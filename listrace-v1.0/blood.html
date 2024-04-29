@@ -1,0 +1,427 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+
+    <!--font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
+    <!-- title of site -->
+    <title>Directory Landing Page</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+   
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+
+    <!--slick.css-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css" >	
+    
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!--explore start -->
+<!-- <section id="explore" class="explore">
+	<div class="container">
+		<div class="section-header">
+			<h2>explore</h2>
+			<p>Explore New place, food, culture around the world and many more</p> -->
+			<div id="popup">
+				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
+				<form class="popupcontent" id="form1">
+					<div class="border">
+					<label for="Governerate" style="color: black;">Governerate</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="governrate1" name="Governerate" value="Cairo">
+					<label for="governrate1">Cairo</label>
+					<br></div>
+					
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="governrate2" name="Governerate" value="Alexandria">
+					<label for="governrate2">Alexandria</label>
+					<br></div>
+					</div>
+					<br><br>
+					<div class="border">
+						<label for="area" style="color: black;">Area</label>
+						<br>
+						<div class="checkbox-container"> 
+						<input type="checkbox" id="area1" name="area" value="5th Settlement">
+						<label for="area">5th Settlement</label>
+						<br></div>
+						<br>
+						<div class="checkbox-container"> 
+						<input type="checkbox" id="area2" name="area" value="Masr Elgedida">
+						<label for="area2">Masr Elgedida</label>
+						<br></div>
+					</div>
+					<br><br>
+					<div class="border">
+					<label for="hospital" style="color: black;">Hospital</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="alshefaHospital" name="hospital" value="ALSHefa">
+					<label for="alshefaHospital">ALSHefa Hospital</label>
+					<br></div>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="elGawyHospital" name="hospital" value="ElGawy">
+					<label for="elGawyHospital">ElGawy Hospital</label>
+					<br></div>
+				</div>
+				<br> <br>
+				  </form>
+				  <button id="closePopup">Apply</button>
+			  </div>
+
+			  <div id="popup1">
+				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+					<h2><a href="#">In Need of Blood Donation</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
+						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Montazah
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+					</p>
+					<div>
+						<div>
+						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Farah Ahmed</label>
+						</div>
+						<div>
+						<i class="fa-solid fa-droplet" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">D</label>
+						</div>
+					</div>
+					<div>
+						<p>Description: In need of 3 bags of blood type D </p>
+					</div>
+					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+					<div class="counter-container">
+						<button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+						<div class="counter" style="border: 1px black;">0</div>
+						<button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+					  </div>
+
+					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
+			  </div>
+		<!--/.section-header-->
+		<div id="openPopup">
+			<button style="font-size: 20px; padding-right:3px ;">Filter</button>
+			<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
+		  </div>
+		 
+		  
+		  
+		<div class="explore-content" id="explore-content">
+			
+				
+					<div class="single-explore-item">
+						<div class="single-explore-txt bg-theme-4">
+							<h2><a href="#">In Need of Blood Donation</a></h2>
+							<p class="explore-rating-price">
+								<span class="explore-rating">5.0</span>
+								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
+								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+									Montazah
+									
+								</label>
+								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+							</p>
+							
+							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+								<div class="row">
+									<div class="col-sm-5">
+										<button class="close-btn open-btn"   id ="openpostdetails1">View Details</button>
+									</div>
+									<div class="col-sm-7">
+										<div class="explore-map-icon">
+											<a href="#"><i data-feather="map-pin"></i></a>
+											<a href="#"><i data-feather="upload"></i></a>
+											<a href="#"><i data-feather="heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+			
+				<div class="single-explore-item">
+					<div class="single-explore-txt bg-theme-4">
+						<h2><a href="#">Blood Donation </a></h2>
+						<p class="explore-rating-price">
+							<span class="explore-rating">5.0</span>
+							<label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">Cairo</label> 
+							<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+								5th Settlement
+								
+							</label>
+							 <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+						</p>
+						
+						<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+							<div class="row">
+								<div class="col-sm-5">
+									<button class="close-btn open-btn"    id ="openpostdetails2">View Details</button>
+								</div>
+								<div class="col-sm-7">
+									<div class="explore-map-icon">
+										<a href="#"><i data-feather="map-pin"></i></a>
+										<a href="#"><i data-feather="upload"></i></a>
+										<a href="#"><i data-feather="heart"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			<div class="single-explore-item">
+				<div class="single-explore-txt bg-theme-4">
+					<h2><a href="#">Blood Donation is Required</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
+						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Masr Elgedida
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+					</p>
+					
+					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+						<div class="row">
+							<div class="col-sm-5">
+								<button class="close-btn open-btn"   id ="openpostdetails3">View Details</button>
+							</div>
+							<div class="col-sm-7">
+								<div class="explore-map-icon">
+									<a href="#"><i data-feather="map-pin"></i></a>
+									<a href="#"><i data-feather="upload"></i></a>
+									<a href="#"><i data-feather="heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	<!--/.container-->
+
+</section><!--/.explore-->
+<script>
+	const popup = document.getElementById('popup');
+	const openPopupBtn = document.getElementById('openPopup');
+	const closePopupBtn = document.getElementById('closePopup');
+  
+	openPopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'block';
+	});
+  
+	closePopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'none';
+	});
+  </script>
+  <script>
+	const popup1 = document.getElementById('popup1');
+	const openPopupBtn1 = document.getElementById('openpostdetails1');
+	const closePopupBtn1 = document.getElementById('closePopup1');
+  
+	openPopupBtn1.addEventListener('click', function() {
+	  popup1.style.display = 'block';
+	});
+  
+	closePopupBtn1.addEventListener('click', function() {
+	  popup1.style.display = 'none';
+	});
+  </script>
+
+  <script>
+  const clearAllButton = document.getElementById('clearall');
+	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	
+	clearAllButton.addEventListener('click', () => {
+	  checkboxes.forEach(checkbox => checkbox.checked = false);
+	});</script>
+
+
+<script>
+	const applyButton = document.getElementById('closePopup');
+const checkboxForm = document.getElementById('form1'); // Assuming ID for checkbox form
+const postElements = document.querySelectorAll('.single-explore-item');
+
+applyButton.addEventListener('click', () => {
+  const selectedFilters = []; // Array to store checked checkbox values
+  
+  // Loop through checkboxes in the form
+  const checkboxes = checkboxForm.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      selectedFilters.push({value: checkbox.value, name:checkbox.name}); // Add checked checkbox value to array
+    }
+  });
+  if(selectedFilters.length===0){
+	postElements.forEach(post=>{
+		post.classList.remove('hidden');
+		
+	})
+	return;
+  }
+
+  let allPostsHidden = true;
+
+  postElements.forEach(post => {
+    let showPost = false; // Assume post is initially hidden
+
+    // Check if any selected filter matches post data
+	for (const filterValue of selectedFilters) {
+let textbx= null;
+      if(filterValue.name.toLocaleLowerCase() === "Governerate".toLocaleLowerCase()){
+        textbx=post.querySelector('.city');
+} 
+else if(filterValue.name.toLocaleLowerCase() === "area".toLocaleLowerCase()){
+textbx=post.querySelector('.area');
+}
+else {
+textbx=post.querySelector('.hospital');
+}
+
+      
+      const textbxText = textbx? textbx.textContent.trim() : '';
+
+      if (textbxText.toLocaleLowerCase()===filterValue.value.toLocaleLowerCase()) { // Adjust comparison based on your data format
+        showPost = true; // Show post if filter matches
+        // Exit inner loop if a match is found (optional)
+      }
+   else{
+       showPost=false;
+       break;
+    }
+    };
+
+    if (showPost) {
+      post.classList.remove('hidden');
+	  allPostsHidden = false; // Update flag if a match is found
+ // Remove hidden class if visible
+    } else {
+      post.classList.add('hidden'); // Add hidden class if not visible
+    }
+  });
+  if (allPostsHidden) {
+    // Display "No posts" message (optional: create a separate element)
+    const noPostsElement = document.createElement('p'); // Create a paragraph element
+    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
+    // Append the element to the appropriate container in your HTML structure
+
+    // (Example: assuming you have a container with ID "filter-results")
+    document.getElementById('explore-content').appendChild(noPostsElement);
+  } else {
+    // Remove any previously displayed "No posts" message (optional)
+    const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+  }
+});
+
+</script>   
+
+<script>
+
+function initMap() { 
+        var test= {lat: -25.363, lng: 131.044}; 
+        var map = new google.maps.Map(document.getElementById('map'), { 
+          zoom: 4, 
+          center: test 
+        }); 
+        var marker = new google.maps.Marker({ 
+          position: test, 
+          map: map 
+        }); 
+      } 
+
+//initMap();
+
+
+
+</script>
+
+
+
+<script async defer 
+src= 
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyBmuwnNLMRK7cwIJ5TblA4i6BbnERPtq6Y&callback=initMap&async"> 
+</script> 
+<script>
+	const counterElement = document.querySelector('.counter');
+let count = 0; // Initial counter value
+
+const incrementButton = document.getElementById('increment');
+const decrementButton = document.getElementById('decrement');
+
+incrementButton.addEventListener('click', () => {
+  count++;
+  counterElement.textContent = count;
+});
+
+decrementButton.addEventListener('click', () => {
+  if (count > 0) {
+    count--;
+  }
+  counterElement.textContent = count;
+});
+
+</script>
+<script>
+	const closeButton = document.getElementById('closeButton');
+const popup2 = document.getElementById('popup1');
+
+closeButton.addEventListener('click', () => {
+  popup2.style.display = 'none'; // Hide the popup
+});
+</script>
+<!--explore end -->
+</body>

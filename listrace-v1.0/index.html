@@ -2,6 +2,10 @@
 <html class="no-js" lang="en">
 
     <head>
+		<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
+	
+
+
         <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,6 +60,7 @@
     </head>
 	
 	<body>
+		<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -148,31 +153,24 @@
 		<section id="home" class="welcome-hero">
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>best place to find and explore <br> that all you need </h2>
-					<p>
-						Find Best Place, Restaurant, Hotel, Real State and many more think in just One click 
-					</p>
+					
+					<ul class="dynamic-txts">
+						<li><span>Donate Now</span></li>
+						<li><span>Make a Difference </span></li>
+					  </ul>
 				</div>
 				<div class="welcome-hero-serch-box">
 					<div class="welcome-hero-form">
 						<div class="single-welcome-hero-form">
-							<h3>what?</h3>
+							<h3>Category?</h3>
 							<form action="index.html">
-								<input type="text" placeholder="Ex: palce, resturent, food, automobile" />
+								<input type="text" placeholder="Ex: Blood donation, Clothes, Toys, etc" />
 							</form>
 							<div class="welcome-hero-form-icon">
 								<i class="flaticon-list-with-dots"></i>
 							</div>
 						</div>
-						<div class="single-welcome-hero-form">
-							<h3>location</h3>
-							<form action="index.html">
-								<input type="text" placeholder="Ex: london, newyork, rome" />
-							</form>
-							<div class="welcome-hero-form-icon">
-								<i class="flaticon-gps-fixed-indicator"></i>
-							</div>
-						</div>
+						
 					</div>
 					<div class="welcome-hero-serch">
 						<button class="welcome-hero-btn" onclick="window.location.href='#'">
@@ -190,32 +188,32 @@
 			<div class="container">
 				<div class="list-topics-content">
 					<ul>
-						<li>
-							<div class="single-list-topics-content">
+						<li > 
+							<a href="blood.html">	<div class="single-list-topics-content"> 
 								<div class="single-list-topics-icon">
-									<i class="flaticon-restaurant"></i>
+									<i class="fas fa-solid fa-droplet" style="font-size: 35px; margin-bottom: 30px;"></i>
 								</div>
-								<h2><a href="#">resturent</a></h2>
-								<p>150 listings</p>
-							</div>
-						</li>
-						<li>
-							<div class="single-list-topics-content">
+								<h2>Blood Donation</h2>
+								<p>2 listings</p>
+							</div></a>
+						</li> 
+						<li > 
+							<a href="teaching.html">	<div class="single-list-topics-content"> 
 								<div class="single-list-topics-icon">
-									<i class="flaticon-travel"></i>
+									<i class="fas fa-solid fa-chalkboard" style="font-size: 35px; margin-bottom: 30px;"></i>
 								</div>
-								<h2><a href="#">destination</a></h2>
-								<p>214 listings</p>
-							</div>
-						</li>
-						<li>
-							<div class="single-list-topics-content">
+								<h2>Probono Teaching</h2>
+								<p>2 listings</p>
+							</div></a>
+						</li> 
+						<li > 
+							<a href="medicalcase.html">	<div class="single-list-topics-content"> 
 								<div class="single-list-topics-icon">
-									<i class="flaticon-building"></i>
+									<i class="fas fa-solid fa-stethoscope" style="font-size: 35px; margin-bottom: 30px;"></i>
 								</div>
-								<h2><a href="#">hotels</a></h2>
-								<p>185 listings</p>
-							</div>
+								<h2>Probono medical Visit</h2>
+								<p>2 listings</p>
+							</div></a>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
@@ -1134,6 +1132,21 @@
 		     
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
+		<script>
+			const images = [
+			  'https://media.istockphoto.com/id/1478310331/photo/black-man-volunteering-and-giving-box-in-park-of-donation-community-service-or-social.webp?b=1&s=170667a&w=0&k=20&c=IEgIUJ75D3AraONyFymA-sQ7RkPboQv1HxehnILDSKo=',
+			  'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9uYXRpb258ZW58MHx8MHx8fDA%3D'
+			];
+			let currentImageIndex = 0;
+		  
+			function changeBackground() {
+			  currentImageIndex = (currentImageIndex + 1) % images.length;
+			  const newImage = images[currentImageIndex];
+			  document.querySelector('.welcome-hero').style.backgroundImage = `url(${newImage})`;
+			}
+		  
+			setInterval(changeBackground, 5000); // Change image every 5 seconds (adjust as needed)
+		  </script>
         
     </body>
 	
