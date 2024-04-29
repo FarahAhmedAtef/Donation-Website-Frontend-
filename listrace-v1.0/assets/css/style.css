@@ -243,12 +243,62 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background:url(../images/welcome-hero/banner.jpg)no-repeat;
-    background-position:center;
-    background-size:cover;
-    text-align: center;
-    height:800px;
-    z-index: 1;
+
+  /* Define both images as background sources */
+  background-image: url(https://media.istockphoto.com/id/1478310331/photo/black-man-volunteering-and-giving-box-in-park-of-donation-community-service-or-social.webp?b=1&s=170667a&w=0&k=20&c=IEgIUJ75D3AraONyFymA-sQ7RkPboQv1HxehnILDSKo=), url(https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fdonation&psig=AOvVaw271zJuB3095w-Ps11fD647&ust=1714311234319000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIi49ZLB4oUDFQAAAAAdAAAAABAJ), url(https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9uYXRpb258ZW58MHx8MHx8fDA%3D);
+
+  /* Set additional background properties */
+  background-repeat: no-repeat;
+  background-position: center;  /* Positions both images centrally */
+  background-size: cover;
+  text-align: center;
+  height: 1000px;
+  z-index: 1;
+}
+
+
+
+ul{
+    list-style:none;
+    text-align: left;
+    
+}
+.dynamic-txts li{
+    
+    position:relative;
+    top:0;
+    animation: slide 6s steps(2) infinite; }
+
+@keyframes slide{
+    100%{
+        top: -180px;
+    }
+}
+.dynamic-txts li ::after {
+ content: "";
+ position: absolute;
+ height: 100%;
+ width:100%;
+ left: 0;
+ background-color: transparent;
+ opacity: 100%;
+ border-left: 2px solid white;
+ animation:typing 3s  infinite;
+}
+.dynamic-txts{
+    
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+@keyframes typing{
+    40%,
+    60%{
+        left:calc(100%)
+    }
+    100%{
+        left:0;
+    }
 }
 .welcome-hero:before{
     position: absolute;
@@ -260,7 +310,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     background:rgba(65,73,89,.65);
     z-index: -1;
 }
-.welcome-hero-txt { padding-top: 155px;}
+.welcome-hero-txt { padding-top:155px;  display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    font-weight: bold;
+    color: white;}
 
 .welcome-hero-txt h2 {
     font-size: 48px;
@@ -284,12 +340,37 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     border-radius: 3px;
     width: 85%;
 }
+.counter-container {
+    display: flex; /* Make the container a flexbox */
+    align-items: center; /* Align buttons and counter vertically */
+  }
+  #closePopup1 {
+    /* Existing styles: color: white; */
+    background-color: green; color:white;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 10px 20px; /* Optional: Adjust padding as needed */
+    border: none; /* Optional: Remove border if desired */
+    cursor: pointer; /* Indicate clickable behavior on hover */
+  }
+  
+  #closePopup1:hover {
+    background-color: white;
+    color: green;
+  }
+  
+  
+  .counter {
+    /* Existing styles for the counter */
+    margin: 0 10px; /* Optional: Add some spacing between buttons and counter */
+  }
+  
 .single-welcome-hero-form {
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 100%;
     padding: 0 30px;
 }
 .single-welcome-hero-form:first-child{border-right: 1px solid #edeff1;}
@@ -353,8 +434,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 205px;
-    height: 170px;
+    width: 300px;
+    height: 250px;
     background:#fff;
     border-radius: 3px;
     margin-right: 20px;
@@ -441,9 +522,12 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     padding:117px 0 95px;
     background: #f8fafb;
 }
-.explore-content{margin-top: 78px;}
+.explore-content{ display: flex;
+    flex-wrap: wrap;
+    margin-top: 78px;}
 
 .single-explore-item {
+    flex: 1 0 30%;
     background: #fff;
     border: 1px solid #edeff1;
     border-radius: 3px;
@@ -453,6 +537,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     -ms-transition:.3s linear; 
     -o-transition:.3s linear;
     transition: .3s linear;
+margin: 10px;
 }
 .single-explore-img{position:relative;overflow: hidden;}
 .single-explore-img:before {
@@ -1365,6 +1450,263 @@ background-color:transparent;
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+/*#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: white;  /* Change this to your desired solid color */
+    
+  /*  z-index: 10;
+    text-align: center;  /* Center the content within the popup */
+  /*  padding: 20px;  /* Add some padding for better readability */
+    
+  /*}*/
+  #popup, #popup1 {
+    position: fixed; /* Fix the popup to the viewport */
+    top: 50%; /* Position vertically at 50% (center) */
+    left: 50%; /* Position horizontally at 50% (center) */
+    transform: translate(-50%, -50%); /* Translate to adjust position */
+    background-color: white; /* Set background color */
+    padding: 20px; /* Add padding for content */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    z-index: 10;
+    display: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+    /* Adjust width and height as needed */
+    width: 400px; /* Example width */
+    height: 550px; /* Example height */
+   
+  }
+  
+  /* Prevent content behind popup from being interactive (Optional) */
+  body.popup-open {
+    overflow: hidden; /* Prevent scrolling */
+  }
+  .popupcontent {
+    display: flex;
+  flex-direction: column;  /* Stack elements vertically */
+  justify-content: center;  /* Center content horizontally */
+  align-items: center; 
+  }
+  #openPopup {
+    margin-top: 20px; /* Adjust margin as needed */
+    font-size: 15px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    position: absolute; /* Position the div absolutely */
+    top: 0; /* Positions at the top of viewport */
+    right: 0; /* Positions at the right of viewport */
+    width: 85px; /* Adjust as needed */
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 5px; /* Adjust padding as needed */
+    margin-right:10px;
+  }
+  #map{
+    height: 25%;
+  }
+  .price-tag {
+    background-color: #4285F4;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 10px 15px;
+    position: relative;
+  }
+  
+  .price-tag::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #4285F4;
+  }
+  
+  #openPopup button,
+  #openPopup .fa-filter {
+    color: inherit;
+  }
+  
+  #openPopup:hover {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+  }
+  
+  
+  .checkbox-container {
+    margin-bottom: 10px;  /* Adjust as needed */
+  }
+.checkbox-container input[type="checkbox"]:checked + label {
+    color: green; /* Change label color to green when checkbox is checked */
+  }
+  .border{
+    border-bottom: 1px solid #e1e5eb;
+
+}
+.hidden{
+    padding: 0 !important;
+      height:0px !important;
+      width:0px !important;
+        opacity: 0 !important; /* Make hidden elements transparent */
+        /* You can add other styles for visual consistency (e.g., display: none;) */
+     
+}
+
+h4{
+    margin-bottom: 10px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .radio-label {
+    display: flex;
+    align-items: center;
+    width: 150 px;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+    /*margin-right: 10px;*/
+  }
+  
+  .radio-label:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .radio-input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .radio-input:checked + .radio-label {
+    background-color: #ffc3c3;
+    border-color: #ff545a;
+  }
+  
+  .radio-input:focus + .radio-label {
+    outline: 2px solid #ff545a;
+  }
+  
+  .radio-inner-circle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #888;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+  
+  .radio-label:hover .radio-inner-circle {
+    border-color: #555;
+  }
+  
+  .radio-input:checked + .radio-label .radio-inner-circle {
+    border-color: #ff545a;
+  }
+  
+  .radio-input:checked + .radio-label .radio-inner-circle::after {
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #ff545a;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+      
+  
+  .option {
+    margin-right: 5px;
+    width: auto;
+    display:inline-block;
+    height: 28px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    border-radius: 34px;
+    transition: 0.25s cubic-bezier(0, 0, 0, 1);
+  }
+  
+  .option:last-child {
+    margin-right: 0;
+  }
+  
+  .option:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .option:hover .span {
+    color: var(--font-color-light);
+  }
+  
+  .input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    appearance: none;
+    cursor: pointer;
+  }
+  
+  .btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .span {
+    color: var(--font-color-dark);
+  }
+  
+  .input:checked + .btn {
+    background-color: var(--main-color);
+    transition: 0.2s cubic-bezier(0, 0, 0, 1);
+  }
+  
+  .input:checked + .btn .span {
+    color: var(--font-color-light);
+    transition: 0.25s cubic-bezier(0, 0, 0, 1);
+  }
+  
 
 
 /* trial farida*/ 
@@ -1394,3 +1736,7 @@ background-color:transparent;
 }
 
 /*========================Thank you=================
+
+
+
+
