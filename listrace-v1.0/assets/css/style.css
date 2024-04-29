@@ -895,10 +895,11 @@ margin: 10px;
 /*custom-input-group*/
 
 /*appsLand-btn*/
-.appsLand-btn {
+.login-btn{
     position: relative;
-    top: 0;
-    right: 0;
+    /* top: 0;
+    right: 0; */
+
     background: #ff545a;
     display: inline-block;
     width: 160px;
@@ -918,6 +919,46 @@ margin: 10px;
     -moz-transition:0.3s ease-in-out;
     -o-transition:0.3s ease-in-out;
     transition:0.3s ease-in-out;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.login-btn:hover, .appsLand-btn:focus, .appsLand-btn:active {
+    text-decoration: none;
+    outline: none;
+}
+.login-btn:hover {
+    box-shadow:0 5px 10px rgba(71,71,71,.4);
+    background: #f43032;
+}
+.container {
+    text-align: center; /* Center-align the button horizontally */
+}
+
+.appsLand-btn {
+    position: relative;
+    /* top: 0;
+    right: 0; */
+    background: #ff545a;
+    display: inline-block;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    border-top-right-radius:2px;
+    border-bottom-right-radius:2px;
+    text-transform:capitalize;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    border: 0;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition:0.3s ease-in-out;
+    -moz-transition:0.3s ease-in-out;
+    -o-transition:0.3s ease-in-out;
+    transition:0.3s ease-in-out;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .appsLand-btn:hover, .appsLand-btn:focus, .appsLand-btn:active {
     text-decoration: none;
@@ -1223,6 +1264,10 @@ background-color:transparent;
 
   
 
+.container {
+    text-align: center; /* Center-align the button horizontally */
+
+}
 /*appsLand-btn*/
 
 /*-------------------------------------
