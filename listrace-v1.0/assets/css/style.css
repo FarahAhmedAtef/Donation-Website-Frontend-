@@ -715,7 +715,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     text-transform:capitalize;
     font-weight: 500;
 }
-
+.wrappernv{
+    display:flex;
+    justify-content: flex-end;
+}
 /*-------------------------------------
         10. Blog
 --------------------------------------*/
@@ -808,20 +811,20 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 
 /*appsLand-btn*/
 .appsLand-btn {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     background: #ff545a;
     display: inline-block;
-    width: 180px;
+    width: 160px;
     height: 60px;
     line-height: 60px;
     text-decoration: none;
-    border-top-right-radius:3px;
-    border-bottom-right-radius:3px;
+    border-top-right-radius:2px;
+    border-bottom-right-radius:2px;
     text-transform:capitalize;
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     border: 0;
     overflow: hidden;
@@ -839,6 +842,302 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     box-shadow:0 5px 10px rgba(71,71,71,.4);
     background: #f43032;
 }
+
+.container {
+    text-align: center; /* Center-align the button horizontally */
+}
+
+/*Counter farida*/
+
+.counter {
+    /* Existing styles for the counter */
+    margin: 0 10px; /* Optional: Add some spacing between buttons and counter */
+  }
+
+  .counter-container {
+    display: flex; /* Make the container a flexbox */
+    align-items: center; /* Align buttons and counter vertically */
+    padding: 5px 10px;
+  }
+
+
+
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #f43032;
+    background-color: #f43032;
+  }
+  
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #f43032;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .button:hover {
+    background: #f43032;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #aa3b3d;
+  }
+  
+  .button:active {
+    border: 1px solid #fa5c5f;
+  }
+
+    /*create post*/ 
+
+.paste-button {
+    position: relative;
+    display: block;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.paste-button:hover{
+
+background-color:transparent;
+    color: #525252;
+}
+.button:hover{
+    background-color:transparent;
+    color: #525252;
+} 
+
+
+  
+  .button {
+    background-color:  #fa5c5f;
+    color: #525252;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 15px; /* Adjust the value as needed */
+    line-height: 30px; /* Adjust the value to match the height of your button */
+    height: 30px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    font-size:larger;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    background-color: #525252;
+    border: 2px solid #fa5c5f;
+    border-radius: 0px 15px 15px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    color: #fa5c5f;
+    padding: 4px 4px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    transition: 0.1s;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #fa5c5f;
+    color: #525252;
+  }
+  
+  .dropdown-content a:focus {
+    background-color: #525252;
+    color: #fa5c5f;
+  }
+  
+  .dropdown-content #top:hover {
+    border-radius: 0px 13px 0px 0px;
+  }
+  
+  .dropdown-content #bottom:hover {
+    border-radius: 0px 0px 13px 13px;
+  }
+  
+  .paste-button:hover button {
+    border-radius: 15px 15px 0px 0px;
+  }
+  
+  .paste-button:hover .dropdown-content {
+    display: block;
+  }
+
+      /*clothes post*/ 
+
+      /* .form {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        height: 200px;
+        width:auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+      } */
+  
+      
+.form {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+        margin-left:25%;
+      }
+      
+
+      .form textarea {
+        border-radius: 8px;
+        height: 100px;
+        width: 100%;
+        resize: none;
+        outline: 0;
+        padding: 8px 14px;
+        border: 1px solid rgb(219, 213, 213);
+        align-items: center;
+      }
+
+
+      .form1 {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+        margin-left:25%;
+      }
+      
+      
+      .form1 textarea {
+        border-radius: 8px;
+        height: 100px;
+        width: 100%;
+        resize: none;
+        outline: 0;
+        padding: 8px 14px;
+        border: 1px solid rgb(219, 213, 213);
+       
+      }
+      
+
+      .btn:link,
+.btn:visited {
+ text-transform: uppercase;
+ text-decoration: none;
+ color:white;
+ background-color: #fa5c5f;
+ padding: 5px 15px;
+ border: 1px solid;
+ border-radius: 1000px;
+ display: inline-block;
+ transition: all .2s;
+ position: relative;
+ width: 100px;
+ width:25%;
+}
+
+.btn:hover {
+ transform: translateY(-5px);
+ background-color: rgb(87, 85, 85);
+ box-shadow: 0 10px 20px rgba(73, 72, 72, 0.5);
+}
+
+.btn:active {
+ transform: translateY(-3px);
+}
+
+.btn::after {
+ content: "";
+ display: inline-block;
+ height: 100%;
+ width: 100%;
+ border-radius: 100px;
+ top: 0;
+ left: 0;
+ position: absolute;
+ z-index: -1;
+ transition: all .3s;
+}
+
+.btn:hover::after {
+ background-color: rgb(244, 73, 54);
+ transform: scaleX(1.4) scaleY(1.5);
+ opacity: 0;
+}
+
+
+
+      
+      
+      /* .form button {
+        align-self: flex-end;
+        padding: 8px;
+        outline: 0;
+        border: 0;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+      }
+           */
+
+  
+
 /*appsLand-btn*/
 
 /*-------------------------------------
@@ -901,6 +1200,124 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .footer-social span:hover{color: #ff545a;}
 .footer-social a:hover {background:#ff545a;color: #fff;}
 
+.file-upload-form {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .file-upload-label input {
+    display: none;
+  }
+  .file-upload-label svg {
+    height: 30px;
+    fill: rgb(82, 82, 82);
+    margin-bottom: 20px;
+  }
+  .file-upload-label {
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 30px 70px;
+    border-radius: 40px;
+    border: 2px dashed rgb(82, 82, 82);
+    box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719);
+  }
+  .file-upload-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .browse-button {
+    background-color: rgb(82, 82, 82);
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s;
+  }
+  .browse-button:hover {
+    background-color: rgb(14, 14, 14);
+  }
+  /* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio-label {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .radio-label:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .radio-input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .radio-input:checked + .radio-label {
+    background-color: #ffc3c3;
+    border-color: #ff1111;
+  }
+  
+  .radio-input:focus + .radio-label {
+    outline: 2px solid #ff1111;
+  }
+  
+  .radio-inner-circle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid #888;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+  
+  .radio-label:hover .radio-inner-circle {
+    border-color: #555;
+  }
+  
+  .radio-input:checked + .radio-label .radio-inner-circle {
+    border-color: #ff1111;
+  }
+  
+  .radio-input:checked + .radio-label .radio-inner-circle::after {
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #ff1111;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
 /*===============================
     Scroll Top
 ===============================*/
@@ -948,4 +1365,32 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+
+
+/* trial farida*/ 
+
+
+/* Initially hide the dropdown content */
+.school-supplies-dropdown {
+    display: none;
+}
+
+/* Show dropdown content when .dropdown-school-supplies is hovered */
+.dropdown-school-supplies:hover .school-supplies-dropdown {
+    display: block;
+    /* color: #fa5c5f;
+    width:100px;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    transition: 0.1s; */
+}
+.dropdown-school-supplies:hover .school-supplies-dropdown a{
+    color:white;
+    font-size:small;
+    text-align: center;
+    padding: 5px 10px;
+
+}
+
 /*========================Thank you=================
