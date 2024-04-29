@@ -2,10 +2,6 @@
 <html class="no-js" lang="en">
 
     <head>
-		<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
-	
-
-
         <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +56,6 @@
     </head>
 	
 	<body>
-		<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -130,16 +125,41 @@
 			            <!-- End Header Navigation -->
 
 			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+						<div class="wrappernv">
+			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu" >
+							<div style="display:flex; align-items: center;">
+
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                    <li class=" scroll active"><a href="#home">home</a></li>
 			                    <li class="scroll"><a href="#works">how it works</a></li>
 			                    <li class="scroll"><a href="#explore">explore</a></li>
 			                    <li class="scroll"><a href="#reviews">review</a></li>
-			                    <li class="scroll"><a href="#blog">blog</a></li>
 			                    <li class="scroll"><a href="#contact">contact</a></li>
-			                </ul><!--/.nav -->
+			                </ul>
+							<div class="paste-button">
+								<button class="button">New Post▼</button>
+								<div class="dropdown-content" onchange="populateDropdown2">
+								  <a id="bottom" href="toys.html">Toys</a>
+								  <a id="bottom1" href="food.html">Food</a>
+								  <a id="top" href="clothes.html">Clothes</a>
+								  <div class="dropdown-school-supplies">
+									<a id="middle" href="#">School Supplies</a>
+									<div class="school-supplies-dropdown">
+										<a href="#">Stationary Items</a>
+										<a href="#">Books</a>
+									</div>
+								</div>
+								  <!-- <a id="middle" class="school" href="#">School Supplies</a> -->
+								  <a id="bottom2" href="#">Medical Supplies</a>
+								  <a id="bottom" href="#">Blood donation</a>
+								  <a id="bottom" href="#">Pro-bono Teaching</a>
+								  <a id="bottom" href="#">Pro-bono Medical visits</a>
+								</div>
+							</div>
+                         </div>
+							<!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
+						</div>
 			        </div><!--/.container-->
 			    </nav><!--/nav-->
 			    <!-- End Navigation -->
@@ -153,29 +173,37 @@
 		<section id="home" class="welcome-hero">
 			<div class="container">
 				<div class="welcome-hero-txt">
-					
-					<ul class="dynamic-txts">
-						<li><span>Donate Now</span></li>
-						<li><span>Make a Difference </span></li>
-					  </ul>
+					<h2>best place to find and explore <br> that all you need </h2>
+					<p>
+						Find Best Place, Restaurant, Hotel, Real State and many more think in just One click 
+					</p>
 				</div>
 				<div class="welcome-hero-serch-box">
 					<div class="welcome-hero-form">
 						<div class="single-welcome-hero-form">
-							<h3>Category?</h3>
+							<h3>what?</h3>
 							<form action="index.html">
-								<input type="text" placeholder="Ex: Blood donation, Clothes, Toys, etc" />
+								<input type="text" placeholder="Ex: palce, resturent, food, automobile" />
 							</form>
 							<div class="welcome-hero-form-icon">
 								<i class="flaticon-list-with-dots"></i>
 							</div>
 						</div>
-						
+						<div class="single-welcome-hero-form">
+							<h3>location</h3>
+							<form action="index.html">
+								<input type="text" placeholder="Ex: london, newyork, rome" />
+							</form>
+							<div class="welcome-hero-form-icon">
+								<i class="flaticon-gps-fixed-indicator"></i>
+							</div>
+						</div>
 					</div>
 					<div class="welcome-hero-serch">
-						<button class="welcome-hero-btn" onclick="window.location.href='#'">
+						<!-- <button class="welcome-hero-btn" onclick="window.location.href='#'">
 							 search  <i data-feather="search"></i> 
-						</button>
+						</button> -->
+
 					</div>
 				</div>
 			</div>
@@ -188,32 +216,32 @@
 			<div class="container">
 				<div class="list-topics-content">
 					<ul>
-						<li > 
-							<a href="blood.html">	<div class="single-list-topics-content"> 
+						<li>
+							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
-									<i class="fas fa-solid fa-droplet" style="font-size: 35px; margin-bottom: 30px;"></i>
+									<i class="flaticon-restaurant"></i>
 								</div>
-								<h2>Blood Donation</h2>
-								<p>2 listings</p>
-							</div></a>
-						</li> 
-						<li > 
-							<a href="teaching.html">	<div class="single-list-topics-content"> 
+								<h2><a href="#">resturent</a></h2>
+								<p>150 listings</p>
+							</div>
+						</li>
+						<li>
+							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
-									<i class="fas fa-solid fa-chalkboard" style="font-size: 35px; margin-bottom: 30px;"></i>
+									<i class="flaticon-travel"></i>
 								</div>
-								<h2>Probono Teaching</h2>
-								<p>2 listings</p>
-							</div></a>
-						</li> 
-						<li > 
-							<a href="medicalcase.html">	<div class="single-list-topics-content"> 
+								<h2><a href="#">destination</a></h2>
+								<p>214 listings</p>
+							</div>
+						</li>
+						<li>
+							<div class="single-list-topics-content">
 								<div class="single-list-topics-icon">
-									<i class="fas fa-solid fa-stethoscope" style="font-size: 35px; margin-bottom: 30px;"></i>
+									<i class="flaticon-building"></i>
 								</div>
-								<h2>Probono medical Visit</h2>
-								<p>2 listings</p>
-							</div></a>
+								<h2><a href="#">hotels</a></h2>
+								<p>185 listings</p>
+							</div>
 						</li>
 						<li>
 							<div class="single-list-topics-content">
@@ -1132,21 +1160,6 @@
 		     
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
-		<script>
-			const images = [
-			  'https://media.istockphoto.com/id/1478310331/photo/black-man-volunteering-and-giving-box-in-park-of-donation-community-service-or-social.webp?b=1&s=170667a&w=0&k=20&c=IEgIUJ75D3AraONyFymA-sQ7RkPboQv1HxehnILDSKo=',
-			  'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9uYXRpb258ZW58MHx8MHx8fDA%3D'
-			];
-			let currentImageIndex = 0;
-		  
-			function changeBackground() {
-			  currentImageIndex = (currentImageIndex + 1) % images.length;
-			  const newImage = images[currentImageIndex];
-			  document.querySelector('.welcome-hero').style.backgroundImage = `url(${newImage})`;
-			}
-		  
-			setInterval(changeBackground, 5000); // Change image every 5 seconds (adjust as needed)
-		  </script>
         
     </body>
 	

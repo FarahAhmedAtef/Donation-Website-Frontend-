@@ -1,0 +1,128 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+
+    <!--font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
+    <!-- title of site -->
+    <title>Directory Landing Page</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+   
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+
+    <!--slick.css-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css" >	
+    
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!--subscription strat -->
+<section id="contact"  class="subscription">
+    <div class="container">
+        <div class="subscribe-title text-center">
+            <h2>
+              New clothes donation post
+            </h2>
+            <!-- <p>
+                Listrace offer you to list your business with us and we very much able to promote your Business.
+            </p> -->
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="subscription-input-group">
+                    <!-- <form action="#"> -->
+                        
+                        <form action="/submit-registration" method="post">
+                            <input type="number" class="subscription-input-form" placeholder="Age">
+                            <br><br>
+                            <input type="text" class="subscription-input-form" placeholder="Season ex: Winter, Summer, etc.">
+                            <br><br>
+                            <input type="text" class="subscription-input-form" placeholder="Material ex: Cotton, Linen, etc.">
+                            <br><br>
+                            <div class="counter-container">
+                                <!-- Quantity <br><br> -->
+                                <button id="decrement">-<i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+                                <div class="counter" style="border: 10px black;">0</div>
+                                <button id="increment">+<i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+                              </div>
+        
+                            
+                           
+
+                            <!-- <label for="confirm-password">Confirm Password:</label> -->
+                            <!-- <input type="password" id="confirm-password" name="confirm-password" required> -->
+                            <br>
+                            <label for="gender">Gender</label>
+                            <div class="radio-group">
+                                <input class="radio-input" name="radio-group" id="radio1" type="radio">
+                                <label class="radio-label" for="radio1">
+                                  <span class="radio-inner-circle"></span>
+                                  Male
+                                </label>
+                                
+                                <input class="radio-input" name="radio-group" id="radio2" type="radio">
+                                <label class="radio-label" for="radio2">
+                                  <span class="radio-inner-circle"></span>
+                                  Female
+                                </label></div>
+                                <br><br>
+
+                                
+                </form>
+                
+                <!-- textbox for description -->
+                <form class="form1">
+                    <textarea placeholder="Extra Information"></textarea>
+                </form>
+<br><br>
+                            
+                            
+                   <a href="#" class="btn">Post</a>
+                        
+                    
+            </div>	
+        </div>
+    </div>
+
+</section><!--/subscription-->	
+<!--subscription end -->
+</body>
