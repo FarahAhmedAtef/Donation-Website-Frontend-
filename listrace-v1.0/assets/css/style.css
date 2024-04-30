@@ -338,13 +338,13 @@ ul{
     background: #fff;
     height: 70px;
     border-radius: 3px;
-    width: 85%;
+    width: 30%;
 }
 .counter-container {
     display: flex; /* Make the container a flexbox */
     align-items: center; /* Align buttons and counter vertically */
   }
-  #closePopup1 {
+  #closePopup1, #closePopup2, #closePopup3 {
     /* Existing styles: color: white; */
     background-color: green; color:white;
     margin-top: 30px;
@@ -354,7 +354,7 @@ ul{
     cursor: pointer; /* Indicate clickable behavior on hover */
   }
   
-  #closePopup1:hover {
+  #closePopup1:hover,   #closePopup2:hover, #closePopup3:hover{
     background-color: white;
     color: green;
   }
@@ -1330,6 +1330,12 @@ background-color:transparent;
 .footer-social span:hover{color: #ff545a;}
 .footer-social a:hover {background:#ff545a;color: #fff;}
 
+.footer {
+  /*flex: 0 0 auto; /* Set footer to fixed height */
+  position: fixed;
+  bottom: 0;
+  width: 100px; /* Adjust the height as needed */
+}
 .file-upload-form {
     width: fit-content;
     height: fit-content;
@@ -1509,7 +1515,7 @@ background-color:transparent;
   /*  padding: 20px;  /* Add some padding for better readability */
     
   /*}*/
-  #popup, #popup1 {
+  #popup, #popup1, #popup2, #popup3, #popupapply {
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
     left: 50%; /* Position horizontally at 50% (center) */
@@ -1543,8 +1549,8 @@ background-color:transparent;
     display: flex;
     justify-content: center; /* Center content horizontally */
     position: absolute; /* Position the div absolutely */
-    top: 0; /* Positions at the top of viewport */
-    right: 0; /* Positions at the right of viewport */
+    top: 200px; /* Positions at the top of viewport */
+    right: 15px; /* Positions at the right of viewport */
     width: 85px; /* Adjust as needed */
     border-radius: 10px;
     background-color: red;
@@ -1553,7 +1559,7 @@ background-color:transparent;
     padding: 5px; /* Adjust padding as needed */
     margin-right:10px;
   }
-  #map{
+  #map, #map2, #map3{
     height: 25%;
   }
   .price-tag {
@@ -1779,6 +1785,9 @@ h4{
     padding: 5px 10px;
 
 }
+
+
+
 
 /*========================Thank you=================
 
