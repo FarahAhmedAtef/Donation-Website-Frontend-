@@ -56,18 +56,36 @@
     </head>
 	
 	<body>
-<div class="section-header">
-    <h2>Subject and class details</h2>
-    <p> Subjects i can teach: </p>
-    <br>
-    <ul>
-        <li>English</li>
-        <li>Maths</li>
-        <li>Science</li>
-        <li>History</li>
-      </ul>
-      <br><br>
-      <p> Number of pro-bono classes I can teach: 4 </p>
+        <div class="subscription-input-group">        
+         <h2>Please State the Subjects you can teach: </h2> <br><br>
+    <input type="snum" class="subscription-input-form" placeholder="Subject 1 (Required)"> <br>
+    <input type="snum1" class="subscription-input-form" placeholder="Subject 2 (Optional)"> <br>
+    <input type="snum2" class="subscription-input-form" placeholder="Subject 3 (Optional)"> <br> 
+    <input type="snum3" class="subscription-input-form" placeholder="Subject 4 (Optional)"> <br>
+</div>
+<br> <br>
+<div class="subscription-input-group"> 
+    <h3> Please Specify the Number of pro-bono classes you can teach: </h3>  <br> 
+    <select name="pbnum" class="subscription-input-form" id="pbnum">
+        <option value="" disabled selected>Number of classes</option>
+        <option value="pb1">1</option>
+        <option value="pb2">2</option>
+        <option value="pb3">3</option>
+        <option value="pb4">4</option>
+    </select>
+    
+</div>
+<br><br>
+<div class="subscription-input-group"> 
+    <h3> Please Specify the Number of pro-bono students you can give private tutoring to: </h3>  <br> 
+    <select name="pbpnum" class="subscription-input-form" id="pbnum">
+        <option value="" disabled selected>Number of classes</option>
+        <option value="pb11">1</option>
+        <option value="pb22">2</option>
+        <option value="pb33">3</option>
+        <option value="pb44">4</option>
+    </select>
+    
 </div>
 </body>
 </html>
