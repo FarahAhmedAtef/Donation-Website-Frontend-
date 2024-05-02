@@ -202,6 +202,8 @@
 					<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 			  <div id="popupapply">
+				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+				<label > Please fill in this form as part of the donation procedure</label>
 				<form class="file-upload-form">
 				  <label for="file" class="file-upload-label">
 					Upload graduation certificate for verification
@@ -217,17 +219,17 @@
 					  <span class="browse-button">Browse file</span>
 					</div>
 					<input id="file" type="file" />
-					<span id="fileError" class="error-message"></span>
+					<span id="fileError" class="error-message" style="color: red;"></span>
 				  </label>
 				</form>
 				<div class="containerapply">
 				  <div class="date-time">
-					<h2>Date Picker</h2>
+					<h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for teaching</h2>
 					<input type="date" id="datepicker">
-					<span id="dateError" class="error-message"></span>
-					<h2>Time Picker</h2>
+					<span id="dateError" class="error-message" style="color: red;"></span>
+					<h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will be available in for teaching</h2>
 					<input type="time" id="timepicker">
-					<span id="timeError" class="error-message"></span>
+					<span id="timeError" class="error-message" style="color: red;"></span>
 				  </div>
 				  <button id="submitButton">Submit</button>
 				</div>
@@ -283,7 +285,7 @@
 				<div class="single-welcome-hero-form">
 					<h3></h3>
 					<form action="index.html">
-						<input type="text" placeholder="Governerate,Area or Subject?" />
+						<input type="text" placeholder="" />
 					</form>
 					
 				</div>
@@ -627,7 +629,7 @@ function initMap() {
 			}); 
 			var marker2 = new google.maps.Marker({ 
 			  position: test, 
-			  map2: map2
+			  map: map2
 			}); 
 
 
@@ -637,7 +639,7 @@ function initMap() {
 			}); 
 			var marker3 = new google.maps.Marker({ 
 			  position: test, 
-			  map3: map3
+			  map: map3
 			}); 
 
 
@@ -653,50 +655,6 @@ src=
 "https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
 </script> 
 
-	
-	
-<script>
-	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
-
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
-
-incrementButton.addEventListener('click', () => {
-  count++;
-  counterElement.textContent = count;
-});
-
-decrementButton.addEventListener('click', () => {
-  if (count > 0) {
-    count--;
-  }
-  counterElement.textContent = count;
-});
-
-</script>
-
-
-<script>
-	const counterElement2 = document.querySelector('.counter2');
-let count2 = 0; // Initial counter value
-
-const incrementButton2 = document.getElementById('increment2');
-const decrementButton2 = document.getElementById('decrement2');
-
-incrementButton2.addEventListener('click', () => {
-  count2++;
-  counterElement2.textContent = count2;
-});
-
-decrementButton2.addEventListener('click', () => {
-  if (count2 > 0) {
-    count2--;
-  }
-  counterElement2.textContent = count2;
-});
-
-</script>
 
 
 <script>
@@ -716,6 +674,16 @@ closeButton2.addEventListener('click', () => {
   popup4.style.display = 'none'; // Hide the popup
 });
 </script>
+
+<script>
+	const closeButton4 = document.getElementById('closepopupapply');
+const popup11 = document.getElementById('popupapply');
+
+closeButton4.addEventListener('click', () => {
+  popup11.style.display = 'none'; // Hide the popup
+});
+</script>
+
 
 <script>
 	const closeButton3 = document.getElementById('closeButton3');
@@ -777,6 +745,69 @@ submitButton.addEventListener('click', () => {
 });
 
 </script>
+
+<script>
+	const searchInput = document.querySelector('.single-welcome-hero-form input');
+	const exploreItems = document.querySelectorAll('.single-explore-item');
+	
+	// Add click event listener to the search div
+	const searchDiv = document.querySelector('.welcome-hero-serch');
+	
+
+	searchDiv.addEventListener('click', () => {
+		const searchText = searchInput.value.trim();
+		console.log(searchText); // Remove leading/trailing whitespaces
+		if(searchText === ''){
+			console.log(searchText); // Remove leading/trailing whitespaces
+
+			const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+		exploreItems.forEach(exploreItem=>{
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		});
+		return;
+	}
+	let allPostsHidden=true;
+	  exploreItems.forEach(exploreItem => {
+		const hospitalLabel = exploreItem.querySelector('.hospital');
+		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
+	
+	
+		
+		  
+	
+		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase()) {
+			allPostsHidden=false;
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		  }
+		  else{
+			exploreItem.classList.add('hidden'); // Show if hospital matches search
+
+		  }
+		
+	  });
+const exploreContent = document.getElementById('explore-content');
+const existingMessage = exploreContent.querySelector('.no-posts-message');
+  if (allPostsHidden && !existingMessage) {
+    // Display "No posts" message (optional: create a separate element)
+    const noPostsElement = document.createElement('p'); // Create a paragraph element
+    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
+    // Append the element to the appropriate container in your HTML structure
+
+    // (Example: assuming you have a container with ID "filter-results")
+   exploreContent.appendChild(noPostsElement);
+  } else if(!allPostsHidden && existingMessage) {
+    // Remove any previously displayed "No posts" message (optional)
+    const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+  }
+	});
+	</script>
 
 <!--explore end -->
 </body>
