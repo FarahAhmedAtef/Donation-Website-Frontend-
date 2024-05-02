@@ -42,7 +42,7 @@ font-family: 'Roboto', sans-serif;
 body{
 	font-family: 'Poppins', sans-serif;
 	font-size:14px;
-	color:#a09e9c;
+	color: #f7eaff;
     text-transform:initial;
     max-width:1920px;
     margin:0 auto;
@@ -1425,8 +1425,8 @@ background-color:transparent;
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-    padding: 20px;
+    background-color: #f7eaff;
+    padding: 0px;
   }
   
   .radio-group {
@@ -1546,7 +1546,7 @@ background-color:transparent;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;#ecd8f6
     height: 100%;
     display: none;
     background-color: white;  /* Change this to your desired solid color */
@@ -1557,6 +1557,7 @@ background-color:transparent;
     
   /*}*/
   #popup, #popup1, #popup2, #popup3, #popupapply {
+    overflow-y: auto;
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
     left: 50%; /* Position horizontally at 50% (center) */
@@ -1667,7 +1668,7 @@ h4{
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
+    background-color: #f7eaff;
     padding: 20px;
   }
   
