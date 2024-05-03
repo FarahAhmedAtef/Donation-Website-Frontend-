@@ -1874,3 +1874,23 @@ border:1px solid white;
 
 
 
+#left-curtain, #right-curtain {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+background-color: cadetblue;
+  background-size: cover;
+  z-index: 2 !important;
+}
+
+#left-curtain {
+  left: 0;
+  width: 50vw;  /* Adjust width for desired curtain size */
+}
+
+#right-curtain {
+  right: 0;
+  width: 50vw;  /* Adjust width for desired curtain size */
+}
+
+

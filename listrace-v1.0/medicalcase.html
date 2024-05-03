@@ -57,6 +57,9 @@
 
 </head>
 <body style="background-color: #ecf0f0; ">
+	<div id="left-curtain"></div>
+	<div id="right-curtain"></div>
+		  
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
@@ -311,11 +314,11 @@
 				</li>
 
 				<li class="head-responsive-right pull-right" style="margin-top: -9px;">
-					<div class="header-top-right" >
-						<ul>
-							<nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+					<div class="header-top-right" style="z-index: 1;">
+						<ul style="z-index: 1;">
+							<nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000" style="z-index: 1;">
 
-								<div class="navbar-header">
+								<div class="navbar-header" style="z-index: 1;">
 									   
 									<a class="navbar-brand" href="index.html" style="margin-right:15px; margin-top: -20px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
 									<li class="header-top-contact" style="color:rgb(30, 102, 105); ">
@@ -887,6 +890,20 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   }
 	});
 	</script>
+	<script>
+window.addEventListener("load", function() {
+  const leftCurtain = document.getElementById("left-curtain");
+  const rightCurtain = document.getElementById("right-curtain");
 
+  leftCurtain.style.transition = "transform 1s ease-in-out";
+  rightCurtain.style.transition = "transform 1s ease-in-out";
+
+  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
+  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
+});
+
+
+</script>  
+  
 <!--explore end -->
 </body>
