@@ -1,0 +1,891 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+
+	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+
+    <!--font-family-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
+    <!-- title of site -->
+    <title>Directory Landing Page</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+   
+    <!--font-awesome.min.css-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!--linear icon css-->
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+
+    <!--animate.css-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!--flaticon.css-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+
+    <!--slick.css-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="assets/css/bootsnav.css" >	
+    
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!--responsive.css-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!--explore start -->
+<!-- <section id="explore" class="explore">
+	<div class="container">
+		<div class="section-header">
+			<h2>explore</h2>
+			<p>Explore New place, food, culture around the world and many more</p> -->
+			<div id="popup">
+				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
+				<form class="popupcontent" id="form1">
+					<div class="border">
+					<label for="Governerate" style="color: black;">Governerate</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="governrate1" name="Governerate" value="Cairo">
+					<label for="governrate1">Cairo</label>
+					<br></div>
+					
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="governrate2" name="Governerate" value="Alexandria">
+					<label for="governrate2">Alexandria</label>
+					<br></div>
+					</div>
+					<br><br>
+					<div class="border">
+						<label for="area" style="color: black;">Area</label>
+						<br>
+						<div class="checkbox-container"> 
+						<input type="checkbox" id="area1" name="area" value="5th Settlement">
+						<label for="area">5th Settlement</label>
+						<br></div>
+						<br>
+						<div class="checkbox-container"> 
+						<input type="checkbox" id="area2" name="area" value="Masr Elgedida">
+						<label for="area2">Masr Elgedida</label>
+						<br></div>
+					</div>
+					<br><br>
+					<div class="border">
+					<label for="hospital" style="color: black;">Organisation Name</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="alshefaHospital" name="hospital" value="Help center">
+					<label for="alshefaHospital">Help center</label>
+					<br></div>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="elGawyHospital" name="hospital" value="DonateExperience">
+					<label for="elGawyHospital">DonateExperience</label>
+					<br></div>
+				</div>
+				<br><br>
+				<div class="border">
+					<label for="hospital" style="color: black;">Speciality</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="alshefaHospital" name="speciality" value="Heart">
+					<label for="alshefaHospital">Heart</label>
+					<br></div>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="elGawyHospital" name="speciality" value="Bones">
+					<label for="elGawyHospital">Bones</label>
+					<br></div>
+				</div>
+				<br> <br>
+				  </form>
+				  <button id="closePopup">Apply</button>
+			  </div>
+
+			  <div id="popup1">
+				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+					<h2><a href="#">In Need of teachers</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
+						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Montazah
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Halp Center</label>
+						 <label class="speciality"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Heart
+						</label>
+						</p>
+					<div>
+						<div>
+						<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Farah Ahmed</label>
+						</div>
+						<div>
+						<i class="fa-solid fa-venus-mars" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Female</label>
+						</div>
+						<div>
+							<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">21 years old</label>
+							</div>
+							<div>
+								<i class="fa-solid fa-scale-balanced" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">61 KG</label>
+								</div>
+							<div>
+								<i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">Abrag El mohandesin, Corniche El Maadi</label>
+								</div>
+
+					</div>
+					<div>
+						<p>Description: In need of heart doctors</p>
+					</div>
+					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+
+					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
+			  </div>
+
+			  <div id="popup2">
+				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+					<h2><a href="#">Probono Teaching Needed</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
+						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							5th Settlement
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">DonateExperience</label>
+						 <label class="speciality"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Bones
+						</label>
+						</p>
+					<div>
+						<div>
+							<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Karen Maged</label>
+							</div>
+							<div>
+							<i class="fa-solid fa-venus-mars" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Female</label>
+							</div>
+							<div>
+								<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">21 years old</label>
+								</div>
+								<div>
+									<i class="fa-solid fa-scale-balanced" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">65 KG</label>
+									</div>
+								<div>
+									<i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">Narges 8, 5th settlement</label>
+									</div>
+	
+						</div>
+						<div>
+							<p>Description: In need of bones doctors</p>
+						</div>
+						<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+	
+						<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
+			  </div>
+
+			  <div id="popup3">
+				<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+					<h2><a href="#">Teacher is needed</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
+						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Masr Elgedida
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Help Center</Center></label>
+						 <label class="speciality"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Bones
+						</label>					
+						</p>
+					<div>
+						<div>
+							<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Rose Bassem</label>
+							</div>
+							<div>
+							<i class="fa-solid fa-venus-mars" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Female</label>
+							</div>
+							<div>
+								<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">21 years old</label>
+								</div>
+								<div>
+									<i class="fa-solid fa-scale-balanced" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">61 KG</label>
+									</div>
+								<div>
+									<i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">Roxy, Masr elgedida</label>
+									</div>
+	
+						</div>
+						<div>
+							<p>Description: In need of Bones doctors</p>
+						</div>
+						<div id="map3" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+	
+						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
+			  </div>
+			  <div id="popupapply">
+				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+				<label > Please fill in this form as part of the donation procedure</label>
+				<form class="file-upload-form">
+				  <label for="file" class="file-upload-label">
+					Upload graduation certificate for verification
+					<br>
+					<div class="file-upload-design">
+					  <svg viewBox="0 0 640 512" height="1em">
+						<path
+						  d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
+						/>
+					  </svg>
+					  <p>Drag and Drop</p>
+					  <p>or</p>
+					  <span class="browse-button">Browse file</span>
+					</div>
+					<input id="file" type="file" />
+					<span id="fileError" class="error-message" style="color: red;"></span>
+				  </label>
+				</form>
+				<div class="containerapply">
+				  <div class="date-time">
+					<h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for teaching</h2>
+					<input type="date" id="datepicker">
+					<span id="dateError" class="error-message" style="color: red;"></span>
+					<h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will be available in for teaching</h2>
+					<input type="time" id="timepicker">
+					<span id="timeError" class="error-message" style="color: red;"></span>
+				  </div>
+				  <button id="submitButton">Submit</button>
+				</div>
+			  </div>
+			  <div id="message" class="hidden"> <p>Done!</p>
+			  </div>
+		<!--/.section-header-->
+		
+		<header id="header-top" class="header-top"  style="background-color: #ecd8f6;">
+			<ul>
+				<li>
+					<div class="header-top-left" >
+						<ul>
+							<label style="color:black">LOGO</label>
+						</ul>
+					</div>
+				</li>
+				<li class="head-responsive-right pull-right" style="margin-top: -9px;">
+					<div class="header-top-right" >
+						<ul>
+							<li class="header-top-contact">
+								+201061064544
+							</li>
+							<li class="header-top-contact">
+								<a href="#"><i class="fa-solid fa-user" style="font-size: 20px ;"></i></a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+					
+		</header><!--/.header-top-->
+		<!--header-top end -->
+		 
+		  <section class="top-area" style="background-color: #ecd8f6;">
+			<div class="header-area">
+				<!-- Start Navigation -->
+			    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+					<div class="navbar-header">
+			               
+						<a class="navbar-brand" href="index.html" style="margin-left:20px; margin-top: -20px;"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+
+					</div>
+			    </nav><!--/nav-->
+			    <!-- End Navigation -->
+			</div><!--/.header-area-->
+		    <div class="clearfix"></div>
+
+		</section>
+		<div class="welcome-hero-serch-box">
+			<div class="welcome-hero-form" style="height: 50px; margin-top: -30px; transform: translate(520px,0px);">
+				<div class="single-welcome-hero-form">
+					<h3></h3>
+					<form action="index.html">
+						<input type="text" placeholder="" />
+					</form>
+					
+				</div>
+				
+			</div>
+			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
+				<button class="welcome-hero-btn" style="height:45px ; width:50px ;" onclick="window.location.href='#'">
+					   <i class="fa-solid fa-magnifying-glass" style="color: white;"></i> 
+				</button>
+			</div>
+		</div>
+		
+		  
+		<div class="explore-content" id="explore-content">
+			
+			<div id="openPopup">
+				<button style="font-size: 20px; padding-right:3px ;">Filter</button>
+				<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
+			  </div>
+					<div class="single-explore-item">
+						<div class="single-explore-txt bg-theme-4">
+							<h2><a href="#">In Need of Doctor</a></h2>
+							<p class="explore-rating-price">
+								<span class="explore-rating">5.0</span>
+								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
+								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+									Montazah
+									
+								</label>
+								
+								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Help center</label>
+								 <label class="speciality"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+									Heart
+								</label>
+							</p>
+							
+							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+								<div class="row">
+									<div class="col-sm-5">
+										<button class="close-btn open-btn"   id ="openpostdetails1">View Details</button>
+									</div>
+									<div class="col-sm-7">
+										<div class="explore-map-icon">
+											<a href="#"><i data-feather="map-pin"></i></a>
+											<a href="#"><i data-feather="upload"></i></a>
+											<a href="#"><i data-feather="heart"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+			
+				<div class="single-explore-item">
+					<div class="single-explore-txt bg-theme-4">
+						<h2><a href="#">Probono Visits Needed</a></h2>
+						<p class="explore-rating-price">
+							<span class="explore-rating">5.0</span>
+							<label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">Cairo</label> 
+							<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+								5th Settlement
+								
+							</label>
+							 <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">DonateExperience</label>
+						     <label class="speciality"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+								Bones
+							</label>
+							</p>
+						
+						<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+							<div class="row">
+								<div class="col-sm-5">
+									<button class="close-btn open-btn"    id ="openpostdetails2">View Details</button>
+								</div>
+								<div class="col-sm-7">
+									<div class="explore-map-icon">
+										<a href="#"><i data-feather="map-pin"></i></a>
+										<a href="#"><i data-feather="upload"></i></a>
+										<a href="#"><i data-feather="heart"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			<div class="single-explore-item">
+				<div class="single-explore-txt bg-theme-4">
+					<h2><a href="#">Doctor is needed</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
+						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Masr Elgedida
+							
+						</label>
+						<label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Help center</label>
+					    <label class="speciality"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Bones
+						</label>
+					</p>
+					
+					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+						<div class="row">
+							<div class="col-sm-5">
+								<button class="close-btn open-btn"   id ="openpostdetails3">View Details</button>
+							</div>
+							<div class="col-sm-7">
+								<div class="explore-map-icon">
+									<a href="#"><i data-feather="map-pin"></i></a>
+									<a href="#"><i data-feather="upload"></i></a>
+									<a href="#"><i data-feather="heart"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	<!--/.container-->
+
+</section><!--/.explore-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+				
+				<div class="hm-footer-copyright">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social">
+								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<a href="#"><i class="fa fa-facebook"></i></a>	
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-google-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!--/.hm-footer-copyright-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.footer-->
+
+
+
+
+
+<script>
+	const popup = document.getElementById('popup');
+	const openPopupBtn = document.getElementById('openPopup');
+	const closePopupBtn = document.getElementById('closePopup');
+  
+	openPopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'block';
+	});
+  
+	closePopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'none';
+	});
+  </script>
+
+
+
+
+
+  <script>
+	const popup1 = document.getElementById('popup1');
+	const popup7= document.getElementById('popupapply');
+	const openPopupBtn1 = document.getElementById('openpostdetails1');
+	const closePopupBtn1 = document.getElementById('closePopup1');
+  
+	openPopupBtn1.addEventListener('click', function() {
+	  popup1.style.display = 'block';
+	});
+  
+	closePopupBtn1.addEventListener('click', function() {
+		popup1.style.display = 'none';
+	  popup7.style.display = 'block';
+	});
+  </script>
+
+<script>
+	const popup3 = document.getElementById('popup2');
+	const popup8= document.getElementById('popupapply');
+
+	const openPopupBtn2 = document.getElementById('openpostdetails2');
+	const closePopupBtn2 = document.getElementById('closePopup2');
+  
+	openPopupBtn2.addEventListener('click', function() {
+	  popup3.style.display = 'block';
+	});
+  
+	closePopupBtn2.addEventListener('click', function() {
+		popup3.style.display = 'none';
+	  popup8.style.display = 'block';
+	});
+  </script>
+
+
+<script>
+	const popup5 = document.getElementById('popup3');
+	const popup9= document.getElementById('popupapply');
+	const openPopupBtn3 = document.getElementById('openpostdetails3');
+	const closePopupBtn3 = document.getElementById('closePopup3');
+  
+	openPopupBtn3.addEventListener('click', function() {
+	  popup5.style.display = 'block';
+	});
+  
+	closePopupBtn3.addEventListener('click', function() {
+		popup5.style.display = 'none';
+	  popup9.style.display = 'block';
+	});
+  </script>
+
+
+
+  <script>
+  const clearAllButton = document.getElementById('clearall');
+	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	
+	clearAllButton.addEventListener('click', () => {
+	  checkboxes.forEach(checkbox => checkbox.checked = false);
+	});</script>
+
+
+<script>
+	const applyButton = document.getElementById('closePopup');
+const checkboxForm = document.getElementById('form1'); // Assuming ID for checkbox form
+const postElements = document.querySelectorAll('.single-explore-item');
+
+applyButton.addEventListener('click', () => {
+  const selectedFilters = []; // Array to store checked checkbox values
+  
+  // Loop through checkboxes in the form
+  const checkboxes = checkboxForm.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      selectedFilters.push({value: checkbox.value, name:checkbox.name}); // Add checked checkbox value to array
+    }
+  });
+  if(selectedFilters.length===0){
+	const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+	postElements.forEach(post=>{
+		post.classList.remove('hidden');
+		
+	})
+    
+	return;
+  }
+
+  let allPostsHidden = true;
+
+  postElements.forEach(post => {
+    let showPost = false; // Assume post is initially hidden
+
+    // Check if any selected filter matches post data
+	for (const filterValue of selectedFilters) {
+let textbx= null;
+      if(filterValue.name.toLocaleLowerCase() === "Governerate".toLocaleLowerCase()){
+        textbx=post.querySelector('.city');
+} 
+else if(filterValue.name.toLocaleLowerCase() === "area".toLocaleLowerCase()){
+textbx=post.querySelector('.area');
+}
+else if(filterValue.name.toLocaleLowerCase() === "speciality".toLocaleLowerCase()){
+textbx=post.querySelector('.speciality');
+}
+else {
+textbx=post.querySelector('.hospital');
+}
+
+      
+      const textbxText = textbx? textbx.textContent.trim() : '';
+
+      if (textbxText.toLocaleLowerCase()===filterValue.value.toLocaleLowerCase()) { // Adjust comparison based on your data format
+        showPost = true; // Show post if filter matches
+        // Exit inner loop if a match is found (optional)
+      }
+   else{
+       showPost=false;
+       break;
+    }
+    };
+
+    if (showPost) {
+      post.classList.remove('hidden');
+	  allPostsHidden = false; // Update flag if a match is found
+ // Remove hidden class if visible
+    } else {
+      post.classList.add('hidden'); // Add hidden class if not visible
+    }
+  });
+  const exploreContent = document.getElementById('explore-content');
+const existingMessage = exploreContent.querySelector('.no-posts-message');
+  if (allPostsHidden && !existingMessage) {
+    // Display "No posts" message (optional: create a separate element)
+    const noPostsElement = document.createElement('p'); // Create a paragraph element
+    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
+    // Append the element to the appropriate container in your HTML structure
+
+    // (Example: assuming you have a container with ID "filter-results")
+   exploreContent.appendChild(noPostsElement);
+  } else if(!allPostsHidden && existingMessage) {
+    // Remove any previously displayed "No posts" message (optional)
+    const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+  }
+});
+
+</script>   
+
+
+
+
+<script>
+
+function initMap() { 
+        var test= {lat: -25.363, lng: 131.044}; 
+        var map = new google.maps.Map(document.getElementById('map'), { 
+          zoom: 4, 
+          center: test 
+        }); 
+        var marker = new google.maps.Marker({ 
+          position: test, 
+          map: map 
+        }); 
+
+
+	
+			var map2 = new google.maps.Map(document.getElementById('map2'), { 
+			  zoom: 4, 
+			  center: test 
+			}); 
+			var marker = new google.maps.Marker({ 
+			  position: test, 
+			  map: map2
+			}); 
+
+
+			var map3 = new google.maps.Map(document.getElementById('map3'), { 
+			  zoom: 4, 
+			  center: test 
+			}); 
+			var marker = new google.maps.Marker({ 
+			  position: test, 
+			  map: map3
+			}); 
+
+
+      } 
+
+//initMap();
+
+
+
+</script>
+<script async defer 
+src= 
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
+</script> 
+
+
+
+<script>
+	const closeButton = document.getElementById('closeButton');
+const popup2 = document.getElementById('popup1');
+
+closeButton.addEventListener('click', () => {
+  popup2.style.display = 'none'; // Hide the popup
+});
+</script>
+
+<script>
+	const closeButton2 = document.getElementById('closeButton2');
+const popup4 = document.getElementById('popup2');
+
+closeButton2.addEventListener('click', () => {
+  popup4.style.display = 'none'; // Hide the popup
+});
+</script>
+
+<script>
+	const closeButton4 = document.getElementById('closepopupapply');
+const popup11 = document.getElementById('popupapply');
+
+closeButton4.addEventListener('click', () => {
+  popup11.style.display = 'none'; // Hide the popup
+});
+</script>
+
+
+<script>
+	const closeButton3 = document.getElementById('closeButton3');
+const popup6 = document.getElementById('popup3');
+
+closeButton3.addEventListener('click', () => {
+  popup6.style.display = 'none'; // Hide the popup
+});
+</script>
+<script>
+	const submitButton = document.getElementById('submitButton');
+const messageElement = document.getElementById('message');
+const popup10 = document.getElementById('popupapply');
+const fileInput = document.getElementById('file');
+const datePicker = document.getElementById('datepicker');
+const timePicker = document.getElementById('timepicker');
+const fileError = document.getElementById('fileError');
+const dateError = document.getElementById('dateError');
+const timeError = document.getElementById('timeError');
+submitButton.addEventListener('click', () => {
+	let hasError = false; // Flag to track if any errors are found
+
+  // Check if file input is empty
+  if (fileInput.value === '') {
+    fileError.textContent = 'Please upload a graduation certificate.';
+    hasError = true;
+  } else {
+    fileError.textContent = ''; // Clear previous error message
+  }
+
+  // Check if date picker has a value
+  if (datePicker.value === '') {
+    dateError.textContent = 'Please select a date.';
+    hasError = true;
+  } else {
+    dateError.textContent = ''; // Clear previous error message
+  }
+
+  // Check if time picker has a value
+  if (timePicker.value===''){
+      timeError.textContent='Please select a time.';
+	  hasError=true;
+  }
+  else{
+	timeError.textContent='';
+  }
+
+  if(!hasError){
+	fileError.textContent='';
+	dateError.textContent='';
+	timeError.textContent='';
+  messageElement.classList.remove('hidden'); // Show the message
+   popup10.style.display='none';
+  // Simulate a transition effect (using setTimeout for simplicity)
+  setTimeout(() => {
+    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
+  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+}
+});
+
+</script>
+
+<script>
+	const searchInput = document.querySelector('.single-welcome-hero-form input');
+	const exploreItems = document.querySelectorAll('.single-explore-item');
+	
+	// Add click event listener to the search div
+	const searchDiv = document.querySelector('.welcome-hero-serch');
+	
+
+	searchDiv.addEventListener('click', () => {
+		const searchText = searchInput.value.trim();
+		console.log(searchText); // Remove leading/trailing whitespaces
+		if(searchText === ''){
+			console.log(searchText); // Remove leading/trailing whitespaces
+
+			const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+		exploreItems.forEach(exploreItem=>{
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		});
+		return;
+	}
+	let allPostsHidden=true;
+	  exploreItems.forEach(exploreItem => {
+		const hospitalLabel = exploreItem.querySelector('.hospital');
+		const specLabel = exploreItem.querySelector('.speciality');
+
+		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
+	
+		const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
+
+		
+		  
+	
+		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase() || searchText.toLocaleLowerCase() === specText.toLocaleLowerCase()) {
+			allPostsHidden=false;
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		  }
+		  else{
+			exploreItem.classList.add('hidden'); // Show if hospital matches search
+
+		  }
+		
+	  });
+const exploreContent = document.getElementById('explore-content');
+const existingMessage = exploreContent.querySelector('.no-posts-message');
+  if (allPostsHidden && !existingMessage) {
+    // Display "No posts" message (optional: create a separate element)
+    const noPostsElement = document.createElement('p'); // Create a paragraph element
+    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
+    // Append the element to the appropriate container in your HTML structure
+
+    // (Example: assuming you have a container with ID "filter-results")
+   exploreContent.appendChild(noPostsElement);
+  } else if(!allPostsHidden && existingMessage) {
+    // Remove any previously displayed "No posts" message (optional)
+    const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+  }
+	});
+	</script>
+
+<!--explore end -->
+</body>
