@@ -42,7 +42,7 @@ font-family: 'Roboto', sans-serif;
 body{
 	font-family: 'Poppins', sans-serif;
 	font-size:14px;
-	color: #f7eaff;
+	color: linear-gradient(to left, #7a60ff, #cd9ffa);;
     text-transform:initial;
     max-width:1920px;
     margin:0 auto;
@@ -60,7 +60,7 @@ a,a:hover,a:active,a:focus {
 }
 h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
-	color:#343a3f;
+	color:#020202;
     font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
@@ -121,7 +121,8 @@ html,body{height: 100%;}
 /*-------------------------------------
         2. Header-top
 --------------------------------------*/
-.header-top{border-bottom:1px solid #f6f8fa;}
+.header-top{padding-top:0px; background: #ecf0f0; }
+
 
 .header-top ul li {display: inline-block;}
 
@@ -129,12 +130,12 @@ html,body{height: 100%;}
 
 /*.select-opt*/
 .select-opt,.header-top-contact{
-    padding: 10px 18px;
-    border-right: 1px solid #f6f8fa;
+    padding: 10px 20px;
+    border-right: 1px solid rgb(30, 102, 105);
 }
 .header-top-contact{
     border-right: 0;
-    border-left: 1px solid #f6f8fa;
+    border-left: 1px solid rgb(30, 102, 105);
     font-size: 12px;
 }
 .select-opt select {
@@ -169,7 +170,7 @@ html,body{height: 100%;}
         3. Top-area
 --------------------------------------*/
 nav.navbar.bootsnav {
-    background-color:#fff;
+    background-color:#ecf0f0;
     border-bottom: transparent;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
@@ -335,10 +336,10 @@ ul{
 .welcome-hero-serch-box{margin-top: 78px;display: flex;}
 .welcome-hero-form {
     display: flex;
-    background: #fff;
+    background: #ecf0f0;
     height: 70px;
     border-radius: 3px;
-    width: 30%;
+    width: 85%;
 }
 .counter-container {
     display: flex; /* Make the container a flexbox */
@@ -401,7 +402,7 @@ ul{
     color:  #fff;
     width:  170px;
     height:  70px;
-    background:  #ff545a;
+    background:  #7a60ff;
     text-transform:  capitalize;
     margin-left:  30px;
     border-radius: 3px;
@@ -411,7 +412,10 @@ ul{
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.welcome-hero-btn:hover{/*background: #fd4043;*/background: #f43032;}
+.welcome-hero-btn:hover{/*background: #fd4043;*/background:white; color: #7a60ff;}
+.welcome-hero-btn button, .welcome-hero-btn.fa-solid.fa-magnifying-glass:hover{
+  color: inherit;
+}
 
 .welcome-hero-btn svg {
     width:  14px;
@@ -524,11 +528,16 @@ ul{
 }
 .explore-content{ display: flex;
     flex-wrap: wrap;
-    margin-top: 78px;}
+    margin-top: 78px;
+  padding:20px;}
 
 .single-explore-item {
+  height: 200px;
     flex: 1 0 30%;
-    background: #fff;
+    /* background: linear-gradient(to left, #7a60ff, #cd9ffa); */
+   background: linear-gradient( to right,  rgb(74, 147, 149),  rgb(92, 182, 183))
+   ;
+
     border: 1px solid #edeff1;
     border-radius: 3px;
     margin-bottom: 25px;
@@ -561,6 +570,14 @@ margin: 10px;
     -ms-transition: .3s linear;
     -o-transition: .3s linear;
     transition: .3s linear;
+}
+.single-explore-item h2,
+.single-explore-item label {
+  color: white !important;
+  font-size: 15px;
+}
+.single-explore-item label {
+  border-right: 1px solid white !important;
 }
 .single-explore-item:hover .single-explore-img-info{
     opacity:1;
@@ -605,7 +622,7 @@ margin: 10px;
 .single-explore-txt.bg-theme-1 .explore-rating{background: #70a9ff;}
 .single-explore-txt.bg-theme-2 .explore-rating{background: #00c61c;}
 .single-explore-txt.bg-theme-3 .explore-rating{background: #ffcc5d;}
-.single-explore-txt.bg-theme-4 .explore-rating{background: #bd70ff;}
+.single-explore-txt.bg-theme-4 .explore-rating{background: rgb(5, 14, 56);}
 .single-explore-txt.bg-theme-5 .explore-rating{background: #ff7a40;}
 
 .explore-rating-price,.explore-rating-price a {
@@ -646,13 +663,14 @@ margin: 10px;
 }
 .explore-person p {font-size: 12px;}
 .explore-open-close-part {
-    margin-top: 20px;
+
+    margin-top: 35px;
 }
 .close-btn {
     color: #f63138;
     text-transform: capitalize;
 }
-.close-btn.open-btn {color: #00c437;}
+.close-btn.open-btn {color: white; border-radius: 5px!important; border-color:1px solid white!important; margin-top: 10px; padding-top: 10px; font-size:12px; font-weight: bold;}
 .explore-map-icon{text-align: right;}
 .explore-map-icon a svg {
     width: 12px;
@@ -1359,6 +1377,8 @@ background-color:transparent;
     -o-transition:.3s;
     transition: .3s;
 }
+
+
 .footer-social a {
     width: 35px;
     height: 35px;
@@ -1368,15 +1388,12 @@ background-color:transparent;
     border-radius: 50%;
 }
 .footer-social span {margin-right:15px;margin-left: 0;color: #a5adb3;}
-.footer-social span:hover{color: #ff545a;}
-.footer-social a:hover {background:#ff545a;color: #fff;}
-
-.footer {
-  /*flex: 0 0 auto; /* Set footer to fixed height */
+/* .footer {
+  /*flex: 0 0 auto; /* Set footer to fixed height 
   position: fixed;
   bottom: 0;
-  width: 100px; /* Adjust the height as needed */
-}
+  width: 0px; /* Adjust the height as needed 
+} */
 .file-upload-form {
     width: fit-content;
     height: fit-content;
@@ -1425,7 +1442,7 @@ background-color:transparent;
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f7eaff;
+    background-color: linear-gradient(to left, #7a60ff, #cd9ffa);;
     padding: 0px;
   }
   
@@ -1591,15 +1608,20 @@ background-color:transparent;
     display: flex;
     justify-content: center; /* Center content horizontally */
     position: absolute; /* Position the div absolutely */
-    top: 200px; /* Positions at the top of viewport */
-    right: 15px; /* Positions at the right of viewport */
+    top: 150px; /* Positions at the top of viewport */
+    right: 20px; /* Positions at the right of viewport */
     width: 85px; /* Adjust as needed */
     border-radius: 10px;
-    background-color: red;
-    color: white;
+    background-color:rgb(30, 102, 105);
+    color: #ecf0f0;
     box-sizing: border-box; /* Include padding in width calculation */
     padding: 5px; /* Adjust padding as needed */
     margin-right:10px;
+    -webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
   }
   #map, #map2, #map3{
     height: 25%;
@@ -1632,8 +1654,8 @@ background-color:transparent;
   }
   
   #openPopup:hover {
-    background-color: white;
-    color: red;
+    background-color: #ecf0f0;
+    color: rgb(30, 102, 105);
     cursor: pointer;
   }
   
@@ -1668,8 +1690,8 @@ h4{
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f7eaff;
-    padding: 20px;
+    background-color: linear-gradient(to left, #7a60ff, #cd9ffa);;
+    padding: 0px;
   }
   
   .radio-group {
@@ -1827,12 +1849,48 @@ h4{
     padding: 5px 10px;
 
 }
+#footercontainer{
+  background-color: linear-gradient(to left, #7a60ff, #cd9ffa);
+}
 
 
 
+/*========================Thank you=================*/
+#openpostdetails1, #openpostdetails2, #openpostdetails3{
+border:1px solid white;
+}
+.explore-open-close-part button {
+  text-align: center; /* Center the text inside the button */
+  padding: 10px 20px; /* Increase button size with padding */
+ /* Increase font size of the button text (optional) */
+}
+.welcome-hero-btn:hover, .fa-solid.fa-magnifying-glass:hover {
+  background-color: white !important;
+  color: #7a60ff !important; /* This will affect both the icon and text if any */
+}
+.welcome-hero-btn i {
+  color: #fefdff; /* This will affect both the icon and text if any */
+}
 
-/*========================Thank you=================
 
 
+#left-curtain, #right-curtain {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+background-color: cadetblue;
+  background-size: cover;
+  z-index: 2 !important;
+}
+
+#left-curtain {
+  left: 0;
+  width: 50vw;  /* Adjust width for desired curtain size */
+}
+
+#right-curtain {
+  right: 0;
+  width: 50vw;  /* Adjust width for desired curtain size */
+}
 
 
