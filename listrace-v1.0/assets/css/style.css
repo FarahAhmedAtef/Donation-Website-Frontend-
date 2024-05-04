@@ -58,6 +58,13 @@ a,a:hover,a:active,a:focus {
     font-weight: 500;
     text-transform: capitalize;
 }
+.single-explore-item h2 a{
+  color:rgb(5, 14, 56);
+  font-weight: bolder; font-size: 18px;
+}
+.explore-rating-price label{
+  padding-right:7px !important;
+}
 h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
 	color:#020202;
@@ -121,7 +128,19 @@ html,body{height: 100%;}
 /*-------------------------------------
         2. Header-top
 --------------------------------------*/
-.header-top{padding-top:0px; background: #ecf0f0; }
+.centered-text {
+  position: absolute; /* Absolute positioning for precise control */
+  top: 50%; /* Vertical centering at 50% */
+  transform: translateY(-50%); /* Adjust vertical position if needed */
+  left: 50%; /* Horizontal centering at 50% */
+  transform: translateX(-50%); /* Adjust horizontal position if needed */
+  font-style: italic; /* Make text italic */
+}
+
+.centered-text span:last-child {
+  color: black; /* Set color for "Difference" */
+}
+.header-top{padding-top:0px; background: #ecf0f0; box-shadow: 0 5px 5px #b3b6b6;}
 
 
 .header-top ul li {display: inline-block;}
@@ -130,7 +149,7 @@ html,body{height: 100%;}
 
 /*.select-opt*/
 .select-opt,.header-top-contact{
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-right: 1px solid rgb(30, 102, 105);
 }
 .header-top-contact{
@@ -181,7 +200,7 @@ nav.navbar.bootsnav {
     color: #1b1e20;
     font-size: 20px;
     font-weight: 700;
-    padding: 34px 0px;
+    padding: 3px 0px;
     text-transform:capitalize;
 }
 .navbar-header a.navbar-brand span{display: inline-block;color:#ff545a;text-transform:capitalize;}
@@ -345,19 +364,24 @@ ul{
     display: flex; /* Make the container a flexbox */
     align-items: center; /* Align buttons and counter vertically */
   }
+ 
+  
+
   #closePopup1, #closePopup2, #closePopup3 {
     /* Existing styles: color: white; */
-    background-color: green; color:white;
+    background-color:rgb(5, 14, 56);;
+    color: #ecf0f0;
+    border: none; /* Remove border for cleaner look */
+    cursor: pointer; /* Indicate clickable behavior */
     margin-top: 30px;
     border-radius: 10px;
     padding: 10px 20px; /* Optional: Adjust padding as needed */
-    border: none; /* Optional: Remove border if desired */
-    cursor: pointer; /* Indicate clickable behavior on hover */
   }
   
   #closePopup1:hover,   #closePopup2:hover, #closePopup3:hover{
-    background-color: white;
-    color: green;
+    background-color: transparent;
+    color: rgb(5, 14, 56);
+    font-weight:bold;
   }
   
   
@@ -412,10 +436,9 @@ ul{
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.welcome-hero-btn:hover{/*background: #fd4043;*/background:white; color: #7a60ff;}
-.welcome-hero-btn button, .welcome-hero-btn.fa-solid.fa-magnifying-glass:hover{
-  color: inherit;
-}
+.welcome-hero-btn:hover{/*background: #fd4043;*/background:#ecf0f0; color:rgb(30, 102, 105)!important;}
+.welcome-hero-btn button, .welcome-hero-btn i:hover{
+  background:#ecf0f0; color:rgb(30, 102, 105)!important;}
 
 .welcome-hero-btn svg {
     width:  14px;
@@ -526,7 +549,9 @@ ul{
     padding:117px 0 95px;
     background: #f8fafb;
 }
-.explore-content{ display: flex;
+.explore-content{ 
+ 
+  display: flex;
     flex-wrap: wrap;
     margin-top: 78px;
   padding:20px;}
@@ -537,8 +562,7 @@ ul{
     /* background: linear-gradient(to left, #7a60ff, #cd9ffa); */
    background: linear-gradient( to right,  rgb(74, 147, 149),  rgb(92, 182, 183))
    ;
-
-    border: 1px solid #edeff1;
+    box-shadow: 0 5px 5px rgb(92, 182, 183);
     border-radius: 3px;
     margin-bottom: 25px;
     -webkit-transition: .3s linear; 
@@ -1335,7 +1359,7 @@ background-color:transparent;
 .footer-menu {padding: 45px 0;}
 .footer-menu .navbar-header{padding:0;}
 .footer-menu .navbar-header a.navbar-brand,.footer-menu.footer-menu .navbar-header a.navbar-brand:hover,.footer-menu .navbar-header a.navbar-brand:focus{
-    padding:0;
+    padding:2;
     height: 0;
 }
 .footer-menu ul.footer-menu-item{text-align: right;}
@@ -1578,8 +1602,8 @@ background-color:transparent;
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
     left: 50%; /* Position horizontally at 50% (center) */
-    transform: translate(-50%, -50%); /* Translate to adjust position */
-    background-color: white; /* Set background color */
+     transform: translate(-50%, -50%); /*Translate to adjust position */
+    background: linear-gradient( to right,  rgb(74, 147, 149),  rgb(92, 182, 183));
     padding: 20px; /* Add padding for content */
     border: 1px solid #ccc; /* Add a border */
     border-radius: 5px; /* Add rounded corners */
@@ -1588,19 +1612,66 @@ background-color:transparent;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
     /* Adjust width and height as needed */
     width: 400px; /* Example width */
-    height: 550px; /* Example height */
+    height: 450px; /* Example height */
    
   }
+  #popup.explore-rating-price.explore-rating label,  #popup1.explore-rating-price.explore-rating label, #popup2.explore-rating-price.explore-rating label, #popup3.explore-rating-price.explore-rating label{
+    color:#ecf0f0 !important;
+    border-right: 1px solid #ecf0f0;
+  } 
+  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a{
+    color:rgb(5, 14, 56);
+    font-size: 15px;
+    font-weight: bold;
+  }
   
+  .explore-rating-price .city,
+  .explore-rating-price .area,
+  .explore-rating-price .hospital,
+  .explore-rating-price .speciality {
+    padding-right: 7px;
+    border-right: 1px solid white!important;
+    color: white;
+  }
+  #popup1 .explore-rating-price .explore-rating,  #popup2 .explore-rating-price .explore-rating,  #popup3 .explore-rating-price .explore-rating {
+    background-color: rgb(5, 14, 56);
+    color: white;
+  }
+#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3, #popup #closeButton0 {
+  font-size: 20px;
+  padding-bottom: 4px;
+}
+  #popup1 div div i,
+  #popup1 div div label,  #popup2 div div i,
+  #popup2 div div label,  #popup3 div div i,
+  #popup3 div div label {
+    color:rgb(5, 14, 56) !important;
+  }
+  #popup1 p,  #popup2 p,  #popup3 p{
+    color: white;
+  }
   /* Prevent content behind popup from being interactive (Optional) */
   body.popup-open {
     overflow: hidden; /* Prevent scrolling */
   }
   .popupcontent {
-    display: flex;
-  flex-direction: column;  /* Stack elements vertically */
-  justify-content: center;  /* Center content horizontally */
-  align-items: center; 
+    display: grid;
+    grid-template-columns: 1fr; /* Define a single column */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .popupcontent .border,
+  .popupcontent label {
+    text-align: left; /* Align text to the left within the centered elements */
+  }
+  #popup #clearall, #popup #closePopup{
+    margin-top: 10px;
+    border: 1px solid rgb(5, 14, 56);
+    border-radius: 5px;
+    color: rgb(5, 14, 56);
+    font-weight: bold;
+    padding: 5px 5px;
   }
   #openPopup {
     margin-top: 20px; /* Adjust margin as needed */
@@ -1608,7 +1679,7 @@ background-color:transparent;
     display: flex;
     justify-content: center; /* Center content horizontally */
     position: absolute; /* Position the div absolutely */
-    top: 150px; /* Positions at the top of viewport */
+    top: 190px; /* Positions at the top of viewport */
     right: 20px; /* Positions at the right of viewport */
     width: 85px; /* Adjust as needed */
     border-radius: 10px;
@@ -1623,8 +1694,8 @@ background-color:transparent;
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
   }
-  #map, #map2, #map3{
-    height: 25%;
+  #map, #map2, #map3, #map4{
+    height: 30%;
   }
   .price-tag {
     background-color: #4285F4;
@@ -1865,11 +1936,12 @@ border:1px solid white;
  /* Increase font size of the button text (optional) */
 }
 .welcome-hero-btn:hover, .fa-solid.fa-magnifying-glass:hover {
-  background-color: white !important;
-  color: #7a60ff !important; /* This will affect both the icon and text if any */
+  background-color: #ecf0f0 !important;
+  color:rgb(30, 102, 105)  !important;
+  i{color:rgb(30, 102, 105) ;} /* This will affect both the icon and text if any */
 }
 .welcome-hero-btn i {
-  color: #fefdff; /* This will affect both the icon and text if any */
+  color: #ecf0f0; /* This will affect both the icon and text if any */
 }
 
 
