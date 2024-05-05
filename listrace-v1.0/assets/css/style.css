@@ -42,7 +42,7 @@ font-family: 'Roboto', sans-serif;
 body{
 	font-family: 'Poppins', sans-serif;
 	font-size:14px;
-	color:#a09e9c;
+	color: linear-gradient(to left, #7a60ff, #cd9ffa);;
     text-transform:initial;
     max-width:1920px;
     margin:0 auto;
@@ -58,9 +58,16 @@ a,a:hover,a:active,a:focus {
     font-weight: 500;
     text-transform: capitalize;
 }
+.single-explore-item h2 a{
+  color:rgb(5, 14, 56);
+  font-weight: bolder; font-size: 18px;
+}
+.explore-rating-price label{
+  padding-right:7px !important;
+}
 h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
-	color:#343a3f;
+	color:#020202;
     font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
@@ -121,7 +128,20 @@ html,body{height: 100%;}
 /*-------------------------------------
         2. Header-top
 --------------------------------------*/
-.header-top{border-bottom:1px solid #f6f8fa;}
+.centered-text {
+  position: absolute; /* Absolute positioning for precise control */
+  top: 50%; /* Vertical centering at 50% */
+  transform: translateY(-50%); /* Adjust vertical position if needed */
+  left: 50%; /* Horizontal centering at 50% */
+  transform: translateX(-50%); /* Adjust horizontal position if needed */
+  font-style: italic; /* Make text italic */
+}
+
+.centered-text span:last-child {
+  color: black; /* Set color for "Difference" */
+}
+.header-top{padding-top:0px; background: #ecf0f0; box-shadow: 0 5px 5px #b3b6b6;}
+
 
 .header-top ul li {display: inline-block;}
 
@@ -129,12 +149,12 @@ html,body{height: 100%;}
 
 /*.select-opt*/
 .select-opt,.header-top-contact{
-    padding: 10px 18px;
-    border-right: 1px solid #f6f8fa;
+    padding: 5px 20px;
+    border-right: 1px solid rgb(30, 102, 105);
 }
 .header-top-contact{
     border-right: 0;
-    border-left: 1px solid #f6f8fa;
+    border-left: 1px solid rgb(30, 102, 105);
     font-size: 12px;
 }
 .select-opt select {
@@ -169,7 +189,7 @@ html,body{height: 100%;}
         3. Top-area
 --------------------------------------*/
 nav.navbar.bootsnav {
-    background-color:#fff;
+    background-color:#ecf0f0;
     border-bottom: transparent;
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
@@ -180,7 +200,7 @@ nav.navbar.bootsnav {
     color: #1b1e20;
     font-size: 20px;
     font-weight: 700;
-    padding: 34px 0px;
+    padding: 3px 0px;
     text-transform:capitalize;
 }
 .navbar-header a.navbar-brand span{display: inline-block;color:#ff545a;text-transform:capitalize;}
@@ -335,7 +355,7 @@ ul{
 .welcome-hero-serch-box{margin-top: 78px;display: flex;}
 .welcome-hero-form {
     display: flex;
-    background: #fff;
+    background: #ecf0f0;
     height: 70px;
     border-radius: 3px;
     width: 85%;
@@ -344,19 +364,24 @@ ul{
     display: flex; /* Make the container a flexbox */
     align-items: center; /* Align buttons and counter vertically */
   }
-  #closePopup1 {
+ 
+  
+
+  #closePopup1, #closePopup2, #closePopup3 {
     /* Existing styles: color: white; */
-    background-color: green; color:white;
+    background-color:rgb(5, 14, 56);;
+    color: #ecf0f0;
+    border: none; /* Remove border for cleaner look */
+    cursor: pointer; /* Indicate clickable behavior */
     margin-top: 30px;
     border-radius: 10px;
     padding: 10px 20px; /* Optional: Adjust padding as needed */
-    border: none; /* Optional: Remove border if desired */
-    cursor: pointer; /* Indicate clickable behavior on hover */
   }
   
-  #closePopup1:hover {
-    background-color: white;
-    color: green;
+  #closePopup1:hover,   #closePopup2:hover, #closePopup3:hover{
+    background-color: transparent;
+    color: rgb(5, 14, 56);
+    font-weight:bold;
   }
   
   
@@ -401,7 +426,7 @@ ul{
     color:  #fff;
     width:  170px;
     height:  70px;
-    background:  #ff545a;
+    background:  #7a60ff;
     text-transform:  capitalize;
     margin-left:  30px;
     border-radius: 3px;
@@ -411,7 +436,9 @@ ul{
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.welcome-hero-btn:hover{/*background: #fd4043;*/background: #f43032;}
+.welcome-hero-btn:hover{/*background: #fd4043;*/background:#ecf0f0; color:rgb(30, 102, 105)!important;}
+.welcome-hero-btn button, .welcome-hero-btn i:hover{
+  background:#ecf0f0; color:rgb(30, 102, 105)!important;}
 
 .welcome-hero-btn svg {
     width:  14px;
@@ -522,14 +549,20 @@ ul{
     padding:117px 0 95px;
     background: #f8fafb;
 }
-.explore-content{ display: flex;
+.explore-content{ 
+ 
+  display: flex;
     flex-wrap: wrap;
-    margin-top: 78px;}
+    margin-top: 78px;
+  padding:20px;}
 
 .single-explore-item {
+  height: 200px;
     flex: 1 0 30%;
-    background: #fff;
-    border: 1px solid #edeff1;
+    /* background: linear-gradient(to left, #7a60ff, #cd9ffa); */
+   background: linear-gradient( to right,  rgb(74, 147, 149),  rgb(92, 182, 183))
+   ;
+    box-shadow: 0 5px 5px rgb(92, 182, 183);
     border-radius: 3px;
     margin-bottom: 25px;
     -webkit-transition: .3s linear; 
@@ -561,6 +594,14 @@ margin: 10px;
     -ms-transition: .3s linear;
     -o-transition: .3s linear;
     transition: .3s linear;
+}
+.single-explore-item h2,
+.single-explore-item label {
+  color: white !important;
+  font-size: 15px;
+}
+.single-explore-item label {
+  border-right: 1px solid white !important;
 }
 .single-explore-item:hover .single-explore-img-info{
     opacity:1;
@@ -605,7 +646,7 @@ margin: 10px;
 .single-explore-txt.bg-theme-1 .explore-rating{background: #70a9ff;}
 .single-explore-txt.bg-theme-2 .explore-rating{background: #00c61c;}
 .single-explore-txt.bg-theme-3 .explore-rating{background: #ffcc5d;}
-.single-explore-txt.bg-theme-4 .explore-rating{background: #bd70ff;}
+.single-explore-txt.bg-theme-4 .explore-rating{background: rgb(5, 14, 56);}
 .single-explore-txt.bg-theme-5 .explore-rating{background: #ff7a40;}
 
 .explore-rating-price,.explore-rating-price a {
@@ -646,13 +687,14 @@ margin: 10px;
 }
 .explore-person p {font-size: 12px;}
 .explore-open-close-part {
-    margin-top: 20px;
+
+    margin-top: 35px;
 }
 .close-btn {
     color: #f63138;
     text-transform: capitalize;
 }
-.close-btn.open-btn {color: #00c437;}
+.close-btn.open-btn {color: white; border-radius: 5px!important; border-color:1px solid white!important; margin-top: 10px; padding-top: 10px; font-size:12px; font-weight: bold;}
 .explore-map-icon{text-align: right;}
 .explore-map-icon a svg {
     width: 12px;
@@ -1268,6 +1310,47 @@ background-color:transparent;
     text-align: center; /* Center-align the button horizontally */
 
 }
+.file-upload-form {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .file-upload-label input {
+    display: none;
+  }
+  .file-upload-label svg {
+    height: 50px;
+    fill: rgb(82, 82, 82);
+    margin-bottom: 20px;
+  }
+  .file-upload-label {
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 30px 70px;
+    border-radius: 40px;
+    border: 2px dashed rgb(82, 82, 82);
+    box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719);
+  }
+  .file-upload-design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .browse-button {
+    background-color: rgb(82, 82, 82);
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: white;
+    transition: all 0.3s;
+  }
+  .browse-button:hover {
+    background-color: rgb(14, 14, 14);
+  }
+  
 /*appsLand-btn*/
 
 /*-------------------------------------
@@ -1276,7 +1359,7 @@ background-color:transparent;
 .footer-menu {padding: 45px 0;}
 .footer-menu .navbar-header{padding:0;}
 .footer-menu .navbar-header a.navbar-brand,.footer-menu.footer-menu .navbar-header a.navbar-brand:hover,.footer-menu .navbar-header a.navbar-brand:focus{
-    padding:0;
+    padding:2;
     height: 0;
 }
 .footer-menu ul.footer-menu-item{text-align: right;}
@@ -1318,6 +1401,8 @@ background-color:transparent;
     -o-transition:.3s;
     transition: .3s;
 }
+
+
 .footer-social a {
     width: 35px;
     height: 35px;
@@ -1327,9 +1412,12 @@ background-color:transparent;
     border-radius: 50%;
 }
 .footer-social span {margin-right:15px;margin-left: 0;color: #a5adb3;}
-.footer-social span:hover{color: #ff545a;}
-.footer-social a:hover {background:#ff545a;color: #fff;}
-
+/* .footer {
+  /*flex: 0 0 auto; /* Set footer to fixed height 
+  position: fixed;
+  bottom: 0;
+  width: 0px; /* Adjust the height as needed 
+} */
 .file-upload-form {
     width: fit-content;
     height: fit-content;
@@ -1378,8 +1466,8 @@ background-color:transparent;
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-    padding: 20px;
+    background-color: linear-gradient(to left, #7a60ff, #cd9ffa);;
+    padding: 0px;
   }
   
   .radio-group {
@@ -1499,7 +1587,7 @@ background-color:transparent;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;#ecd8f6
     height: 100%;
     display: none;
     background-color: white;  /* Change this to your desired solid color */
@@ -1509,12 +1597,13 @@ background-color:transparent;
   /*  padding: 20px;  /* Add some padding for better readability */
     
   /*}*/
-  #popup, #popup1 {
+  #popup, #popup1, #popup2, #popup3, #popupapply {
+    overflow-y: auto;
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
     left: 50%; /* Position horizontally at 50% (center) */
-    transform: translate(-50%, -50%); /* Translate to adjust position */
-    background-color: white; /* Set background color */
+     transform: translate(-50%, -50%); /*Translate to adjust position */
+    background: linear-gradient( to right,  rgb(74, 147, 149),  rgb(92, 182, 183));
     padding: 20px; /* Add padding for content */
     border: 1px solid #ccc; /* Add a border */
     border-radius: 5px; /* Add rounded corners */
@@ -1523,19 +1612,66 @@ background-color:transparent;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
     /* Adjust width and height as needed */
     width: 400px; /* Example width */
-    height: 550px; /* Example height */
+    height: 450px; /* Example height */
    
   }
+  #popup.explore-rating-price.explore-rating label,  #popup1.explore-rating-price.explore-rating label, #popup2.explore-rating-price.explore-rating label, #popup3.explore-rating-price.explore-rating label{
+    color:#ecf0f0 !important;
+    border-right: 1px solid #ecf0f0;
+  } 
+  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a{
+    color:rgb(5, 14, 56);
+    font-size: 15px;
+    font-weight: bold;
+  }
   
+  .explore-rating-price .city,
+  .explore-rating-price .area,
+  .explore-rating-price .hospital,
+  .explore-rating-price .speciality {
+    padding-right: 7px;
+    border-right: 1px solid white!important;
+    color: white;
+  }
+  #popup1 .explore-rating-price .explore-rating,  #popup2 .explore-rating-price .explore-rating,  #popup3 .explore-rating-price .explore-rating {
+    background-color: rgb(5, 14, 56);
+    color: white;
+  }
+#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3, #popup #closeButton0 {
+  font-size: 20px;
+  padding-bottom: 4px;
+}
+  #popup1 div div i,
+  #popup1 div div label,  #popup2 div div i,
+  #popup2 div div label,  #popup3 div div i,
+  #popup3 div div label {
+    color:rgb(5, 14, 56) !important;
+  }
+  #popup1 p,  #popup2 p,  #popup3 p{
+    color: white;
+  }
   /* Prevent content behind popup from being interactive (Optional) */
   body.popup-open {
     overflow: hidden; /* Prevent scrolling */
   }
   .popupcontent {
-    display: flex;
-  flex-direction: column;  /* Stack elements vertically */
-  justify-content: center;  /* Center content horizontally */
-  align-items: center; 
+    display: grid;
+    grid-template-columns: 1fr; /* Define a single column */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .popupcontent .border,
+  .popupcontent label {
+    text-align: left; /* Align text to the left within the centered elements */
+  }
+  #popup #clearall, #popup #closePopup{
+    margin-top: 10px;
+    border: 1px solid rgb(5, 14, 56);
+    border-radius: 5px;
+    color: rgb(5, 14, 56);
+    font-weight: bold;
+    padding: 5px 5px;
   }
   #openPopup {
     margin-top: 20px; /* Adjust margin as needed */
@@ -1543,18 +1679,23 @@ background-color:transparent;
     display: flex;
     justify-content: center; /* Center content horizontally */
     position: absolute; /* Position the div absolutely */
-    top: 0; /* Positions at the top of viewport */
-    right: 0; /* Positions at the right of viewport */
+    top: 190px; /* Positions at the top of viewport */
+    right: 20px; /* Positions at the right of viewport */
     width: 85px; /* Adjust as needed */
     border-radius: 10px;
-    background-color: red;
-    color: white;
+    background-color:rgb(30, 102, 105);
+    color: #ecf0f0;
     box-sizing: border-box; /* Include padding in width calculation */
     padding: 5px; /* Adjust padding as needed */
     margin-right:10px;
+    -webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
   }
-  #map{
-    height: 25%;
+  #map, #map2, #map3, #map4{
+    height: 30%;
   }
   .price-tag {
     background-color: #4285F4;
@@ -1584,8 +1725,8 @@ background-color:transparent;
   }
   
   #openPopup:hover {
-    background-color: white;
-    color: red;
+    background-color: #ecf0f0;
+    color: rgb(30, 102, 105);
     cursor: pointer;
   }
   
@@ -1620,8 +1761,8 @@ h4{
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-    padding: 20px;
+    background-color: linear-gradient(to left, #7a60ff, #cd9ffa);;
+    padding: 0px;
   }
   
   .radio-group {
@@ -1895,9 +2036,49 @@ body {
 } */
 
 
+#footercontainer{
+  background-color: linear-gradient(to left, #7a60ff, #cd9ffa);
+}
 
-/*========================Thank you=================
 
 
+/*========================Thank you=================*/
+#openpostdetails1, #openpostdetails2, #openpostdetails3{
+border:1px solid white;
+}
+.explore-open-close-part button {
+  text-align: center; /* Center the text inside the button */
+  padding: 10px 20px; /* Increase button size with padding */
+ /* Increase font size of the button text (optional) */
+}
+.welcome-hero-btn:hover, .fa-solid.fa-magnifying-glass:hover {
+  background-color: #ecf0f0 !important;
+  color:rgb(30, 102, 105)  !important;
+  i{color:rgb(30, 102, 105) ;} /* This will affect both the icon and text if any */
+}
+.welcome-hero-btn i {
+  color: #ecf0f0; /* This will affect both the icon and text if any */
+}
+
+
+
+#left-curtain, #right-curtain {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+background-color: cadetblue;
+  background-size: cover;
+  z-index: 2 !important;
+}
+
+#left-curtain {
+  left: 0;
+  width: 50vw;  /* Adjust width for desired curtain size */
+}
+
+#right-curtain {
+  right: 0;
+  width: 50vw;  /* Adjust width for desired curtain size */
+}
 
 
