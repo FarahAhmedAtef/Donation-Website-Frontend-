@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+    <script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
 
     <!--font-family-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -55,57 +56,35 @@
 
 </head>
 <body>
-<!--subscription strat -->
-<section id="contact"  class="subscription">
-    <div class="container">
-        <div class="subscribe-title text-center">
-            <h2>
-                sign in
-            </h2>
-            
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="subscription-input-group">
-                    <form action="#">
-                        <input type="email" class="subscription-input-form" placeholder="enter your username">
-                        <br/>
-                        <input type="password" class="subscription-input-form" placeholder="enter your password">
-                        <br/>
-                       
-                    </form>
+
+        
+                <div class="postpopup">
+                    <!-- <form action="#"> -->
+                        
+                        <form action="/submit-registration" method="post">
+                            <div class="notificationCard">
+                                <p class="notificationHeading">Your Post Was Sucessfully Posted!</p>
+                                <i class="fa-regular fa-circle-check"></i>
+                                <!-- <p class="notificationPara">Allow push notifications so you will get latest updates</p> -->
+                                <div class="buttonContainer">
+                                    <a href="homepageorg.html" class="postback">Back to Home Page</a>
+                                  <!-- <button class="NotnowBtn">Now now</button> -->
+                                </div>
+                              </div>
+                           
+
+                                
+                </form>
                 
-                </div>
-                <div>
-                    <button class="login-btn subscribe-btn" onclick="window.location.href='#'">
-                        login
-                    </button>
-                    <br/>
-                    <p>
-                        don't have an account?
-                    </p>
-                    <br/>
-                    <button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
-                        register as a donor
-                    </button>
-                    <br/>
-                    <button class="appsLand-btn subscribe-btn" onclick="window.location.href='register.html'">
-                        register as an organisation
-                    </button>
-                    <br/>
-                    <!-- <button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
-                        change password
-                    </button>
-                    <br/> -->
-                </div>
+             
+                    
             </div>	
-            
         </div>
-       
     </div>
-   
 
 </section><!--/subscription-->	
-
 <!--subscription end -->
+
+
+
 </body>

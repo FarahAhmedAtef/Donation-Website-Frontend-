@@ -2,6 +2,8 @@
 <html class="no-js" lang="en">
 
 <head>
+	<link rel="stylesheet" type="text/css"
+	href="https://fonts.googleapis.com/css?family=Tangerine">
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
     <!-- meta data -->
     <meta charset="utf-8">
@@ -54,8 +56,11 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head>
-<body>
+</head >
+
+<body style="background:#ecf0f0;">
+	<div id="left-curtain"></div>
+	<div id="right-curtain"></div>
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
@@ -63,18 +68,19 @@
 			<h2>explore</h2>
 			<p>Explore New place, food, culture around the world and many more</p> -->
 			<div id="popup">
+				<i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
 				<form class="popupcontent" id="form1">
 					<div class="border">
 					<label for="Governerate" style="color: black;">Governerate</label>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="governrate1" name="Governerate" value="Cairo">
+					<input type="radio" id="governrate1" name="Governerate" value="Cairo">
 					<label for="governrate1">Cairo</label>
 					<br></div>
 					
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="governrate2" name="Governerate" value="Alexandria">
+					<input type="radio" id="governrate2" name="Governerate" value="Alexandria">
 					<label for="governrate2">Alexandria</label>
 					<br></div>
 					</div>
@@ -83,12 +89,12 @@
 						<label for="area" style="color: black;">Area</label>
 						<br>
 						<div class="checkbox-container"> 
-						<input type="checkbox" id="area1" name="area" value="5th Settlement">
+						<input type="radio" id="area1" name="area" value="5th Settlement">
 						<label for="area">5th Settlement</label>
 						<br></div>
 						<br>
 						<div class="checkbox-container"> 
-						<input type="checkbox" id="area2" name="area" value="Masr Elgedida">
+						<input type="radio" id="area2" name="area" value="Masr Elgedida">
 						<label for="area2">Masr Elgedida</label>
 						<br></div>
 					</div>
@@ -97,12 +103,12 @@
 					<label for="hospital" style="color: black;">Hospital</label>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="alshefaHospital" name="hospital" value="ALShefa hospital">
+					<input type="radio" id="alshefaHospital" name="hospital" value="ALShefa hospital">
 					<label for="alshefaHospital">ALShefa Hospital</label>
 					<br></div>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="elGawyHospital" name="hospital" value="ElGawy hospital">
+					<input type="radio" id="elGawyHospital" name="hospital" value="ElGawy hospital">
 					<label for="elGawyHospital">ElGawy Hospital</label>
 					<br></div>
 				</div>
@@ -216,48 +222,47 @@
 
 		<!--/.section-header-->
 		
-		<header id="header-top" class="header-top" >
+		<header id="header-top" class="header-top"  >
 			<ul>
 				<li>
 					<div class="header-top-left" >
 						<ul>
-							<label style="color:black">LOGO</label>
+							<li> <img src="assets/logo/SE logo.png" alt="Company Logo" width="90" height="9" style="padding-left: 8px;">  </li>
 						</ul>
 					</div>
 				</li>
-				<li class="head-responsive-right pull-right" style="margin-top: -9px;">
-					<div class="header-top-right" >
-						<ul>
-							<li class="header-top-contact">
-								+201061064544
-							</li>
-							<li class="header-top-contact">
-								<a href="#"><i class="fa-solid fa-user" style="font-size: 20px ;"></i></a>
-							</li>
+				<li style="transform:translate(570px,0px);">
+					<span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+					  Make  <span style="color: rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+					</span>
+				  </li>
+				  
+				<li class="head-responsive-right pull-right" style="margin-top: 28px;">
+					<div class="header-top-right" style="z-index: 1;">
+						<ul style="z-index: 1;">
+							<nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000" style="z-index: 1;">
+
+								<div class="navbar-header" style="z-index: 1;">
+									   
+									<a class="navbar-brand" href="index.html" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+									<li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
+										+201061064544
+									</li>
+									<li class="header-top-contact">
+										<a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+									</li>
+								</div>
+								
+							</nav>
+							
 						</ul>
 					</div>
 				</li>
 			</ul>
-					
+				
+			
 		</header><!--/.header-top-->
 		<!--header-top end -->
-		 
-		  <section class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
-					<div class="navbar-header">
-			               
-						<a class="navbar-brand" href="index.html" style="margin-left:20px; margin-top: -20px;"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
-
-					</div>
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
-		    <div class="clearfix"></div>
-
-		</section>
 		<div class="welcome-hero-serch-box">
 			<div class="welcome-hero-form" style="height: 50px; margin-top: -30px; transform: translate(520px,0px);">
 				<div class="single-welcome-hero-form">
@@ -378,38 +383,40 @@
 	<!--/.container-->
 
 </section><!--/.explore-->
-		<footer id="footer"  class="footer">
-			<div class="container">
-				
-				<div class="hm-footer-copyright">
-					<div class="row">
-						<div class="col-sm-5">
-							<p>
-								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
-							</p><!--/p-->
-						</div>
-						<div class="col-sm-7">
-							<div class="footer-social">
-								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
-								<a href="#"><i class="fa fa-facebook"></i></a>	
-								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-linkedin"></i></a>
-								<a href="#"><i class="fa fa-google-plus"></i></a>
-							</div>
-						</div>
-					</div>
-					
-				</div><!--/.hm-footer-copyright-->
-			</div><!--/.container-->
-
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
+bottom: 0;
+width: 0px; ">
+	<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+		
+		<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
+			<div class="row">
+				<div class="col-sm-5">
+					<p>
+						&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+					</p><!--/p-->
 				</div>
-				
-			</div><!--/.scroll-Top-->
+				<div class="col-sm-7">
+					<div class="footer-social" style="padding-right: 20px;">
+						<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+						<a href="#"><i class="fa fa-facebook"></i></a>	
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+					</div>
+				</div>
+			</div>
 			
-        </footer><!--/.footer-->
+		</div><!--/.hm-footer-copyright-->
+	</div><!--/.container-->
+
+	<div id="scroll-Top">
+		<div class="return-to-top">
+			<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+		</div>
+		
+	</div><!--/.scroll-Top-->
+	
+</footer><!--/.footer-->
 
 
 
@@ -419,12 +426,16 @@
 	const popup = document.getElementById('popup');
 	const openPopupBtn = document.getElementById('openPopup');
 	const closePopupBtn = document.getElementById('closePopup');
-  
+	const closePopupBtn4 = document.getElementById('closeButton0');
+
 	openPopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'block';
 	});
   
 	closePopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'none';
+	});
+	closePopupBtn4.addEventListener('click', function() {
 	  popup.style.display = 'none';
 	});
   </script>
@@ -480,7 +491,7 @@
 
   <script>
   const clearAllButton = document.getElementById('clearall');
-	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	const checkboxes = document.querySelectorAll('input[type="radio"]');
 	
 	clearAllButton.addEventListener('click', () => {
 	  checkboxes.forEach(checkbox => checkbox.checked = false);
@@ -496,7 +507,7 @@ applyButton.addEventListener('click', () => {
   const selectedFilters = []; // Array to store checked checkbox values
   
   // Loop through checkboxes in the form
-  const checkboxes = checkboxForm.querySelectorAll('input[type="checkbox"]');
+  const checkboxes = checkboxForm.querySelectorAll('input[type="radio"]');
   checkboxes.forEach(checkbox => {
     if (checkbox.checked) {
       selectedFilters.push({value: checkbox.value, name:checkbox.name}); // Add checked checkbox value to array
@@ -762,6 +773,19 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 	});
 	</script>
 
-
+<script>
+	window.addEventListener("load", function() {
+	  const leftCurtain = document.getElementById("left-curtain");
+	  const rightCurtain = document.getElementById("right-curtain");
+	
+	  leftCurtain.style.transition = "transform 1s ease-in-out";
+	  rightCurtain.style.transition = "transform 1s ease-in-out";
+	
+	  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
+	  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
+	});
+	
+	
+	</script> 
 <!--explore end -->
 </body>

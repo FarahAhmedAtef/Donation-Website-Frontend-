@@ -4,6 +4,8 @@
 <head>
 
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,18 +69,19 @@
 			<h2>explore</h2>
 			<p>Explore New place, food, culture around the world and many more</p> -->
 			<div id="popup">
+				<i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
 				<form class="popupcontent" id="form1">
 					<div class="border">
 					<label for="Governerate" style="color: black;">Governerate</label>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="governrate1" name="Governerate" value="Cairo">
+					<input type="radio" id="governrate1" name="Governerate" value="Cairo">
 					<label for="governrate1">Cairo</label>
 					<br></div>
 					
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="governrate2" name="Governerate" value="Alexandria">
+					<input type="radio" id="governrate2" name="Governerate" value="Alexandria">
 					<label for="governrate2">Alexandria</label>
 					<br></div>
 					</div>
@@ -87,12 +90,12 @@
 						<label for="area" style="color: black;">Area</label>
 						<br>
 						<div class="checkbox-container"> 
-						<input type="checkbox" id="area1" name="area" value="5th Settlement">
+						<input type="radio" id="area1" name="area" value="5th Settlement">
 						<label for="area">5th Settlement</label>
 						<br></div>
 						<br>
 						<div class="checkbox-container"> 
-						<input type="checkbox" id="area2" name="area" value="Masr Elgedida">
+						<input type="radio" id="area2" name="area" value="Masr Elgedida">
 						<label for="area2">Masr Elgedida</label>
 						<br></div>
 					</div>
@@ -101,12 +104,12 @@
 					<label for="hospital" style="color: black;">Organisation Name</label>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="alshefaHospital" name="hospital" value="Help center">
+					<input type="radio" id="alshefaHospital" name="hospital" value="Help center">
 					<label for="alshefaHospital">Help center</label>
 					<br></div>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="elGawyHospital" name="hospital" value="DonateExperience">
+					<input type="radio" id="elGawyHospital" name="hospital" value="DonateExperience">
 					<label for="elGawyHospital">DonateExperience</label>
 					<br></div>
 				</div>
@@ -115,12 +118,12 @@
 					<label for="hospital" style="color: black;">Speciality</label>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="alshefaHospital" name="speciality" value="Heart">
+					<input type="radio" id="alshefaHospital" name="speciality" value="Heart">
 					<label for="alshefaHospital">Heart</label>
 					<br></div>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="elGawyHospital" name="speciality" value="Bones">
+					<input type="radio" id="elGawyHospital" name="speciality" value="Bones">
 					<label for="elGawyHospital">Bones</label>
 					<br></div>
 				</div>
@@ -154,7 +157,7 @@
 						<label style="margin-right:5px; color: black;">Female</label>
 						</div>
 						<div>
-							<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+							<i class="fa-solid fa-hourglass-end" style="margin-right:4px; color: black;"></i>
 							<label style="margin-right:5px; color: black;">21 years old</label>
 							</div>
 							<div>
@@ -287,6 +290,25 @@
 					<span id="fileError" class="error-message" style="color: red;"></span>
 				  </label>
 				</form>
+				<div id="clinic-address">
+					<label for="address-input">Please enter your clinic address:</label><br>
+					<input type="text" id="address-input" placeholder="Enter address">
+				</div>
+				<div>
+					<label for="governorate-select">Governorate:</label>
+					<select id="governorate-select"></select>
+					<label for="area-select">Area:</label>
+					<select id="area-select" disabled></select>
+				  </div>
+                <label>Please pick your exact location on map</label>
+				<div id="map4"></div>
+                <label for="speciality-select">Speciality:</label>
+                <select id="speciality-select">
+      <option value="skin">Skin</option>
+      <option value="bones">Bones</option>
+      <option value="heart">Heart</option>
+    </select>
+
 				<div class="containerapply">
 				  <div class="date-time">
 					<h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for teaching</h2>
@@ -308,24 +330,29 @@
 				<li>
 					<div class="header-top-left" >
 						<ul>
-							<label style="color:rgb(30, 102, 105)">LOGO</label>
+							<li> <img src="assets/logo/SE logo.png" alt="Company Logo" width="90" height="9" style="padding-left: 8px;">  </li>
 						</ul>
 					</div>
 				</li>
-
-				<li class="head-responsive-right pull-right" style="margin-top: -9px;">
+				<li style="transform:translate(570px,0px);">
+					<span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+					  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+					</span>
+				  </li>
+				  
+				<li class="head-responsive-right pull-right" style="margin-top: 28px;">
 					<div class="header-top-right" style="z-index: 1;">
 						<ul style="z-index: 1;">
 							<nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000" style="z-index: 1;">
 
 								<div class="navbar-header" style="z-index: 1;">
 									   
-									<a class="navbar-brand" href="index.html" style="margin-right:15px; margin-top: -20px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
-									<li class="header-top-contact" style="color:rgb(30, 102, 105); ">
+									<a class="navbar-brand" href="index.html" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+									<li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
 										+201061064544
 									</li>
 									<li class="header-top-contact">
-										<a href="#"><i class="fa-solid fa-user" style="font-size: 20px; color:rgb(30, 102, 105); "></i></a>
+										<a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
 									</li>
 								</div>
 								
@@ -348,7 +375,7 @@
 				<div class="single-welcome-hero-form">
 					<h3></h3>
 					<form action="index.html">
-						<input type="text" placeholder="" />
+						<input type="text" placeholder="What and where would you like to donate?" />
 					</form>
 					
 				</div>
@@ -517,12 +544,16 @@
 	const popup = document.getElementById('popup');
 	const openPopupBtn = document.getElementById('openPopup');
 	const closePopupBtn = document.getElementById('closePopup');
-  
+	const closePopupBtn4 = document.getElementById('closeButton0');
+
 	openPopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'block';
 	});
   
 	closePopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'none';
+	});
+	closePopupBtn4.addEventListener('click', function() {
 	  popup.style.display = 'none';
 	});
   </script>
@@ -585,7 +616,7 @@
 
   <script>
   const clearAllButton = document.getElementById('clearall');
-	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	const checkboxes = document.querySelectorAll('input[type="radio"]');
 	
 	clearAllButton.addEventListener('click', () => {
 	  checkboxes.forEach(checkbox => checkbox.checked = false);
@@ -601,7 +632,7 @@ applyButton.addEventListener('click', () => {
   const selectedFilters = []; // Array to store checked checkbox values
   
   // Loop through checkboxes in the form
-  const checkboxes = checkboxForm.querySelectorAll('input[type="checkbox"]');
+  const checkboxes = checkboxForm.querySelectorAll('input[type="radio"]');
   checkboxes.forEach(checkbox => {
     if (checkbox.checked) {
       selectedFilters.push({value: checkbox.value, name:checkbox.name}); // Add checked checkbox value to array
@@ -689,7 +720,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 
 <script>
 
-function initMap() { 
+async function initMap() { 
         var test= {lat: -25.363, lng: 131.044}; 
         var map = new google.maps.Map(document.getElementById('map'), { 
           zoom: 4, 
@@ -720,9 +751,31 @@ function initMap() {
 			  position: test, 
 			  map: map3
 			}); 
+			const center = { lat: 30.0444, lng: 31.2357 };
+  const map4 = new google.maps.Map(document.getElementById("map4"), {
+    zoom: 8,
+    center: center,
+  });
 
+ 
+  let marker2; // Declare a variable to hold the marker
+
+// Add click listener to the map
+map4.addListener("click", (e) => {
+  // Create a new marker if one doesn't exist
+  if (!marker2) {
+	marker2 = new google.maps.Marker({
+	  position: e.latLng,
+	  map: map4,
+	});
+  } else {
+	// Update the position of the existing marker
+	marker2.setPosition(e.latLng);
+  }
+});
 
       } 
+	  
 
 //initMap();
 
@@ -905,5 +958,50 @@ window.addEventListener("load", function() {
 
 </script>  
   
+
+
+<script>
+	const governorateSelect = document.getElementById("governorate-select");
+  const areaSelect = document.getElementById("area-select");
+
+  // Sample governorate data (replace with actual data)
+  const governorates = {
+    "Cairo": ["Nasr City", "Giza", "Heliopolis"],
+    "Alexandria": ["Downtown", "Smouha", "East Alexandria"],
+    // Add more governorates and their areas
+  };
+
+  // Populate the governorate dropdown
+  for (const governorate in governorates) {
+    const option = document.createElement("option");
+    option.value = governorate;
+    option.text = governorate;
+    governorateSelect.appendChild(option);
+  }
+
+  // Function to update area dropdown based on selected governorate
+  function updateAreaSelect() {
+    const selectedGovernorate = governorateSelect.value;
+    areaSelect.disabled = !governorates[selectedGovernorate]; // Enable only if areas exist
+    areaSelect.innerHTML = ""; // Clear previous options
+
+    if (governorates[selectedGovernorate]) {
+      for (const area of governorates[selectedGovernorate]) {
+        const option = document.createElement("option");
+        option.value = area;
+        option.text = area;
+        areaSelect.appendChild(option);
+      }
+    }
+  }
+
+  // Event listener for governorate change
+  governorateSelect.addEventListener("change", updateAreaSelect);
+
+  // Call updateAreaSelect initially to handle default governorate state
+  updateAreaSelect();
+
+</script>
+
 <!--explore end -->
 </body>
