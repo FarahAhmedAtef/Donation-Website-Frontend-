@@ -56,6 +56,8 @@
 
 </head>
 <body style="background:#ecf0f0">
+	<div id="left-curtain"></div>
+	<div id="right-curtain"></div>
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
@@ -63,26 +65,28 @@
 			<h2>explore</h2>
 			<p>Explore New place, food, culture around the world and many more</p> -->
             <div id="popup">
+				<i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+
 				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
 				<form class="popupcontent" id="form1">
 					<div class="border">
 					<label for="Age" style="color: black;">Age</label>
 					
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="age1" name="Governerate" value="0 - 5">
+					<input type="radio" id="age1" name="Governerate" value="0 - 5">
 					<label for="age1">0 - 5</label>
 					</div>
 					
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="age2" name="Governerate" value="6 - 10">
+					<input type="radio" id="age2" name="Governerate" value="6 - 10">
 					<label for="age2">6 - 10</label>
 					</div>
                     <div class="checkbox-container"> 
-                        <input type="checkbox" id="age3" name="Governerate" value="11 - 16">
+                        <input type="radio" id="age3" name="Governerate" value="11 - 16">
                         <label for="age3">11 - 16</label>
                         </div>
                         <div class="checkbox-container"> 
-                            <input type="checkbox" id="age4" name="Governerate" value="17 - 21">
+                            <input type="radio" id="age4" name="Governerate" value="17 - 21">
                             <label for="age4">17 - 21</label>
                             </div>
 					</div>
@@ -90,34 +94,34 @@
 						<label for="gender" style="color: black;">Gender</label>
 						
 						<div class="checkbox-container"> 
-						<input type="checkbox" id="gender1" name="area" value="Male">
+						<input type="radio" id="gender1" name="area" value="Male">
 						<label for="gender">Male</label>
 						</div>
 						
 						<div class="checkbox-container"> 
-						<input type="checkbox" id="gender2" name="area" value="Female">
+						<input type="radio" id="gender2" name="area" value="Female">
 						<label for="gender2">Female</label>
 						</div>
 					</div>
 					<div class="border">
 					<label for="Season" style="color: black;">Season</label>
 					<div class="checkbox-container"> 
-					<input type="checkbox" id="spring" name="hospital" value="spring">
+					<input type="radio" id="spring" name="hospital" value="spring">
 					<label for="spring">Spring</label>
 				</div>
 				
 					<div class="checkbox-container"> 
-                        <input type="checkbox" id="summer" name="hospital" value="summer">
+                        <input type="radio" id="summer" name="hospital" value="summer">
                         <label for="summer">Summer</label>
                         </div>
                         
                         <div class="checkbox-container"> 
-                            <input type="checkbox" id="fall" name="hospital" value="fall">
+                            <input type="radio" id="fall" name="hospital" value="fall">
                             <label for="fall">Fall</label>
                             </div>
                             
                         <div class="checkbox-container"> 
-                                <input type="checkbox" id="winter" name="hospital" value="winter">
+                                <input type="radio" id="winter" name="hospital" value="winter">
                                 <label for="winter">Winter</label>
                                 </div>
                                 
@@ -127,7 +131,7 @@
 				  <button id="closePopup">Apply</button>
 			  </div>
 
-			  <div id="popup1">
+			  <div id="popup1" style="height: 370px;">
 				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 					<h2><a href="#">In Need of Clothes Donation</a></h2>
 					<p class="explore-rating-price">
@@ -140,35 +144,32 @@
 						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter </label>
 					</p>
 					<div>
-						<div>
-						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>						
-						</div>
+						
 						
 					</div>
 					<div>
 						<div>
 							<i class="fa-solid fa-shirt" style="margin-right:5px; color: black;"></i>
-							<label style="margin-right:5px; color: black;">Jackets</label>
+							<label style="margin-right:5px; color: black;">T-shirts</label>
 							</div>
 							<div>
 							<i class="fa-brands fa-cotton-bureau" style="margin-right:5px; color: black;"></i>
 							<label style="margin-right:5px; color: black;">Fleece, Cotton, Wool</label>
 							</div>
 							<div>
-								<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
-								<label style="margin-right:5px; color: black;">6 Jackets</label>
+								<i class="fa-solid fa-arrow-up-1-9" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">6 T-shirts</label>
 								</div>
 								<div>
 									<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">14-17 years old</label>
 									</div>
 								<div>
-									<i class="fa-solid fa-calendar-days" style="margin-right:5px; color: black;"></i>
+									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Winter</label>
 									</div>
 	
 						</div>
-					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
 					<div class="counter-container">
 						<button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
 						<div class="counter" style="border: 1px black;">0</div>
@@ -178,7 +179,7 @@
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
-			  <div id="popup2">
+			  <div id="popup2" style="height: 370px;">
 				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 					<h2><a href="#">Clothes Donation</a></h2>
 					<p class="explore-rating-price">
@@ -191,36 +192,34 @@
 						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer </label>
 					</p>
 					<div>
-						<div>
-						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-						</div>
+						
 						
 					</div>
 					
 					<div>
 						<div>
-							<i class="fa-solid fa-shirt" style="margin-right:5px; color: black;"></i>
-							<label style="margin-right:5px; color: black;">Jeans</label>
+							<i class="fa-solid fa-vest" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Vests</label>
 							</div>
 							<div>
 							<i class="fa-brands fa-cotton-bureau" style="margin-right:5px; color: black;"></i>
 							<label style="margin-right:5px; color: black;">Denim</label>
 							</div>
 							<div>
-								<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
-								<label style="margin-right:5px; color: black;">5 Jeans</label>
+								<i class="fa-solid fa-arrow-up-1-9" style="margin-right:5px; color: black;"></i>
+
+								<label style="margin-right:5px; color: black;">5 Vests</label>
 								</div>
 								<div>
 									<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">6-9 years old</label>
 									</div>
 								<div>
-									<i class="fa-solid fa-calendar-days" style="margin-right:5px; color: black;"></i>
+									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Summer</label>
 									</div>
 	
 						</div>
-					<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>
 					<div class="counter-container">
 						<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
 						<div class="counter2" style="border: 1px black;">0</div>
@@ -230,7 +229,7 @@
 					<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
-			  <div id="popup3">
+			  <div id="popup3" style="height: 370px;">
 				<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 					<h2><a href="#">In Need of Clothes Donation</a></h2>
 					<p class="explore-rating-price">
@@ -242,11 +241,7 @@
 						</label>
 						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
 					</p>
-					<div>
-						<div>
-						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-						</div>
-					</div>
+					
 					<div>
 						<div>
 							<i class="fa-solid fa-shirt" style="margin-right:5px; color: black;"></i>
@@ -257,7 +252,7 @@
 							<label style="margin-right:5px; color: black;">Cotton, Polyester</label>
 							</div>
 							<div>
-								<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+								<i class="fa-solid fa-arrow-up-1-9" style="margin-right:5px; color: black;"></i>
 								<label style="margin-right:5px; color: black;">7 T-Shirts</label>
 								</div>
 								<div>
@@ -265,12 +260,11 @@
 									<label style="margin-right:5px; color: black;">10-13 years old</label>
 									</div>
 								<div>
-									<i class="fa-solid fa-calendar-days" style="margin-right:5px; color: black;"></i>
+									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Summer</label>
 									</div>
 	
 						</div>
-					<div id="map3" style=" margin-top: 20px; margin-bottom: 20px;"></div>
 					
 
 					<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
@@ -489,12 +483,16 @@
 	const popup = document.getElementById('popup');
 	const openPopupBtn = document.getElementById('openPopup');
 	const closePopupBtn = document.getElementById('closePopup');
-  
+	const closePopupBtn4 = document.getElementById('closeButton0');
+
 	openPopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'block';
 	});
   
 	closePopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'none';
+	});
+	closePopupBtn4.addEventListener('click', function() {
 	  popup.style.display = 'none';
 	});
   </script>
@@ -550,7 +548,7 @@
 
   <script>
   const clearAllButton = document.getElementById('clearall');
-	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	const checkboxes = document.querySelectorAll('input[type="radio"]');
 	
 	clearAllButton.addEventListener('click', () => {
 	  checkboxes.forEach(checkbox => checkbox.checked = false);
@@ -566,7 +564,7 @@ applyButton.addEventListener('click', () => {
   const selectedFilters = []; // Array to store checked checkbox values
   
   // Loop through checkboxes in the form
-  const checkboxes = checkboxForm.querySelectorAll('input[type="checkbox"]');
+  const checkboxes = checkboxForm.querySelectorAll('input[type="radio"]');
   checkboxes.forEach(checkbox => {
     if (checkbox.checked) {
       selectedFilters.push({value: checkbox.value, name:checkbox.name}); // Add checked checkbox value to array
@@ -642,7 +640,7 @@ textbx=post.querySelector('.hospital');
 
 
 
-<script>
+<!-- <script>
 
 function initMap() { 
         var test= {lat: -25.363, lng: 131.044}; 
@@ -687,7 +685,7 @@ function initMap() {
 <script async defer 
 src= 
 "https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
-</script> 
+</script>  -->
 
 	
 	
@@ -762,6 +760,20 @@ closeButton3.addEventListener('click', () => {
 });
 </script>
 
+<script>
+	window.addEventListener("load", function() {
+	  const leftCurtain = document.getElementById("left-curtain");
+	  const rightCurtain = document.getElementById("right-curtain");
+	
+	  leftCurtain.style.transition = "transform 1s ease-in-out";
+	  rightCurtain.style.transition = "transform 1s ease-in-out";
+	
+	  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
+	  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
+	});
+	
+	
+	</script> 
 
 <!--explore end -->
 </body>
