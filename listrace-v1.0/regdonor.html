@@ -133,6 +133,11 @@
 				var file = document.getElementById('file');
 		
 				var inputs = [fname, lname, gender, email, cnum, pass, address, area, govern, typed, file];
+
+				var existingErrorMessages = document.querySelectorAll('.error-message');
+        existingErrorMessages.forEach(function(errorMessage) {
+            errorMessage.parentNode.removeChild(errorMessage);
+        });
 		
 				inputs.forEach(function(input) {
 					if (!input.value) {
