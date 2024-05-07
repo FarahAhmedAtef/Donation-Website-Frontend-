@@ -2,6 +2,8 @@
 <html class="no-js" lang="en">
 
 <head>
+	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
+
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -157,7 +159,7 @@
 			<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 	  </div>
 	  <div id="popup2">
-		<i id="closePopup2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+		<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 			<h2><a href="#">Request For Toys</a></h2>
 			<p class="explore-rating-price">
 				<span class="explore-rating">5.0</span>
@@ -184,7 +186,7 @@
 	  </div>
 
 	  <div id="popup3">
-		<i id="closePopup3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+		<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 			<h2><a href="#">Toy Donatio Request</a></h2>
 			<p class="explore-rating-price">
 				<span class="explore-rating">5.0</span>
@@ -252,16 +254,25 @@
 			
 		</header><!--/.header-top-->
 		<!--header-top end -->
-	
-		<div class="explore-content">
-			
-								</div>
-							</div>
-						</div>
-					</div>
+		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
+			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
+				<div class="single-welcome-hero-form">
+					<h3></h3>
+					<form action="index.html">
+						<input type="text" placeholder="What and where would you like to donate?" />
+					</form>
+					
 				</div>
-				<div class=" col-md-4 col-sm-6">
+				
+			</div>
+			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
+				<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
+					   <i class="fa-solid fa-magnifying-glass" ></i> 
+				</button>
+			</div>
+		</div>
 
+		<div class="explore-content">
 					<div id="openPopup">
 						<button style="font-size: 20px; padding-right:3px ;">Filter</button>
 						<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
@@ -270,7 +281,7 @@
 					<div class="single-explore-item">
 						
 						<div class="single-explore-txt bg-theme-4">
-							<h2><a href="#">toy donation </a></h2>
+							<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">toy donation</a></h2>
 							<p class="explore-rating-price">
 								<span class="explore-rating">5.0</span>
 								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">5 years</label> 
@@ -280,11 +291,8 @@
 								</label>
 								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">sports</label>
 							</p>
-							<div class="explore-person">
-								<div class="row">
-								</div>
-							</div>
-							<div class="explore-open-close-part">
+							
+							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
 								<div class="row">
 									<div class="col-sm-5">
 										<button class="close-btn open-btn" id ="openpostdetails1">View Details</button>
@@ -300,12 +308,11 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
+				
 					<div class="single-explore-item">
 						
-						<div class="single-explore-txt bg-theme-2">
-							<h2><a href="#">request for toys</a></h2>
+						<div class="single-explore-txt bg-theme-4">
+							<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">request for toys</a></h2>
 							<p class="explore-rating-price">
 								<span class="explore-rating">5.0</span>
 								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">12 years</label> 
@@ -315,13 +322,9 @@
 								</label>
 								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">board games </label>
 							</p>
-							<div class="explore-person">
-								<div class="row">
-
-
-								</div>
-							</div>
-							<div class="explore-open-close-part">
+						
+							
+							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
 								<div class="row">
 									<div class="col-sm-5">
 										<button class="close-btn open-btn" id = "openpostdetails2">view Details</button>
@@ -337,12 +340,12 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
+				
+				
 					<div class="single-explore-item">
 					
-						<div class="single-explore-txt bg-theme-5">
-							<h2><a href="#">toys donation request</a></h2>
+						<div class="single-explore-txt bg-theme-4">
+							<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">toys donation request</a></h2>
 							<p class="explore-rating-price">
 								<span class="explore-rating">5.0</span>
 								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">7 years</label> 
@@ -352,15 +355,12 @@
 								</label>
 								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">stuffed toys </label>
 							</p>
-							<div class="explore-person">
-								<div class="row">
-									
-								</div>
-							</div>
-							<div class="explore-open-close-part">
+							
+							
+							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
 								<div class="row">
 									<div class="col-sm-5">
-										<button class="close-btn" id="openpostdetails3">View Details</button>
+										<button class="close-btn open-btn" id="openpostdetails3">View Details</button>
 									</div>
 									<div class="col-sm-7">
 										<div class="explore-map-icon">
@@ -374,14 +374,14 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			
 		</div>
 	</div><!--/.container-->
 
-</section><!--/.explore-->
 
 
-</section><!--/.explore-->
+
+
 <footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
 bottom: 0;
 width: 0px; ">
