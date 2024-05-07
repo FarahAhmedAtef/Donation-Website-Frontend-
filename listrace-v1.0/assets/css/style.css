@@ -780,7 +780,7 @@ margin: 10px;
 /*single-testimonial-box */
 .single-testimonial-box  {
     
-    padding: 50px 30px;
+    padding: 15px 30px;
     box-shadow: 0 0px 5px rgba(71,71,71,.2); 
     overflow-x:hidden;
     -webkit-transition: .3s; 
@@ -788,7 +788,7 @@ margin: 10px;
     -ms-transition:.3s; 
     -o-transition:.3s;
     transition: .3s;
-    height: 250px;
+    height: 270px;
     width: 200px;
 }
 .single-testimonial-box:hover{box-shadow:0 10px 20px rgba(21,19,19,.2);}
