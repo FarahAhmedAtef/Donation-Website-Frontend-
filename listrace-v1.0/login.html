@@ -68,16 +68,16 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form action="#">
-                        <input type="email" class="subscription-input-form" placeholder="enter your username">
+                        <input type="email" id = "username" class="subscription-input-form" placeholder="enter your username">
                         <br/>
-                        <input type="password" class="subscription-input-form" placeholder="enter your password">
+                        <input type="password" id = "password" class="subscription-input-form" placeholder="enter your password">
                         <br/>
                        
                     </form>
                 
                 </div>
                 <div>
-                    <button class="login-btn subscribe-btn" onclick="window.location.href='#'">
+                    <button class="login-btn subscribe-btn" onclick="login()">
                         login
                     </button>
                     <br/>
@@ -98,6 +98,7 @@
                     </button>
                     <br/> -->
                 </div>
+               
             </div>	
             
         </div>
@@ -106,6 +107,25 @@
    
 
 </section><!--/subscription-->	
+<script>
+    function login() {
+    var username = document.querySelector('.subscription-input-form[type="email"]').value;
+    var password = document.querySelector('.subscription-input-form[type="password"]').value;
+
+    // Check if the username and password are specific values
+    if (username === "karennn" && password === "toot24") {
+        // Redirect to a specific page
+        window.location.href = "admindb.html"; // Replace "dashboard.html" with the URL of the dashboard page
+    } else if (username === "karennn" && password !== "toot24"){
+        alert("Invalid password. Please try again.");
+    } else {
+        alert("Invalid username. Please try again.");
+    }
+}
+
+
+  </script>
+  
 
 <!--subscription end -->
 </body>

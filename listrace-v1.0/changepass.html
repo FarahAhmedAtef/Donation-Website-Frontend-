@@ -60,25 +60,79 @@
     <div class="container">
         <div class="subscribe-title text-center">
             <h2>
-                do you want to add your business listing with us?
+                Change Password
             </h2>
-            <p>
+            <!-- <p>
                 Listrace offer you to list your business with us and we very much able to promote your Business.
-            </p>
+            </p> -->
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form action="#">
-                        <input type="email" class="subscription-input-form" placeholder="Enter your email here">
-                        <button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
-                            creat account
-                        </button>
-                    </form>
+                        <input id = "oldpass" type="password" class="subscription-input-form" placeholder="enter your old password">     
+                    </form>     
+                </div>
+            </div>	
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="subscription-input-group">
+                    <form action="#">
+                        <input id = "newpass" type="password" class="subscription-input-form" placeholder="enter your new password">
+                    </form>   
+                </div>
+            </div>	
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="subscription-input-group">
+                    <form action="#">
+                        <input id = "cnewpass" type="password" class="subscription-input-form" placeholder="confirm your new password"> 
+                    </form> 
+                </div>
+            </div>	
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="subscription-input-group">
+                   <button class="appsLand-btn subscribe-btn" onclick="change()">
+                            save new password
+                   </button>
                 </div>
             </div>	
         </div>
     </div>
+    
+    <script>
+        function change() {
+        var oldpass = document.getElementById("oldpass").value;
+        var newpass = document.getElementById("newpass").value;
+        var confirmnewpass = document.getElementById("cnewpass").value;
+
+    
+        // Check if the username and password are specific values
+        if (oldpass !== "toot24") {
+            alert("Wrong old password. Please try again.");
+        } else if (confirmnewpass !== newpass) {
+            alert("New password does not match. Please try again");
+        } else {
+            alert("New password saved.");
+            window.location.href = "admindb.html"; 
+        }
+        // if (username === "karennn" && password === "toot24") {
+        //     // Redirect to a specific page
+        //     window.location.href = "admindb.html"; // Replace "dashboard.html" with the URL of the dashboard page
+        // } else if (username === "karennn" && password !== "toot24"){
+        //     alert("Invalid password. Please try again.");
+        // } else {
+        //     alert("Invalid username. Please try again.");
+        // }
+    }
+    
+    
+      </script>
+   
 
 </section><!--/subscription-->	
 <!--subscription end -->
