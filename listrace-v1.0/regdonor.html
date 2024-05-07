@@ -67,19 +67,20 @@
 					<div class="col-sm-12">
 						<div class="subscription-input-group">
 							<form action="#">
-								<input type="fname" class="subscription-input-form" placeholder="First name">
-								<input type="lname" class="subscription-input-form" placeholder="Last name">
-								<select name="gender" class="subscription-input-form" id="gender">
+								<input type="text" id="fname" class="subscription-input-form" placeholder="First name" required>
+								<input type="text" id="lname" class="subscription-input-form" placeholder="Last name" required>
+								<select name="gender" id="gender" class="subscription-input-form" id="gender" required>
 									<option value="" disabled selected>Gender</option>
 									<option value="Male">Male</option>
 									<option value="Female">Female</option>
-								</select>								<input type="email" class="subscription-input-form" placeholder="Email">
-								<input type="cnum" class="subscription-input-form" placeholder="Contact number">
-								<input type="pass" class="subscription-input-form" placeholder="Enter a new password">
-								<input type="address" class="subscription-input-form" placeholder="Address">
-								<input type="area" class="subscription-input-form" placeholder="Area">
-								<input type="govern" class="subscription-input-form" placeholder="Governorate">
-								<select name="typed" class="subscription-input-form" id="typed">
+								</select>	
+								<input type="email" id = "email" class="subscription-input-form" placeholder="Email" required>
+								<input type="tel" id="cnum" class="subscription-input-form" placeholder="Contact number" required>
+								<input type="password" id = "pass" class="subscription-input-form" placeholder="Enter a new password" required>
+								<input type="text" id="address" class="subscription-input-form" placeholder="Address" required>
+								<input type="text" id="area" class="subscription-input-form" placeholder="Area" required>
+								<input type="text" id="govern" class="subscription-input-form" placeholder="Governorate" required>
+								<select name="typed"id="typed" class="subscription-input-form" id="typed" required>
 									<option value="" disabled selected>Select type of donor</option>
 									<option value="Regular">Regular</option>
 									<option value="Teacher">Teacher</option>
@@ -100,7 +101,7 @@
 										<p>or</p>
 										<span class="browse-button">Browse file</span>
 									  </div>
-									  <input id="file" type="file" />
+									  <input id="file" type="file" required/>
 									</label>
 								  </form>								  
 
@@ -109,10 +110,46 @@
 						</div>
 					</div>	
 				</div>
-				<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
+				<button class="appsLand-btn subscribe-btn" onclick="validateForm()">
 					create account
 				</button>
+				
 			</div>
 		</section>
+		
+		<script>
+			function validateForm() {
+				var form = document.getElementById('registration-form');
+				var fname = document.getElementById('fname');
+				var lname = document.getElementById('lname');
+				var gender = document.getElementById('gender');
+				var email = document.getElementById('email');
+				var cnum = document.getElementById('cnum');
+				var pass = document.getElementById('pass');
+				var address = document.getElementById('address');
+				var area = document.getElementById('area');
+				var govern = document.getElementById('govern');
+				var typed = document.getElementById('typed');
+				var file = document.getElementById('file');
+		
+				var inputs = [fname, lname, gender, email, cnum, pass, address, area, govern, typed, file];
+
+				var existingErrorMessages = document.querySelectorAll('.error-message');
+        existingErrorMessages.forEach(function(errorMessage) {
+            errorMessage.parentNode.removeChild(errorMessage);
+        });
+		
+				inputs.forEach(function(input) {
+					if (!input.value) {
+						var errorMessage = document.createElement('span');
+						errorMessage.className = 'error-message';
+						errorMessage.textContent = 'This field is required';
+						input.parentNode.insertBefore(errorMessage, input.nextSibling);
+					}
+				});
+			}
+		</script>
+		
+		
     </body>
 </html>
