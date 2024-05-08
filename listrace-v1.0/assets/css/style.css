@@ -1017,16 +1017,40 @@ margin: 10px;
 
 /*Counter farida*/
 
-.counter {
+#quantityLabel {
+  margin-right: 10px; /* Add spacing between label and counter */
+  /*flex: 0 0 auto; /* Prevent label from shrinking/growing */
+}
+.counter1 {
     /* Existing styles for the counter */
     margin: 0 10px; /* Optional: Add some spacing between buttons and counter */
   }
 
-  .counter-container {
-    display: flex; /* Make the container a flexbox */
+  .counter-container1 {
+   /* display: flex; /* Make the container a flexbox */
     align-items: center; /* Align buttons and counter vertically */
     padding: 5px 10px;
+    display: grid; /* Make the container a grid */
+  grid-template-columns: auto 1fr auto; /* Define columns */
+
+}
+  
+  /*counter container farida*/
+  .counter-container1 {
+    overflow: hidden; /* Prevent elements from overflowing the container */
   }
+  
+  #decrement1, #increment1 {
+    float: left; /* Float the buttons to the left */
+    margin-right: 10px; /* Add spacing between buttons */
+  }
+  
+  .counter1 {
+    float: left; /* Float the counter display to the left */
+  }
+
+  
+  
 
 
 
@@ -1088,7 +1112,7 @@ margin: 10px;
     border: 1px solid #fa5c5f;
   }
 
-    /*create post*/ 
+    /*create post farida*/ 
 
 .paste-button {
     position: relative;
@@ -1919,11 +1943,256 @@ h4{
     text-align: center;
     padding: 5px 10px;
 }
-/*post farida*/
 
-body {
-  background-color: none;
+/*my posts farida*/
+.button-container {
+  display: flex;
+  display: flex;
+  justify-content: flex-end; /* Aligns the buttons to the right */
+  align-items: center;
 }
+
+.edit-button,
+.delete-button {
+  margin-left: 10px; /* Adjust this value to your preference */
+
+}
+
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(22, 25, 61);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164); */
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+.edit-svgIcon path:hover{
+  fill: rgb(22, 25, 61);
+}
+
+.edit-button:hover {
+  width: 120px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color:transparent;
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+  color: rgb(22, 25, 61);
+  
+}
+
+.delete-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(22, 25, 61);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164); */
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.delete-svgIcon {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.delete-svgIcon path {
+  fill: white;
+}
+.delete-svgIcon path:hover{
+  fill: rgb(22, 25, 61);
+}
+
+.delete-button:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color:transparent;
+  align-items: center;
+}
+
+.delete-button:hover .delete-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.delete-button::before {
+  display: none;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.delete-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+  color: rgb(22, 25, 61);
+}
+/*delete popup*/
+.card {
+  width: 300px;
+  height: fit-content;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  position: fixed;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.068);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-content {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.card-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(27, 27, 27);
+}
+.card-description {
+  font-weight: 100;
+  color: rgb(102, 102, 102);
+}
+.card-button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.card-button {
+  width: 50%;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.primary {
+  background-color: rgb(255, 114, 109);
+  color: white;
+}
+.primary:hover {
+  background-color: rgb(255, 73, 66);
+}
+.secondary {
+  background-color: #ddd;
+}
+.secondary:hover {
+  background-color: rgb(197, 197, 197);
+}
+.exit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.exit-button:hover svg {
+  fill: black;
+}
+.exit-button svg {
+  fill: rgb(175, 175, 175);
+}
+ /* Done button farida */
+ .doneBtn{
+  width: 70px;
+  height: 40px;
+  background-color: rgb(22, 25, 61);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164); */
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  color:white;
+ }
+ .doneBtn:hover{
+  background-color: transparent;
+  color:rgb(22, 25, 61);
+ }
+
+/*post farida*/
 
 .notificationCard {
   width: 500px;
@@ -1995,7 +2264,7 @@ body {
  transform: translateY(-3px);
 }
 
-.postback::after {
+/* .postback::after {
  content: "";
  display: inline-block;
  height: 100%;
@@ -2006,7 +2275,7 @@ body {
  position: absolute;
  z-index: -1;
  transition: all .3s;
-}
+} */
 
 .postback:hover::after {
  background-color: rgb(244, 73, 54);
