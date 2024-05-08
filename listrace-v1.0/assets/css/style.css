@@ -367,7 +367,7 @@ ul{
  
   
 
-  #closePopup1, #closePopup2, #closePopup3 {
+  #closePopup1, #closePopup2, #closePopup3, #submitButton {
     /* Existing styles: color: white; */
     background-color:rgb(5, 14, 56);;
     color: #ecf0f0;
@@ -378,7 +378,7 @@ ul{
     padding: 10px 20px; /* Optional: Adjust padding as needed */
   }
   
-  #closePopup1:hover,   #closePopup2:hover, #closePopup3:hover{
+  #closePopup1:hover,   #closePopup2:hover, #closePopup3:hover, #submitButton:hover{
     background-color: transparent;
     color: rgb(5, 14, 56);
     font-weight:bold;
@@ -2417,6 +2417,14 @@ background-color: cadetblue;
 #right-curtain {
   right: 0;
   width: 50vw;  /* Adjust width for desired curtain size */
+}
+#popupapply label, #popupapply h2{
+  font-weight:bold;
+  color:rgb(5, 14, 56);
+  padding-bottom: 7px;
+}
+#popupaplly select{
+  padding-bottom: 7px;
 }
 
 
