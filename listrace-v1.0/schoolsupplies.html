@@ -5,6 +5,7 @@
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
 
@@ -54,7 +55,9 @@
     <![endif]-->
 
 </head>
-<body>
+<body style="background:#ecf0f0;">
+	<div id="left-curtain"></div>
+	<div id="right-curtain"></div>
  
 <!--/.section-header-->
 
@@ -173,10 +176,30 @@
 <!--header-top end -->
 	
 
-		</div><!--/.section-header-->
+<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
+	<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
+		<div class="single-welcome-hero-form">
+			<h3></h3>
+			<form action="index.html">
+				<input type="text" placeholder="What and where would you like to donate?" />
+			</form>
+			
+		</div>
+		
+	</div>
+	<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
+		<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
+			   <i class="fa-solid fa-magnifying-glass" ></i> 
+		</button>
+	</div>
+</div>
 		<div class="explore-content">
 			
-				
+			<div id="openPopup">
+				<button style="font-size: 20px; padding-right:3px ;">Filter</button>
+				<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
+			  </div>
+
 			<div class="single-explore-item">
 				<div class="single-explore-txt bg-theme-4">
 					<h2><a href="#">School Supplies </a></h2>
@@ -252,45 +275,45 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div></div>
 		
 	<!--/.container
+</section>/.explore-->
 
-</section><!--/.explore-->
 <footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
-bottom: 0;
-width: 0px; ">
-	<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
-		
-		<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
-			<div class="row">
-				<div class="col-sm-5">
-					<p>
-						&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
-					</p><!--/p-->
-				</div>
-				<div class="col-sm-7">
-					<div class="footer-social" style="padding-right: 20px;">
-						<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
-						<a href="#"><i class="fa fa-facebook"></i></a>	
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+		bottom: 0;
+		width: 0px; ">
+			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+				
+				<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social" style="padding-right: 20px;">
+								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<a href="#"><i class="fa fa-facebook"></i></a>	
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			
-		</div><!--/.hm-footer-copyright-->
-	</div><!--/.container-->
+					
+				</div><!--/.hm-footer-copyright-->
+			</div><!--/.container-->
 
-	<div id="scroll-Top">
-		<div class="return-to-top">
-			<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-		</div>
-		
-	</div><!--/.scroll-Top-->
-	
-</footer><!--/.footer-->
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.footer-->
 
 
 <script>
@@ -319,7 +342,7 @@ width: 0px; ">
 	  popup2.style.display = 'none';
 	});
   </script>
-  <script>
+  <!-- <script>
 	const popup3 = document.getElementById('popup3');
 	const openPopupBtn3 = document.getElementById('openpostdetails3');
 	const closePopupBtn3 = document.getElementById('closePopup3');
@@ -331,7 +354,22 @@ width: 0px; ">
 	closePopupBtn3.addEventListener('click', function() {
 	  popup3.style.display = 'none';
 	});
-  </script>
+  </script> -->
+
+<script>
+	window.addEventListener("load", function() {
+	  const leftCurtain = document.getElementById("left-curtain");
+	  const rightCurtain = document.getElementById("right-curtain");
+	
+	  leftCurtain.style.transition = "transform 1s ease-in-out";
+	  rightCurtain.style.transition = "transform 1s ease-in-out";
+	
+	  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
+	  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
+	});
+	
+	
+	</script> 
 <!--explore end -->
 
 
