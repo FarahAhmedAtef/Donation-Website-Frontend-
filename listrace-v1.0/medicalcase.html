@@ -93,11 +93,22 @@
 						<input type="radio" id="area1" name="area" value="5th Settlement">
 						<label for="area">5th Settlement</label>
 						<br></div>
-						<br>
+						
 						<div class="checkbox-container"> 
 						<input type="radio" id="area2" name="area" value="Masr Elgedida">
 						<label for="area2">Masr Elgedida</label>
-						<br></div>
+					</br></div>
+					
+						<div class="checkbox-container"> 
+							<input type="radio" id="area3" name="area" value="Montazah">
+							<label for="area">Montazah</label>
+							<br></div>
+							
+							<div class="checkbox-container"> 
+								<input type="radio" id="area4" name="area" value="Sidi Gaber">
+								<label for="area">Sidi Gaber</label>
+								<br></div>
+								
 					</div>
 					<br><br>
 					<div class="border">
@@ -107,10 +118,18 @@
 					<input type="radio" id="alshefaHospital" name="hospital" value="Help center">
 					<label for="alshefaHospital">Help center</label>
 					<br></div>
-					<br>
 					<div class="checkbox-container"> 
-					<input type="radio" id="elGawyHospital" name="hospital" value="DonateExperience">
-					<label for="elGawyHospital">DonateExperience</label>
+						<input type="radio" id="alshefaHospital" name="hospital" value="Al Orman">
+						<label for="alshefaHospital">Al Orman</label>
+						<br></div>
+						<div class="checkbox-container"> 
+							<input type="radio" id="alshefaHospital" name="hospital" value="Resala">
+							<label for="alshefaHospital">Resala</label>
+							<br></div>	
+					
+					<div class="checkbox-container"> 
+					<input type="radio" id="elGawyHospital" name="hospital" value="DonateYourExperience">
+					<label for="elGawyHospital">DonateYourExperience</label>
 					<br></div>
 				</div>
 				<br><br>
@@ -142,7 +161,7 @@
 							Montazah
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Halp Center</label>
+						 <label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Help Center</label>
 						 <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
 							Heart
 						</label>
@@ -369,7 +388,7 @@
 		 
 		 
 
-		</section>
+		
 		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
 			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
 				<div class="single-welcome-hero-form">
@@ -500,7 +519,7 @@
 		</div>
 	<!--/.container-->
 
-</section><!--/.explore-->
+<!--/.explore-->
 		<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
 		bottom: 0;
 		width: 0px; ">
@@ -617,9 +636,16 @@
   <script>
   const clearAllButton = document.getElementById('clearall');
 	const checkboxes = document.querySelectorAll('input[type="radio"]');
-	
+const areaSelectElements1 = document.querySelectorAll('input[name="area"]');
 	clearAllButton.addEventListener('click', () => {
 	  checkboxes.forEach(checkbox => checkbox.checked = false);
+	  for (const areaElement of areaSelectElements) {
+     
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    
+
 	});</script>
 
 
@@ -724,9 +750,10 @@ async function initMap() {
         var test= {lat: -25.363, lng: 131.044}; 
         var map = new google.maps.Map(document.getElementById('map'), { 
           zoom: 4, 
-          center: test 
+          center: test,
+		  mapId:"fc7d36a02ec1bfd9" 
         }); 
-        var marker = new google.maps.Marker({ 
+        var marker = new google.maps.marker.AdvancedMarkerElement({ 
           position: test, 
           map: map 
         }); 
@@ -735,9 +762,10 @@ async function initMap() {
 	
 			var map2 = new google.maps.Map(document.getElementById('map2'), { 
 			  zoom: 4, 
-			  center: test 
+			  center: test,
+			  mapId:  "fc7d36a02ec1bfd9" 
 			}); 
-			var marker = new google.maps.Marker({ 
+			var marker = new google.maps.marker.AdvancedMarkerElement({ 
 			  position: test, 
 			  map: map2
 			}); 
@@ -745,9 +773,10 @@ async function initMap() {
 
 			var map3 = new google.maps.Map(document.getElementById('map3'), { 
 			  zoom: 4, 
-			  center: test 
+			  center: test,
+			  mapId:"fc7d36a02ec1bfd9" 
 			}); 
-			var marker = new google.maps.Marker({ 
+			var marker = new google.maps.marker.AdvancedMarkerElement({ 
 			  position: test, 
 			  map: map3
 			}); 
@@ -755,6 +784,7 @@ async function initMap() {
   const map4 = new google.maps.Map(document.getElementById("map4"), {
     zoom: 8,
     center: center,
+	mapId:"fc7d36a02ec1bfd9"
   });
 
  
@@ -764,7 +794,7 @@ async function initMap() {
 map4.addListener("click", (e) => {
   // Create a new marker if one doesn't exist
   if (!marker2) {
-	marker2 = new google.maps.Marker({
+	marker2 = new google.maps.marker.AdvancedMarkerElement({
 	  position: e.latLng,
 	  map: map4,
 	});
@@ -781,11 +811,11 @@ map4.addListener("click", (e) => {
 
 
 
-</script>
-<script async defer 
+ </script>
+<script   
 src= 
-"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
-</script> 
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&loading=async&callback=initMap&v=weekly&libraries=marker" defer> 
+</script>
 
 
 
@@ -1002,6 +1032,91 @@ window.addEventListener("load", function() {
   updateAreaSelect();
 
 </script>
+
+<script>
+	const governateRadioButtons = document.querySelectorAll('input[name="Governerate"]');
+const areaSelectElements = document.querySelectorAll('input[name="area"]');
+
+function updateAreaOptions() {
+  const selectedGovernerate = document.querySelector('input[name="Governerate"]:checked');
+  if (selectedGovernerate) {
+  if( selectedGovernerate.value === "Cairo"){
+   
+    for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+else if( selectedGovernerate.value === "Alexandria"){
+	for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+  }
+}
+
+// Update area options on initial load based on any selected radio button
+updateAreaOptions();
+
+// Update area options whenever a governate radio button is clicked
+for (const radioButton of governateRadioButtons) {
+  radioButton.addEventListener('click', updateAreaOptions);
+}
+</script>
+
+
+<!-- <script>
+	const governateRadioButtons1 = document.querySelectorAll('input[name="area"]');
+const areaSelectElements2 = document.querySelectorAll('input[name="hospital"]');
+
+function updateAreaOptions() {
+  const selectedGovernerate = document.querySelector('input[name="area"]:checked');
+  if (selectedGovernerate) {
+  if( selectedGovernerate.value.toLocaleLowerCase() === "5th settlement".toLocaleLowerCase()){
+   
+    for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+else if( selectedGovernerate.value === "Alexandria"){
+	for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+  }
+}
+
+// Update area options on initial load based on any selected radio button
+updateAreaOptions();
+
+// Update area options whenever a governate radio button is clicked
+for (const radioButton of governateRadioButtons) {
+  radioButton.addEventListener('click', updateAreaOptions);
+}
+</script> -->
 
 <!--explore end -->
 </body>
