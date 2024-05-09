@@ -2448,4 +2448,42 @@ background-color: cadetblue;
   padding-bottom: 7px;
 }
 
+.order-notification{
+  height: 200px;
+    flex: 0 0 30%;
+    /* background: linear-gradient(to left, #7a60ff, #cd9ffa); */
+   background: linear-gradient( to right,  rgb(74, 147, 149),  rgb(92, 182, 183))
+   ;
+    box-shadow: 0 5px 5px rgb(92, 182, 183);
+    border-radius: 3px;
+    margin-bottom: 25px;
+    -webkit-transition: .3s linear; 
+    -moz-transition:.3s linear; 
+    -ms-transition:.3s linear; 
+    -o-transition:.3s linear;
+    transition: .3s linear;
+margin: 10px;
 
+}
+
+.order-notification:hover{box-shadow: 0 10px 20px rgba(21,19,19,.2);}
+
+.order-notification:hover .single-explore-img-info{
+  opacity:1;
+  visibility:visible;
+  bottom:0px
+}
+
+.order-notification h2,
+.order-notification label {
+  color: white !important;
+  font-size: 15px;
+}
+.order-notification label {
+  border-right: 1px solid white !important;
+}
+
+.order-notification h2 a{
+  color:rgb(5, 14, 56);
+  font-weight: bolder; font-size: 18px;
+}
