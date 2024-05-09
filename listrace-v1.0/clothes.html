@@ -74,20 +74,26 @@
                     <!-- <form action="#"> -->
                         
                         <form action="/submit-registration" method="post">
-                            <input type="number" class="subscription-input-form" placeholder="Age">
+                          <select name="type1" class="subscription-input-form" id="type1">
+                            <option value="" disabled selected>Select age range</option>
+                            <option value="age1">0 - 5 years old</option>
+                            <option value="age2">6 - 10 years old</option>
+                            <option value="age3">11 - 16 years old</option>
+                            <option value="age4">17 - 21 years old</option>
+                        </select>
                             <br><br>
                             <input type="text" class="subscription-input-form" placeholder="Season ex: Winter, Summer, etc.">
                             <br><br>
                             <input type="text" class="subscription-input-form" placeholder="Material ex: Cotton, Linen, etc.">
                             <br><br>
                             <div class="counter-container">
-                                <!-- Quantity <br><br> -->
-                                <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" style="border: 10px black;">0</div>
-                                <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-                              </div>
+                              <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
+                              <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+                              <div class="counter" style="border: 10px black;">0</div>
+                              <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+                            </div>
         
-                            
+        
                            
 
                             <!-- <label for="confirm-password">Confirm Password:</label> -->
@@ -118,7 +124,7 @@
 <br><br>
                             
                             
-                   <a href="post.html" class="btn">Post</a>
+                   <a href="posted.html" class="btn">Post</a>
                         
                     
             </div>	

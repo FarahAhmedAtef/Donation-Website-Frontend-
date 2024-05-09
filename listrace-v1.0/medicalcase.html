@@ -310,23 +310,27 @@
 				  </label>
 				</form>
 				<div id="clinic-address">
-					<label for="address-input">Please enter your clinic address:</label><br>
+					<label for="address-input">Please enter your clinic address</label><br>
 					<input type="text" id="address-input" placeholder="Enter address">
 				</div>
+				<span id="fileError" class="error-message" style="color: red;"></span>
 				<div>
-					<label for="governorate-select">Governorate:</label>
-					<select id="governorate-select"></select>
-					<label for="area-select">Area:</label>
+					<label for="governorate-select">Governorate</label><br>
+					<select id="governorate-select"></select><br>
+					<span id="fileError" class="error-message" style="color: red;"></span>
+					<label for="area-select">Area</label><br>
 					<select id="area-select" disabled></select>
+					<span id="fileError" class="error-message" style="color: red;"></span>
 				  </div>
                 <label>Please pick your exact location on map</label>
 				<div id="map4"></div>
-                <label for="speciality-select">Speciality:</label>
+                <label for="speciality-select">Speciality</label><br>
                 <select id="speciality-select">
       <option value="skin">Skin</option>
       <option value="bones">Bones</option>
       <option value="heart">Heart</option>
     </select>
+	<span id="fileError" class="error-message" style="color: red;"></span>
 
 				<div class="containerapply">
 				  <div class="date-time">
@@ -337,10 +341,20 @@
 					<input type="time" id="timepicker">
 					<span id="timeError" class="error-message" style="color: red;"></span>
 				  </div>
-				  <button id="submitButton">Submit</button>
+				  <label for="elGawyHospital">Please pick where would you like to carry out the visit</label>
+				  <div class="checkbox-container"> 
+					<input type="radio" id="clinic" name="place" value="At your clinic">
+					<label for="elGawyHospital">At your clinic</label>
+					<br></div>
+					<div class="checkbox-container"> 
+						<input type="radio" id="patient" name="place" value="At patient's place">
+						<label for="elGawyHospital">At patient's place</label>
+						<br></div>
+						<span id="fileError" class="error-message" style="color: red;"></span>
+				  <button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
 				</div>
 			  </div>
-			  <div id="message" class="hidden"> <p>Done!</p>
+			  <div id="message" class="hidden"> <i class="fa-solid fa-circle-check" style="color:rgb(20, 160, 20)"></i><p style="color:rgb(20, 160, 20)">Your Request to donate has been sumbitted succesfully! We will get back to you after considering your response</p>
 			  </div>
 		<!--/.section-header-->
 		
@@ -865,6 +879,13 @@ const timePicker = document.getElementById('timepicker');
 const fileError = document.getElementById('fileError');
 const dateError = document.getElementById('dateError');
 const timeError = document.getElementById('timeError');
+const address = document.getElementById('address-input');
+const gov = document.getElementById('governerate-select');
+const area = document.getElementById('area-select');
+const spec = document.getElementById('speciality-select');
+const pat = document.getElementById('patient');
+const clinic = document.getElementById('clinic');
+
 submitButton.addEventListener('click', () => {
 	let hasError = false; // Flag to track if any errors are found
 
