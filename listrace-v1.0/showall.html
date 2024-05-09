@@ -356,6 +356,7 @@
 			  </div>
 			  <div id="message" class="hidden"> <i class="fa-solid fa-circle-check" style="color:rgb(20, 160, 20)"></i><p style="color:rgb(20, 160, 20)">Your Request to donate has been sumbitted succesfully! We will get back to you after considering your response</p>
 			  </div>
+              
 		<!--/.section-header-->
 		
 		<header id="header-top" class="header-top"  >
@@ -401,33 +402,11 @@
 		<!--header-top end -->
 		 
 		 
-
-		
-		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
-			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
-				<div class="single-welcome-hero-form">
-					<h3></h3>
-					<form action="index.html">
-						<input type="text" placeholder="What and where would you like to donate?" />
-					</form>
-					
-				</div>
-				
-			</div>
-			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
-				<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
-					   <i class="fa-solid fa-magnifying-glass" ></i> 
-				</button>
-			</div>
-		</div>
 		
 		  
 		<div class="explore-content" id="explore-content">
 			
-			<div id="openPopup">
-				<button style="font-size: 20px; padding-right:3px ;">Filter</button>
-				<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
-			  </div>
+			
 					<div class="single-explore-item">
 						<div class="single-explore-txt bg-theme-4">
 							<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">In Need of Doctor</a></h2>
@@ -531,6 +510,7 @@
 			</div>
 			
 		</div>
+        
 	<!--/.container-->
 
 <!--/.explore-->
@@ -905,7 +885,6 @@ submitButton.addEventListener('click', () => {
     dateError.textContent = ''; // Clear previous error message
   }
 
-  // Check if time picker has a value
   if (timePicker.value===''){
       timeError.textContent='Please select a time.';
 	  hasError=true;
@@ -918,12 +897,11 @@ submitButton.addEventListener('click', () => {
 	fileError.textContent='';
 	dateError.textContent='';
 	timeError.textContent='';
-  messageElement.classList.remove('hidden'); // Show the message
+  messageElement.classList.remove('hidden'); 
    popup10.style.display='none';
-  // Simulate a transition effect (using setTimeout for simplicity)
   setTimeout(() => {
-    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
-  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+    messageElement.classList.add('hidden'); 
+  }, 3000); 
 }
 });
 
@@ -933,22 +911,21 @@ submitButton.addEventListener('click', () => {
 	const searchInput = document.querySelector('.single-welcome-hero-form input');
 	const exploreItems = document.querySelectorAll('.single-explore-item');
 	
-	// Add click event listener to the search div
 	const searchDiv = document.querySelector('.welcome-hero-serch');
 	
 
 	searchDiv.addEventListener('click', () => {
 		const searchText = searchInput.value.trim();
-		console.log(searchText); // Remove leading/trailing whitespaces
+		console.log(searchText); 
 		if(searchText === ''){
-			console.log(searchText); // Remove leading/trailing whitespaces
+			console.log(searchText); 
 
 			const existingNoPostsMessage = document.querySelector('.no-posts-message');
     if (existingNoPostsMessage) {
       existingNoPostsMessage.remove();
     }
 		exploreItems.forEach(exploreItem=>{
-			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+			exploreItem.classList.remove('hidden'); 
 		});
 		return;
 	}
@@ -957,36 +934,31 @@ submitButton.addEventListener('click', () => {
 		const hospitalLabel = exploreItem.querySelector('.hospital');
 		const specLabel = exploreItem.querySelector('.speciality');
 
-		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
+		const hospitalText = hospitalLabel.textContent.trim(); 
 	
-		const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
+		const specText = specLabel.textContent.trim(); 
 
 		
 		  
 	
 		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase() || searchText.toLocaleLowerCase() === specText.toLocaleLowerCase()) {
 			allPostsHidden=false;
-			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+			exploreItem.classList.remove('hidden'); 
 		  }
 		  else{
-			exploreItem.classList.add('hidden'); // Show if hospital matches search
-
+			exploreItem.classList.add('hidden'); 
 		  }
 		
 	  });
 const exploreContent = document.getElementById('explore-content');
 const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
-    // Display "No posts" message (optional: create a separate element)
-    const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
-    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
-    // Append the element to the appropriate container in your HTML structure
+    const noPostsElement = document.createElement('p'); 
+    noPostsElement.textContent = 'No posts found based on your filters.'; 
+    noPostsElement.classList.add('no-posts-message'); 
 
-    // (Example: assuming you have a container with ID "filter-results")
    exploreContent.appendChild(noPostsElement);
   } else if(!allPostsHidden && existingMessage) {
-    // Remove any previously displayed "No posts" message (optional)
     const existingNoPostsMessage = document.querySelector('.no-posts-message');
     if (existingNoPostsMessage) {
       existingNoPostsMessage.remove();
@@ -1002,8 +974,8 @@ window.addEventListener("load", function() {
   leftCurtain.style.transition = "transform 1s ease-in-out";
   rightCurtain.style.transition = "transform 1s ease-in-out";
 
-  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
-  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
+  leftCurtain.style.transform = "translateX(-50vw)";  
+  rightCurtain.style.transform = "translateX(50vw)";  
 });
 
 
@@ -1015,14 +987,11 @@ window.addEventListener("load", function() {
 	const governorateSelect = document.getElementById("governorate-select");
   const areaSelect = document.getElementById("area-select");
 
-  // Sample governorate data (replace with actual data)
   const governorates = {
     "Cairo": ["Nasr City", "Giza", "Heliopolis"],
     "Alexandria": ["Downtown", "Smouha", "East Alexandria"],
-    // Add more governorates and their areas
   };
 
-  // Populate the governorate dropdown
   for (const governorate in governorates) {
     const option = document.createElement("option");
     option.value = governorate;
@@ -1030,11 +999,10 @@ window.addEventListener("load", function() {
     governorateSelect.appendChild(option);
   }
 
-  // Function to update area dropdown based on selected governorate
   function updateAreaSelect() {
     const selectedGovernorate = governorateSelect.value;
-    areaSelect.disabled = !governorates[selectedGovernorate]; // Enable only if areas exist
-    areaSelect.innerHTML = ""; // Clear previous options
+    areaSelect.disabled = !governorates[selectedGovernorate]; 
+    areaSelect.innerHTML = ""; 
 
     if (governorates[selectedGovernorate]) {
       for (const area of governorates[selectedGovernorate]) {
@@ -1046,10 +1014,8 @@ window.addEventListener("load", function() {
     }
   }
 
-  // Event listener for governorate change
   governorateSelect.addEventListener("change", updateAreaSelect);
 
-  // Call updateAreaSelect initially to handle default governorate state
   updateAreaSelect();
 
 </script>
@@ -1066,10 +1032,10 @@ function updateAreaOptions() {
     for (const areaElement of areaSelectElements) {
       if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
         areaElement.disabled = true;
-        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+        areaElement.parentElement.classList.add('hidden'); 
       } else  {
         areaElement.disabled = false;
-        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+        areaElement.parentElement.classList.remove('hidden'); 
       }
     }
 }
@@ -1077,67 +1043,22 @@ else if( selectedGovernerate.value === "Alexandria"){
 	for (const areaElement of areaSelectElements) {
       if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
         areaElement.disabled = true;
-        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+        areaElement.parentElement.classList.add('hidden'); 
       } else  {
         areaElement.disabled = false;
-        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+        areaElement.parentElement.classList.remove('hidden'); 
       }
     }
 }
   }
 }
 
-// Update area options on initial load based on any selected radio button
 updateAreaOptions();
 
-// Update area options whenever a governate radio button is clicked
 for (const radioButton of governateRadioButtons) {
   radioButton.addEventListener('click', updateAreaOptions);
 }
 </script>
 
 
-<!-- <script>
-	const governateRadioButtons1 = document.querySelectorAll('input[name="area"]');
-const areaSelectElements2 = document.querySelectorAll('input[name="hospital"]');
-
-function updateAreaOptions() {
-  const selectedGovernerate = document.querySelector('input[name="area"]:checked');
-  if (selectedGovernerate) {
-  if( selectedGovernerate.value.toLocaleLowerCase() === "5th settlement".toLocaleLowerCase()){
-   
-    for (const areaElement of areaSelectElements) {
-      if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
-        areaElement.disabled = true;
-        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
-      } else  {
-        areaElement.disabled = false;
-        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
-      }
-    }
-}
-else if( selectedGovernerate.value === "Alexandria"){
-	for (const areaElement of areaSelectElements) {
-      if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
-        areaElement.disabled = true;
-        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
-      } else  {
-        areaElement.disabled = false;
-        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
-      }
-    }
-}
-  }
-}
-
-// Update area options on initial load based on any selected radio button
-updateAreaOptions();
-
-// Update area options whenever a governate radio button is clicked
-for (const radioButton of governateRadioButtons) {
-  radioButton.addEventListener('click', updateAreaOptions);
-}
-</script> -->
-
-<!--explore end -->
 </body>

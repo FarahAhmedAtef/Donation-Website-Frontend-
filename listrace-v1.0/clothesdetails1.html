@@ -2,8 +2,6 @@
 <html class="no-js" lang="en">
 
 <head>
-	<link rel="stylesheet" type="text/css"
-	href="https://fonts.googleapis.com/css?family=Tangerine">
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
     <!-- meta data -->
     <meta charset="utf-8">
@@ -56,69 +54,73 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-</head >
-
-<body style="background:#ecf0f0;">
-	<div id="left-curtain"></div>
-	<div id="right-curtain"></div>
+</head>
+<body style="background:#ecf0f0">
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
 		<div class="section-header">
 			<h2>explore</h2>
 			<p>Explore New place, food, culture around the world and many more</p> -->
-			<div id="popup">
-				<i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+            <div id="popup">
 				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
 				<form class="popupcontent" id="form1">
 					<div class="border">
-					<label for="Governerate" style="color: black;">Governerate</label>
-					<br>
-					<div class="checkbox-container"> 
-					<input type="radio" id="governrate1" name="Governerate" value="Cairo">
-					<label for="governrate1">Cairo</label>
-					<br></div>
+					<label for="Age" style="color: black;">Age</label>
 					
 					<div class="checkbox-container"> 
-					<input type="radio" id="governrate2" name="Governerate" value="Alexandria">
-					<label for="governrate2">Alexandria</label>
-					<br></div>
+					<input type="checkbox" id="age1" name="Governerate" value="0 - 5">
+					<label for="age1">0 - 5</label>
 					</div>
-					<br><br>
-					<div class="border">
-						<label for="area" style="color: black;">Area</label>
-						<br>
-						<div class="checkbox-container"> 
-						<input type="radio" id="area1" name="area" value="5th Settlement">
-						<label for="area">5th Settlement</label>
-						<br></div>
-						<div class="checkbox-container"> 
-						<input type="radio" id="area2" name="area" value="Masr Elgedida">
-						<label for="area2">Masr Elgedida</label>
-						<br></div>
-						<div class="checkbox-container"> 
-							<input type="radio" id="area3" name="area" value="Montazah">
-							<label for="area">Montazah</label>
-							<br></div>
-							
-							<div class="checkbox-container"> 
-								<input type="radio" id="area4" name="area" value="Sidi Gaber">
-								<label for="area">Sidi Gaber</label>
-								<br></div>
+					
+					<div class="checkbox-container"> 
+					<input type="checkbox" id="age2" name="Governerate" value="6 - 10">
+					<label for="age2">6 - 10</label>
 					</div>
-					<br><br>
+                    <div class="checkbox-container"> 
+                        <input type="checkbox" id="age3" name="Governerate" value="11 - 16">
+                        <label for="age3">11 - 16</label>
+                        </div>
+                        <div class="checkbox-container"> 
+                            <input type="checkbox" id="age4" name="Governerate" value="17 - 21">
+                            <label for="age4">17 - 21</label>
+                            </div>
+					</div>
 					<div class="border">
-					<label for="hospital" style="color: black;">Hospital</label>
-					<br>
+						<label for="gender" style="color: black;">Gender</label>
+						
+						<div class="checkbox-container"> 
+						<input type="checkbox" id="gender1" name="area" value="Male">
+						<label for="gender">Male</label>
+						</div>
+						
+						<div class="checkbox-container"> 
+						<input type="checkbox" id="gender2" name="area" value="Female">
+						<label for="gender2">Female</label>
+						</div>
+					</div>
+					<div class="border">
+					<label for="Season" style="color: black;">Season</label>
 					<div class="checkbox-container"> 
-					<input type="radio" id="alshefaHospital" name="hospital" value="ALShefa hospital">
-					<label for="alshefaHospital">ALShefa Hospital</label>
-					<br></div>
-					<br>
+					<input type="checkbox" id="spring" name="hospital" value="spring">
+					<label for="spring">Spring</label>
+				</div>
+				
 					<div class="checkbox-container"> 
-					<input type="radio" id="elGawyHospital" name="hospital" value="ElGawy hospital">
-					<label for="elGawyHospital">ElGawy Hospital</label>
-					<br></div>
+                        <input type="checkbox" id="summer" name="hospital" value="summer">
+                        <label for="summer">Summer</label>
+                        </div>
+                        
+                        <div class="checkbox-container"> 
+                            <input type="checkbox" id="fall" name="hospital" value="fall">
+                            <label for="fall">Fall</label>
+                            </div>
+                            
+                        <div class="checkbox-container"> 
+                                <input type="checkbox" id="winter" name="hospital" value="winter">
+                                <label for="winter">Winter</label>
+                                </div>
+                                
 				</div>
 				<br> <br>
 				  </form>
@@ -127,28 +129,28 @@
 
 			  <div id="popup1">
 				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">In Need of Blood Donation</a></h2>
+					<h2><a href="#">In Need of Clothes Donation</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
-						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Montazah
+							New Cairo
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Al Orman Orphanage </label>
 					</p>
 					<div>
 						<div>
-						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">Farah Ahmed</label>
+						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>						
 						</div>
-						<div>
-						<i class="fa-solid fa-droplet" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">D</label>
-						</div>
+						
 					</div>
 					<div>
-						<p>Description: In need of 3 bags of blood type D </p>
+						<p>Type of Clothing: Jackets  </p>
+						<p> Material: Cotton, Fleece, Wool</p>
+                        <p> Quantity: 6</p>
+						<p> Age: 14-17 </p>
+						<p> Season: Winter </p>
 					</div>
 					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
 					<div class="counter-container">
@@ -160,34 +162,30 @@
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
-
-
-			  
-
 			  <div id="popup2">
 				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">Blood Donation</a></h2>
+					<h2><a href="#">Clothes Donation</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							5th Settlement
+							Nasr City 
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">SOS Children's Village </label>
 					</p>
 					<div>
 						<div>
 						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">Karen Maged</label>
 						</div>
-						<div>
-						<i class="fa-solid fa-droplet" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">D</label>
-						</div>
+						
 					</div>
 					<div>
-						<p>Description: In need of 3 bags of blood type D </p>
+						<p>Type of Clothing: Jeans  </p>
+						<p> Material: Denim</p>
+                        <p> Quantity: 5</p>
+						<p> Age: 6-9 </p>
+						<p> Season: Winter, Summer, Spring, Fall </p>
 					</div>
 					<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>
 					<div class="counter-container">
@@ -201,28 +199,27 @@
 
 			  <div id="popup3">
 				<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">In Need of Blood Donation</a></h2>
+					<h2><a href="#">In Need of Clothes Donation</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Masr Elgedida
+							Maadi
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Awlady</label>
 					</p>
 					<div>
 						<div>
 						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">Rose Bassem</label>
-						</div>
-						<div>
-						<i class="fa-solid fa-droplet" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">D</label>
 						</div>
 					</div>
 					<div>
-						<p>Description: In need of 3 bags of blood type D </p>
+						<p>Type of Clothing: T-Shirts  </p>
+						<p> Material: Cotton, Polyester</p>
+                        <p> Quantity: 7</p>
+						<p> Age: 10-13 </p>
+						<p> Season: Summer, Spring </p>
 					</div>
 					<div id="map3" style=" margin-top: 20px; margin-bottom: 20px;"></div>
 					
@@ -233,7 +230,6 @@
 
 
 		<!--/.section-header-->
-		
 		<header id="header-top" class="header-top"  >
 			<ul>
 				<li>
@@ -245,7 +241,7 @@
 				</li>
 				<li style="transform:translate(570px,0px);">
 					<span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-					  Make  <span style="color: rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+					  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
 					</span>
 				  </li>
 				  
@@ -274,21 +270,21 @@
 				
 			
 		</header><!--/.header-top-->
-		<!--header-top end -->
-		<div class="welcome-hero-serch-box">
-			<div class="welcome-hero-form" style="height: 50px; margin-top: -30px; transform: translate(520px,0px);">
+		
+		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
+			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
 				<div class="single-welcome-hero-form">
 					<h3></h3>
 					<form action="index.html">
-						<input type="text" placeholder=""/>
+						<input type="text" placeholder="What and where would you like to donate?" />
 					</form>
 					
 				</div>
 				
 			</div>
 			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
-				<button class="welcome-hero-btn" style="height:45px ; width:50px ;" >
-					   <i class="fa-solid fa-magnifying-glass" style="color: white;"></i> 
+				<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
+					   <i class="fa-solid fa-magnifying-glass" ></i> 
 				</button>
 			</div>
 		</div>
@@ -302,15 +298,15 @@
 			  </div>
 					<div class="single-explore-item">
 						<div class="single-explore-txt bg-theme-4">
-							<h2><a href="#">In Need of Blood Donation</a></h2>
+							<h2><a href="#">In Need of Clothes Donation</a></h2>
 							<p class="explore-rating-price">
 								<span class="explore-rating">5.0</span>
-								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
+								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">10</label> 
 								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-									Montazah
+									Female
 									
 								</label>
-								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter</label>
 							</p>
 							
 							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -333,15 +329,15 @@
 			
 				<div class="single-explore-item">
 					<div class="single-explore-txt bg-theme-4">
-						<h2><a href="#">Blood Donation </a></h2>
+						<h2><a href="#">Clothes Donation </a></h2>
 						<p class="explore-rating-price">
 							<span class="explore-rating">5.0</span>
 							<label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">Cairo</label> 
 							<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-								5th Settlement
+								Nasr City
 								
 							</label>
-							 <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">algawy hospital</label>
+							 <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">SOS Children's Village</label>
 						</p>
 						
 						<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -363,15 +359,15 @@
 			
 			<div class="single-explore-item">
 				<div class="single-explore-txt bg-theme-4">
-					<h2><a href="#">Blood Donation is Required</a></h2>
+					<h2><a href="#">Clothes Donations are Required</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Masr Elgedida
+							Maadi
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Awlady</label>
 					</p>
 					
 					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -395,41 +391,41 @@
 	<!--/.container-->
 
 </section><!--/.explore-->
+		
 <footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
-bottom: 0;
-width: 0px; ">
-	<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
-		
-		<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
-			<div class="row">
-				<div class="col-sm-5">
-					<p>
-						&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
-					</p><!--/p-->
-				</div>
-				<div class="col-sm-7">
-					<div class="footer-social" style="padding-right: 20px;">
-						<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
-						<a href="#"><i class="fa fa-facebook"></i></a>	
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+		bottom: 0;
+		width: 0px; ">
+			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+				
+				<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social" style="padding-right: 20px;">
+								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<a href="#"><i class="fa fa-facebook"></i></a>	
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+							</div>
+						</div>
 					</div>
+					
+				</div><!--/.hm-footer-copyright-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
 				</div>
-			</div>
+				
+			</div><!--/.scroll-Top-->
 			
-		</div><!--/.hm-footer-copyright-->
-	</div><!--/.container-->
-
-	<div id="scroll-Top">
-		<div class="return-to-top">
-			<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-		</div>
-		
-	</div><!--/.scroll-Top-->
-	
-</footer><!--/.footer-->
-
+        </footer><!--/.footer-->
 
 
 
@@ -438,16 +434,12 @@ width: 0px; ">
 	const popup = document.getElementById('popup');
 	const openPopupBtn = document.getElementById('openPopup');
 	const closePopupBtn = document.getElementById('closePopup');
-	const closePopupBtn4 = document.getElementById('closeButton0');
-
+  
 	openPopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'block';
 	});
   
 	closePopupBtn.addEventListener('click', function() {
-	  popup.style.display = 'none';
-	});
-	closePopupBtn4.addEventListener('click', function() {
 	  popup.style.display = 'none';
 	});
   </script>
@@ -501,20 +493,13 @@ width: 0px; ">
 
 
 
-<script>
-	const clearAllButton = document.getElementById('clearall');
-	  const checkboxes = document.querySelectorAll('input[type="radio"]');
-  const areaSelectElements1 = document.querySelectorAll('input[name="area"]');
-	  clearAllButton.addEventListener('click', () => {
-		checkboxes.forEach(checkbox => checkbox.checked = false);
-		for (const areaElement of areaSelectElements) {
-	   
-		  areaElement.disabled = false;
-		  areaElement.parentElement.classList.remove('hidden'); // Reset display to default
-		}
-	  
-  
-	  });</script>
+  <script>
+  const clearAllButton = document.getElementById('clearall');
+	const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+	
+	clearAllButton.addEventListener('click', () => {
+	  checkboxes.forEach(checkbox => checkbox.checked = false);
+	});</script>
 
 
 <script>
@@ -526,17 +511,13 @@ applyButton.addEventListener('click', () => {
   const selectedFilters = []; // Array to store checked checkbox values
   
   // Loop through checkboxes in the form
-  const checkboxes = checkboxForm.querySelectorAll('input[type="radio"]');
+  const checkboxes = checkboxForm.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach(checkbox => {
     if (checkbox.checked) {
       selectedFilters.push({value: checkbox.value, name:checkbox.name}); // Add checked checkbox value to array
     }
   });
   if(selectedFilters.length===0){
-	const existingNoPostsMessage = document.querySelector('.no-posts-message');
-    if (existingNoPostsMessage) {
-      existingNoPostsMessage.remove();
-    }
 	postElements.forEach(post=>{
 		post.classList.remove('hidden');
 		
@@ -583,10 +564,7 @@ textbx=post.querySelector('.hospital');
       post.classList.add('hidden'); // Add hidden class if not visible
     }
   });
-
-  const exploreContent = document.getElementById('explore-content');
-const existingMessage = exploreContent.querySelector('.no-posts-message');
-  if (allPostsHidden && !existingMessage) {
+  if (allPostsHidden) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
     noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
@@ -594,8 +572,8 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
     // Append the element to the appropriate container in your HTML structure
 
     // (Example: assuming you have a container with ID "filter-results")
-   exploreContent.appendChild(noPostsElement);
-  } else if(!allPostsHidden && existingMessage) {
+    document.getElementById('explore-content').appendChild(noPostsElement);
+  } else {
     // Remove any previously displayed "No posts" message (optional)
     const existingNoPostsMessage = document.querySelector('.no-posts-message');
     if (existingNoPostsMessage) {
@@ -615,10 +593,9 @@ function initMap() {
         var test= {lat: -25.363, lng: 131.044}; 
         var map = new google.maps.Map(document.getElementById('map'), { 
           zoom: 4, 
-          center: test ,
-		  mapId:"fc7d36a02ec1bfd9" 
+          center: test 
         }); 
-        var marker = new google.maps.marker.AdvancedMarkerElement({ 
+        var marker = new google.maps.Marker({ 
           position: test, 
           map: map 
         }); 
@@ -627,23 +604,21 @@ function initMap() {
 	
 			var map2 = new google.maps.Map(document.getElementById('map2'), { 
 			  zoom: 4, 
-			  center: test,
-			  mapId:"fc7d36a02ec1bfd9"  
+			  center: test 
 			}); 
-			var marker2 = new google.maps.marker.AdvancedMarkerElement({ 
+			var marker2 = new google.maps.Marker({ 
 			  position: test, 
-			  map: map2
+			  map2: map2
 			}); 
 
 
 			var map3 = new google.maps.Map(document.getElementById('map3'), { 
 			  zoom: 4, 
-			  center: test,
-			  mapId:"fc7d36a02ec1bfd9"  
+			  center: test 
 			}); 
-			var marker3 = new google.maps.marker.AdvancedMarkerElement({ 
+			var marker3 = new google.maps.Marker({ 
 			  position: test, 
-			  map: map3
+			  map3: map3
 			}); 
 
 
@@ -654,10 +629,10 @@ function initMap() {
 
 
 </script>
-<script   
+<script async defer 
 src= 
-"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&loading=async&callback=initMap&v=weekly&libraries=marker" defer> 
-</script>
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
+</script> 
 
 	
 	
@@ -732,126 +707,6 @@ closeButton3.addEventListener('click', () => {
 });
 </script>
 
-<script>
-	const searchInput = document.querySelector('.single-welcome-hero-form input');
-	const exploreItems = document.querySelectorAll('.single-explore-item');
-	
-	// Add click event listener to the search div
-	const searchDiv = document.querySelector('.welcome-hero-serch');
-	
 
-	searchDiv.addEventListener('click', () => {
-		const searchText = searchInput.value.trim();
-		console.log(searchText); // Remove leading/trailing whitespaces
-		if(searchText === ''){
-			console.log(searchText); // Remove leading/trailing whitespaces
-
-			const existingNoPostsMessage = document.querySelector('.no-posts-message');
-    if (existingNoPostsMessage) {
-      existingNoPostsMessage.remove();
-    }
-		exploreItems.forEach(exploreItem=>{
-			exploreItem.classList.remove('hidden'); // Show if hospital matches search
-		});
-		return;
-	}
-	let allPostsHidden=true;
-	  exploreItems.forEach(exploreItem => {
-		const hospitalLabel = exploreItem.querySelector('.hospital');
-		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
-	
-	
-		
-		  
-	
-		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase()) {
-			allPostsHidden=false;
-			exploreItem.classList.remove('hidden'); // Show if hospital matches search
-		  }
-		  else{
-			exploreItem.classList.add('hidden'); // Show if hospital matches search
-
-		  }
-		
-	  });
-const exploreContent = document.getElementById('explore-content');
-const existingMessage = exploreContent.querySelector('.no-posts-message');
-  if (allPostsHidden && !existingMessage) {
-    // Display "No posts" message (optional: create a separate element)
-    const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
-    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
-    // Append the element to the appropriate container in your HTML structure
-
-    // (Example: assuming you have a container with ID "filter-results")
-   exploreContent.appendChild(noPostsElement);
-  } else if(!allPostsHidden && existingMessage) {
-    // Remove any previously displayed "No posts" message (optional)
-    const existingNoPostsMessage = document.querySelector('.no-posts-message');
-    if (existingNoPostsMessage) {
-      existingNoPostsMessage.remove();
-    }
-  }
-	});
-	</script>
-
-<script>
-	window.addEventListener("load", function() {
-	  const leftCurtain = document.getElementById("left-curtain");
-	  const rightCurtain = document.getElementById("right-curtain");
-	
-	  leftCurtain.style.transition = "transform 1s ease-in-out";
-	  rightCurtain.style.transition = "transform 1s ease-in-out";
-	
-	  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
-	  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
-	});
-	
-	
-	</script> 
-
-
-
-<script>
-	const governateRadioButtons = document.querySelectorAll('input[name="Governerate"]');
-const areaSelectElements = document.querySelectorAll('input[name="area"]');
-
-function updateAreaOptions() {
-  const selectedGovernerate = document.querySelector('input[name="Governerate"]:checked');
-  if (selectedGovernerate) {
-  if( selectedGovernerate.value === "Cairo"){
-   
-    for (const areaElement of areaSelectElements) {
-      if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
-        areaElement.disabled = true;
-        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
-      } else  {
-        areaElement.disabled = false;
-        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
-      }
-    }
-}
-else if( selectedGovernerate.value === "Alexandria"){
-	for (const areaElement of areaSelectElements) {
-      if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
-        areaElement.disabled = true;
-        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
-      } else  {
-        areaElement.disabled = false;
-        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
-      }
-    }
-}
-  }
-}
-
-// Update area options on initial load based on any selected radio button
-updateAreaOptions();
-
-// Update area options whenever a governate radio button is clicked
-for (const radioButton of governateRadioButtons) {
-  radioButton.addEventListener('click', updateAreaOptions);
-}
-</script>
 <!--explore end -->
 </body>

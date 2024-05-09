@@ -574,6 +574,80 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 
 
 
+<!-- <script>
+
+async function initMap() { 
+        var test= {lat: -25.363, lng: 131.044}; 
+        var map = new google.maps.Map(document.getElementById('map'), { 
+          zoom: 4, 
+          center: test,
+		  mapId:"fc7d36a02ec1bfd9" 
+        }); 
+        var marker = new google.maps.marker.AdvancedMarkerElement({ 
+          position: test, 
+          map: map 
+        }); 
+
+
+	
+			var map2 = new google.maps.Map(document.getElementById('map2'), { 
+			  zoom: 4, 
+			  center: test,
+			  mapId:  "fc7d36a02ec1bfd9" 
+			}); 
+			var marker = new google.maps.marker.AdvancedMarkerElement({ 
+			  position: test, 
+			  map: map2
+			}); 
+
+
+			var map3 = new google.maps.Map(document.getElementById('map3'), { 
+			  zoom: 4, 
+			  center: test,
+			  mapId:"fc7d36a02ec1bfd9" 
+			}); 
+			var marker = new google.maps.marker.AdvancedMarkerElement({ 
+			  position: test, 
+			  map: map3
+			}); 
+			const center = { lat: 30.0444, lng: 31.2357 };
+  const map4 = new google.maps.Map(document.getElementById("map4"), {
+    zoom: 8,
+    center: center,
+	mapId:"fc7d36a02ec1bfd9"
+  });
+
+ 
+  let marker2; // Declare a variable to hold the marker
+
+// Add click listener to the map
+map4.addListener("click", (e) => {
+  // Create a new marker if one doesn't exist
+  if (!marker2) {
+	marker2 = new google.maps.marker.AdvancedMarkerElement({
+	  position: e.latLng,
+	  map: map4,
+	});
+  } else {
+	// Update the position of the existing marker
+	marker2.setPosition(e.latLng);
+  }
+});
+
+      } 
+	  
+
+//initMap();
+
+
+
+ </script>
+<script   
+src= 
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&loading=async&callback=initMap&v=weekly&libraries=marker" defer> 
+</script> -->
+
+
 
 <script>
 	const closeButton = document.getElementById('closeButton');

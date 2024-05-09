@@ -67,22 +67,51 @@
 					<div class="col-sm-12">
 						<div class="subscription-input-group">
 							<form action="#">
-								<input type="email" class="subscription-input-form" placeholder="Update Email">
-								<input type="cnum" class="subscription-input-form" placeholder="Update Contact number">
-								<input type="pass" class="subscription-input-form" placeholder="Update password">
-								<input type="address" class="subscription-input-form" placeholder="Update Address">
-								<input type="area" class="subscription-input-form" placeholder="Update Area">
-								<input type="govern" class="subscription-input-form" placeholder="Update Governorate">
+								<input type="text" id="email" class="subscription-input-form" placeholder="Update Email" required>
+								<input type="text" id="cnum" class="subscription-input-form" placeholder="Update Contact number" required>
+								<input type="password" id="pass" class="subscription-input-form" placeholder="Update password" required>
+								<input type="text" id="address" class="subscription-input-form" placeholder="Update Address" required>
+								<input type="text" id="area" class="subscription-input-form" placeholder="Update Area" required>
+								<input type="text" id="govern" class="subscription-input-form" placeholder="Update Governorate" required>
 								<br><br>
 							</form>
 			
 						</div>
 					</div>	
 				</div>
-				<button class="appsLand-btn subscribe-btn" onclick="window.location.href='#'">
+				<button class="appsLand-btn subscribe-btn" onclick="validateForm()">
 					Save Changes
 				</button>
 			</div>
 		</section>
+        <script>
+            function validateForm() {
+                var form = document.getElementById('update-account');
+                var fname = document.getElementById('email');
+                var fname = document.getElementById('cnum');
+                var fname = document.getElementById('pass');
+                var fname = document.getElementById('address');
+                var fname = document.getElementById('area');
+                var fname = document.getElementById('govern');
+
+        
+                var inputs = [email, cnum, pass, address, area, govern];
+        
+                var existingErrorMessages = document.querySelectorAll('.error-message');
+        existingErrorMessages.forEach(function(errorMessage) {
+            errorMessage.parentNode.removeChild(errorMessage);
+        });
+        
+                inputs.forEach(function(input) {
+                    if (!input.value) {
+                        var errorMessage = document.createElement('span');
+                        errorMessage.className = 'error-message';
+                        errorMessage.textContent = 'This field is required';
+                        input.parentNode.insertBefore(errorMessage, input.nextSibling);
+                    }
+                });
+            }
+            
+        </script>
     </body>
 </html>

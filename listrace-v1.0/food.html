@@ -79,16 +79,16 @@
                                 <option value="fruit">fruits</option>
                                 <option value="fm">fresh meals</option>
                             </select> <br><br>
-                            <div id="amount-container" style="display: none;"> <input type="number" class="subscription-input-form " id="amountInput" placeholder="Amount in kgs">
+                         <input type="text" class="subscription-input-form " id="amountInput" placeholder="Amount in kgs ex: 1/2 kgs, 2kgs, etc." style="display: none;">
                                 <br><br>
-                              </div>
                             <input type="text" class="subscription-input-form" placeholder="Item Name">
                             <br><br>
                            
-                            <div class="counter-container">
-                                <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" style="border: 10px black;">0</div>
-                                <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+                            <div class="counter-container1" style="display: none;">
+                                <label id="quantityLabel" style="margin-left:-500px;">Quantity:</label> 
+                                <button id="decrement1" style="margin-left: 300px;"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+                                <div class="counter1" style="border: 10px black; margin: 0 10px;">0</div>
+                                <button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
         
                             
@@ -108,7 +108,7 @@
 <br><br>
                             
                             
-                   <a href="post.html" class="btn">Post</a>
+                   <a href="posted.html" class="btn">Post</a>
                         
                     
             </div>	
@@ -119,28 +119,51 @@
 <!--subscription end -->
 
 
-<!-- 
-    <script> 
+<!--amount in kgs textbox-->
+<script>
+    // Get the select element
+    const typeSelect = document.getElementById('type1');
+    // Get the amount input element
+    const amountInput = document.getElementById('amountInput');
 
-document.getElementById('typed').addEventListener('change', function() {
-    var selectElement = document.getElementById('typed');
-    var amountInput = document.getElementById('amountInput');
+    // Add event listener for change event on select element
+    typeSelect.addEventListener('change', function() {
+        // If the selected option is vegetables or fruits, show the amount input
+        if (this.value === 'veggies' || this.value === 'fruit') {
+            amountInput.style.display = 'block';
+        } else {
+            // Otherwise, hide the amount input
+            amountInput.style.display = 'none';
+        }
+    });
+</script>
 
-    // Show amount input if "vegetables" or "fruits" option is selected
-    if (selectElement.value === 'veggies' || selectElement.value === 'fruit') {
-        amountInput.classList.remove('hidden');
-    } else {
-        amountInput.classList.add('hidden');
-    }
-});
-    </script> -->
+<!--counter hide and appear -->
 
 <script>
-	const counterElement = document.querySelector('.counter');
+    // Get the select element
+    const typeSelect1 = document.getElementById('type1');
+    // Get the counter container element
+    const counterContainer = document.querySelector('.counter-container1');
+
+    // Add event listener for change event on select element
+    typeSelect1.addEventListener('change', function() {
+        // If the selected option is fresh meals, show the counter container
+        if (this.value === 'fm') {
+            counterContainer.style.display = 'block';
+        } else {
+            // Otherwise, hide the counter container
+            counterContainer.style.display = 'none';
+        }
+    });
+</script>
+
+<script>
+	const counterElement = document.querySelector('.counter1');
 let count = 0; // Initial counter value
 
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
+const incrementButton = document.getElementById('increment1');
+const decrementButton = document.getElementById('decrement1');
 
 incrementButton.addEventListener('click', () => {
   count++;
