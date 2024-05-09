@@ -78,14 +78,14 @@
                     <div class="border">
 
 					<div class="checkbox-container"> 
-					<input type="radio" id="governrate1" name="Governerate" value="Cairo">
+					<input type="radio" id="governrate1" name="Governerate" value="Fruits And Vegetables">
 					<label for="governrate1">Fruits And Vegetables</label>
 					<br></div>
                 </div><br>
 
 					<div class="border">
                         <div class="checkbox-container"> 
-                            <input type="radio" id="governrate2" name="Governerate" value="Alexandria">
+                            <input type="radio" id="governrate2" name="Governerate" value="Canned Foods">
                             <label for="governrate2">Canned Foods</label>
                             <br></div>
                     </div>
@@ -94,16 +94,16 @@
                     <div class="border"> 
 
                     <div class="checkbox-container"> 
-                        <input type="radio" id="governrate1" name="Governerate" value="Cairo">
-                        <label for="governrate1">Fresh Meals</label>
+                        <input type="radio" id="governrate3" name="Governerate" value="Fresh Meals">
+                        <label for="governrate3">Fresh Meals</label>
                         <br></div>
                     </div>
                     <br>
 
 
                         <div class="checkbox-container"> 
-                            <input type="radio" id="governrate1" name="Governerate" value="Cairo">
-                            <label for="governrate1">Baked Goods</label>
+                            <input type="radio" id="governrate4" name="Governerate" value="Baked Goods">
+                            <label for="governrate4">Baked Goods</label>
                             <br></div>
 					</div>
 					
@@ -141,7 +141,13 @@
 					<div>
 						<p>Description: In need of Fruits And Vegetables</p>
 					</div>
-
+					<div class="counter-container">
+						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+						<div class="counter1" style="border: 1px black;">0</div>
+						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+					  </div>
+                 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
+					
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -187,7 +193,13 @@
 							<p>Description: In need of Baked Goods</p>
 						</div>
 						<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>
-	
+						<div class="counter-container">
+							<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+							<div class="counter2" style="border: 1px black;">0</div>
+							<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+						  </div>
+					 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
+
 						<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -223,7 +235,13 @@
 							<p>Description: In need of Fruits And Vegetables</p>
 						</div>
 						<div id="map3" style=" margin-top: 20px; margin-bottom: 20px;"></div>
-	
+						<div class="counter-container">
+							<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+							<div class="counter3" style="border: 1px black;">0</div>
+							<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+						  </div>
+					 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
+
 						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 			  <!--  -->
@@ -305,15 +323,7 @@
 							<p class="explore-rating-price">
 								<span class="explore-rating">5.0</span>
 								<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Fruits And Vegetables</label> 
-								<!-- <label class="area"  Style="padding-right:7px; border-right: 1px solid  #86888b">
-									Montazah
-									
-								</label>
 								
-								 <label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Help center</label>
-								 <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
-									Heart
-								</label> -->
 							</p>
 							
 							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -440,7 +450,90 @@
 			
         </footer><!--/.footer-->
 
-
+		<script>
+			const counterElement1 = document.querySelector('.counter1');
+			const maxlimit1 = document.getElementById('maxlimit1');
+		
+		let count1 = 0; // Initial counter value
+		
+		const incrementButton1 = document.getElementById('increment1');
+		const decrementButton1 = document.getElementById('decrement1');
+		
+		incrementButton1.addEventListener('click', () => {
+		if(count1<5)	{
+		  count1++;
+		  counterElement1.textContent = count1;
+		}
+		else{
+			maxlimit1.style.display='block';
+		}
+		});
+		
+		decrementButton1.addEventListener('click', () => {
+		  if (count1 > 0) {
+			count1--;
+		  }
+		  counterElement1.textContent = count1;
+		});
+		
+		</script>
+		
+		<script>
+			const counterElement2 = document.querySelector('.counter2');
+			const maxlimit2 = document.getElementById('maxlimit2');
+		
+		let count2 = 0; // Initial counter value
+		
+		const incrementButton2 = document.getElementById('increment2');
+		const decrementButton2 = document.getElementById('decrement2');
+		
+		incrementButton2.addEventListener('click', () => {
+		if(count2<4)	{
+		  count2++;
+		  counterElement2.textContent = count2;
+		}
+		else{
+			maxlimit2.style.display='block';
+		}
+		});
+		
+		decrementButton2.addEventListener('click', () => {
+		  if (count2 > 0) {
+			count2--;
+		  }
+		  counterElement2.textContent = count2;
+		});
+		
+		</script>
+		
+		
+		
+		
+		<script>
+			const counterElement3 = document.querySelector('.counter3');
+		let count3 = 0; // Initial counter value
+		
+		const incrementButton3 = document.getElementById('increment3');
+		const decrementButton3 = document.getElementById('decrement3');
+		
+		incrementButton3.addEventListener('click', () => {
+			if(count3<5)	{
+		  count3++;
+		  counterElement3.textContent = count3;
+		}
+		else{
+			maxlimit3.style.display='block';
+		}
+		});
+		
+		decrementButton3.addEventListener('click', () => {
+		  if (count3 > 0) {
+			count3--;
+		  }
+		  counterElement3.textContent = count3;
+		});
+		
+		</script>
 
 
 
@@ -573,15 +666,7 @@ let textbx= null;
       if(filterValue.name.toLocaleLowerCase() === "Governerate".toLocaleLowerCase()){
         textbx=post.querySelector('.city');
 } 
-else if(filterValue.name.toLocaleLowerCase() === "area".toLocaleLowerCase()){
-textbx=post.querySelector('.area');
-}
-else if(filterValue.name.toLocaleLowerCase() === "speciality".toLocaleLowerCase()){
-textbx=post.querySelector('.speciality');
-}
-else {
-textbx=post.querySelector('.hospital');
-}
+	
 
       
       const textbxText = textbx? textbx.textContent.trim() : '';
@@ -625,83 +710,6 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 });
 
 </script>   
-
-
-
-
-<script>
-
-async function initMap() { 
-        var test= {lat: -25.363, lng: 131.044}; 
-        var map = new google.maps.Map(document.getElementById('map'), { 
-          zoom: 4, 
-          center: test,
-		  mapId:"fc7d36a02ec1bfd9" 
-        }); 
-        var marker = new google.maps.marker.AdvancedMarkerElement({ 
-          position: test, 
-          map: map 
-        }); 
-
-
-	
-			var map2 = new google.maps.Map(document.getElementById('map2'), { 
-			  zoom: 4, 
-			  center: test,
-			  mapId:  "fc7d36a02ec1bfd9" 
-			}); 
-			var marker = new google.maps.marker.AdvancedMarkerElement({ 
-			  position: test, 
-			  map: map2
-			}); 
-
-
-			var map3 = new google.maps.Map(document.getElementById('map3'), { 
-			  zoom: 4, 
-			  center: test,
-			  mapId:"fc7d36a02ec1bfd9" 
-			}); 
-			var marker = new google.maps.marker.AdvancedMarkerElement({ 
-			  position: test, 
-			  map: map3
-			}); 
-			const center = { lat: 30.0444, lng: 31.2357 };
-  const map4 = new google.maps.Map(document.getElementById("map4"), {
-    zoom: 8,
-    center: center,
-	mapId:"fc7d36a02ec1bfd9"
-  });
-
- 
-  let marker2; // Declare a variable to hold the marker
-
-// Add click listener to the map
-map4.addListener("click", (e) => {
-  // Create a new marker if one doesn't exist
-  if (!marker2) {
-	marker2 = new google.maps.marker.AdvancedMarkerElement({
-	  position: e.latLng,
-	  map: map4,
-	});
-  } else {
-	// Update the position of the existing marker
-	marker2.setPosition(e.latLng);
-  }
-});
-
-      } 
-	  
-
-//initMap();
-
-
-
- </script>
-<script   
-src= 
-"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&loading=async&callback=initMap&v=weekly&libraries=marker" defer> 
-</script>
-
 
 
 <script>
@@ -818,17 +826,17 @@ submitButton.addEventListener('click', () => {
 	}
 	let allPostsHidden=true;
 	  exploreItems.forEach(exploreItem => {
-		const hospitalLabel = exploreItem.querySelector('.hospital');
-		const specLabel = exploreItem.querySelector('.speciality');
+		const hospitalLabel = exploreItem.querySelector('.city');
+		// const specLabel = exploreItem.querySelector('.speciality');
 
 		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
 	
-		const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
+		// const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
 
 		
 		  
 	
-		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase() || searchText.toLocaleLowerCase() === specText.toLocaleLowerCase()) {
+		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase()) {
 			allPostsHidden=false;
 			exploreItem.classList.remove('hidden'); // Show if hospital matches search
 		  }
@@ -843,7 +851,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
     noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
     // Append the element to the appropriate container in your HTML structure
 

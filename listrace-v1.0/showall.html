@@ -73,177 +73,222 @@
 				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
 				<form class="popupcontent" id="form1">
 					<div class="border">
-						<label for="Age" style="color: black;">Age</label>
+					<label for="Governerate" style="color: black;">Governerate</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="radio" id="governrate1" name="Governerate" value="Cairo">
+					<label for="governrate1">Cairo</label>
+					<br></div>
+					
+					<div class="checkbox-container"> 
+					<input type="radio" id="governrate2" name="Governerate" value="Alexandria">
+					<label for="governrate2">Alexandria</label>
+					<br></div>
+					</div>
+					<br><br>
+					<div class="border">
+						<label for="area" style="color: black;">Area</label>
 						<br>
 						<div class="checkbox-container"> 
-						<input type="radio" id="Age1" name="Age" value="1-3 years">
-						<label for="Age2">1-3 years</label>
+						<input type="radio" id="area1" name="area" value="5th Settlement">
+						<label for="area">5th Settlement</label>
 						<br></div>
 						
 						<div class="checkbox-container"> 
-						<input type="radio" id="Age2" name="Age" value="3-6 years">
-						<label for="Age2">3-6 years</label>
+						<input type="radio" id="area2" name="area" value="Masr Elgedida">
+						<label for="area2">Masr Elgedida</label>
+					</br></div>
+					
+						<div class="checkbox-container"> 
+							<input type="radio" id="area3" name="area" value="Montazah">
+							<label for="area">Montazah</label>
+							<br></div>
+							
+							<div class="checkbox-container"> 
+								<input type="radio" id="area4" name="area" value="Sidi Gaber">
+								<label for="area">Sidi Gaber</label>
+								<br></div>
+								
+					</div>
+					<br><br>
+					<div class="border">
+					<label for="hospital" style="color: black;">Organisation Name</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="radio" id="alshefaHospital" name="hospital" value="Help center">
+					<label for="alshefaHospital">Help center</label>
+					<br></div>
+					<div class="checkbox-container"> 
+						<input type="radio" id="alshefaHospital" name="hospital" value="Al Orman">
+						<label for="alshefaHospital">Al Orman</label>
 						<br></div>
 						<div class="checkbox-container"> 
-							<input type="radio" id="Age2" name="Age" value="6-10 years">
-							<label for="Age2">6-10 years</label>
-							<br></div>
-						</div>
-						<br><br>
-						<div class="border">
-							<label for="Gender" style="color: black;">Gender</label>
-							<br>
-							<div class="checkbox-container"> 
-							<input type="radio" id="gender1" name="Gender" value="Girls">
-							<label for="Gender">Girls</label>
-							<br></div>
-							<br>
-							<div class="checkbox-container"> 
-							<input type="radio" id="gender2" name="Gender" value="Boys">
-							<label for="gender2">Boys</label>
-							<br></div>
-						</div>
-						<br><br>
-						<div class="border">
-							<label for="category" style="color: black;">Category</label>
-							<br>
-							<div class="checkbox-container"> 
-							<input type="radio" id="boardgames" name="category" value="board games">
-							<label for="boardgames"> board games</label>
-							<br></div>
-							<br>
-							<div class="checkbox-container"> 
-							<input type="radio" id="stuffedtoys" name="category" value="stuffed toys">
-							<label for="stuffedtoys">stuffed toys</label>
-							<br></div>
-							<br>
-							<div class="checkbox-container">
-							<input type="radio" id="dollss" name="category" value="dolls">
-							<label for="dollss">dolls</label>
-							<br></div>
-							<br>
-							<div class="checkbox-container"> 
-							<input type="radio" id="sportss" name="category" value="sports">
-							<label for="sportss">sports</label>
-							<br></div>
-							<br>
-							<div class="checkbox-container"> 
-							<input type="radio" id="car" name="category" value="cars">
-							<label for="car">cars</label>
-							<br></div>
-							<br>
-							<div class="checkbox-container"> 
-							<input type="radio" id="outdoorr" name="category" value="outdoor">
-							<label for="outdoorr">outdoor</label>
-							<br></div>
-				
-						</div>
-						<br> <br>
-				
-		
+							<input type="radio" id="alshefaHospital" name="hospital" value="Resala">
+							<label for="alshefaHospital">Resala</label>
+							<br></div>	
+					
+					<div class="checkbox-container"> 
+					<input type="radio" id="elGawyHospital" name="hospital" value="DonateYourExperience">
+					<label for="elGawyHospital">DonateYourExperience</label>
+					<br></div>
+				</div>
+				<br><br>
+				<div class="border">
+					<label for="hospital" style="color: black;">Speciality</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="radio" id="alshefaHospital" name="speciality" value="Heart">
+					<label for="alshefaHospital">Heart</label>
+					<br></div>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="radio" id="elGawyHospital" name="speciality" value="Bones">
+					<label for="elGawyHospital">Bones</label>
+					<br></div>
+				</div>
+				<br> <br>
 				  </form>
 				  <button id="closePopup">Apply</button>
 			  </div>
 
 			  <div id="popup1">
 				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-				<h2><a href="#">Toy Donation</a></h2>
-				<p class="explore-rating-price">
-					<span class="explore-rating">5.0</span>
-					<label class="Age" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">1-3 years</label> 
-					<label class="Gender"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-						Boys
-						
-					</label>
-					 <label class="category" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Sports</label>
-				</p>
-				<div>
+					<h2><a href="#">In Need of teachers</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Alexandria</label> 
+						<label class="area"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+							Montazah
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Help Center</label>
+						 <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+							Heart
+						</label>
+						</p>
 					<div>
-					<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-					<label style="margin-right:5px; color: black;">Farah Organisation</label>
-					</div>
-				</div>
-				<div>
-					<p>15 basketballs </p>
-				</div>
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\basketball.jpeg" alt="Imagedescription">
-					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
-					<div class="counter-container">
-						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter1" style="border: 1px black;">0</div>
-						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-					  </div>
-                 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
-				
+						<div>
+						<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Farah Ahmed</label>
+						</div>
+						<div>
+						<i class="fa-solid fa-venus-mars" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Female</label>
+						</div>
+						<div>
+							<i class="fa-solid fa-hourglass-end" style="margin-right:4px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">21 years old</label>
+							</div>
+							<div>
+								<i class="fa-solid fa-scale-balanced" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">61 KG</label>
+								</div>
+							<div>
+								<i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">Abrag El mohandesin, Corniche El Maadi</label>
+								</div>
 
-				</div>
+					</div>
+					<div>
+						<p>Description: In need of heart doctors</p>
+					</div>
+					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+
+					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
+			  </div>
 
 			  <div id="popup2">
 				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-				<h2><a href="#">Request For Toys</a></h2>
-				<p class="explore-rating-price">
-					<span class="explore-rating">5.0</span>
-					<label class="Age" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">3-6 years</label> 
-					<label class="Gender"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-						Girls
-						
-					</label>
-					 <label class="category" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Board games</label>
-				</p>
-				<div>
+					<h2><a href="#">Probono Teaching Needed</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Cairo</label> 
+						<label class="area"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+							5th Settlement
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">DonateExperience</label>
+						 <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+							Bones
+						</label>
+						</p>
 					<div>
-					<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-					<label style="margin-right:5px; color: black;">Karen Organisation</label>
-					</div>
-				</div>
-				<div>
-					<p>5 unos</p>
-				</div>
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\uno.jpeg" alt="Imagedescription">
-				<div class="counter-container">
-					<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-					<div class="counter2" style="border: 1px black;">0</div>
-					<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-				  </div>
-			 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
-
+						<div>
+							<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Karen Maged</label>
+							</div>
+							<div>
+							<i class="fa-solid fa-venus-mars" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Female</label>
+							</div>
+							<div>
+								<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">21 years old</label>
+								</div>
+								<div>
+									<i class="fa-solid fa-scale-balanced" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">65 KG</label>
+									</div>
+								<div>
+									<i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">Narges 8, 5th settlement</label>
+									</div>
+	
+						</div>
+						<div>
+							<p>Description: In need of bones doctors</p>
+						</div>
+						<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+	
 						<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
 			  <div id="popup3">
 				<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-				<h2><a href="#">Toy Donatio Request</a></h2>
-				<p class="explore-rating-price">
-					<span class="explore-rating">5.0</span>
-					<label class="Age" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">6-10 years</label> 
-					<label class="Gender"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-						Girls
-						
-					</label>
-					 <label class="category" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Stuffed Toys</label>
-				</p>
-				<div>
+					<h2><a href="#">Teacher is needed</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Cairo</label> 
+						<label class="area"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+							Masr Elgedida
+							
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Help Center</Center></label>
+						 <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+							Bones
+						</label>					
+						</p>
 					<div>
-					<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-					<label style="margin-right:5px; color: black;">Farida Organisation</label>
-					</div>
-				</div>
-				<div>
-					<p>12 Stuffed Toys</p>
-				</div>
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\stitch.jpeg" alt="Imagedescription">
+						<div>
+							<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Rose Bassem</label>
+							</div>
+							<div>
+							<i class="fa-solid fa-venus-mars" style="margin-right:5px; color: black;"></i>
+							<label style="margin-right:5px; color: black;">Female</label>
+							</div>
+							<div>
+								<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+								<label style="margin-right:5px; color: black;">21 years old</label>
+								</div>
+								<div>
+									<i class="fa-solid fa-scale-balanced" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">61 KG</label>
+									</div>
+								<div>
+									<i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+									<label style="margin-right:5px; color: black;">Roxy, Masr elgedida</label>
+									</div>
 	
-				<div class="counter-container">
-					<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-					<div class="counter3" style="border: 1px black;">0</div>
-					<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-				  </div>
-			 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
-
-
+						</div>
+						<div>
+							<p>Description: In need of Bones doctors</p>
+						</div>
+						<div id="map3" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+	
 						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
-			  <!-- <div id="popupapply">
+			  <div id="popupapply">
 				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 				<label > Please fill in this form as part of the donation procedure</label>
 				<form class="file-upload-form">
@@ -265,23 +310,27 @@
 				  </label>
 				</form>
 				<div id="clinic-address">
-					<label for="address-input">Please enter your clinic address:</label><br>
+					<label for="address-input">Please enter your clinic address</label><br>
 					<input type="text" id="address-input" placeholder="Enter address">
 				</div>
+				<span id="fileError" class="error-message" style="color: red;"></span>
 				<div>
-					<label for="governorate-select">Governorate:</label>
-					<select id="governorate-select"></select>
-					<label for="area-select">Area:</label>
+					<label for="governorate-select">Governorate</label><br>
+					<select id="governorate-select"></select><br>
+					<span id="fileError" class="error-message" style="color: red;"></span>
+					<label for="area-select">Area</label><br>
 					<select id="area-select" disabled></select>
+					<span id="fileError" class="error-message" style="color: red;"></span>
 				  </div>
                 <label>Please pick your exact location on map</label>
 				<div id="map4"></div>
-                <label for="speciality-select">Speciality:</label>
+                <label for="speciality-select">Speciality</label><br>
                 <select id="speciality-select">
       <option value="skin">Skin</option>
       <option value="bones">Bones</option>
       <option value="heart">Heart</option>
     </select>
+	<span id="fileError" class="error-message" style="color: red;"></span>
 
 				<div class="containerapply">
 				  <div class="date-time">
@@ -292,11 +341,21 @@
 					<input type="time" id="timepicker">
 					<span id="timeError" class="error-message" style="color: red;"></span>
 				  </div>
-				  <button id="submitButton">Submit</button>
+				  <label for="elGawyHospital">Please pick where would you like to carry out the visit</label>
+				  <div class="checkbox-container"> 
+					<input type="radio" id="clinic" name="place" value="At your clinic">
+					<label for="elGawyHospital">At your clinic</label>
+					<br></div>
+					<div class="checkbox-container"> 
+						<input type="radio" id="patient" name="place" value="At patient's place">
+						<label for="elGawyHospital">At patient's place</label>
+						<br></div>
+						<span id="fileError" class="error-message" style="color: red;"></span>
+				  <button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
 				</div>
 			  </div>
-			  <div id="message" class="hidden"> <p>Done!</p>
-			  </div> -->
+			  <div id="message" class="hidden"> <i class="fa-solid fa-circle-check" style="color:rgb(20, 160, 20)"></i><p style="color:rgb(20, 160, 20)">Your Request to donate has been sumbitted succesfully! We will get back to you after considering your response</p>
+			  </div>
 		<!--/.section-header-->
 		
 		<header id="header-top" class="header-top"  >
@@ -344,42 +403,27 @@
 		 
 
 		
-		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
-			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
-				<div class="single-welcome-hero-form">
-					<h3></h3>
-					<form action="index.html">
-						<input type="text" placeholder="What and where would you like to donate?" />
-					</form>
-					
-				</div>
-				
-			</div>
-			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
-				<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
-					   <i class="fa-solid fa-magnifying-glass" ></i> 
-				</button>
-			</div>
-		</div>
+		
 		
 		  
 		<div class="explore-content" id="explore-content">
 			
-			<div id="openPopup">
-				<button style="font-size: 20px; padding-right:3px ;">Filter</button>
-				<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
-			  </div>
+			
 					<div class="single-explore-item">
 						<div class="single-explore-txt bg-theme-4">
-							<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">toy donation</a></h2>
+							<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">In Need of Doctor</a></h2>
 							<p class="explore-rating-price">
 								<span class="explore-rating">5.0</span>
-								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">1-3 years</label> 
-								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-									boys
+								<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Alexandria</label> 
+								<label class="area"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+									Montazah
 									
 								</label>
-								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">sports</label>
+								
+								 <label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Help center</label>
+								 <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+									Heart
+								</label>
 							</p>
 							
 							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -402,15 +446,18 @@
 			
 				<div class="single-explore-item">
 					<div class="single-explore-txt bg-theme-4">
-						<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">request for toys</a></h2>
-							<p class="explore-rating-price">
-								<span class="explore-rating">5.0</span>
-								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">3-6 years</label> 
-								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-									girls
-									
-								</label>
-								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">board games </label>
+						<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">Probono Visits Needed</a></h2>
+						<p class="explore-rating-price">
+							<span class="explore-rating">5.0</span>
+							<label class="city"  Style="padding-right:7px; border-right: 1px solid  #86888b" href="#">Cairo</label> 
+							<label class="area"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+								5th Settlement
+								
+							</label>
+							 <label class="hospital" href="#" Style="padding-right:7px; border-right: 1px solid  #86888b">DonateExperience</label>
+						     <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
+								Bones
+							</label>
 							</p>
 						
 						<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -432,15 +479,19 @@
 			
 			<div class="single-explore-item">
 				<div class="single-explore-txt bg-theme-4">
-					<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">toys donation request</a></h2>
+					<h2><a href="#" style="color: rgb(5, 14, 56); font-weight: bolder; font-size: 18px;">Doctor is needed</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
-						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">6-10 years</label> 
-						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							girls
+						<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #ffffff">Cairo</label> 
+						<label class="area"  Style="padding-right:7px; border-right: 1px solid  #ffffff">
+							Masr Elgedida
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">stuffed toys </label>
+
+						<label class="hospital" href="#"  Style="padding-right:7px; border-right: 1px solid  #ffffff">Help center</label>
+					    <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #ffffff">
+							Bones
+						</label>
 					</p>
 					
 					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -459,7 +510,96 @@
 					</div>
 				</div>
 			</div>
-			
+			<div class="single-explore-item">
+                <div class="single-explore-txt bg-theme-4">
+                    <h2><a href="#">In Need of Clothes Donation</a></h2>
+                    <p class="explore-rating-price">
+                        <span class="explore-rating">5.0</span>
+                        <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">14-17 years old</label> 
+                        <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                            Female
+                            
+                        </label>
+                         <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter</label>
+                    </p>
+                    
+                    <div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <button class="close-btn open-btn"   id ="openpostdetails1">View Details</button>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="explore-map-icon">
+                                    <a href="#"><i data-feather="map-pin"></i></a>
+                                    <a href="#"><i data-feather="upload"></i></a>
+                                    <a href="#"><i data-feather="heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    
+        <div class="single-explore-item">
+            <div class="single-explore-txt bg-theme-4">
+                <h2><a href="#">Clothes Donation </a></h2>
+                <p class="explore-rating-price">
+                    <span class="explore-rating">5.0</span>
+                    <label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">6-9 years old</label> 
+                    <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                        Male
+                        
+                    </label>
+                     <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
+                </p>
+                
+                <div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <button class="close-btn open-btn"    id ="openpostdetails2">View Details</button>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="explore-map-icon">
+                                <a href="#"><i data-feather="map-pin"></i></a>
+                                <a href="#"><i data-feather="upload"></i></a>
+                                <a href="#"><i data-feather="heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="single-explore-item">
+        <div class="single-explore-txt bg-theme-4">
+            <h2><a href="#">Clothes Donations are Required</a></h2>
+            <p class="explore-rating-price">
+                <span class="explore-rating">5.0</span>
+                <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">10-13 years old</label> 
+                <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                    Female
+                    
+                </label>
+                 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
+            </p>
+            
+            <div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <button class="close-btn open-btn"   id ="openpostdetails3">View Details</button>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="explore-map-icon">
+                            <a href="#"><i data-feather="map-pin"></i></a>
+                            <a href="#"><i data-feather="upload"></i></a>
+                            <a href="#"><i data-feather="heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 		</div>
 	<!--/.container-->
 
@@ -499,93 +639,10 @@
 			
         </footer><!--/.footer-->
 
-		<script>
-			const counterElement1 = document.querySelector('.counter1');
-			const maxlimit1 = document.getElementById('maxlimit1');
-		
-		let count1 = 0; // Initial counter value
-		
-		const incrementButton1 = document.getElementById('increment1');
-		const decrementButton1 = document.getElementById('decrement1');
-		
-		incrementButton1.addEventListener('click', () => {
-		if(count1<15)	{
-		  count1++;
-		  counterElement1.textContent = count1;
-		}
-		else{
-			maxlimit1.style.display='block';
-		}
-		});
-		
-		decrementButton1.addEventListener('click', () => {
-		  if (count1 > 0) {
-			count1--;
-		  }
-		  counterElement1.textContent = count1;
-		});
-		
-		</script>
-		
-		<script>
-			const counterElement2 = document.querySelector('.counter2');
-			const maxlimit2 = document.getElementById('maxlimit2');
-		
-		let count2 = 0; // Initial counter value
-		
-		const incrementButton2 = document.getElementById('increment2');
-		const decrementButton2 = document.getElementById('decrement2');
-		
-		incrementButton2.addEventListener('click', () => {
-		if(count2<5)	{
-		  count2++;
-		  counterElement2.textContent = count2;
-		}
-		else{
-			maxlimit2.style.display='block';
-		}
-		});
-		
-		decrementButton2.addEventListener('click', () => {
-		  if (count2 > 0) {
-			count2--;
-		  }
-		  counterElement2.textContent = count2;
-		});
-		
-		</script>
-		
-		
-		
-		
-		<script>
-			const counterElement3 = document.querySelector('.counter3');
-		let count3 = 0; // Initial counter value
-		
-		const incrementButton3 = document.getElementById('increment3');
-		const decrementButton3 = document.getElementById('decrement3');
-		
-		incrementButton3.addEventListener('click', () => {
-			if(count3<12)	{
-		  count3++;
-		  counterElement3.textContent = count3;
-		}
-		else{
-			maxlimit3.style.display='block';
-		}
-		});
-		
-		decrementButton3.addEventListener('click', () => {
-		  if (count3 > 0) {
-			count3--;
-		  }
-		  counterElement3.textContent = count3;
-		});
-		
-		</script>
 
 
 
+  
 <script>
 	const popup = document.getElementById('popup');
 	const openPopupBtn = document.getElementById('openPopup');
@@ -712,16 +769,18 @@ applyButton.addEventListener('click', () => {
     // Check if any selected filter matches post data
 	for (const filterValue of selectedFilters) {
 let textbx= null;
-      if(filterValue.name.toLocaleLowerCase() === "Age".toLocaleLowerCase()){
+      if(filterValue.name.toLocaleLowerCase() === "Governerate".toLocaleLowerCase()){
         textbx=post.querySelector('.city');
 } 
-else if(filterValue.name.toLocaleLowerCase() === "Gender".toLocaleLowerCase()){
+else if(filterValue.name.toLocaleLowerCase() === "area".toLocaleLowerCase()){
 textbx=post.querySelector('.area');
 }
-else if(filterValue.name.toLocaleLowerCase() === "Category".toLocaleLowerCase()){
+else if(filterValue.name.toLocaleLowerCase() === "speciality".toLocaleLowerCase()){
+textbx=post.querySelector('.speciality');
+}
+else {
 textbx=post.querySelector('.hospital');
 }
-
 
       
       const textbxText = textbx? textbx.textContent.trim() : '';
@@ -890,6 +949,13 @@ const timePicker = document.getElementById('timepicker');
 const fileError = document.getElementById('fileError');
 const dateError = document.getElementById('dateError');
 const timeError = document.getElementById('timeError');
+const address = document.getElementById('address-input');
+const gov = document.getElementById('governerate-select');
+const area = document.getElementById('area-select');
+const spec = document.getElementById('speciality-select');
+const pat = document.getElementById('patient');
+const clinic = document.getElementById('clinic');
+
 submitButton.addEventListener('click', () => {
 	let hasError = false; // Flag to track if any errors are found
 
@@ -959,16 +1025,16 @@ submitButton.addEventListener('click', () => {
 	let allPostsHidden=true;
 	  exploreItems.forEach(exploreItem => {
 		const hospitalLabel = exploreItem.querySelector('.hospital');
-		// const specLabel = exploreItem.querySelector('.speciality');
+		const specLabel = exploreItem.querySelector('.speciality');
 
 		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
 	
-		// const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
+		const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
 
 		
 		  
 	
-		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase()) {
+		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase() || searchText.toLocaleLowerCase() === specText.toLocaleLowerCase()) {
 			allPostsHidden=false;
 			exploreItem.classList.remove('hidden'); // Show if hospital matches search
 		  }
@@ -983,7 +1049,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
+    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
     noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
     // Append the element to the appropriate container in your HTML structure
 
@@ -1101,4 +1167,47 @@ for (const radioButton of governateRadioButtons) {
 </script>
 
 
+<!-- <script>
+	const governateRadioButtons1 = document.querySelectorAll('input[name="area"]');
+const areaSelectElements2 = document.querySelectorAll('input[name="hospital"]');
+
+function updateAreaOptions() {
+  const selectedGovernerate = document.querySelector('input[name="area"]:checked');
+  if (selectedGovernerate) {
+  if( selectedGovernerate.value.toLocaleLowerCase() === "5th settlement".toLocaleLowerCase()){
+   
+    for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+else if( selectedGovernerate.value === "Alexandria"){
+	for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+  }
+}
+
+// Update area options on initial load based on any selected radio button
+updateAreaOptions();
+
+// Update area options whenever a governate radio button is clicked
+for (const radioButton of governateRadioButtons) {
+  radioButton.addEventListener('click', updateAreaOptions);
+}
+</script> -->
+
+<!--explore end -->
 </body>

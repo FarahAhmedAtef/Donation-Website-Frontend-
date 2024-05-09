@@ -123,6 +123,14 @@
 						<p>Precautions: Do not take after RedBull</p>
 					</div>
 
+					<div class="counter-container">
+						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+						<div class="counter1" style="border: 1px black;">0</div>
+						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+					  </div>
+                 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
+				
+
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -154,7 +162,15 @@
 						<div>
 							<p>Precautions: Do not use if you have stomach issues</p>
 						</div>
-	
+						
+						<div class="counter-container">
+							<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+							<div class="counter2" style="border: 1px black;">0</div>
+							<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+						  </div>
+					 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
+
+					
 						<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -186,6 +202,14 @@
 						<div>
 							<p>Precautions: Dry skin should not use it </p>
 						</div>
+
+						<div class="counter-container">
+							<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+							<div class="counter3" style="border: 1px black;">0</div>
+							<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+						  </div>
+					 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
+
 	
 						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
@@ -397,7 +421,90 @@
 			
         </footer><!--/.footer-->
 
-
+		<script>
+			const counterElement1 = document.querySelector('.counter1');
+			const maxlimit1 = document.getElementById('maxlimit1');
+		
+		let count1 = 0; // Initial counter value
+		
+		const incrementButton1 = document.getElementById('increment1');
+		const decrementButton1 = document.getElementById('decrement1');
+		
+		incrementButton1.addEventListener('click', () => {
+		if(count1<16)	{
+		  count1++;
+		  counterElement1.textContent = count1;
+		}
+		else{
+			maxlimit1.style.display='block';
+		}
+		});
+		
+		decrementButton1.addEventListener('click', () => {
+		  if (count1 > 0) {
+			count1--;
+		  }
+		  counterElement1.textContent = count1;
+		});
+		
+		</script>
+		
+		<script>
+			const counterElement2 = document.querySelector('.counter2');
+			const maxlimit2 = document.getElementById('maxlimit2');
+		
+		let count2 = 0; // Initial counter value
+		
+		const incrementButton2 = document.getElementById('increment2');
+		const decrementButton2 = document.getElementById('decrement2');
+		
+		incrementButton2.addEventListener('click', () => {
+		if(count2<48)	{
+		  count2++;
+		  counterElement2.textContent = count2;
+		}
+		else{
+			maxlimit2.style.display='block';
+		}
+		});
+		
+		decrementButton2.addEventListener('click', () => {
+		  if (count2 > 0) {
+			count2--;
+		  }
+		  counterElement2.textContent = count2;
+		});
+		
+		</script>
+		
+		
+		
+		
+		<script>
+			const counterElement3 = document.querySelector('.counter3');
+		let count3 = 0; // Initial counter value
+		
+		const incrementButton3 = document.getElementById('increment3');
+		const decrementButton3 = document.getElementById('decrement3');
+		
+		incrementButton3.addEventListener('click', () => {
+			if(count3<2)	{
+		  count3++;
+		  counterElement3.textContent = count3;
+		}
+		else{
+			maxlimit3.style.display='block';
+		}
+		});
+		
+		decrementButton3.addEventListener('click', () => {
+		  if (count3 > 0) {
+			count3--;
+		  }
+		  counterElement3.textContent = count3;
+		});
+		
+		</script>
 
 
 

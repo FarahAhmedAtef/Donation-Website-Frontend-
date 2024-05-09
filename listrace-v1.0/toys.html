@@ -73,13 +73,19 @@
                 <div class="subscription-input-group">
                     <!-- <form action="#"> -->
                         
-                        <form action="/submit-registration" method="post">
+      
                             
-                            <input type="text" class="subscription-input-form" placeholder="Toy type">
+                            <input type="text" id="toyType" class="subscription-input-form" placeholder="Toy type">
                             <br><br>
-                            <input type="number" class="subscription-input-form" placeholder="Age">
+                            <select name="type1" class="subscription-input-form" id="type1">
+                              <option value="" disabled selected>Select age range</option>
+                              <option value="age1">1 - 3 years old</option>
+                              <option value="age2">3 - 6 years old</option>
+                              <option value="age3">6 -10 years old</option>
+                
+                          </select>
                             <br><br>
-                            <input type="text" class="subscription-input-form" placeholder="Category ex: board games, stuffed toys, dolls, etc.">
+                            <input type="text" id="category" class="subscription-input-form" placeholder="Category ex: board games, stuffed toys, dolls, etc.">
                             <br><br>
                             
                             <!-- <label for="password">Password:</label> -->
@@ -120,6 +126,7 @@
                                             d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
                                           ></path>
                                         </svg>
+                                        <img id="preview" scr="" alt="toy1.png">
                                         <p>Drag and Drop</p>
                                         <p>or</p>
                                         <span class="browse-button">Browse file</span>
@@ -128,8 +135,8 @@
                                     </label>
                                   </form>
                                   <br><br>
+                                  <!-- <button id="upload" class="uploadbtn" style="margin-right: auto; display: none;">Upload</button> -->
                                      
-                    </form>
 
 
                       <!-- textbox for description -->
@@ -138,8 +145,11 @@
                      </form>
                 <br><br>
 
-                            
-                   <a href="posted.html" class="btn">Post</a>
+                <div id="warningMsg" style="display: none; color: red;">Please fill in all required fields!</div>
+                <br>
+                <!-- <div id="warningMsg1" style="display: none; color: red;">Please fill in and "Category"!</div> -->
+
+                <a href="posted.html" class="btn" id="postBtn">Post</a>
                         
                     
             </div>	
@@ -148,6 +158,45 @@
 
 </section><!--/subscription-->	
 <!--subscription end -->
+
+<!---to fill all fields-->
+<script>
+  const postBtn = document.getElementById('postBtn');
+  const toyTypeInput = document.getElementById('toyType');
+  const categoryInput = document.getElementById('category');
+  const warningMsg = document.getElementById('warningMsg');
+
+  // Function to update border style based on input value
+  function updateInputBorderColor(inputElement) {
+    if (inputElement.value.trim() === "") {
+      inputElement.style.border = "1px solid red";
+    } else {
+      inputElement.style.border = "none"; // Remove red border if not empty
+    }
+  }
+
+  // Event listeners for input changes
+  toyTypeInput.addEventListener('input', function() {
+    updateInputBorderColor(toyTypeInput);
+  });
+
+  categoryInput.addEventListener('input', function() {
+    updateInputBorderColor(categoryInput);
+  });
+
+  postBtn.addEventListener('click', function(event) {
+    if (toyTypeInput.value.trim() === "" || categoryInput.value.trim() === "") {
+      event.preventDefault(); // Prevent form submission
+      warningMsg.style.display = "block"; // Display warning message
+      updateInputBorderColor(toyTypeInput);
+      updateInputBorderColor(categoryInput);
+    } else {
+      warningMsg.style.display = "none"; // Hide warning message (optional)
+      // Submit the form (form submission logic)
+    }
+  });
+</script>
+
 <script>
 	const counterElement = document.querySelector('.counter');
 let count = 0; // Initial counter value
@@ -168,5 +217,8 @@ decrementButton.addEventListener('click', () => {
 });
 
 </script>
+
+<!---image preview-->
+
 
 </body>

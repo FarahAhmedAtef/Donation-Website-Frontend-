@@ -101,16 +101,16 @@
 					</div>
 					<br><br>
 					<div class="border">
-					<label for="hospital" style="color: black;">Hospital</label>
+					<label for="hospital" style="color: black;">Status</label>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="radio" id="alshefaHospital" name="hospital" value="ALShefa hospital">
-					<label for="alshefaHospital">ALShefa Hospital</label>
+					<input type="radio" id="alshefaHospital" name="hospital" value="Pending">
+					<label for="alshefaHospital">Pending</label>
 					<br></div>
 					<br>
 					<div class="checkbox-container"> 
-					<input type="radio" id="elGawyHospital" name="hospital" value="ElGawy hospital">
-					<label for="elGawyHospital">ElGawy Hospital</label>
+					<input type="radio" id="elGawyHospital" name="hospital" value="Fulfilled">
+					<label for="elGawyHospital">Fulfilled</label>
 					<br></div>
 				</div>
 				<br> <br>
@@ -122,7 +122,7 @@
 			  <div id="popup1">
 				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 					<h2><a href="#">In Need of Blood Donation</a></h2>
-					<p class="explore-rating-price">
+					<span contenteditable="false" class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<span contenteditable="=false" class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b" >Alexandria</span> 
 						<span contenteditable="=false"class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
@@ -130,7 +130,7 @@
 							
 						</span>
 						 <span contenteditable="=false" class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</span>
-					</p>
+					</span>
 					<div>
 						<div>
 						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
@@ -378,7 +378,7 @@
 			
 		</header><!--/.header-top-->
 		<!--header-top end -->
-		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
+		<!-- <div class="welcome-hero-serch-box" style="border-color: #3855d4;">
 			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
 				<div class="single-welcome-hero-form">
 					<h3></h3>
@@ -394,7 +394,7 @@
 					   <i class="fa-solid fa-magnifying-glass" ></i> 
 				</button>
 			</div>
-		</div>
+		</div> -->
 		
 				
 			<!-- </div>
@@ -416,13 +416,15 @@
 						<div class="single-explore-txt bg-theme-4">
 							<h2><a href="#">In Need of Blood Donation</a></h2>
 							<p class="explore-rating-price">
+
 								<span class="explore-rating">5.0</span>
 								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
 								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
 									Montazah
 									
 								</label>
-								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</label>
+								 <label class="hospital" href="#"  style="padding-right:3px; border-right: 1px; color: red">Fulfilled</label>
+
 							</p>
 							
 							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -453,10 +455,8 @@
 									5th Settlement
 									
 								</label>
-								 <label class="hospital" href="#" Style="padding-right:7px; border-right: 1px solid  #86888b">DonateExperience</label>
-								 <label class="speciality"  Style="padding-right:7px; border-right: 1px solid  #86888b">
-									Bones
-								</label>
+								 <label class="hospital" href="#" Style="padding-right:7px; border-right: 1px solid  #86888b">Fulfilled</label>
+								 
 								</p>
 							
 							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -486,7 +486,7 @@
 							Masr Elgedida
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">English</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Pending</label>
 					</p>
 					
 					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
