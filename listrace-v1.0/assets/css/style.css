@@ -2012,7 +2012,35 @@ h4{
     text-align: center;
     padding: 5px 10px;
 }
+/*medical supplies farida*/
+.medical-supplies-dropdown {
+  display: none;
+}
+.dropdown-medical-supplies:hover .medical-supplies-dropdown {
+  display: block;
+  /* color: #fa5c5f;
+  width:100px;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s; */
+}
+.dropdown-medical-supplies:hover .medical-supplies-dropdown a{
+  color:white;
+  font-size:small;
+  text-align: center;
+  padding: 5px 10px;
+}
 
+.container {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+}
 /*my posts farida*/
 .button-container {
   display: flex;
@@ -2260,7 +2288,14 @@ h4{
   background-color: transparent;
   color:rgb(22, 25, 61);
  }
-
+/*account info farida*/
+.infoo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items horizontally in the center */
+  justify-content: flex-start; /* Align items vertically in the center */
+  height: 100vh; /* Set the height of the container to the full viewport height */
+}
 /*post farida*/
 
 .notificationCard {
