@@ -68,27 +68,91 @@
 						<div class="subscription-input-group">
 							<form action="#">
 
-								<input type="address" class="subscription-input-form" placeholder="Address">
-								<input type="area" class="subscription-input-form" placeholder="Area">
-								<input type="govern" class="subscription-input-form" placeholder="Governorate">
-                                <input type="pin" class="subscription-input-form" placeholder="Location Ex: Nasr City, New Cairo, etc.">
-                                <input type="speciality" class="subscription-input-form" placeholder="Speciality">
-                                <select name="pbpnum1" class="subscription-input-form" id="pbnum1">
+								<input type="text" id="address" class="subscription-input-form" placeholder="Address" required>
+								<input type="text" id= "area" class="subscription-input-form" placeholder="Area" required>
+								<input type="text" id="govern" class="subscription-input-form" placeholder="Governorate" required>
+                                <input type="text" id="speciality" class="subscription-input-form" placeholder="Speciality" required>
+                                <select name="pbpnum1" class="subscription-input-form" id="pbnum1" required>
                                     <option value="" disabled selected>Number of pro-bono cases I can take on</option>
                                     <option value="pb111">1</option>
                                     <option value="pb222">2</option>
                                     <option value="pb333">3</option>
                                     <option value="pb444">4</option>
                                 </select>
-
+                                <br><br>
+                                <h4>Please pick your exact location on map</h4>
+                                <div id="map4" style="height: 400px;"></div>
                                 <br><br>
                                 <br> <br>
 							</form>
 						</div>
 					</div>	
 				</div>
-                
+                <button class="appsLand-btn subscribe-btn" onclick="validateForm()">
+					Next
+				</button>
 			</div>
 		</section>
+        <script>
+			function validateForm() {
+				var form = document.getElementById('clinic-location');
+				var fname = document.getElementById('address');
+				var lname = document.getElementById('area');
+				var gender = document.getElementById('govern');
+				var cnum = document.getElementById('speciality');
+				var pass = document.getElementById('pbnum1');
+			
+		
+				var inputs = [address, area, govern, speciality, pass, pbnum1];
+
+				var existingErrorMessages = document.querySelectorAll('.error-message');
+        existingErrorMessages.forEach(function(errorMessage) {
+            errorMessage.parentNode.removeChild(errorMessage);
+        });
+		
+				inputs.forEach(function(input) {
+					if (!input.value) {
+						var errorMessage = document.createElement('span');
+						errorMessage.className = 'error-message';
+						errorMessage.textContent = 'This field is required';
+						input.parentNode.insertBefore(errorMessage, input.nextSibling);
+					}
+				});
+			}
+            
+			
+		</script>
+        <script   
+        src= 
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&loading=async&callback=initMap&v=weekly&libraries=marker" defer> 
+        </script>
+
+        <script>
+            function initMap() {
+                const center = { lat: 30.0444, lng: 31.2357 };
+                const map = new google.maps.Map(document.getElementById("map4"), {
+                    zoom: 8,
+                    center: center,
+                    mapId: "fc7d36a02ec1bfd9"
+                });
+    
+                let marker; // Declare a variable to hold the marker
+    
+                // Add click listener to the map
+                map.addListener("click", (e) => {
+                    // Create a new marker if one doesn't exist
+                    if (!marker) {
+                        // Highlight: Corrected marker creation
+                        marker = new google.maps.Marker({
+                            position: e.latLng,
+                            map: map,
+                        });
+                    } else {
+                        // Update the position of the existing marker
+                        marker.setPosition(e.latLng);
+                    }
+                });
+            }
+        </script>
     </body>
 </html>

@@ -58,10 +58,10 @@
 	<body>
         <div class="subscription-input-group">        
          <h2>Please State the Subjects you can teach: </h2> <br><br>
-    <input type="snum" class="subscription-input-form" placeholder="Subject 1 (Required)"> <br>
-    <input type="snum1" class="subscription-input-form" placeholder="Subject 2 (Optional)"> <br>
-    <input type="snum2" class="subscription-input-form" placeholder="Subject 3 (Optional)"> <br> 
-    <input type="snum3" class="subscription-input-form" placeholder="Subject 4 (Optional)"> <br>
+    <input type="text" id="sub1" class="subscription-input-form" placeholder="Subject 1 (Required)" required> <br>
+    <input type="text" id="sub2" class="subscription-input-form" placeholder="Subject 2 (Optional)"> <br>
+    <input type="text" id="sub3" class="subscription-input-form" placeholder="Subject 3 (Optional)"> <br> 
+    <input type="text" id="sub4" class="subscription-input-form" placeholder="Subject 4 (Optional)"> <br>
 </div>
 <br> <br>
 <div class="subscription-input-group"> 
@@ -85,7 +85,34 @@
         <option value="pb33">3</option>
         <option value="pb44">4</option>
     </select>
-    
+    <button class="appsLand-btn subscribe-btn" onclick="validateForm()">
+        Next
+    </button>
 </div>
+<script>
+    function validateForm() {
+        var form = document.getElementById('subject-details');
+        var fname = document.getElementById('sub1');
+      
+
+        var inputs = [sub1];
+
+        var existingErrorMessages = document.querySelectorAll('.error-message');
+existingErrorMessages.forEach(function(errorMessage) {
+    errorMessage.parentNode.removeChild(errorMessage);
+});
+
+        inputs.forEach(function(input) {
+            if (!input.value) {
+                var errorMessage = document.createElement('span');
+                errorMessage.className = 'error-message';
+                errorMessage.textContent = 'This field is required';
+                input.parentNode.insertBefore(errorMessage, input.nextSibling);
+            }
+        });
+    }
+    
+</script>
+
 </body>
 </html>

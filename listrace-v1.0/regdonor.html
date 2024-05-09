@@ -80,7 +80,7 @@
 								<input type="text" id="address" class="subscription-input-form" placeholder="Address" required>
 								<input type="text" id="area" class="subscription-input-form" placeholder="Area" required>
 								<input type="text" id="govern" class="subscription-input-form" placeholder="Governorate" required>
-								<select name="typed"id="typed" class="subscription-input-form" id="typed" required>
+								<select name="typed" class="subscription-input-form" id="typed" required>
 									<option value="" disabled selected>Select type of donor</option>
 									<option value="Regular">Regular</option>
 									<option value="Teacher">Teacher</option>
@@ -101,7 +101,7 @@
 										<p>or</p>
 										<span class="browse-button">Browse file</span>
 									  </div>
-									  <input id="file" type="file" required/>
+									  <input id="file" type="file" required onchange="handleFileUpload(this.files)"/>
 									</label>
 								  </form>								  
 
@@ -148,6 +148,7 @@
 					}
 				});
 			}
+			
 		</script>
 		
 		
