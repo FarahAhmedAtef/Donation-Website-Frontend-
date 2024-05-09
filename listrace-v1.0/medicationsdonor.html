@@ -433,6 +433,7 @@
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
+		window.location.href = 'selectDonationItems.html';
 		popup1.style.display = 'none';
 	});
   </script>
@@ -448,6 +449,7 @@
 	});
   
 	closePopupBtn2.addEventListener('click', function() {
+		window.location.href = 'selectDonationItems.html';
 		popup3.style.display = 'none';
 	});
   </script>
@@ -463,6 +465,7 @@
 	});
   
 	closePopupBtn3.addEventListener('click', function() {
+		window.location.href = 'selectDonationItems.html';
 		popup5.style.display = 'none';
 	});
   </script>
@@ -665,7 +668,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
     noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
     // Append the element to the appropriate container in your HTML structure
 

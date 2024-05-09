@@ -60,6 +60,8 @@
 <body style="background: #ecf0f0;">
 	<div id="left-curtain"></div>
 	<div id="right-curtain"></div>
+	<div class="counterflag" style="display:none;">0</div>
+
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
@@ -217,6 +219,7 @@
 			  <div id="popupapply">
 				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 				<label > Please fill in this form as part of the donation procedure</label>
+				<label id="checkmap" style="display:none;"></label>
 				<form class="file-upload-form">
 				  <label for="file" class="file-upload-label">
 					Upload graduation certificate for verification
@@ -235,20 +238,58 @@
 					<span id="fileError" class="error-message" style="color: red;"></span>
 				  </label>
 				</form>
+				
+				
+                
+<br>
+                <label for="speciality-select">Subject</label><br>
+                <select id="speciality-select">
+					<option value="Choose subject">Choose subject</option>
+      <option value="skin">English</option>
+      <option value="bones">Math</option>
+      <option value="heart">Science</option>
+    </select><br>
+	<span id="specError" class="error-message" style="color: red;"></span><br>
+
 				<div class="containerapply">
-				  <div class="date-time">
-					<h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for teaching</h2>
-					<input type="date" id="datepicker">
-					<span id="dateError" class="error-message" style="color: red;"></span>
-					<h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will be available in for teaching</h2>
-					<input type="time" id="timepicker">
-					<span id="timeError" class="error-message" style="color: red;"></span>
+				  <label>Pick the number of classes you want to donate</label><br>
+				  <div class="counter-container">
+					<button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+					<div class="counter" style="border: 1px black;">0</div>
+					<button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 				  </div>
-				  <button id="submitButton">Submit</button>
+				  <br>
+				  <label>Pick the number of students you want to donate</label><br>
+                  <div class="counter-container">
+					<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+					<div class="counter2" style="border: 1px black;">0</div>
+					<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+				  </div>
+					
+				  <button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
 				</div>
 			  </div>
-			  <div id="message" class="hidden"> <p>Done!</p>
+			  <div id="message" class="hidden" style="color:rgb(20, 160, 20)"> <i class="fa-solid fa-circle-check" style="color:rgb(20, 160, 20); margin-right:3px;"></i>Your Request to donate has been sumbitted succesfully! We will get back to you after considering your response
 			  </div>
+
+			  <div id="directapply">
+				<i id="closeButton00" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+				<div class="containerapply">
+					<div class="date-time">
+					  <h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for teaching</h2>
+					  <input type="date" id="datepicker1">
+					  <span id="dateError1" class="error-message" style="color: red;"></span>
+					  <h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will be available in for teaching</h2>
+					  <input type="time" id="timepicker1">
+					  <span id="timeError1" class="error-message" style="color: red;"></span>
+					</div>
+					
+					<button id="submitButton1" style=" margin: 0 auto; display: block;">Submit</button>
+
+				  </div>
+
+			  </div>
+
 		<!--/.section-header-->
 		
 		<header id="header-top" class="header-top"  >
@@ -292,20 +333,20 @@
 			
 		</header><!--/.header-top-->
 		<!--header-top end -->
-		<div class="welcome-hero-serch-box">
-			<div class="welcome-hero-form" style="height: 50px; margin-top: -30px; transform: translate(520px,0px);">
+		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
+			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
 				<div class="single-welcome-hero-form">
 					<h3></h3>
 					<form action="index.html">
-						<input type="text" placeholder="" />
+						<input type="text" placeholder="What and where would you like to donate?" />
 					</form>
 					
 				</div>
 				
 			</div>
 			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
-				<button class="welcome-hero-btn" style="height:45px ; width:50px ;" onclick="window.location.href='#'">
-					   <i class="fa-solid fa-magnifying-glass" style="color: white;"></i> 
+				<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
+					   <i class="fa-solid fa-magnifying-glass" ></i> 
 				</button>
 			</div>
 		</div>
@@ -455,6 +496,8 @@ width: 0px; ">
 	const openPopupBtn = document.getElementById('openPopup');
 	const closePopupBtn = document.getElementById('closePopup');
 	const closePopupBtn4 = document.getElementById('closeButton0');
+	const closebutton00= document.getElementById('closeButton00');
+	const directapp= document.getElementById('directapply');
 
 	openPopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'block';
@@ -465,6 +508,12 @@ width: 0px; ">
 	});
 	closePopupBtn4.addEventListener('click', function() {
 	  popup.style.display = 'none';
+	});
+	closebutton00.addEventListener('click', function() {
+	  dateError2.textContent='';
+	  timeError2.textContent='';
+	  popup10.style.display='none';
+	  directapp.style.display = 'none';
 	});
   </script>
 
@@ -477,14 +526,24 @@ width: 0px; ">
 	const popup7= document.getElementById('popupapply');
 	const openPopupBtn1 = document.getElementById('openpostdetails1');
 	const closePopupBtn1 = document.getElementById('closePopup1');
+	const flag = document.querySelector('.counterflag');
+	const directpopup= document.getElementById('directapply');
+
+	
   
 	openPopupBtn1.addEventListener('click', function() {
 	  popup1.style.display = 'block';
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
+		if(flag.textContent==="0"){
 		popup1.style.display = 'none';
 	  popup7.style.display = 'block';
+		}
+		else{
+			popup1.style.display = 'none';
+	  directpopup.style.display = 'block';
+		}
 	});
   </script>
 
@@ -499,9 +558,16 @@ width: 0px; ">
 	  popup3.style.display = 'block';
 	});
   
+	
 	closePopupBtn2.addEventListener('click', function() {
+		if(flag.textContent==="0"){
 		popup3.style.display = 'none';
 	  popup8.style.display = 'block';
+		}
+		else{
+			popup3.style.display = 'none';
+	  directpopup.style.display = 'block';
+		}
 	});
   </script>
 
@@ -515,10 +581,18 @@ width: 0px; ">
 	openPopupBtn3.addEventListener('click', function() {
 	  popup5.style.display = 'block';
 	});
-  
+	
 	closePopupBtn3.addEventListener('click', function() {
 		popup5.style.display = 'none';
 	  popup9.style.display = 'block';
+	  if(flag.textContent==="0"){
+		popup5.style.display = 'none';
+	  popup9.style.display = 'block';
+		}
+		else{
+			popup5.style.display = 'none';
+	  directpopup.style.display = 'block';
+		}
 	});
   </script>
 
@@ -705,9 +779,25 @@ closeButton2.addEventListener('click', () => {
 <script>
 	const closeButton4 = document.getElementById('closepopupapply');
 const popup11 = document.getElementById('popupapply');
+const fileInput1 = document.getElementById('file');
+const fileError1 = document.getElementById('fileError');
+
+const counterElement5 = document.querySelector('.counter');
+const counterElement6 = document.querySelector('.counter2');
+const spec1 = document.getElementById('speciality-select');
+
+
+const specError1 = document.getElementById('specError');
 
 closeButton4.addEventListener('click', () => {
   popup11.style.display = 'none'; // Hide the popup
+  fileError1.textContent='';
+	specError1.textContent='';
+
+	spec1.selectedIndex=0;
+     counterElement5.textContent="1";
+	 counterElement6.textContent="1";
+     fileInput1.value='';
 });
 </script>
 
@@ -725,11 +815,19 @@ closeButton3.addEventListener('click', () => {
 const messageElement = document.getElementById('message');
 const popup10 = document.getElementById('popupapply');
 const fileInput = document.getElementById('file');
-const datePicker = document.getElementById('datepicker');
-const timePicker = document.getElementById('timepicker');
+const counterElement4 = document.querySelector('.counter');
+const counterElement3 = document.querySelector('.counter2');
+
 const fileError = document.getElementById('fileError');
-const dateError = document.getElementById('dateError');
-const timeError = document.getElementById('timeError');
+
+
+const spec = document.getElementById('speciality-select');
+
+
+
+const specError = document.getElementById('specError');
+
+
 submitButton.addEventListener('click', () => {
 	let hasError = false; // Flag to track if any errors are found
 
@@ -742,26 +840,31 @@ submitButton.addEventListener('click', () => {
   }
 
   // Check if date picker has a value
-  if (datePicker.value === '') {
-    dateError.textContent = 'Please select a date.';
-    hasError = true;
-  } else {
-    dateError.textContent = ''; // Clear previous error message
-  }
-
-  // Check if time picker has a value
-  if (timePicker.value===''){
-      timeError.textContent='Please select a time.';
+  
+  
+  if (spec.value ==="Choose subject"){
+      specError.textContent='Please select a subject.';
 	  hasError=true;
   }
-  else{
-	timeError.textContent='';
+  else {
+	specError.textContent='';
   }
+
+  
+  
+
+
+
 
   if(!hasError){
 	fileError.textContent='';
-	dateError.textContent='';
-	timeError.textContent='';
+	specError.textContent='';
+	spec.selectedIndex=0;
+     counterElement3.textContent="1";
+	 counterElement4.textContent="1";
+     fileInput.value='';
+	 flag.textContent="1";
+
   messageElement.classList.remove('hidden'); // Show the message
    popup10.style.display='none';
   // Simulate a transition effect (using setTimeout for simplicity)
@@ -820,7 +923,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
     noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
     // Append the element to the appropriate container in your HTML structure
 
@@ -891,7 +994,106 @@ for (const radioButton of governateRadioButtons) {
   radioButton.addEventListener('click', updateAreaOptions);
 }
 </script>
+<script>
+	const counterElement2 = document.querySelector('.counter2');
+let count2 = 0; // Initial counter value
 
+const incrementButton2 = document.getElementById('increment2');
+const decrementButton2 = document.getElementById('decrement2');
+
+incrementButton2.addEventListener('click', () => {
+  count2++;
+  counterElement2.textContent = count2;
+});
+
+decrementButton2.addEventListener('click', () => {
+  if (count2 > 0) {
+    count2--;
+  }
+  counterElement2.textContent = count2;
+});
+
+</script>
+<script>
+	const counterElement = document.querySelector('.counter');
+let count = 0; // Initial counter value
+
+const incrementButton = document.getElementById('increment');
+const decrementButton = document.getElementById('decrement');
+
+incrementButton.addEventListener('click', () => {
+  count++;
+  counterElement.textContent = count;
+});
+
+decrementButton.addEventListener('click', () => {
+  if (count > 0) {
+    count--;
+  }
+  counterElement.textContent = count;
+});
+
+</script>
+
+<script>
+	const submitButton1 = document.getElementById('submitButton1');
+const popup20 = document.getElementById('directapply');
+
+const datePicker2 = document.getElementById('datepicker1');
+const timePicker2 = document.getElementById('timepicker1');
+
+const dateError2 = document.getElementById('dateError1');
+const timeError2 = document.getElementById('timeError1');
+
+
+
+
+
+
+submitButton1.addEventListener('click', () => {
+	let hasError = false; // Flag to track if any errors are found
+
+  // Check if file input is empty
+  
+  // Check if date picker has a value
+  if (datePicker2.value === '') {
+    dateError2.textContent = 'Please select a date.';
+    hasError = true;
+  } else {
+    dateError2.textContent = ''; // Clear previous error message
+  }
+
+  // Check if time picker has a value
+  if (timePicker2.value===''){
+      timeError2.textContent='Please select a time.';
+	  hasError=true;
+  }
+  else {
+	timeError2.textContent='';
+  }
+
+  
+
+
+ 
+
+  
+
+  if(!hasError){
+	dateError2.textContent='';
+	timeError2.textContent='';
+	
+  messageElement.classList.remove('hidden'); // Show the message
+   popup20.style.display='none';
+   popup10.style.display='none';
+  // Simulate a transition effect (using setTimeout for simplicity)
+  setTimeout(() => {
+    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
+  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+}
+});
+
+</script>
 
 <!--explore end -->
 </body>
