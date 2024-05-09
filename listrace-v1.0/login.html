@@ -118,8 +118,10 @@
         window.location.href = "admindb.html"; // Replace "dashboard.html" with the URL of the dashboard page
     } else if (username === "karennn" && password !== "toot24"){
         alert("Invalid password. Please try again.");
-    } else {
+    } else if (username !== "karennn" && password === "toot24"){
         alert("Invalid username. Please try again.");
+    } else{
+        alert("Invalid username & password. Please try again");
     }
 }
 

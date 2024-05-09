@@ -80,75 +80,72 @@
 								<input type="text" id="address" class="subscription-input-form" placeholder="Address" required>
 								<input type="text" id="area" class="subscription-input-form" placeholder="Area" required>
 								<input type="text" id="govern" class="subscription-input-form" placeholder="Governorate" required>
-								<select name="typed"id="typed" class="subscription-input-form" id="typed" required>
+								<select name="typed" class="subscription-input-form" id="typed" required>
 									<option value="" disabled selected>Select type of donor</option>
 									<option value="Regular">Regular</option>
 									<option value="Teacher">Teacher</option>
 									<option value="Doctor">Doctor</option>
 								</select>
 								<br><br>
-								<h1> please add your verification </h1>
-
-								<form class="file-upload-form">
-									<label for="file" class="file-upload-label">
-									  <div class="file-upload-design">
-										<svg viewBox="0 0 640 512" height="1em">
-										  <path
-											d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
-										  ></path>
-										</svg>
-										<p>Drag and Drop</p>
-										<p>or</p>
-										<span class="browse-button">Browse file</span>
-									  </div>
-									  <input id="file" type="file" required/>
-									</label>
-								  </form>								  
+															  
 
 							</form>
 			
 						</div>
 					</div>	
 				</div>
-				<button class="appsLand-btn subscribe-btn" onclick="validateForm()">
+				<button class="appsLand-btn subscribe-btn">
 					create account
 				</button>
 				
 			</div>
 		</section>
 		
+		
 		<script>
-			function validateForm() {
-				var form = document.getElementById('registration-form');
-				var fname = document.getElementById('fname');
-				var lname = document.getElementById('lname');
-				var gender = document.getElementById('gender');
-				var email = document.getElementById('email');
-				var cnum = document.getElementById('cnum');
-				var pass = document.getElementById('pass');
-				var address = document.getElementById('address');
-				var area = document.getElementById('area');
-				var govern = document.getElementById('govern');
-				var typed = document.getElementById('typed');
-				var file = document.getElementById('file');
+			
+			// Attach an event listener to the button click
+			document.querySelector('.subscribe-btn').addEventListener('click', function() {
+				// Retrieve all form fields
+				var inputs = document.querySelectorAll('.subscription-input-form');
 		
-				var inputs = [fname, lname, gender, email, cnum, pass, address, area, govern, typed, file];
-
+				// Remove existing error messages
 				var existingErrorMessages = document.querySelectorAll('.error-message');
-        existingErrorMessages.forEach(function(errorMessage) {
-            errorMessage.parentNode.removeChild(errorMessage);
-        });
+				existingErrorMessages.forEach(function(errorMessage) {
+					errorMessage.parentNode.removeChild(errorMessage);
+				});
 		
+				var isValid = true;
+		
+				// Validate each field
 				inputs.forEach(function(input) {
+					// Check if the field is empty
 					if (!input.value) {
+						isValid = false;
 						var errorMessage = document.createElement('span');
 						errorMessage.className = 'error-message';
 						errorMessage.textContent = 'This field is required';
 						input.parentNode.insertBefore(errorMessage, input.nextSibling);
 					}
 				});
-			}
+		
+				// If all fields are filled, proceed with redirection
+				if (isValid) {
+					var typed = document.getElementById('typed').value;
+		
+					if (typed === 'Teacher') {
+						window.location.href = 'subjectdetails.html'; // Redirect to subjectdetails.html
+					} else if (typed === 'Doctor') {
+						window.location.href = 'cliniclocation.html'; // Redirect to cliniclocation.html
+					} else if (typed === 'Regular') {
+						window.location.href = 'index.html'; // Redirect to index.html
+					}
+				}
+			});
 		</script>
+		
+		
+		
 		
 		
     </body>

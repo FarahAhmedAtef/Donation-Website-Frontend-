@@ -62,7 +62,7 @@
     <div class="container">
         <div class="subscribe-title text-center">
             <h2>
-               New school supplies donation post
+               New medical supplies donation post
             </h2>
             <!-- <p>
                 Listrace offer you to list your business with us and we very much able to promote your Business.
@@ -75,21 +75,10 @@
                         
       
                             
-                            <input type="text" id="bookname" class="subscription-input-form" placeholder="Book name">
+                            <input type="text" id="Mtype" class="subscription-input-form" placeholder="Medical Device Type">
                             <br><br>
-                            <input type="text" id="author" class="subscription-input-form" placeholder="Author Name">
+                            <input type="text" id="use" class="subscription-input-form" placeholder="Medical Use">
                             <br><br>
-                            <input type="text" id="edition" class="subscription-input-form" placeholder="Edition ex: first, second, etc.">
-                            <br><br>
-                            <select name="type1" class="subscription-input-form" id="type1">
-                              <option value="" disabled selected>Select book language</option>
-                              <option value="l1">English</option>
-                              <option value="l2">Arabic</option>
-                              <option value="l3">French</option>
-                              <option value="l4">German</option>
-                          </select>
-                            <br><br>
-                            <!-- <label for="password">Password:</label> -->
                             <div class="counter-container">
                                <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
                                 <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
@@ -99,16 +88,10 @@
         
                             
                            <br><br>
-                  <!-- textbox for description -->
-                  <label for="txtbox">Brief summary of what the book is about:</label>
-                      <form class="form">
-                        <textarea placeholder="Summary of what the book is about"></textarea>
-                     </form>
-                <br><br>
                                 
                                 <form class="file-upload-form">
                                     <label for="file" class="file-upload-label">
-                                        Upload picture of the book required
+                                        Upload picture of medical device required
                                         <br>
                                       <div class="file-upload-design">
                                         <svg viewBox="0 0 640 512" height="1em">
@@ -126,14 +109,6 @@
                                   </form>
                                   <br><br>
                                   <!-- <button id="upload" class="uploadbtn" style="margin-right: auto; display: none;">Upload</button> -->
-                                     
-
-
-                      <!-- textbox for description
-                      <form class="form">
-                        <textarea placeholder=" Extra information"></textarea>
-                     </form>
-                <br><br> -->
 
                 <div id="warningMsg" style="display: none; color: red;">Please fill in all required fields!</div>
                 <br>
@@ -152,9 +127,8 @@
 <!---to fill all fields-->
 <script>
   const postBtn = document.getElementById('postBtn');
-  const nameInput = document.getElementById('bookname');
-  const authorInput = document.getElementById('author');
-  const editionInput = document.getElementById('edition');
+  const typeInput = document.getElementById('Mtype');
+  const useInput = document.getElementById('use');
   const warningMsg = document.getElementById('warningMsg');
 
   // Function to update border style based on input value
@@ -167,25 +141,20 @@
   }
 
   // Event listeners for input changes
-  nameInput.addEventListener('input', function() {
-    updateInputBorderColor(nameInput);
+  typeInput.addEventListener('input', function() {
+    updateInputBorderColor(typeInput);
   });
 
-  authorInput.addEventListener('input', function() {
-    updateInputBorderColor(authorInput);
-  });
-  editionInput.addEventListener('input', function() {
-    updateInputBorderColor(editionInput);
+  useInput.addEventListener('input', function() {
+    updateInputBorderColor(useInput);
   });
 
   postBtn.addEventListener('click', function(event) {
-    if (nameInput.value.trim() === "" || authorInput.value.trim() === "" || editionInput.value.trim() === "" ) {
+    if (typeInput.value.trim() === "" || useInput.value.trim() === ""  ) {
       event.preventDefault(); // Prevent form submission
       warningMsg.style.display = "block"; // Display warning message
-      updateInputBorderColor(nameInput);
-      updateInputBorderColor(authorInput);
-      updateInputBorderColor(editionInput);
-
+      updateInputBorderColor(typeInput);
+      updateInputBorderColor(useInput);
     } else {
       warningMsg.style.display = "none"; // Hide warning message (optional)
       // Submit the form (form submission logic)

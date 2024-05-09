@@ -171,11 +171,11 @@
 	
 						</div>
 					<div class="counter-container">
-						<button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter" style="border: 1px black;">0</div>
-						<button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+						<div class="counter1" style="border: 1px black;">0</div>
+						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 					  </div>
-
+                 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -220,11 +220,12 @@
 									</div>
 	
 						</div>
-					<div class="counter-container">
-						<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter2" style="border: 1px black;">0</div>
-						<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-					  </div>
+						<div class="counter-container">
+							<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+							<div class="counter2" style="border: 1px black;">0</div>
+							<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+						  </div>
+					 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
 
 					<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
@@ -265,7 +266,12 @@
 									</div>
 	
 						</div>
-					
+						<div class="counter-container">
+							<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+							<div class="counter3" style="border: 1px black;">0</div>
+							<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+						  </div>
+					 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
 
 					<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
@@ -690,37 +696,50 @@ src=
 	
 	
 <script>
-	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
+	const counterElement1 = document.querySelector('.counter1');
+	const maxlimit1 = document.getElementById('maxlimit1');
 
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
+let count1 = 0; // Initial counter value
 
-incrementButton.addEventListener('click', () => {
-  count++;
-  counterElement.textContent = count;
+const incrementButton1 = document.getElementById('increment1');
+const decrementButton1 = document.getElementById('decrement1');
+
+incrementButton1.addEventListener('click', () => {
+if(count1<6)	{
+  count1++;
+  counterElement1.textContent = count1;
+}
+else{
+    maxlimit1.style.display='block';
+}
 });
 
-decrementButton.addEventListener('click', () => {
-  if (count > 0) {
-    count--;
+decrementButton1.addEventListener('click', () => {
+  if (count1 > 0) {
+    count1--;
   }
-  counterElement.textContent = count;
+  counterElement1.textContent = count1;
 });
 
 </script>
 
-
 <script>
 	const counterElement2 = document.querySelector('.counter2');
+	const maxlimit2 = document.getElementById('maxlimit2');
+
 let count2 = 0; // Initial counter value
 
 const incrementButton2 = document.getElementById('increment2');
 const decrementButton2 = document.getElementById('decrement2');
 
 incrementButton2.addEventListener('click', () => {
+if(count2<5)	{
   count2++;
   counterElement2.textContent = count2;
+}
+else{
+    maxlimit2.style.display='block';
+}
 });
 
 decrementButton2.addEventListener('click', () => {
@@ -728,6 +747,35 @@ decrementButton2.addEventListener('click', () => {
     count2--;
   }
   counterElement2.textContent = count2;
+});
+
+</script>
+
+
+
+
+<script>
+	const counterElement3 = document.querySelector('.counter3');
+let count3 = 0; // Initial counter value
+
+const incrementButton3 = document.getElementById('increment3');
+const decrementButton3 = document.getElementById('decrement3');
+
+incrementButton3.addEventListener('click', () => {
+	if(count3<7)	{
+  count3++;
+  counterElement3.textContent = count3;
+}
+else{
+    maxlimit3.style.display='block';
+}
+});
+
+decrementButton3.addEventListener('click', () => {
+  if (count3 > 0) {
+    count3--;
+  }
+  counterElement3.textContent = count3;
 });
 
 </script>
