@@ -96,7 +96,10 @@
         
     </header><!--/.header-top-->
     <!--header-top end -->
-
+<div id="pagewrapper" style=" display: grid;
+grid-template-rows: 1fr auto;
+min-height: 100vh;">
+    <div id="main-content">
 <section id="reviews" class="reviews">
     <div class="section-header">
         <h2 style="color:rgb(5,14,56);">Organizations List</h2>
@@ -565,40 +568,7 @@
         <h4><button onclick="closePopup('r1')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
     </div>
 
-      <footer id="footer"  class="footer" style="padding-right: 0px; position: relative;
-      bottom: 0;
-      width: 0px; ">
-          <div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
-              
-              <div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
-                  <div class="row">
-                      <div class="col-sm-5">
-                          <p>
-                              &copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
-                          </p><!--/p-->
-                      </div>
-                      <div class="col-sm-7">
-                          <div class="footer-social" style="padding-right: 20px;">
-                              <span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
-                              <a href="#"><i class="fa fa-facebook"></i></a>	
-                              <a href="#"><i class="fa fa-twitter"></i></a>
-                              <a href="#"><i class="fa fa-linkedin"></i></a>
-                              <!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
-                          </div>
-                      </div>
-                  </div>
-                  
-              </div><!--/.hm-footer-copyright-->
-          </div><!--/.container-->
-
-          <!-- <div id="scroll-Top">
-              <div class="return-to-top">
-                  <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-              </div> -->
-              
-          <!-- </div>/.scroll-Top -->
-          
-      </footer><!--/.footer-->
+  
 
 
 
@@ -608,6 +578,41 @@
 
 </section><!--/.reviews-->
 <!--reviews end -->
+</div>
+<footer id="footer"  class="footer" style="padding-right: 0px; grid-row: 2;
+width: 0px; ">
+    <div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+        
+        <div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>
+                        &copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+                    </p><!--/p-->
+                </div>
+                <div class="col-sm-7">
+                    <div class="footer-social" style="padding-right: 20px;">
+                        <span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+                        <a href="#"><i class="fa fa-facebook"></i></a>	
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+                    </div>
+                </div>
+            </div>
+            
+        </div><!--/.hm-footer-copyright-->
+    </div><!--/.container-->
+
+    <!-- <div id="scroll-Top">
+        <div class="return-to-top">
+            <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+        </div> -->
+        
+    <!-- </div>/.scroll-Top -->
+    
+</footer><!--/.footer-->
+</div>
 
 <script src="assets/js/jquery.js"></script>
         
