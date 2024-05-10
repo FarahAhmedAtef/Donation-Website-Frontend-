@@ -527,7 +527,7 @@ width: 0px; ">
 	const popup7= document.getElementById('popupapply');
 	const openPopupBtn1 = document.getElementById('openpostdetails1');
 	const closePopupBtn1 = document.getElementById('closePopup1');
-	const flag = document.querySelector('.counterflag');
+	let flag = sessionStorage.getItem('myValue');
 	const directpopup= document.getElementById('directapply');
 
 	
@@ -537,13 +537,15 @@ width: 0px; ">
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
-		if(flag.textContent==="0"){
-		popup1.style.display = 'none';
-	  popup7.style.display = 'block';
+		if(flag && flag==="1"){
+			popup1.style.display = 'none';
+	  directpopup.style.display = 'block';
+
+		
 		}
 		else{
 			popup1.style.display = 'none';
-	  directpopup.style.display = 'block';
+	  popup7.style.display = 'block';
 		}
 	});
   </script>
@@ -561,13 +563,15 @@ width: 0px; ">
   
 	
 	closePopupBtn2.addEventListener('click', function() {
-		if(flag.textContent==="0"){
-		popup3.style.display = 'none';
-	  popup8.style.display = 'block';
+		if(flag && flag==="1"){
+			popup3.style.display = 'none';
+	  directpopup.style.display = 'block';
+
+	
 		}
 		else{
 			popup3.style.display = 'none';
-	  directpopup.style.display = 'block';
+	  popup8.style.display = 'block';
 		}
 	});
   </script>
@@ -586,13 +590,13 @@ width: 0px; ">
 	closePopupBtn3.addEventListener('click', function() {
 		popup5.style.display = 'none';
 	  popup9.style.display = 'block';
-	  if(flag.textContent==="0"){
-		popup5.style.display = 'none';
-	  popup9.style.display = 'block';
+	  if(flag && flag==="1"){
+        popup5.style.display = 'none';
+	  directpopup.style.display = 'block';
 		}
 		else{
 			popup5.style.display = 'none';
-	  directpopup.style.display = 'block';
+	  popup9.style.display = 'block';
 		}
 	});
   </script>
@@ -864,14 +868,11 @@ submitButton.addEventListener('click', () => {
      counterElement3.textContent="1";
 	 counterElement4.textContent="1";
      fileInput.value='';
-	 flag.textContent="1";
-
-  messageElement.classList.remove('hidden'); // Show the message
+	 sessionStorage.setItem('myValue', "1");
+	 window.location.href='requestedtodonate.html';
    popup10.style.display='none';
   // Simulate a transition effect (using setTimeout for simplicity)
-  setTimeout(() => {
-    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
-  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+// Specify the delay in milliseconds (3000ms = 3 seconds)
 }
 });
 
@@ -1084,13 +1085,11 @@ submitButton1.addEventListener('click', () => {
 	dateError2.textContent='';
 	timeError2.textContent='';
 	
-  messageElement.classList.remove('hidden'); // Show the message
+	window.location.href='requestedtodonate.html';
    popup20.style.display='none';
    popup10.style.display='none';
   // Simulate a transition effect (using setTimeout for simplicity)
-  setTimeout(() => {
-    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
-  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+   // Specify the delay in milliseconds (3000ms = 3 seconds)
 }
 });
 
