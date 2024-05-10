@@ -54,7 +54,7 @@
 
 </head>
 
-<body>
+<body style="background-color:#ecf0f0">
     <header id="header-top" class="header-top"  >
         <ul>
             <li>
@@ -98,7 +98,7 @@
 
 <section id="reviews" class="reviews">
     <div class="section-header">
-        <h2>Organizations List</h2>
+        <h2 style="color:rgb(5,14,56);">Organizations List</h2>
         <!-- <p>all donors are free to donate anything they want; you will only find specified whether or not that donor is additionally a teacher/doctor</p> -->
     </div><!--/.section-header-->
     <div class="welcome-hero-serch-box" style="border-color: #3855d4;">
@@ -106,7 +106,7 @@
             <div class="single-welcome-hero-form">
                 <h3></h3>
                 <form action="index.html">
-                    <input type="text" placeholder="who would you like to view?" />
+                    <input style="text-transform: none;" type="text" placeholder="who would you like to view?" />
                 </form>
                 
             </div>
@@ -120,7 +120,7 @@
     </div>
     <div class="reviews-content">
         <div class="testimonial-carousel">
-            <div class="single-testimonial-box">
+            <div class="single-testimonial-box" id="box1">
                 <div class="testimonial-description">
                     <div class="testimonial-info">
                         
@@ -136,8 +136,8 @@
                                 Al Orman 
                             </h2>
                             <!-- <div class="single-settings-icon"> <i class="fa-solid fa-location-dot"></i></div> -->
-                            <h4 class="area"><div class="single-settings-icon"> <i class="fa-solid fa-map-location-dot"></i></div> Mohandeseen </h4>
-                            <h4 class="loc"><div class="single-settings-icon"><i class="fa-solid fa-location-dot"></i></div>Giza, Egypt</h4>
+                            <h4 class="area"><div class="single-settings-icon"> <i class="fa-solid fa-map-location-dot" style="color: rgb(74,147,149);"></i></div> Mohandeseen </h4>
+                            <h4 class="loc"><div class="single-settings-icon"><i class="fa-solid fa-location-dot" style="color: rgb(74,147,149);"></i></div>Giza, Egypt</h4>
                             <h4 class="job"> Orphanage </h4>
                             <!-- <div class="testimonial-person-star">
                                 <i class="fa fa-star"></i>
@@ -154,18 +154,36 @@
                         </p>
                     </div>
                     <h5>
-                        <button id="view1" class="open-btn how-work-btn" onclick="window.location.href='#'"> view details </button>
+                        <button id="view1" class="open-btn how-work-btn" onclick="window.location.href='#'"  style="border-color:rgb(5,14,56); color:rgb(5,14,56);"> view details </button>
 
                     </h5>
                     <h6> 
-                        <button class="open-btn how-work-btn" id="a1" onclick="accept('a1')"> accept </button>
-                        <button class="open-btn how-work-btn" id="r1" onclick="reject('r1')"> reject </button>
+                        <button class="open-btn how-work-btn" id="a1" onclick="accept('a1')" style="border-color:mediumseagreen; color:mediumseagreen;"> accept </button>
+                        <button class="open-btn how-work-btn" id="r1" onclick="reject('r1')" style="border-color:#f63138; color:#f63138;"> reject </button>
                     </h6>
                     <!-- <button class="open-btn how-work-btn" onclick="window.location.href='#'"> accept </button> -->
                     <!-- /.testimonial-comment -->
+                    <button class="sheel" onclick="openPopup('delete1')" id="delete1" style="display:none;">
+                        <div class="button-content" style="transform:translate(0px,-18px); align-content: center; padding-left:15px;">
+                            <div class="single-list-topics-icon" >
+                                <i class="fa-solid fa-trash" style="margin-left:6px; margin-right:10px;" ></i>					
+                            </div>
+                            <label style="transform:translate(0px,3px);">Delete Account</label>
+                        </div>
+                    </button>
+                    
+                    <button class="sheel" onclick="window.location.href='orgsubs.html'">
+                        <div class="button-content">
+                            <div class="single-list-topics-icon" >
+                                <i class="fa-solid fa-file" style="margin-left:6px; margin-right:10px;" ></i>					
+                            </div>
+                            <label style="transform:translate(0px,3px);">Review Submissions</label>
+                        </div>
+                    </button>
+                    <br/>
                 </div><!--/.testimonial-description-->
             </div><!--/.single-testimonial-box-->
-            <div class="single-testimonial-box">
+            <div class="single-testimonial-box" id="box2">
                 <div class="testimonial-description">
                     <div class="testimonial-info">
                         
@@ -180,8 +198,8 @@
                                 </div>
                                 Resala
                             </h2>
-                            <h4 class="area"><div class="single-settings-icon"> <i class="fa-solid fa-map-location-dot"></i></div> Zamalek </h4>
-                            <h4 class="loc"><div class="single-settings-icon"> <i class="fa-solid fa-location-dot"></i></div>Cairo, Egypt</h4>
+                            <h4 class="area"><div class="single-settings-icon"> <i class="fa-solid fa-map-location-dot" style="color: rgb(74,147,149);"></i></div> Zamalek </h4>
+                            <h4 class="loc"><div class="single-settings-icon"> <i class="fa-solid fa-location-dot" style="color: rgb(74,147,149);"></i></div>Cairo, Egypt</h4>
                             <h4 class="job"> Charity</h4>
                             <!-- <div class="testimonial-person-star">
                                 <i class="fa fa-star"></i>
@@ -197,13 +215,31 @@
                             status: accepted
                         </p>
                         <h5>
-                            <button id="view2" class="open-btn how-work-btn" onclick="window.location.href='#'"> view details </button>
+                            <button id="view2" class="open-btn how-work-btn" onclick="window.location.href='#'"  style="border-color:rgb(5,14,56); color:rgb(5,14,56);"> view details </button>
     
                         </h5>
                     </div><!--/.testimonial-comment-->
+                    <button class="sheel" onclick="openPopup('delete2')" id="delete2">
+                        <div class="button-content">
+                            <div class="single-list-topics-icon" >
+                                <i class="fa-solid fa-trash" style="margin-left:6px; margin-right:10px;" ></i>					
+                            </div>
+                            <label style="transform:translate(0px,3px);">Delete Account</label>
+                        </div>
+                    </button>
+                    <button class="sheel" onclick="window.location.href='orgsubs.html'">
+                        <div class="button-content">
+                            <div class="single-list-topics-icon" >
+                                <i class="fa-solid fa-file" style="margin-left:6px; margin-right:10px;" ></i>					
+                            </div>
+                            <label style="transform:translate(0px,3px);">Review Submissions</label>
+                        </div>
+                    </button>
+                    <br/>
+                </div>
                 </div><!--/.testimonial-description-->
             </div><!--/.single-testimonial-box-->
-            <div class="single-testimonial-box" style="margin-bottom: 100px;">
+            <div class="single-testimonial-box" id="box3" style="margin-bottom: 100px;">
                 <div class="testimonial-description">
                     <div class="testimonial-info">
                         
@@ -215,8 +251,8 @@
                                 </div>
                                 Bank Al Taam
                             </h2>
-                            <h4 class="area"><div class="single-settings-icon"> <i class="fa-solid fa-map-location-dot"></i></div> Montazah </h4>
-                            <h4 class="loc"><div class="single-settings-icon"> <i class="fa-solid fa-location-dot"></i></div>Alexandria, Egypt</h4>
+                            <h4 class="area"><div class="single-settings-icon"> <i class="fa-solid fa-map-location-dot" style="color: rgb(74,147,149);"></i></div> Montazah </h4>
+                            <h4 class="loc"><div class="single-settings-icon"> <i class="fa-solid fa-location-dot" style="color: rgb(74,147,149);"></i></div>Alexandria, Egypt</h4>
                             <h4 class="job"> Charity </h4>
                             <!-- <div class="testimonial-person-star">
                                 <i class="fa fa-star"></i>
@@ -232,10 +268,27 @@
                             status: accepted
                         </p>
                         <h5>
-                            <button id="view3" class="open-btn how-work-btn" onclick="window.location.href='#'"> view details </button>
+                            <button id="view3" class="open-btn how-work-btn" onclick="window.location.href='#'"  style="border-color:rgb(5,14,56); color:rgb(5,14,56);"> view details </button>
     
                         </h5>
                     </div><!--/.testimonial-comment-->
+                    <button class="sheel" onclick="openPopup('delete3')" id="delete3">
+                        <div class="button-content">
+                            <div class="single-list-topics-icon" >
+                                <i class="fa-solid fa-trash" style="margin-left:6px; margin-right:10px;" ></i>					
+                            </div>
+                            <label style="transform:translate(0px,3px);">Delete Account</label>
+                        </div>
+                    </button>
+                    <button class="sheel" onclick="window.location.href='orgsubs.html'">
+                        <div class="button-content">
+                            <div class="single-list-topics-icon" >
+                                <i class="fa-solid fa-file" style="margin-left:6px; margin-right:10px;" ></i>					
+                            </div>
+                            <label style="transform:translate(0px,3px);">Review Submissions</label>
+                        </div>
+                    </button>
+                    <br/>
                 </div><!--/.testimonial-description-->
             </div><!--/.single-testimonial-box-->
         </div>  
@@ -468,6 +521,49 @@
 
             <!-- <button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button> -->
       </div>
+
+      <div id="openPopup">
+        <button style="font-size: 20px; padding-right:3px ;">Filter</button>
+        <i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
+      </div>
+
+      <div class="deletepops" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+        <!-- Popup content -->
+        <h2 style="text-transform:none;">Account Deleted Successfully</h2>
+        <br><br>
+        <!-- <p>Hello, this is a simple popup!</p> -->
+        <h4><button onclick="closePopup('confirmb')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
+    </div>
+
+    <div class="deletepops" id="delpopup1" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+        <!-- Popup content -->
+        <h2 style="text-transform:none;">Are you sure you want to delete this account?</h2>
+        <br><br>
+        <!-- <p>Hello, this is a simple popup!</p> -->
+        <h4><button style="margin-right: 100px; margin-left: 100px;border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;" onclick="deleteacc('delete1')">Yes</button><button onclick="closePopup('delete6')" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">No</button></h4>
+    </div>
+    <div class="deletepops" id="delpopup2" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+        <!-- Popup content -->
+        <h2 style="text-transform:none;">Are you sure you want to delete this account?</h2>
+        <br><br>
+        <!-- <p>Hello, this is a simple popup!</p> -->
+        <h4><button style="margin-right: 100px; margin-left: 100px;border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;" onclick="deleteacc('delete2')">Yes</button><button onclick="closePopup('delete2')" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">No</button></h4>
+    </div>
+    <div class="deletepops" id="delpopup3" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+        <!-- Popup content -->
+        <h2 style="text-transform:none;">Are you sure you want to delete this account?</h2>
+        <br><br>
+        <!-- <p>Hello, this is a simple popup!</p> -->
+        <h4><button style="margin-right: 100px; margin-left: 100px;border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;" onclick="deleteacc('delete3')">Yes</button><button onclick="closePopup('delete3')" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">No</button></h4>
+    </div>
+    <div class="deletepops" id="rejpopup1" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+        <!-- Popup content -->
+        <h2 style="text-transform:none;">Account Rejected & Deleted Successfully</h2>
+        <br><br>
+        <!-- <p>Hello, this is a simple popup!</p> -->
+        <h4><button onclick="closePopup('r1')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
+    </div>
+
       <footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
       bottom: 0;
       width: 0px; ">
@@ -550,6 +646,39 @@
 			  document.querySelector('.welcome-hero').style.backgroundImage = `url(${newImage})`;
 			}
 
+            function openPopup(buttonid) {
+                if (buttonid === "delete1"){
+                    var popup = document.getElementById("delpopup1");
+                    popup.style.display = "block";
+                } else if (buttonid === "delete2"){
+                    var popup = document.getElementById("delpopup2");
+                    popup.style.display = "block";
+                }
+                else if (buttonid === "delete3"){
+                    var popup = document.getElementById("delpopup3");
+                    popup.style.display = "block";
+                }
+            }
+
+            function closePopup(buttonid) {
+                if (buttonid === "delete1"){
+                    var popup = document.getElementById("delpopup1");
+                    popup.style.display = "none";
+                } else if (buttonid === "delete2"){
+                    var popup = document.getElementById("delpopup2");
+                    popup.style.display = "none";
+                } else if (buttonid === "delete3"){
+                    var popup = document.getElementById("delpopup3");
+                    popup.style.display = "none";
+                } else if (buttonid === "confirmb"){
+                    var popup = document.getElementById("confirmp");
+                    popup.style.display = "none";
+                } else if (buttonid === "r1"){
+                    var popup = document.getElementById("rejpopup1");
+                    popup.style.display = "none";
+                } 
+            }        
+
             function accept(buttonid){
             if (buttonid === "a1"){
                 var pending1 = document.getElementById("t1");
@@ -558,48 +687,80 @@
                 var buttonR = document.getElementById("r1");
                 buttonA.parentNode.removeChild(buttonA);
                 buttonR.parentNode.removeChild(buttonR);
-            } else if (buttonid === "a2"){
-                var pending1 = document.getElementById("t2");
-                pending1.textContent = "status: accepted";
-                var buttonA = document.getElementById("a2");
-                var buttonR = document.getElementById("r2");
-                buttonA.parentNode.removeChild(buttonA);
-                buttonR.parentNode.removeChild(buttonR);
-            } else if (buttonid === "a3"){
-                var pending1 = document.getElementById("t3");
-                pending1.textContent = "status: accepted";
-                var buttonA = document.getElementById("a3");
-                var buttonR = document.getElementById("r3");
-                buttonA.parentNode.removeChild(buttonA);
-                buttonR.parentNode.removeChild(buttonR);
+                var deleteb = document.getElementById("delete1");
+                deleteb.style.display = 'block';
             }
+            // } else if (buttonid === "a2"){
+            //     var pending1 = document.getElementById("t2");
+            //     pending1.textContent = "status: accepted";
+            //     var buttonA = document.getElementById("a2");
+            //     var buttonR = document.getElementById("r2");
+            //     buttonA.parentNode.removeChild(buttonA);
+            //     buttonR.parentNode.removeChild(buttonR);
+            // } else if (buttonid === "a3"){
+            //     var pending1 = document.getElementById("t3");
+            //     pending1.textContent = "status: accepted";
+            //     var buttonA = document.getElementById("a3");
+            //     var buttonR = document.getElementById("r3");
+            //     buttonA.parentNode.removeChild(buttonA);
+            //     buttonR.parentNode.removeChild(buttonR);
+            // }
 
         }
 
-            function reject(buttonid){
+        function reject(buttonid){
             if (buttonid === "r1"){
-                var pending1 = document.getElementById("t1");
-                pending1.textContent = "status: rejected";
-                var buttonA = document.getElementById("a1");
-                var buttonR = document.getElementById("r1");
-                buttonA.parentNode.removeChild(buttonA);
-                buttonR.parentNode.removeChild(buttonR);
-            } else if (buttonid === "r2"){
-                var pending1 = document.getElementById("t2");
-                pending1.textContent = "status: rejected";
-                var buttonA = document.getElementById("a2");
-                var buttonR = document.getElementById("r2");
-                buttonA.parentNode.removeChild(buttonA);
-                buttonR.parentNode.removeChild(buttonR);
-            } else if (buttonid === "r3"){
-                var pending1 = document.getElementById("t3");
-                pending1.textContent = "status: rejected";
-                var buttonA = document.getElementById("a3");
-                var buttonR = document.getElementById("r3");
-                buttonA.parentNode.removeChild(buttonA);
-                buttonR.parentNode.removeChild(buttonR);
+                var container = document.getElementById("box1");
+                    container.parentNode.removeChild(container);
+                    var popup = document.getElementById("rejpopup1");
+                    popup.style.display = 'block';
             }
+            // } else if (buttonid === "r2"){
+            //     var pending1 = document.getElementById("t2");
+            //     pending1.textContent = "status: rejected";
+            //     var buttonA = document.getElementById("a2");
+            //     var buttonR = document.getElementById("r2");
+            //     buttonA.parentNode.removeChild(buttonA);
+            //     buttonR.parentNode.removeChild(buttonR);
+            // } else if (buttonid === "r3"){
+            //     var pending1 = document.getElementById("t3");
+            //     pending1.textContent = "status: rejected";
+            //     var buttonA = document.getElementById("a3");
+            //     var buttonR = document.getElementById("r3");
+            //     buttonA.parentNode.removeChild(buttonA);
+            //     buttonR.parentNode.removeChild(buttonR);
+            // }
 
+        }
+
+        function deleteacc(buttonid){
+                if (buttonid === "delete1"){
+                    var container = document.getElementById("box1");
+                    container.parentNode.removeChild(container);
+                    var popup = document.getElementById("delpopup1");
+                    popup.style.display = 'none';
+                    var popupp = document.getElementById("confirmp");
+                    popupp.style.display = 'block';
+                    
+                }
+                else if (buttonid === "delete2"){
+                    var container = document.getElementById("box2");
+                    container.parentNode.removeChild(container);
+                    var popup = document.getElementById("delpopup2");
+                    popup.style.display = 'none';
+                    var popupp = document.getElementById("confirmp");
+                    popupp.style.display = 'block';
+                    
+                }
+                else if (buttonid === "delete3"){
+                    var container = document.getElementById("box3");
+                    container.parentNode.removeChild(container);
+                    var popup = document.getElementById("delpopup3");
+                    popup.style.display = 'none';
+                    var popupp = document.getElementById("confirmp");
+                    popupp.style.display = 'block';
+                    
+                }
         }
 		  
 			setInterval(changeBackground, 5000); // Change image every 5 seconds (adjust as needed)
