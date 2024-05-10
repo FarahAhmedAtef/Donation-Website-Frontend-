@@ -4,8 +4,7 @@
 <head>
 
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
+	
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,8 +58,8 @@
 
 </head>
 <body style="background-color: #ecf0f0; ">
-	<div id="left-curtain"></div>
-	<div id="right-curtain"></div>
+	
+	<div class="counter" style="display:none;">0</div>
 		  
 <!--explore start -->
 <!-- <section id="explore" class="explore">
@@ -153,7 +152,7 @@
 
 			  <div id="popup1">
 				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">In Need of teachers</a></h2>
+					<h2><a href="#">In Need of Doctors</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Alexandria</label> 
@@ -199,7 +198,7 @@
 
 			  <div id="popup2">
 				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">Probono Teaching Needed</a></h2>
+					<h2><a href="#">Probono Doctors Needed</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Cairo</label> 
@@ -245,7 +244,7 @@
 
 			  <div id="popup3">
 				<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">Teacher is needed</a></h2>
+					<h2><a href="#">Doctor is needed</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<label class="city" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Cairo</label> 
@@ -291,6 +290,7 @@
 			  <div id="popupapply">
 				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 				<label > Please fill in this form as part of the donation procedure</label>
+				<label id="checkmap" style="display:none;"></label>
 				<form class="file-upload-form">
 				  <label for="file" class="file-upload-label">
 					Upload graduation certificate for verification
@@ -309,38 +309,44 @@
 					<span id="fileError" class="error-message" style="color: red;"></span>
 				  </label>
 				</form>
+				<br>
 				<div id="clinic-address">
 					<label for="address-input">Please enter your clinic address</label><br>
 					<input type="text" id="address-input" placeholder="Enter address">
 				</div>
-				<span id="fileError" class="error-message" style="color: red;"></span>
+				<span id="addressError" class="error-message" style="color: red;"></span>
+				<br>
 				<div>
 					<label for="governorate-select">Governorate</label><br>
 					<select id="governorate-select"></select><br>
-					<span id="fileError" class="error-message" style="color: red;"></span>
+					<span id="govError" class="error-message" style="color: red;"></span><br>
 					<label for="area-select">Area</label><br>
 					<select id="area-select" disabled></select>
-					<span id="fileError" class="error-message" style="color: red;"></span>
-				  </div>
+					<span id="areaError" class="error-message" style="color: red;"></span><br>
+				  </div><br>
                 <label>Please pick your exact location on map</label>
 				<div id="map4"></div>
+				<span id="mapError" class="error-message" style="color: red;"></span>
+<br>
                 <label for="speciality-select">Speciality</label><br>
                 <select id="speciality-select">
+					<option value="Choose speciality">Choose speciality</option>
       <option value="skin">Skin</option>
       <option value="bones">Bones</option>
       <option value="heart">Heart</option>
     </select>
-	<span id="fileError" class="error-message" style="color: red;"></span>
+	<span id="specError" class="error-message" style="color: red;"></span>
 
 				<div class="containerapply">
 				  <div class="date-time">
-					<h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for teaching</h2>
+					<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available in for the visit</h2>
 					<input type="date" id="datepicker">
 					<span id="dateError" class="error-message" style="color: red;"></span>
-					<h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will be available in for teaching</h2>
+					<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available in for visit</h2>
 					<input type="time" id="timepicker">
 					<span id="timeError" class="error-message" style="color: red;"></span>
 				  </div>
+				  <br>
 				  <label for="elGawyHospital">Please pick where would you like to carry out the visit</label>
 				  <div class="checkbox-container"> 
 					<input type="radio" id="clinic" name="place" value="At your clinic">
@@ -350,11 +356,38 @@
 						<input type="radio" id="patient" name="place" value="At patient's place">
 						<label for="elGawyHospital">At patient's place</label>
 						<br></div>
-						<span id="fileError" class="error-message" style="color: red;"></span>
+						<span id="placeError" class="error-message" style="color: red;"></span>
 				  <button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
 				</div>
 			  </div>
 			  <div id="message" class="hidden"> <i class="fa-solid fa-circle-check" style="color:rgb(20, 160, 20)"></i><p style="color:rgb(20, 160, 20)">Your Request to donate has been sumbitted succesfully! We will get back to you after considering your response</p>
+			  </div>
+
+			  <div id="directapply">
+				<i id="closeButton00" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+				<div class="containerapply">
+					<div class="date-time">
+					  <h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for visit</h2>
+					  <input type="date" id="datepicker1">
+					  <span id="dateError1" class="error-message" style="color: red;"></span>
+					  <h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will be available in for visit</h2>
+					  <input type="time" id="timepicker1">
+					  <span id="timeError1" class="error-message" style="color: red;"></span>
+					</div>
+					<label for="elGawyHospital">Please pick where would you like to carry out the visit</label>
+					<div class="checkbox-container"> 
+					  <input type="radio" id="clinic1" name="place" value="At your clinic">
+					  <label for="elGawyHospital">At your clinic</label>
+					  <br></div>
+					  <div class="checkbox-container"> 
+						  <input type="radio" id="patient1" name="place" value="At patient's place">
+						  <label for="elGawyHospital">At patient's place</label>
+						  <br></div>
+						  <span id="placeError1" class="error-message" style="color: red;"></span>
+					<button id="submitButton1" style=" margin: 0 auto; display: block;">Submit</button>
+
+				  </div>
+
 			  </div>
 		<!--/.section-header-->
 		
@@ -367,9 +400,9 @@
 						</ul>
 					</div>
 				</li>
-				<li style="transform:translate(570px,0px);">
-					<span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-					  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+				<li style="transform:translate(450px,0px);">
+					<span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+					  Yalla  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
 					</span>
 				  </li>
 				  
@@ -385,7 +418,7 @@
 										+201061064544
 									</li>
 									<li class="header-top-contact">
-										<a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+										<a href="donoraccount.html"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
 									</li>
 								</div>
 								
@@ -394,6 +427,7 @@
 						</ul>
 					</div>
 				</li>
+
 			</ul>
 				
 			
@@ -537,7 +571,7 @@
 		<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
 		bottom: 0;
 		width: 0px; ">
-			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
 				
 				<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
 					<div class="row">
@@ -548,7 +582,7 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="footer-social" style="padding-right: 20px;">
-								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<span><i class="fa fa-phone"> +201061064544</i></span>
 								<a href="#"><i class="fa fa-facebook"></i></a>	
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -578,6 +612,9 @@
 	const openPopupBtn = document.getElementById('openPopup');
 	const closePopupBtn = document.getElementById('closePopup');
 	const closePopupBtn4 = document.getElementById('closeButton0');
+	const closebutton00= document.getElementById('closeButton00');
+	const directapp= document.getElementById('directapply');
+
 
 	openPopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'block';
@@ -589,6 +626,15 @@
 	closePopupBtn4.addEventListener('click', function() {
 	  popup.style.display = 'none';
 	});
+
+	closebutton00.addEventListener('click', function() {
+		pat2.checked=false;
+	clinic2.checked=false;
+	placeError2.textContent='';
+	dateError2.textContent='';
+	timeError2.textContent='';
+	  directapp.style.display = 'none';
+	});
   </script>
 
 
@@ -598,16 +644,26 @@
   <script>
 	const popup1 = document.getElementById('popup1');
 	const popup7= document.getElementById('popupapply');
+	const directpopup= document.getElementById('directapply');
+
 	const openPopupBtn1 = document.getElementById('openpostdetails1');
 	const closePopupBtn1 = document.getElementById('closePopup1');
-  
+	let flag = sessionStorage.getItem('myValue');
+
 	openPopupBtn1.addEventListener('click', function() {
 	  popup1.style.display = 'block';
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
-		popup1.style.display = 'none';
+		if(flag && flag==="1"){
+			popup1.style.display = 'none';
+	  directpopup.style.display = 'block';
+
+		}
+		else{
+			popup1.style.display = 'none';
 	  popup7.style.display = 'block';
+		}
 	});
   </script>
 
@@ -617,14 +673,23 @@
 
 	const openPopupBtn2 = document.getElementById('openpostdetails2');
 	const closePopupBtn2 = document.getElementById('closePopup2');
-  
+
 	openPopupBtn2.addEventListener('click', function() {
 	  popup3.style.display = 'block';
 	});
+	
   
 	closePopupBtn2.addEventListener('click', function() {
-		popup3.style.display = 'none';
+		if(flag && flag==="1"){
+			popup3.style.display = 'none';
+	  directpopup.style.display = 'block';
+		}
+		else{
+            popup3.style.display = 'none';
 	  popup8.style.display = 'block';
+
+			
+		}
 	});
   </script>
 
@@ -638,10 +703,18 @@
 	openPopupBtn3.addEventListener('click', function() {
 	  popup5.style.display = 'block';
 	});
+	
   
 	closePopupBtn3.addEventListener('click', function() {
-		popup5.style.display = 'none';
+		if(flag && flag==="1"){
+            popup5.style.display = 'none';
+	  directpopup.style.display = 'block';
+
+		}
+		else{
+			popup5.style.display = 'none';
 	  popup9.style.display = 'block';
+		}
 	});
   </script>
 
@@ -760,6 +833,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 
 <script>
 
+
 async function initMap() { 
         var test= {lat: -25.363, lng: 131.044}; 
         var map = new google.maps.Map(document.getElementById('map'), { 
@@ -803,11 +877,12 @@ async function initMap() {
 
  
   let marker2; // Declare a variable to hold the marker
-
+  const checkmap= document.getElementById("checkmap");
 // Add click listener to the map
 map4.addListener("click", (e) => {
   // Create a new marker if one doesn't exist
   if (!marker2) {
+    checkmap.textContent="fih marker";
 	marker2 = new google.maps.marker.AdvancedMarkerElement({
 	  position: e.latLng,
 	  map: map4,
@@ -855,9 +930,49 @@ closeButton2.addEventListener('click', () => {
 	const closeButton4 = document.getElementById('closepopupapply');
 const popup11 = document.getElementById('popupapply');
 
+const fileError1 = document.getElementById('fileError');
+const dateError1 = document.getElementById('dateError');
+const timeError1 = document.getElementById('timeError');
+
+const addressError1 = document.getElementById('addressError');
+const govError1 = document.getElementById('govError');
+const areaError1 = document.getElementById('areaError');
+const specError1 = document.getElementById('specError');
+const placeError1 = document.getElementById('placeError');
+const mapError1 = document.getElementById('mapError');
+const address1 = document.getElementById('address-input');
+const gov1 = document.getElementById('governorate-select');
+
+const area1 = document.getElementById('area-select');
+const spec1 = document.getElementById('speciality-select');
+const pat1 = document.getElementById('patient');
+const clinic1 = document.getElementById('clinic');
+
+
+
+
+
 closeButton4.addEventListener('click', () => {
   popup11.style.display = 'none'; // Hide the popup
+  fileError1.textContent='';
+	dateError1.textContent='';
+	timeError1.textContent='';
+	addressError1.textContent='';
+	govError1.textContent='';
+	areaError1.textContent='';
+	placeError1.textContent='';
+	mapError1.textContent='';
+	specError1.textContent='';
+	address1.value=address1.placeholder;
+	gov1.selectedIndex=0;
+	area1.selectedIndex=0;
+	spec1.selectedIndex=0;
+	pat1.checked=false;
+	clinic.checked=false;
+
+
 });
+
 </script>
 
 
@@ -880,11 +995,19 @@ const fileError = document.getElementById('fileError');
 const dateError = document.getElementById('dateError');
 const timeError = document.getElementById('timeError');
 const address = document.getElementById('address-input');
-const gov = document.getElementById('governerate-select');
+const gov = document.getElementById('governorate-select');
+
 const area = document.getElementById('area-select');
 const spec = document.getElementById('speciality-select');
 const pat = document.getElementById('patient');
 const clinic = document.getElementById('clinic');
+const addressError = document.getElementById('addressError');
+const govError = document.getElementById('govError');
+const areaError = document.getElementById('areaError');
+const specError = document.getElementById('specError');
+const placeError = document.getElementById('placeError');
+const map = document.getElementById('checkmap');
+const mapError = document.getElementById('mapError');
 
 submitButton.addEventListener('click', () => {
 	let hasError = false; // Flag to track if any errors are found
@@ -910,24 +1033,155 @@ submitButton.addEventListener('click', () => {
       timeError.textContent='Please select a time.';
 	  hasError=true;
   }
-  else{
+  else {
 	timeError.textContent='';
+  }
+
+  if (gov.value==="Choose a governorate"){
+      govError.textContent='Please select a governorate.';
+	  hasError=true;
+  }
+  else {
+	govError.textContent='';
+  }
+
+  if (area.value==="Choose an area"){
+      areaError.textContent='Please select an area.';
+	  hasError=true;
+  }
+  else {
+	areaError.textContent='';
+  }
+  if (spec.value==="Choose speciality"){
+      specError.textContent='Please select a speciality.';
+	  hasError=true;
+  }
+  else {
+	specError.textContent='';
+  }
+
+  if(address.value===''){
+	addressError.textContent='Please enter your address';
+	hasError=true;
+
+  }
+  else{
+	addressError.textContent='';
+
+  }
+
+
+
+  if (!clinic.checked && !pat.checked) {
+	console.log("ok");
+	placeError.textContent='Please select a location for the visit.';
+    hasError = true;
+  } else {
+    // Clear any previous location error
+    placeError.textContent = '';
+  }
+
+  if(map.textContent===''){
+	mapError.textContent='Please pick your location on map';
+    hasError = true;
+  }
+  else{
+	mapError.textContent='';
+
   }
 
   if(!hasError){
 	fileError.textContent='';
 	dateError.textContent='';
 	timeError.textContent='';
-  messageElement.classList.remove('hidden'); // Show the message
+	addressError.textContent='';
+	govError.textContent='';
+	areaError.textContent='';
+	placeError.textContent='';
+	mapError.textContent='';
+	specError.textContent='';
+	sessionStorage.setItem('myValue', "1");
+
+	window.location.href='requestedtodonate.html';
    popup10.style.display='none';
   // Simulate a transition effect (using setTimeout for simplicity)
-  setTimeout(() => {
-    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
-  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+// Specify the delay in milliseconds (3000ms = 3 seconds)
 }
 });
 
 </script>
+
+
+
+<script>
+	const submitButton1 = document.getElementById('submitButton1');
+const popup20 = document.getElementById('directapply');
+
+const datePicker2 = document.getElementById('datepicker1');
+const timePicker2 = document.getElementById('timepicker1');
+
+const dateError2 = document.getElementById('dateError1');
+const timeError2 = document.getElementById('timeError1');
+
+
+
+const pat2 = document.getElementById('patient1');
+const clinic2 = document.getElementById('clinic1');
+
+const placeError2 = document.getElementById('placeError1');
+
+
+submitButton1.addEventListener('click', () => {
+	let hasError = false; // Flag to track if any errors are found
+
+  // Check if file input is empty
+  
+  // Check if date picker has a value
+  if (datePicker2.value === '') {
+    dateError2.textContent = 'Please select a date.';
+    hasError = true;
+  } else {
+    dateError2.textContent = ''; // Clear previous error message
+  }
+
+  // Check if time picker has a value
+  if (timePicker2.value===''){
+      timeError2.textContent='Please select a time.';
+	  hasError=true;
+  }
+  else {
+	timeError2.textContent='';
+  }
+
+  
+
+
+  if (!clinic2.checked && !pat2.checked) {
+	console.log("ok");
+	placeError2.textContent='Please select a location for the visit.';
+    hasError = true;
+  } else {
+    // Clear any previous location error
+    placeError2.textContent = '';
+  }
+
+  
+
+  if(!hasError){
+	dateError2.textContent='';
+	timeError2.textContent='';
+	placeError2.textContent='';
+	pat2.checked=false;
+	clinic2.checked=false;
+window.location.href='requestedtodonate.html';
+   popup20.style.display='none';
+  // Simulate a transition effect (using setTimeout for simplicity)
+  // Specify the delay in milliseconds (3000ms = 3 seconds)
+}
+});
+
+</script>
+
 
 <script>
 	const searchInput = document.querySelector('.single-welcome-hero-form input');
@@ -979,7 +1233,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
     noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
     // Append the element to the appropriate container in your HTML structure
 
@@ -994,20 +1248,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   }
 	});
 	</script>
-	<script>
-window.addEventListener("load", function() {
-  const leftCurtain = document.getElementById("left-curtain");
-  const rightCurtain = document.getElementById("right-curtain");
-
-  leftCurtain.style.transition = "transform 1s ease-in-out";
-  rightCurtain.style.transition = "transform 1s ease-in-out";
-
-  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
-  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
-});
-
-
-</script>  
+	 
   
 
 
@@ -1017,8 +1258,9 @@ window.addEventListener("load", function() {
 
   // Sample governorate data (replace with actual data)
   const governorates = {
-    "Cairo": ["Nasr City", "Giza", "Heliopolis"],
-    "Alexandria": ["Downtown", "Smouha", "East Alexandria"],
+	"Choose a governorate":["Choose an area"],
+    "Cairo": ["Choose an area","Nasr City", "Giza", "Heliopolis"],
+    "Alexandria": ["Choose and area","Downtown", "Smouha", "East Alexandria"],
     // Add more governorates and their areas
   };
 

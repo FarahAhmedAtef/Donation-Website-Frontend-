@@ -122,7 +122,14 @@
 			<p>Description: In need of 3 boxes of blue pens </p>
 		</div> -->
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
-			  </div>
+					<div class="counter-container">
+						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+						<div class="counter1" style="border: 1px black;">0</div>
+						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+					  </div>
+                 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
+				
+				</div>
 
 			  <div id="popup2">
 				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
@@ -159,6 +166,7 @@
 			written by American novelist Louisa May Alcott, originally published in two volumes in 1868 and 1869. The story follows the lives of the four March sisters—Meg, Jo, Beth, and Amy—and details their passage from childhood to womanhood. </label>				
 			</div>
 			
+<<<<<<< HEAD
 			</div>
 
 			<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\lw.jpeg" alt="Imagedescription" style="padding: 10px;">
@@ -167,6 +175,17 @@
 
 		
 
+=======
+		</div>
+		<div class="counter-container">
+			<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+			<div class="counter2" style="border: 1px black;">0</div>
+			<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+		  </div>
+	 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
+
+	
+>>>>>>> 9e52f412b9a7cdbf907e1c29e4044a55600cf1e3
 						<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -193,10 +212,23 @@
 				</div>
 				<!-- <div>
 					<p>Description: In need of 7 rulers </p>
+<<<<<<< HEAD
 				</div> -->
 				
 				<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			</div>
+=======
+				</div>
+				<div class="counter-container">
+					<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+					<div class="counter3" style="border: 1px black;">0</div>
+					<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+				  </div>
+			 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
+
+						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
+			  </div>
+>>>>>>> 9e52f412b9a7cdbf907e1c29e4044a55600cf1e3
 
 		<!--/.section-header-->
 		
@@ -209,9 +241,9 @@
 						</ul>
 					</div>
 				</li>
-				<li style="transform:translate(570px,0px);">
-					<span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-					  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+				<li style="transform:translate(450px,0px);">
+					<span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+					  Yalla<span style="color: rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
 					</span>
 				  </li>
 				  
@@ -354,7 +386,7 @@
 		<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
 		bottom: 0;
 		width: 0px; ">
-			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
 				
 				<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
 					<div class="row">
@@ -386,7 +418,90 @@
 			
         </footer><!--/.footer-->
 
-
+		<script>
+			const counterElement1 = document.querySelector('.counter1');
+			const maxlimit1 = document.getElementById('maxlimit1');
+		
+		let count1 = 0; // Initial counter value
+		
+		const incrementButton1 = document.getElementById('increment1');
+		const decrementButton1 = document.getElementById('decrement1');
+		
+		incrementButton1.addEventListener('click', () => {
+		if(count1<3)	{
+		  count1++;
+		  counterElement1.textContent = count1;
+		}
+		else{
+			maxlimit1.style.display='block';
+		}
+		});
+		
+		decrementButton1.addEventListener('click', () => {
+		  if (count1 > 0) {
+			count1--;
+		  }
+		  counterElement1.textContent = count1;
+		});
+		
+		</script>
+		
+		<script>
+			const counterElement2 = document.querySelector('.counter2');
+			const maxlimit2 = document.getElementById('maxlimit2');
+		
+		let count2 = 0; // Initial counter value
+		
+		const incrementButton2 = document.getElementById('increment2');
+		const decrementButton2 = document.getElementById('decrement2');
+		
+		incrementButton2.addEventListener('click', () => {
+		if(count2<1)	{
+		  count2++;
+		  counterElement2.textContent = count2;
+		}
+		else{
+			maxlimit2.style.display='block';
+		}
+		});
+		
+		decrementButton2.addEventListener('click', () => {
+		  if (count2 > 0) {
+			count2--;
+		  }
+		  counterElement2.textContent = count2;
+		});
+		
+		</script>
+		
+		
+		
+		
+		<script>
+			const counterElement3 = document.querySelector('.counter3');
+		let count3 = 0; // Initial counter value
+		
+		const incrementButton3 = document.getElementById('increment3');
+		const decrementButton3 = document.getElementById('decrement3');
+		
+		incrementButton3.addEventListener('click', () => {
+			if(count3<7)	{
+		  count3++;
+		  counterElement3.textContent = count3;
+		}
+		else{
+			maxlimit3.style.display='block';
+		}
+		});
+		
+		decrementButton3.addEventListener('click', () => {
+		  if (count3 > 0) {
+			count3--;
+		  }
+		  counterElement3.textContent = count3;
+		});
+		
+		</script>
 
 
 
