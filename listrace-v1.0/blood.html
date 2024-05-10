@@ -2,8 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-	<link rel="stylesheet" type="text/css"
-	href="https://fonts.googleapis.com/css?family=Tangerine">
+
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
     <!-- meta data -->
     <meta charset="utf-8">
@@ -59,8 +58,7 @@
 </head >
 
 <body style="background:#ecf0f0;">
-	<div id="left-curtain"></div>
-	<div id="right-curtain"></div>
+	
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
@@ -254,7 +252,7 @@
 				</li>
 				<li style="transform:translate(450px,0px);">
 					<span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-					  Yalla  <span style="color: rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
+					  Yalla  <span style="color: rgb(30, 102, 105); font-size: 50px; ; font-weight: bold;"> Aawen</span>
 					</span>
 				  </li>
 				  
@@ -270,7 +268,7 @@
 										+201061064544
 									</li>
 									<li class="header-top-contact">
-										<a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+										<a href="donoraccount.html"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
 									</li>
 								</div>
 								
@@ -418,7 +416,7 @@ width: 0px; ">
 				</div>
 				<div class="col-sm-7">
 					<div class="footer-social" style="padding-right: 20px;">
-						<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+						<span><i class="fa fa-phone"> +201061064544</i></span>
 						<a href="#"><i class="fa fa-facebook"></i></a>	
 						<a href="#"><i class="fa fa-twitter"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -448,6 +446,7 @@ width: 0px; ">
 	const openPopupBtn = document.getElementById('openPopup');
 	const closePopupBtn = document.getElementById('closePopup');
 	const closePopupBtn4 = document.getElementById('closeButton0');
+	const closebutton00 = document.getElementById('closeButton00');
 
 	openPopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'block';
@@ -459,6 +458,12 @@ width: 0px; ">
 	closePopupBtn4.addEventListener('click', function() {
 	  popup.style.display = 'none';
 	});
+	closebutton00.addEventListener('click', function() {
+	  dateError2.textContent='';
+	  timeError2.textContent='';
+	  popup10.style.display='none';
+	  directapp.style.display = 'none';
+	});
   </script>
 
 
@@ -467,6 +472,8 @@ width: 0px; ">
 
   <script>
 	const popup1 = document.getElementById('popup1');
+	const popup9 = document.getElementById('directapply');
+
 	const openPopupBtn1 = document.getElementById('openpostdetails1');
 	const closePopupBtn1 = document.getElementById('closePopup1');
   
@@ -475,6 +482,7 @@ width: 0px; ">
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
+		popup9.style.display="block";
 	  popup1.style.display = 'none';
 	});
   </script>
@@ -489,6 +497,7 @@ width: 0px; ">
 	});
   
 	closePopupBtn2.addEventListener('click', function() {
+		popup9.style.display="block";
 	  popup3.style.display = 'none';
 	});
   </script>
@@ -504,6 +513,7 @@ width: 0px; ">
 	});
   
 	closePopupBtn3.addEventListener('click', function() {
+		popup9.style.display="block";
 	  popup5.style.display = 'none';
 	});
   </script>
@@ -762,20 +772,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 	});
 	</script>
 
-<script>
-	window.addEventListener("load", function() {
-	  const leftCurtain = document.getElementById("left-curtain");
-	  const rightCurtain = document.getElementById("right-curtain");
-	
-	  leftCurtain.style.transition = "transform 1s ease-in-out";
-	  rightCurtain.style.transition = "transform 1s ease-in-out";
-	
-	  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
-	  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
-	});
-	
-	
-	</script> 
+
 
 
 
@@ -819,6 +816,62 @@ updateAreaOptions();
 for (const radioButton of governateRadioButtons) {
   radioButton.addEventListener('click', updateAreaOptions);
 }
+</script>
+<script>
+	const submitButton1 = document.getElementById('submitButton1');
+const popup20 = document.getElementById('directapply');
+
+const datePicker2 = document.getElementById('datepicker1');
+const timePicker2 = document.getElementById('timepicker1');
+
+const dateError2 = document.getElementById('dateError1');
+const timeError2 = document.getElementById('timeError1');
+
+
+
+
+
+
+submitButton1.addEventListener('click', () => {
+	let hasError = false; // Flag to track if any errors are found
+
+  // Check if file input is empty
+  
+  // Check if date picker has a value
+  if (datePicker2.value === '') {
+    dateError2.textContent = 'Please select a date.';
+    hasError = true;
+  } else {
+    dateError2.textContent = ''; // Clear previous error message
+  }
+
+  // Check if time picker has a value
+  if (timePicker2.value===''){
+      timeError2.textContent='Please select a time.';
+	  hasError=true;
+  }
+  else {
+	timeError2.textContent='';
+  }
+
+  
+
+
+ 
+
+  
+
+  if(!hasError){
+	dateError2.textContent='';
+	timeError2.textContent='';
+	
+	window.location.href='requestedtodonate.html';
+   popup20.style.display='none';
+  // Simulate a transition effect (using setTimeout for simplicity)
+   // Specify the delay in milliseconds (3000ms = 3 seconds)
+}
+});
+
 </script>
 <!--explore end -->
 </body>
