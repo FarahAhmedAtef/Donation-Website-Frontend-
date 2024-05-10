@@ -64,9 +64,9 @@
                     </ul>
                 </div>
             </li>
-            <li style="transform:translate(500px,0px);">
-                <span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-                  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+            <li style="transform:translate(450px,0px);">
+                <span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+                  Yalla  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
                 </span>
               </li>
               
@@ -97,6 +97,11 @@
     </header><!--/.header-top-->
 
 <!--subscription strat -->
+<div id="pagewrapper" style=" display: grid;
+grid-template-rows: 1fr auto;
+min-height: 100vh;">
+    <div id="main-content">
+
 <section id="contact"  class="subscription">
     <div class="container">
         <div class="subscribe-title text-center">
@@ -111,7 +116,7 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form action="#">
-                        <input id = "oldpass" type="password" class="subscription-input-form" placeholder="enter your old password">     
+                        <input id = "oldpass" type="password" class="subscription-input-form" placeholder="enter your old password" style="border: 2px solid rgb(30, 102, 105); border-radius: 5px;">     
                     </form>     
                 </div>
             </div>	
@@ -120,7 +125,7 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form action="#">
-                        <input id = "newpass" type="password" class="subscription-input-form" placeholder="enter your new password">
+                        <input id = "newpass" type="password" class="subscription-input-form" placeholder="enter your new password" style="border: 2px solid rgb(30, 102, 105); border-radius: 5px;">
                     </form>   
                 </div>
             </div>	
@@ -129,7 +134,7 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form action="#">
-                        <input id = "cnewpass" type="password" class="subscription-input-form" placeholder="confirm your new password"> 
+                        <input id = "cnewpass" type="password" class="subscription-input-form" placeholder="confirm your new password" style="border: 2px solid rgb(30, 102, 105); border-radius: 5px;"> 
                     </form> 
                 </div>
             </div>	
@@ -144,6 +149,8 @@
             </div>	
         </div>
     </div>
+</div>
+</div>
     
     <script>
         function change() {
@@ -153,13 +160,19 @@
 
     
         // Check if the username and password are specific values
-        if (oldpass !== "toot24") {
+        if (oldpass !== "toot24" && oldpass !== "cars" && oldpass !== "123" && oldpass !== "456" && oldpass !== "1593") {
             alert("Wrong old password. Please try again.");
         } else if (confirmnewpass !== newpass) {
             alert("New password does not match. Please try again");
         } else {
             alert("New password saved.");
-            window.location.href = "admindb.html"; 
+            if (oldpass === "toot24"){
+                window.location.href = "admindb.html"; 
+            } else if (oldpass === "cars" || oldpass === "123" || oldpass === "456"){
+                window.location.href = "index.html";
+            } else if (oldpass === "1593"){
+                window.location.href = "homepageorg.html";
+            }
         }
         // if (username === "karennn" && password === "toot24") {
         //     // Redirect to a specific page
@@ -173,10 +186,12 @@
     
     
       </script>
+      </section><!--/subscription-->	
+
    		<footer id="footer"  class="footer" style="padding-right: 0px; position: relative;
            bottom: 0;
            width: 0px; ">
-               <div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+               <div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
                    
                    <div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
                        <div class="row">
@@ -209,6 +224,5 @@
            </footer><!--/.footer-->
    
 
-</section><!--/subscription-->	
 <!--subscription end -->
 </body>

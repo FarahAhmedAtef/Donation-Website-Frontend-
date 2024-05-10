@@ -64,9 +64,9 @@
                     </ul>
                 </div>
             </li>
-            <li style="transform:translate(500px,0px);">
-                <span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-                  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+            <li style="transform:translate(450px,0px);">
+                <span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+                  Yalla  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
                 </span>
               </li>
               
@@ -95,7 +95,10 @@
             
         
     </header><!--/.header-top-->
-
+ <div id="pagewrapper" style=" display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;">
+    <div id="main-content">
 <section id="reviews" class="reviews">
     <div class="section-header">
         <h2 style="color:rgb(5, 14, 56);">Donors List</h2>
@@ -119,7 +122,7 @@
         </div>
     </div>
     <div class="reviews-content">
-        <div class="testimonial-carousel">
+        <!-- <div class="testimonial-carousel"> -->
             <div class="single-testimonial-box" id="box1">
                 <div class="testimonial-description">
                     <div class="testimonial-info">
@@ -519,8 +522,9 @@
                     <br/>
                 </div><!--/.testimonial-description-->
             </div><!--/.single-testimonial-box-->
-        </div>  
+        <!-- </div>   -->
     </div>
+</div>
     <div id="popup">
         <i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
         <button id="clearall" style="margin-bottom:10px ;">Clear All</button>
@@ -680,6 +684,14 @@
         <h4><button onclick="closePopup('r3')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
     </div>
 
+
+     
+
+      
+
+</section><!--/.reviews-->
+<!--reviews end -->
+    </div>
     <footer id="footer"  class="footer" style="padding-right: 0px; position: relative;
     bottom: 0;
     width: 0px; ">
@@ -716,38 +728,32 @@
         
     </footer><!--/.footer-->
 
-     
 
-      
-
-</section><!--/.reviews-->
-<!--reviews end -->
-
-<script src="assets/js/jquery.js"></script>
+<!-- <script src="assets/js/jquery.js"></script> -->
         
         <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
 		
 		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- <script src="assets/js/bootstrap.min.js"></script> -->
 		
 		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
+		<!-- <script src="assets/js/bootsnav.js"></script> -->
 
         <!--feather.min.js-->
-        <script  src="assets/js/feather.min.js"></script>
+        <!-- <script  src="assets/js/feather.min.js"></script> -->
 
         <!-- counter js -->
-		<script src="assets/js/jquery.counterup.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
+		<!-- <script src="assets/js/jquery.counterup.min.js"></script> -->
+		<!-- <script src="assets/js/waypoints.min.js"></script> -->
 
         <!--slick.min.js-->
         <!-- <script src="assets/js/slick.min.js"></script> -->
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
 		     
         <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
+        <!-- <script src="assets/js/custom.js"></script> -->
         <script>
             function openPopup(buttonid) {
                 if (buttonid === "delete1"){
@@ -820,11 +826,11 @@
             }
         </script>
 		<script>
-			const images = [
-			  'https://media.istockphoto.com/id/1478310331/photo/black-man-volunteering-and-giving-box-in-park-of-donation-community-service-or-social.webp?b=1&s=170667a&w=0&k=20&c=IEgIUJ75D3AraONyFymA-sQ7RkPboQv1HxehnILDSKo=',
-			  'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9uYXRpb258ZW58MHx8MHx8fDA%3D'
-			];
-			let currentImageIndex = 0;
+			// const images = [
+			//   'https://media.istockphoto.com/id/1478310331/photo/black-man-volunteering-and-giving-box-in-park-of-donation-community-service-or-social.webp?b=1&s=170667a&w=0&k=20&c=IEgIUJ75D3AraONyFymA-sQ7RkPboQv1HxehnILDSKo=',
+			//   'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9uYXRpb258ZW58MHx8MHx8fDA%3D'
+			// ];
+			// let currentImageIndex = 0;
 		  
 			function changeBackground() {
 			  currentImageIndex = (currentImageIndex + 1) % images.length;
@@ -902,7 +908,7 @@
 
         }
 		  
-			setInterval(changeBackground, 5000); // Change image every 5 seconds (adjust as needed)
+			// setInterval(changeBackground, 5000); // Change image every 5 seconds (adjust as needed)
 
             function deleteacc(buttonid){
                 if (buttonid === "delete1"){
