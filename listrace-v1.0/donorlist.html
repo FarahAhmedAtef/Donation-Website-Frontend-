@@ -95,7 +95,10 @@
             
         
     </header><!--/.header-top-->
-
+ <div id="pagewrapper" style=" display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;">
+    <div id="main-content">
 <section id="reviews" class="reviews">
     <div class="section-header">
         <h2 style="color:rgb(5, 14, 56);">Donors List</h2>
@@ -296,7 +299,7 @@
                     </div><!--/.testimonial-info-->
                     <div class="testimonial-comment">
                         <p class="status">
-                            status: rejected
+                            status: accepted
                         </p>
                     </div><!--/.testimonial-comment-->
                 </div><!--/.testimonial-description-->
@@ -521,6 +524,7 @@
             </div><!--/.single-testimonial-box-->
         <!-- </div>   -->
     </div>
+</div>
     <div id="popup">
         <i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
         <button id="clearall" style="margin-bottom:10px ;">Clear All</button>
@@ -672,7 +676,7 @@
         <!-- <p>Hello, this is a simple popup!</p> -->
         <h4><button onclick="closePopup('r2')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
     </div>
-    <div class="deletepops" id="repopup3" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+    <div class="deletepops" id="rejpopup3" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
         <!-- Popup content -->
         <h2 style="text-transform:none;">Account Rejected & Deleted Successfully</h2>
         <br><br>
@@ -680,6 +684,14 @@
         <h4><button onclick="closePopup('r3')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
     </div>
 
+
+     
+
+      
+
+</section><!--/.reviews-->
+<!--reviews end -->
+    </div>
     <footer id="footer"  class="footer" style="padding-right: 0px; position: relative;
     bottom: 0;
     width: 0px; ">
@@ -716,12 +728,6 @@
         
     </footer><!--/.footer-->
 
-     
-
-      
-
-</section><!--/.reviews-->
-<!--reviews end -->
 
 <!-- <script src="assets/js/jquery.js"></script> -->
         
