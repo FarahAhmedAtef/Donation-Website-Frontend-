@@ -374,7 +374,7 @@ ul{
  
   
 
-  #closePopup1, #closePopup2, #closePopup3, #submitButton {
+  #closePopup1, #closePopup2, #closePopup3, #submitButton, #submitButton1 {
     /* Existing styles: color: white; */
     background-color:rgb(5, 14, 56);;
     color: #ecf0f0;
@@ -392,7 +392,7 @@ ul{
   }
   
   
-  .counter {
+  .counter, .counter2, .counter3 {
     /* Existing styles for the counter */
     margin: 0 10px; /* Optional: Add some spacing between buttons and counter */
   }
@@ -1219,7 +1219,7 @@ margin: 10px;
     overflow: hidden; /* Prevent elements from overflowing the container */
   }
   
-  #decrement1, #increment1 {
+  #decrement1, #increment1, #increment2, #decerement2, #increment3, #decrement3 {
     float: left; /* Float the buttons to the left */
     margin-right: 10px; /* Add spacing between buttons */
   }
@@ -1800,7 +1800,7 @@ background-color:transparent;
   /*  padding: 20px;  /* Add some padding for better readability */
     
   /*}*/
-  #popup, #popup1, #popup2, #popup3, #popupapply {
+  #popup, #popup1, #popup2, #popup3, #popupapply, #directapply {
     overflow-y: auto;
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
@@ -1840,7 +1840,7 @@ background-color:transparent;
     background-color: rgb(5, 14, 56);
     color: white;
   }
-#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3, #popup #closeButton0 {
+#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3, #popup #closeButton0, #closeButton00, #closepopupapply {
   font-size: 20px;
   padding-bottom: 4px;
 }
@@ -2399,6 +2399,20 @@ input {
   color:rgb(22, 25, 61);
  }
 /*account info farida*/
+.small-btn {
+  height: 30px;
+  width: 60px;
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Set the desired border radius */
+}
+
+#profileList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 2px solid #ddd;
+}
 .infoo {
   display: flex;
   flex-direction: column;
@@ -2563,7 +2577,7 @@ background-color: cadetblue;
   right: 0;
   width: 50vw;  /* Adjust width for desired curtain size */
 }
-#popupapply label, #popupapply h2{
+#popupapply label, #popupapply h2, #directapply h2, #directapply label{
   font-weight:bold;
   color:rgb(5, 14, 56);
   padding-bottom: 7px;
@@ -2610,4 +2624,25 @@ margin: 10px;
 .order-notification h2 a{
   color:rgb(5, 14, 56);
   font-weight: bolder; font-size: 18px;
+}
+
+.counter-container button i{
+  /* Shared styles for both buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Create a circular border */
+  border: 1px solid rgb(5, 14, 56); /* Remove default button border */
+  cursor: pointer; /* Indicate clickable button */
+}
+.no-posts-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:rgb(5, 14, 56);
+  font-size:20px;
+  font-weight: bold;
 }

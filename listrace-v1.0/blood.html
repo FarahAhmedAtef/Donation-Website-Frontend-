@@ -67,6 +67,23 @@
 		<div class="section-header">
 			<h2>explore</h2>
 			<p>Explore New place, food, culture around the world and many more</p> -->
+			<div id="directapply">
+				<i id="closeButton00" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+				<div class="containerapply">
+					<div class="date-time">
+					  <h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will pass by for blood donation</h2>
+					  <input type="date" id="datepicker1">
+					  <span id="dateError1" class="error-message" style="color: red;"></span>
+					  <h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will pass by for blood donation</h2>
+					  <input type="time" id="timepicker1">
+					  <span id="timeError1" class="error-message" style="color: red;"></span>
+					</div>
+					
+					<button id="submitButton1" style=" margin: 0 auto; display: block;">Submit</button>
+
+				  </div>
+
+			  </div>
 			<div id="popup">
 				<i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
@@ -151,11 +168,7 @@
 						<p>Description: In need of 3 bags of blood type D </p>
 					</div>
 					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
-					<div class="counter-container">
-						<button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter" style="border: 1px black;">0</div>
-						<button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-					  </div>
+					
 
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
@@ -190,11 +203,7 @@
 						<p>Description: In need of 3 bags of blood type D </p>
 					</div>
 					<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>
-					<div class="counter-container">
-						<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter2" style="border: 1px black;">0</div>
-						<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-					  </div>
+					
 
 					<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
@@ -275,24 +284,24 @@
 			
 		</header><!--/.header-top-->
 		<!--header-top end -->
-		<div class="welcome-hero-serch-box">
-			<div class="welcome-hero-form" style="height: 50px; margin-top: -30px; transform: translate(520px,0px);">
+		
+		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
+			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
 				<div class="single-welcome-hero-form">
 					<h3></h3>
 					<form action="index.html">
-						<input type="text" placeholder=""/>
+						<input type="text" placeholder="What and where would you like to donate?" />
 					</form>
 					
 				</div>
 				
 			</div>
 			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
-				<button class="welcome-hero-btn" style="height:45px ; width:50px ;" >
-					   <i class="fa-solid fa-magnifying-glass" style="color: white;"></i> 
+				<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
+					   <i class="fa-solid fa-magnifying-glass" ></i> 
 				</button>
 			</div>
 		</div>
-		
 		  
 		<div class="explore-content" id="explore-content">
 			
@@ -659,50 +668,8 @@ src=
 "https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&loading=async&callback=initMap&v=weekly&libraries=marker" defer> 
 </script>
 
-	
-	
-<script>
-	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
-
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
-
-incrementButton.addEventListener('click', () => {
-  count++;
-  counterElement.textContent = count;
-});
-
-decrementButton.addEventListener('click', () => {
-  if (count > 0) {
-    count--;
-  }
-  counterElement.textContent = count;
-});
-
-</script>
 
 
-<script>
-	const counterElement2 = document.querySelector('.counter2');
-let count2 = 0; // Initial counter value
-
-const incrementButton2 = document.getElementById('increment2');
-const decrementButton2 = document.getElementById('decrement2');
-
-incrementButton2.addEventListener('click', () => {
-  count2++;
-  counterElement2.textContent = count2;
-});
-
-decrementButton2.addEventListener('click', () => {
-  if (count2 > 0) {
-    count2--;
-  }
-  counterElement2.textContent = count2;
-});
-
-</script>
 
 
 <script>
@@ -779,7 +746,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
+    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
     noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
     // Append the element to the appropriate container in your HTML structure
 

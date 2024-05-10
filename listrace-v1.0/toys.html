@@ -92,7 +92,7 @@
                             <div class="counter-container">
                                <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
                                 <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" style="border: 10px black;">0</div>
+                                <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
                                 <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
         
@@ -159,13 +159,54 @@
 </section><!--/subscription-->	
 <!--subscription end -->
 
+<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
+bottom: 0;
+width: 0px; ">
+	<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+		
+		<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
+			<div class="row">
+				<div class="col-sm-5">
+					<p>
+						&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+					</p><!--/p-->
+				</div>
+				<div class="col-sm-7">
+					<div class="footer-social" style="padding-right: 20px;">
+						<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+						<a href="#"><i class="fa fa-facebook"></i></a>	
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
+					</div>
+				</div>
+			</div>
+			
+		</div><!--/.hm-footer-copyright-->
+	</div><!--/.container-->
+
+	<div id="scroll-Top">
+		<div class="return-to-top">
+			<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+		</div>
+	</div><!--/.scroll-Top-->
+</footer><!--/.footer-->
+
 <!---to fill all fields-->
 <script>
   const postBtn = document.getElementById('postBtn');
   const toyTypeInput = document.getElementById('toyType');
   const categoryInput = document.getElementById('category');
   const warningMsg = document.getElementById('warningMsg');
+  const ageDropdown = document.getElementById('type1');
+  const quantityCounter = document.getElementById('quantityCounter');
 
+  let currentQuantity = 0; // Store current quantity
+
+   // Function to check if a valid option is selected from the dropdown
+   function isValidFoodOptionSelected() {
+    return ageDropdown.value !== ""; // Check if value is not the empty string
+  }
   // Function to update border style based on input value
   function updateInputBorderColor(inputElement) {
     if (inputElement.value.trim() === "") {
@@ -174,6 +215,22 @@
       inputElement.style.border = "none"; // Remove red border if not empty
     }
   }
+  // Function to update quantity value on button click
+  function updateQuantity(change) {
+    currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
+    quantityCounter.textContent = currentQuantity;
+  }
+   // Event listeners for increment/decrement buttons
+   const decrementBtn = document.getElementById('decrement');
+  const incrementBtn = document.getElementById('increment');
+
+  decrementBtn.addEventListener('click', function() {
+    updateQuantity(-1);
+  });
+
+  incrementBtn.addEventListener('click', function() {
+    updateQuantity(1);
+  });
 
   // Event listeners for input changes
   toyTypeInput.addEventListener('input', function() {
@@ -190,7 +247,16 @@
       warningMsg.style.display = "block"; // Display warning message
       updateInputBorderColor(toyTypeInput);
       updateInputBorderColor(categoryInput);
-    } else {
+    } else if (!isValidFoodOptionSelected()) {
+      event.preventDefault(); // Prevent form submission
+      warningMsg.textContent = "Please choose an age range to proceed."; // Update warning message
+      warningMsg.style.display = "block";}
+    else if (currentQuantity === 0) {
+      event.preventDefault(); // Prevent form submission
+      warningMsg.textContent = "Please choose a quantity to proceed."; // Update warning message
+      warningMsg.style.display = "block";
+    }
+    else {
       warningMsg.style.display = "none"; // Hide warning message (optional)
       // Submit the form (form submission logic)
     }
