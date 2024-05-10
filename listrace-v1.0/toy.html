@@ -4,7 +4,8 @@
 <head>
 
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
-	
+	<link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,7 +59,8 @@
 
 </head>
 <body style="background-color: #ecf0f0; ">
-	
+	<div id="left-curtain"></div>
+	<div id="right-curtain"></div>
 		  
 <!--explore start -->
 <!-- <section id="explore" class="explore">
@@ -160,21 +162,18 @@
 					<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
 					<label style="margin-right:5px; color: black;">Farah Organisation</label>
 					</div>
-				</div>
-				<div>
-					<p>15 basketballs </p>
-				</div>
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\basketball.jpeg" alt="Imagedescription">
-					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
-					<div class="counter-container">
-						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter1" style="border: 1px black;">0</div>
-						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-					  </div>
-                 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
-				
+					<div>
+						<i class="fa-solid fa-basketball" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">15 basketballs </label>
+						</div>
 
 				</div>
+				<!-- <div>
+					<p></p>
+				</div> -->
+				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\basketball.jpeg" alt="Imagedescription" style="padding: 10px;">
+					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
+			  </div>
 
 			  <div id="popup2">
 				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
@@ -193,18 +192,16 @@
 					<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
 					<label style="margin-right:5px; color: black;">Karen Organisation</label>
 					</div>
+					<div>
+						<i class="fa-solid fa-chess-board" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">5 unos</label>
+						</div>
 				</div>
-				<div>
+				<!-- <div>
 					<p>5 unos</p>
-				</div>
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\uno.jpeg" alt="Imagedescription">
-				<div class="counter-container">
-					<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-					<div class="counter2" style="border: 1px black;">0</div>
-					<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-				  </div>
-			 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
-
+				</div> -->
+				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\uno.jpeg" alt="Imagedescription" style="padding: 10px;">
+	
 						<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -225,77 +222,16 @@
 					<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
 					<label style="margin-right:5px; color: black;">Farida Organisation</label>
 					</div>
+					<div>
+						<i class="fa-solid fa-dog" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">12 Stuffed Toys</label>
+						</div>
 				</div>
-				<div>
-					<p>12 Stuffed Toys</p>
-				</div>
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\stitch.jpeg" alt="Imagedescription">
+				
+				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\stitch.jpeg" alt="Imagedescription" style="padding: 10px;">
 	
-				<div class="counter-container">
-					<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-					<div class="counter3" style="border: 1px black;">0</div>
-					<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-				  </div>
-			 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
-
-
 						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
-			  <!-- <div id="popupapply">
-				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
-				<label > Please fill in this form as part of the donation procedure</label>
-				<form class="file-upload-form">
-				  <label for="file" class="file-upload-label">
-					Upload graduation certificate for verification
-					<br>
-					<div class="file-upload-design">
-					  <svg viewBox="0 0 640 512" height="1em">
-						<path
-						  d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
-						/>
-					  </svg>
-					  <p>Drag and Drop</p>
-					  <p>or</p>
-					  <span class="browse-button">Browse file</span>
-					</div>
-					<input id="file" type="file" />
-					<span id="fileError" class="error-message" style="color: red;"></span>
-				  </label>
-				</form>
-				<div id="clinic-address">
-					<label for="address-input">Please enter your clinic address:</label><br>
-					<input type="text" id="address-input" placeholder="Enter address">
-				</div>
-				<div>
-					<label for="governorate-select">Governorate:</label>
-					<select id="governorate-select"></select>
-					<label for="area-select">Area:</label>
-					<select id="area-select" disabled></select>
-				  </div>
-                <label>Please pick your exact location on map</label>
-				<div id="map4"></div>
-                <label for="speciality-select">Speciality:</label>
-                <select id="speciality-select">
-      <option value="skin">Skin</option>
-      <option value="bones">Bones</option>
-      <option value="heart">Heart</option>
-    </select>
-
-				<div class="containerapply">
-				  <div class="date-time">
-					<h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for teaching</h2>
-					<input type="date" id="datepicker">
-					<span id="dateError" class="error-message" style="color: red;"></span>
-					<h2 style="font-size: 15px; margin-top: 9px;">Please choose the time you will be available in for teaching</h2>
-					<input type="time" id="timepicker">
-					<span id="timeError" class="error-message" style="color: red;"></span>
-				  </div>
-				  <button id="submitButton">Submit</button>
-				</div>
-			  </div>
-			  <div id="message" class="hidden"> <p>Done!</p>
-			  </div> -->
-		<!--/.section-header-->
 		
 		<header id="header-top" class="header-top"  >
 			<ul>
@@ -306,9 +242,9 @@
 						</ul>
 					</div>
 				</li>
-				<li style="transform:translate(450px,0px);">
-					<span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-					  Yalla<span style="color: rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
+				<li style="transform:translate(570px,0px);">
+					<span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+					  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
 					</span>
 				  </li>
 				  
@@ -324,7 +260,7 @@
 										+201061064544
 									</li>
 									<li class="header-top-contact">
-										<a href="donoraccount.html"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+										<a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
 									</li>
 								</div>
 								
@@ -386,11 +322,11 @@
 										<button class="close-btn open-btn"   id ="openpostdetails1" >View Details</button>
 									</div>
 									<div class="col-sm-7">
-										<div class="explore-map-icon">
+										<!-- <div class="explore-map-icon">
 											<a href="#"><i data-feather="map-pin"></i></a>
 											<a href="#"><i data-feather="upload"></i></a>
 											<a href="#"><i data-feather="heart"></i></a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
@@ -417,11 +353,11 @@
 									<button class="close-btn open-btn"    id ="openpostdetails2">View Details</button>
 								</div>
 								<div class="col-sm-7">
-									<div class="explore-map-icon">
+									<!-- <div class="explore-map-icon">
 										<a href="#"><i data-feather="map-pin"></i></a>
 										<a href="#"><i data-feather="upload"></i></a>
 										<a href="#"><i data-feather="heart"></i></a>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -447,11 +383,11 @@
 								<button class="close-btn open-btn"   id ="openpostdetails3">View Details</button>
 							</div>
 							<div class="col-sm-7">
-								<div class="explore-map-icon">
+								<!-- <div class="explore-map-icon">
 									<a href="#"><i data-feather="map-pin"></i></a>
 									<a href="#"><i data-feather="upload"></i></a>
 									<a href="#"><i data-feather="heart"></i></a>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -465,7 +401,7 @@
 		<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
 		bottom: 0;
 		width: 0px; ">
-			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
+			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
 				
 				<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
 					<div class="row">
@@ -476,7 +412,7 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="footer-social" style="padding-right: 20px;">
-								<span><i class="fa fa-phone"> +201061064544</i></span>
+								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
 								<a href="#"><i class="fa fa-facebook"></i></a>	
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -497,90 +433,7 @@
 			
         </footer><!--/.footer-->
 
-		<script>
-			const counterElement1 = document.querySelector('.counter1');
-			const maxlimit1 = document.getElementById('maxlimit1');
-		
-		let count1 = 0; // Initial counter value
-		
-		const incrementButton1 = document.getElementById('increment1');
-		const decrementButton1 = document.getElementById('decrement1');
-		
-		incrementButton1.addEventListener('click', () => {
-		if(count1<15)	{
-		  count1++;
-		  counterElement1.textContent = count1;
-		}
-		else{
-			maxlimit1.style.display='block';
-		}
-		});
-		
-		decrementButton1.addEventListener('click', () => {
-		  if (count1 > 0) {
-			count1--;
-		  }
-		  counterElement1.textContent = count1;
-		});
-		
-		</script>
-		
-		<script>
-			const counterElement2 = document.querySelector('.counter2');
-			const maxlimit2 = document.getElementById('maxlimit2');
-		
-		let count2 = 0; // Initial counter value
-		
-		const incrementButton2 = document.getElementById('increment2');
-		const decrementButton2 = document.getElementById('decrement2');
-		
-		incrementButton2.addEventListener('click', () => {
-		if(count2<5)	{
-		  count2++;
-		  counterElement2.textContent = count2;
-		}
-		else{
-			maxlimit2.style.display='block';
-		}
-		});
-		
-		decrementButton2.addEventListener('click', () => {
-		  if (count2 > 0) {
-			count2--;
-		  }
-		  counterElement2.textContent = count2;
-		});
-		
-		</script>
-		
-		
-		
-		
-		<script>
-			const counterElement3 = document.querySelector('.counter3');
-		let count3 = 0; // Initial counter value
-		
-		const incrementButton3 = document.getElementById('increment3');
-		const decrementButton3 = document.getElementById('decrement3');
-		
-		incrementButton3.addEventListener('click', () => {
-			if(count3<12)	{
-		  count3++;
-		  counterElement3.textContent = count3;
-		}
-		else{
-			maxlimit3.style.display='block';
-		}
-		});
-		
-		decrementButton3.addEventListener('click', () => {
-		  if (count3 > 0) {
-			count3--;
-		  }
-		  counterElement3.textContent = count3;
-		});
-		
-		</script>
+
 
 
 
@@ -769,6 +622,9 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 
 
 
+
+
+
 <script>
 	const closeButton = document.getElementById('closeButton');
 const popup2 = document.getElementById('popup1');
@@ -799,7 +655,85 @@ closeButton3.addEventListener('click', () => {
 });
 </script>
 
+<script>
+	const searchInput = document.querySelector('.single-welcome-hero-form input');
+	const exploreItems = document.querySelectorAll('.single-explore-item');
 	
+	// Add click event listener to the search div
+	const searchDiv = document.querySelector('.welcome-hero-serch');
+	
+
+	searchDiv.addEventListener('click', () => {
+		const searchText = searchInput.value.trim();
+		console.log(searchText); // Remove leading/trailing whitespaces
+		if(searchText === ''){
+			console.log(searchText); // Remove leading/trailing whitespaces
+
+			const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+		exploreItems.forEach(exploreItem=>{
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		});
+		return;
+	}
+	let allPostsHidden=true;
+	  exploreItems.forEach(exploreItem => {
+		const hospitalLabel = exploreItem.querySelector('.hospital');
+		// const specLabel = exploreItem.querySelector('.speciality');
+
+		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
+	
+		// const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
+
+		
+		  
+	
+		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase()) {
+			allPostsHidden=false;
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		  }
+		  else{
+			exploreItem.classList.add('hidden'); // Show if hospital matches search
+
+		  }
+		
+	  });
+const exploreContent = document.getElementById('explore-content');
+const existingMessage = exploreContent.querySelector('.no-posts-message');
+  if (allPostsHidden && !existingMessage) {
+    // Display "No posts" message (optional: create a separate element)
+    const noPostsElement = document.createElement('p'); // Create a paragraph element
+    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
+    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
+    // Append the element to the appropriate container in your HTML structure
+
+    // (Example: assuming you have a container with ID "filter-results")
+   exploreContent.appendChild(noPostsElement);
+  } else if(!allPostsHidden && existingMessage) {
+    // Remove any previously displayed "No posts" message (optional)
+    const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+  }
+	});
+	</script>
+	<script>
+window.addEventListener("load", function() {
+  const leftCurtain = document.getElementById("left-curtain");
+  const rightCurtain = document.getElementById("right-curtain");
+
+  leftCurtain.style.transition = "transform 1s ease-in-out";
+  rightCurtain.style.transition = "transform 1s ease-in-out";
+
+  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
+  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
+});
+
+
+</script>  
   
 
 
