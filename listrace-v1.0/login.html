@@ -64,9 +64,9 @@
                     </ul>
                 </div>
             </li>
-            <li style="transform:translate(500px,0px);">
-                <span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-                  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+            <li style="transform:translate(450px,0px);">
+                <span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+                  Yalla  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
                 </span>
               </li>
               
@@ -109,9 +109,9 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form action="#">
-                        <input type="email" id = "username" class="subscription-input-form" placeholder="enter your username">
+                        <input type="email" id = "username" class="subscription-input-form" placeholder="enter your username" style="border: 2px solid rgb(30, 102, 105); border-radius: 5px;">
                         <br/>
-                        <input type="password" id = "password" class="subscription-input-form" placeholder="enter your password">
+                        <input type="password" id = "password" class="subscription-input-form" placeholder="enter your password" style="border: 2px solid rgb(30, 102, 105); border-radius: 5px;">
                         <br/>
                        
                     </form>
@@ -191,9 +191,16 @@
     if (username === "karennn" && password === "toot24") {
         // Redirect to a specific page
         window.location.href = "admindb.html"; // Replace "dashboard.html" with the URL of the dashboard page
-    } else if (username === "karennn" && password !== "toot24"){
+    } else if ((username === "carol" && password === "cars") || (username === "basant" && password === "456") 
+        || (username === "farah" && password === "123")){
+        window.location.href = "index.html";
+    } else if ((username === "faridaelsaie" && password === "1593")){
+        window.location.href = "homepageorg.html";
+    } else if ((username === "karennn" && password !== "toot24") || (username === "carol" && password !== "cars") || (username === "basant" && password !== "456") 
+        || (username === "farah" && password !== "123") || (username === "faridaelsaie" && password !== "1593")){
         alert("Invalid password. Please try again.");
-    } else if (username !== "karennn" && password === "toot24"){
+    } else if ((username !== "karennn" && password === "toot24") || (username !== "carol" && password === "cars") || (username !== "basant" && password === "456") 
+        || (username !== "farah" && password === "123") || (username !== "faridaelsaie" && password === "1593")){
         alert("Invalid username. Please try again.");
     } else{
         alert("Invalid username & password. Please try again");
