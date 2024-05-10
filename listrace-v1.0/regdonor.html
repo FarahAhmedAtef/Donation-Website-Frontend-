@@ -79,8 +79,12 @@
 								<input type="password" id = "pass" class="subscription-input-form" placeholder="Enter a new password" required>
 								<input type="text" id="address" class="subscription-input-form" placeholder="Address" required>
 								<input type="text" id="area" class="subscription-input-form" placeholder="Area" required>
-								<input type="text" id="govern" class="subscription-input-form" placeholder="Governorate" required>
-								<select name="typed" class="subscription-input-form" id="typed" required>
+								<select name="govern" class="subscription-input-form" id="govern" required>
+									<option value="" disabled selected>Governorate</option>
+									<option value="Regular">Cairo</option>
+									<option value="Teacher">Giza</option>
+									<option value="Doctor">Alexandria</option>
+								</select>								<select name="typed" class="subscription-input-form" id="typed" required>
 									<option value="" disabled selected>Select type of donor</option>
 									<option value="Regular">Regular</option>
 									<option value="Teacher">Teacher</option>
