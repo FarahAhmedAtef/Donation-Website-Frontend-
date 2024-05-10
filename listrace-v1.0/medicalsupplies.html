@@ -245,12 +245,12 @@
 
 								<div class="navbar-header" style="z-index: 1;">
 									   
-									<a class="navbar-brand" href="index.html" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+									<a class="navbar-brand" href="javascript:void(0)" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
 									<li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
 										+201061064544
 									</li>
 									<li class="header-top-contact">
-										<a href="donoraccount.html"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+										<a href="javascript:void(0)"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
 									</li>
 								</div>
 								
@@ -1041,4 +1041,50 @@ for (const radioButton of governateRadioButtons) {
 </script> -->
 
 <!--explore end -->
+<script>
+	const navbarBrand = document.querySelector('.navbar-brand');
+	
+	navbarBrand.addEventListener('click', function() {
+	  const storedValue = sessionStorage.getItem('user');
+	
+	  // Handle potential absence of stored value
+	  if (storedValue === 'farah') {
+		window.location.href = "indexteacher.html"; // Default to index if no value exists
+		 // Exit the function if no value found
+	  }
+	else if (storedValue === 'carol'){
+		window.location.href = "index.html"; // Default to index if no value exists
+	
+	}
+	else if (storedValue === 'basant'){
+		window.location.href = "indexdoctor.html"; // Default to index if no value exists
+	
+	}
+	 
+	});
+	</script>
+	
+	
+	<script>
+		const accinfo = document.querySelector('.accinfo');
+		
+		accinfo.addEventListener('click', function() {
+		  const storedValue = sessionStorage.getItem('user');
+		
+		  // Handle potential absence of stored value
+		  if (storedValue === 'farah') {
+			window.location.href = "donoraccount2.html"; // Default to index if no value exists
+			 // Exit the function if no value found
+		  }
+		else if (storedValue === 'carol'){
+			window.location.href = "donoraccount1.html"; // Default to index if no value exists
+		
+		}
+		else if (storedValue === 'basant'){
+			window.location.href = "donoraccount.html"; // Default to index if no value exists
+		
+		}
+		 
+		});
+		</script>
 </body>
