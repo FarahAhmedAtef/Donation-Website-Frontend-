@@ -1373,21 +1373,11 @@ background-color:transparent;
     display: block;
   }
 
-      /*clothes post*/ 
+      /*home page org farida*/ 
+      .nav.navbar-nav.navbar-right {
+        text-align: center;
+      }
 
-      /* .form {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-        height: 200px;
-        width:auto;
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
-      } */
   
       
 .form {
