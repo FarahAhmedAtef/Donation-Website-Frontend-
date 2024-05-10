@@ -2091,9 +2091,126 @@ h4{
   
 
 
-/* trial farida*/ 
+/* delete account farida*/ 
+.delete-button1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(22, 25, 61);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164); */
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.delete-svgIcon1 {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.delete-svgIcon1 path {
+  fill: white;
+}
+.delete-svgIcon1 path:hover{
+  fill: rgb(22, 25, 61);
+}
+
+.delete-button1:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color:transparent;
+  align-items: center;
+}
+
+.delete-button1:hover .delete-svgIcon1 {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.delete-button1::before {
+  display: none;
+  content: "Delete Account";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.delete-button1:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+  color: rgb(22, 25, 61);
+}
 
 
+.fa-solid.fa-trash-can{
+  color: rgb(22, 25, 61); 
+  font-size: 50px; 
+}
+.buttonContainer1 {
+  display: flex; /* Make the container a flexbox */
+  justify-content: space-between; /* Align buttons horizontally */
+}
+
+.buttonContainer1 button {
+  margin: 5px; /* Add some margin between buttons */
+}
+
+.appsLand-btn1 {
+  position: relative;
+  /* top: 0;
+  right: 0; */
+  background: rgb(74, 147, 149);
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  border-top-right-radius:2px;
+  border-bottom-right-radius:2px;
+  text-transform:capitalize;
+  text-align:center;
+  color: #ecf0f0 ;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid #ecf0f0;
+  border-radius: 10px;
+  /* border-color: rgb(74, 147, 149); */
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition:0.3s ease-in-out;
+  -moz-transition:0.3s ease-in-out;
+  -o-transition:0.3s ease-in-out;
+  transition:0.3s ease-in-out;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.appsLand-btn1:hover, .appsLand-btn:focus, .appsLand-btn:active {
+  text-decoration: none;
+  outline: none;
+}
+.appsLand-btn1:hover {
+  box-shadow:0 5px 10px rgba(71,71,71,.4);
+  background: #ecf0f0;
+  color:rgb(74, 147, 149);
+  border: 2px solid rgb(74, 147, 149);
+}
 /* Initially hide the dropdown content */
 .school-supplies-dropdown {
     display: none;
