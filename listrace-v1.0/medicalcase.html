@@ -649,20 +649,21 @@
 
 	const openPopupBtn1 = document.getElementById('openpostdetails1');
 	const closePopupBtn1 = document.getElementById('closePopup1');
-	const flag = document.querySelector('.counter');
+	let flag = sessionStorage.getItem('myValue');
 
 	openPopupBtn1.addEventListener('click', function() {
 	  popup1.style.display = 'block';
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
-		if(flag.textContent==="0"){
-		popup1.style.display = 'none';
-	  popup7.style.display = 'block';
+		if(flag && flag==="1"){
+			popup1.style.display = 'none';
+	  directpopup.style.display = 'block';
+
 		}
 		else{
 			popup1.style.display = 'none';
-	  directpopup.style.display = 'block';
+	  popup7.style.display = 'block';
 		}
 	});
   </script>
@@ -680,14 +681,15 @@
 	
   
 	closePopupBtn2.addEventListener('click', function() {
-		if(flag.textContent==="0"){
-			flag.textContent="1";
-		popup3.style.display = 'none';
-	  popup8.style.display = 'block';
-		}
-		else{
+		if(flag && flag==="1"){
 			popup3.style.display = 'none';
 	  directpopup.style.display = 'block';
+		}
+		else{
+            popup3.style.display = 'none';
+	  popup8.style.display = 'block';
+
+			
 		}
 	});
   </script>
@@ -705,14 +707,14 @@
 	
   
 	closePopupBtn3.addEventListener('click', function() {
-		if(flag.textContent==="0"){
-			flag.textContent="1";
-		popup5.style.display = 'none';
-	  popup9.style.display = 'block';
+		if(flag && flag==="1"){
+            popup5.style.display = 'none';
+	  directpopup.style.display = 'block';
+
 		}
 		else{
 			popup5.style.display = 'none';
-	  directpopup.style.display = 'block';
+	  popup9.style.display = 'block';
 		}
 	});
   </script>
@@ -1099,14 +1101,12 @@ submitButton.addEventListener('click', () => {
 	placeError.textContent='';
 	mapError.textContent='';
 	specError.textContent='';
-	flag.textContent="1";
+	sessionStorage.setItem('myValue', "1");
 
-  messageElement.classList.remove('hidden'); // Show the message
+	window.location.href='requestedtodonate.html';
    popup10.style.display='none';
   // Simulate a transition effect (using setTimeout for simplicity)
-  setTimeout(() => {
-    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
-  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+// Specify the delay in milliseconds (3000ms = 3 seconds)
 }
 });
 
@@ -1174,13 +1174,10 @@ submitButton1.addEventListener('click', () => {
 	placeError2.textContent='';
 	pat2.checked=false;
 	clinic2.checked=false;
-
-  messageElement.classList.remove('hidden'); // Show the message
+window.location.href='requestedtodonate.html';
    popup20.style.display='none';
   // Simulate a transition effect (using setTimeout for simplicity)
-  setTimeout(() => {
-    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
-  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+  // Specify the delay in milliseconds (3000ms = 3 seconds)
 }
 });
 
