@@ -66,10 +66,10 @@
             </li>
             <li style="transform:translate(450px,0px);">
                 <span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-                  Yalla  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
+                  Yalla<span style="color: rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
                 </span>
               </li>
-                  
+          
             <li class="head-responsive-right pull-right" style="margin-top: 28px;">
                 <div class="header-top-right" style="z-index: 1;">
                     <ul style="z-index: 1;">
@@ -77,13 +77,13 @@
 
                             <div class="navbar-header" style="z-index: 1;">
                                    
-                                <a class="navbar-brand" href="admindb.html" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+                                <a class="navbar-brand" href="javascript:void(0)" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
                                 <li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
                                     +201061064544
                                 </li>
-                                <!-- <li class="header-top-contact">
-                                    <a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
-                                </li> -->
+                                <li class="header-top-contact">
+                                    <a class="accinfo" href="javascript:void(0)"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+                                </li>
                             </div>
                             
                         </nav>
@@ -95,7 +95,11 @@
             
         
     </header><!--/.header-top-->
-
+    <!--header-top end -->
+<div id="pagewrapper" style=" display: grid;
+grid-template-rows: 1fr auto;
+min-height: 100vh;">
+    <div id="main-content">
 <section id="reviews" class="reviews">
     <div class="section-header">
         <h2 style="color:rgb(5,14,56);">Organizations List</h2>
@@ -119,70 +123,8 @@
         </div>
     </div>
     <div class="reviews-content">
-        <div class="testimonial-carousel">
-            <div class="single-testimonial-box" id="box1">
-                <div class="testimonial-description">
-                    <div class="testimonial-info">
-                        
-                        <!-- <div class="testimonial-img">
-                            <img src="assets/images/clients/c1.png" alt="clients">
-                        </div> -->
-                        <!--/.testimonial-img-->
-                        <div class="testimonial-person">
-                            <h2 class="name">
-                                <div class="single-settings-icon">
-                                    <i class="fa-solid fa-children"></i>
-                                </div>
-                                Al Orman 
-                            </h2>
-                            <!-- <div class="single-settings-icon"> <i class="fa-solid fa-location-dot"></i></div> -->
-                            <h4 class="area"><div class="single-settings-icon"> <i class="fa-solid fa-map-location-dot" style="color: rgb(74,147,149);"></i></div> Mohandeseen </h4>
-                            <h4 class="loc"><div class="single-settings-icon"><i class="fa-solid fa-location-dot" style="color: rgb(74,147,149);"></i></div>Giza, Egypt</h4>
-                            <h4 class="job"> Orphanage </h4>
-                            <!-- <div class="testimonial-person-star">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div> -->
-                        </div><!--/.testimonial-person-->
-                    </div><!--/.testimonial-info-->
-                    <div class="testimonial-comment">
-                        <p class="status" id="t1">
-                            status: pending
-                        </p>
-                    </div>
-                    <h5>
-                        <button id="view1" class="open-btn how-work-btn" onclick="window.location.href='#'"  style="border-color:rgb(5,14,56); color:rgb(5,14,56);"> view details </button>
-
-                    </h5>
-                    <h6> 
-                        <button class="open-btn how-work-btn" id="a1" onclick="accept('a1')" style="border-color:mediumseagreen; color:mediumseagreen;"> accept </button>
-                        <button class="open-btn how-work-btn" id="r1" onclick="reject('r1')" style="border-color:#f63138; color:#f63138;"> reject </button>
-                    </h6>
-                    <!-- <button class="open-btn how-work-btn" onclick="window.location.href='#'"> accept </button> -->
-                    <!-- /.testimonial-comment -->
-                    <button class="sheel" onclick="openPopup('delete1')" id="delete1" style="display:none;">
-                        <div class="button-content" style="transform:translate(0px,-18px); align-content: center; padding-left:15px;">
-                            <div class="single-list-topics-icon" >
-                                <i class="fa-solid fa-trash" style="margin-left:6px; margin-right:10px;" ></i>					
-                            </div>
-                            <label style="transform:translate(0px,3px);">Delete Account</label>
-                        </div>
-                    </button>
-                    
-                    <button class="sheel" onclick="window.location.href='orgsubs.html'">
-                        <div class="button-content">
-                            <div class="single-list-topics-icon" >
-                                <i class="fa-solid fa-file" style="margin-left:6px; margin-right:10px;" ></i>					
-                            </div>
-                            <label style="transform:translate(0px,3px);">Review Submissions</label>
-                        </div>
-                    </button>
-                    <br/>
-                </div><!--/.testimonial-description-->
-            </div><!--/.single-testimonial-box-->
+        <!-- <div class="testimonial-carousel"> -->
+        
             <div class="single-testimonial-box" id="box2">
                 <div class="testimonial-description">
                     <div class="testimonial-info">
@@ -211,30 +153,14 @@
                         </div><!--/.testimonial-person-->
                     </div><!--/.testimonial-info-->
                     <div class="testimonial-comment">
-                        <p class="status">
-                            status: accepted
-                        </p>
+                        
                         <h5>
                             <button id="view2" class="open-btn how-work-btn" onclick="window.location.href='#'"  style="border-color:rgb(5,14,56); color:rgb(5,14,56);"> view details </button>
     
                         </h5>
                     </div><!--/.testimonial-comment-->
-                    <button class="sheel" onclick="openPopup('delete2')" id="delete2">
-                        <div class="button-content">
-                            <div class="single-list-topics-icon" >
-                                <i class="fa-solid fa-trash" style="margin-left:6px; margin-right:10px;" ></i>					
-                            </div>
-                            <label style="transform:translate(0px,3px);">Delete Account</label>
-                        </div>
-                    </button>
-                    <button class="sheel" onclick="window.location.href='orgsubs.html'">
-                        <div class="button-content">
-                            <div class="single-list-topics-icon" >
-                                <i class="fa-solid fa-file" style="margin-left:6px; margin-right:10px;" ></i>					
-                            </div>
-                            <label style="transform:translate(0px,3px);">Review Submissions</label>
-                        </div>
-                    </button>
+                   
+                   
                     <br/>
                 </div>
                 </div><!--/.testimonial-description-->
@@ -264,34 +190,17 @@
                         </div><!--/.testimonial-person-->
                     </div><!--/.testimonial-info-->
                     <div class="testimonial-comment">
-                        <p class="status">
-                            status: accepted
-                        </p>
+                       
                         <h5>
                             <button id="view3" class="open-btn how-work-btn" onclick="window.location.href='#'"  style="border-color:rgb(5,14,56); color:rgb(5,14,56);"> view details </button>
     
                         </h5>
                     </div><!--/.testimonial-comment-->
-                    <button class="sheel" onclick="openPopup('delete3')" id="delete3">
-                        <div class="button-content">
-                            <div class="single-list-topics-icon" >
-                                <i class="fa-solid fa-trash" style="margin-left:6px; margin-right:10px;" ></i>					
-                            </div>
-                            <label style="transform:translate(0px,3px);">Delete Account</label>
-                        </div>
-                    </button>
-                    <button class="sheel" onclick="window.location.href='orgsubs.html'">
-                        <div class="button-content">
-                            <div class="single-list-topics-icon" >
-                                <i class="fa-solid fa-file" style="margin-left:6px; margin-right:10px;" ></i>					
-                            </div>
-                            <label style="transform:translate(0px,3px);">Review Submissions</label>
-                        </div>
-                    </button>
+                   
                     <br/>
                 </div><!--/.testimonial-description-->
             </div><!--/.single-testimonial-box-->
-        </div>  
+        <!-- </div>   -->
     </div>
     <div id="popup">
         <i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
@@ -522,40 +431,17 @@
             <!-- <button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button> -->
       </div>
 
-      <!-- <div id="openPopup">
+      <div id="openPopup">
         <button style="font-size: 20px; padding-right:3px ;">Filter</button>
         <i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
-      </div> -->
+      </div>
 
-      <!-- <div class="postpopup">
-                <div class="notificationCard">
-                    <p class="notificationHeading">Your Account Was Sucessfully Deleted!</p>
-                    <i class="fa-solid fa-trash-can"></i>
-
-                    <div class="buttonContainer1">
-                    <form id="redirectForm" action="register.html" method="get">
-                        <button class="appsLand-btn1 subscribe-btn" type="submit">Create new Account</button>
-                    </form>
-                    <form id="redirectForm" action="#" method="get">
-                        <button class="appsLand-btn subscribe-btn" type="submit">continue as a guest</button>
-                    </form>
-                    </div>
-                </div>
-        </div>	 -->
-
-        <!-- <div class="deletepops" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
-            <h2 style="text-transform:none;">Account Deleted Successfully</h2>
-            <br><br>
-            <h4><button onclick="closePopup('confirmb')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
-        </div> -->
-
-
-    <div class="postpopup" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+      <div class="deletepops" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
         <!-- Popup content -->
         <h2 style="text-transform:none;">Account Deleted Successfully</h2>
         <br><br>
         <!-- <p>Hello, this is a simple popup!</p> -->
-        <h4><button class="appsLand-btn subscribe-btn" onclick="closePopup('confirmb')" id="confirmb">OK</button></h4>
+        <h4><button onclick="closePopup('confirmb')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
     </div>
 
     <div class="deletepops" id="delpopup1" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
@@ -587,15 +473,20 @@
         <h4><button onclick="closePopup('r1')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
     </div>
 
+  
 
 
+
+
+
+      
 
 </section><!--/.reviews-->
 <!--reviews end -->
-<footer id="footer"  class="footer" style="padding-right: 0px; position: relative;
-bottom: 0;
+</div>
+<footer id="footer"  class="footer" style="padding-right: 0px; grid-row: 2;
 width: 0px; ">
-    <div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+    <div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
         
         <div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
             <div class="row">
@@ -621,13 +512,12 @@ width: 0px; ">
     <!-- <div id="scroll-Top">
         <div class="return-to-top">
             <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-        </div>
+        </div> -->
         
-    </div> -->
-    <!--/.scroll-Top-->
+    <!-- </div>/.scroll-Top -->
     
 </footer><!--/.footer-->
-
+</div>
 
 <!-- <script src="assets/js/jquery.js"></script> -->
         
@@ -647,7 +537,7 @@ width: 0px; ">
 		<!-- <script src="assets/js/jquery.counterup.min.js"></script> -->
 		<!-- <script src="assets/js/waypoints.min.js"></script> -->
 
-        <!--slick.min.js-->
+        <!-- slick.min.js -->
         <!-- <script src="assets/js/slick.min.js"></script> -->
 
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
@@ -655,6 +545,17 @@ width: 0px; ">
         <!--Custom JS-->
         <!-- <script src="assets/js/custom.js"></script> -->
 		<script>
+			// const images = [
+			//   'https://media.istockphoto.com/id/1478310331/photo/black-man-volunteering-and-giving-box-in-park-of-donation-community-service-or-social.webp?b=1&s=170667a&w=0&k=20&c=IEgIUJ75D3AraONyFymA-sQ7RkPboQv1HxehnILDSKo=',
+			//   'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9uYXRpb258ZW58MHx8MHx8fDA%3D'
+			// ];
+			// let currentImageIndex = 0;
+		  
+			// function changeBackground() {
+			//   currentImageIndex = (currentImageIndex + 1) % images.length;
+			//   const newImage = images[currentImageIndex];
+			//   document.querySelector('.welcome-hero').style.backgroundImage = `url(${newImage})`;
+			// }
 
             function openPopup(buttonid) {
                 if (buttonid === "delete1"){
@@ -669,7 +570,6 @@ width: 0px; ">
                     popup.style.display = "block";
                 }
             }
-
 
             function closePopup(buttonid) {
                 if (buttonid === "delete1"){
@@ -774,24 +674,9 @@ width: 0px; ">
                 }
         }
 		  
+			// setInterval(changeBackground, 5000); // Change image every 5 seconds (adjust as needed)
 		  </script>
-          <script>
-            const popup = document.getElementById('popup');
-            const openPopupBtn = document.getElementById('openPopup');
-            const closePopupBtn = document.getElementById('closePopup');
-            const closePopupBtn4 = document.getElementById('closeButton0');
-        
-            openPopupBtn.addEventListener('click', function() {
-              popup.style.display = 'block';
-            });
           
-            closePopupBtn.addEventListener('click', function() {
-              popup.style.display = 'none';
-            });
-            closePopupBtn4.addEventListener('click', function() {
-              popup.style.display = 'none';
-            });
-          </script>
 
           <script>
             const applyButton = document.getElementById('closePopup');
@@ -963,7 +848,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
     <script>
 
         async function initMap() { 
-                var test= {lat: -25.363, lng: 131.044}; 
+                var test= {lat: 30.0444, lng: 31.2357}; 
                 var map = new google.maps.Map(document.getElementById('map'), { 
                   zoom: 4, 
                   center: test,
@@ -996,7 +881,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
                       position: test, 
                       map: map3
                     }); 
-        //             const center = { lat: 30.0444, lng: 31.2357 };
+                    const center = { lat: 30.0444, lng: 31.2357 };
         //   const map4 = new google.maps.Map(document.getElementById("map4"), {
         //     zoom: 8,
         //     center: center,
@@ -1006,7 +891,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
          
         //   let marker2; // Declare a variable to hold the marker
         
-        // // Add click listener to the map
+        // Add click listener to the map
         // map4.addListener("click", (e) => {
         //   // Create a new marker if one doesn't exist
         //   if (!marker2) {
@@ -1034,12 +919,12 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
         </script>
 
 <script>
-	const view1 = document.getElementById('view1');
+	// const view1 = document.getElementById('view1');
 const popup1open = document.getElementById('popup1');
 
-view1.addEventListener('click', () => {
-  popup1open.style.display = 'block'; // Hide the popup
-});
+// view1.addEventListener('click', () => {
+//   popup1open.style.display = 'block'; // Hide the popup
+// });
 </script>
 <script>
 	const closeButton1 = document.getElementById('closeButton1');
@@ -1083,5 +968,72 @@ closeButton3.addEventListener('click', () => {
   popup3close.style.display = 'none'; // Hide the popup
 });
 </script>
+<script>
+    const popup = document.getElementById('popup');
+    const openPopupBtn = document.getElementById('openPopup');
+    const closePopupBtn = document.getElementById('closePopup');
+    const closePopupBtn4 = document.getElementById('closeButton0');
+
+    openPopupBtn.addEventListener('click', function() {
+        console.log("alo");
+      popup.style.display = 'block';
+    });
+  
+    closePopupBtn.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+    closePopupBtn4.addEventListener('click', function() {
+      popup.style.display = 'none';
+    });
+  </script>
+
+
+
+<script>
+	const navbarBrand = document.querySelector('.navbar-brand');
+	
+	navbarBrand.addEventListener('click', function() {
+	  const storedValue = sessionStorage.getItem('user');
+	
+	  // Handle potential absence of stored value
+	  if (storedValue === 'farah') {
+		window.location.href = "indexteacher.html"; // Default to index if no value exists
+		 // Exit the function if no value found
+	  }
+	else if (storedValue === 'carol'){
+		window.location.href = "indexregular.html"; // Default to index if no value exists
+	
+	}
+	else if (storedValue === 'basant'){
+		window.location.href = "indexdoctor.html"; // Default to index if no value exists
+	
+	}
+	 
+	});
+	</script>
+	
+	
+	<script>
+		const accinfo = document.querySelector('.accinfo');
+		
+		accinfo.addEventListener('click', function() {
+		  const storedValue = sessionStorage.getItem('user');
+		
+		  // Handle potential absence of stored value
+		  if (storedValue === 'farah') {
+			window.location.href = "donoraccount2.html"; // Default to index if no value exists
+			 // Exit the function if no value found
+		  }
+		else if (storedValue === 'carol'){
+			window.location.href = "donoraccount1.html"; // Default to index if no value exists
+		
+		}
+		else if (storedValue === 'basant'){
+			window.location.href = "donoraccount.html"; // Default to index if no value exists
+		
+		}
+		 
+		});
+		</script>
 
 </body>

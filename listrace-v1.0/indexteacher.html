@@ -65,7 +65,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 		
-		<header id="header-top" class="header-top"  >
+		<header id="header-top" class="header-top" style="border-bottom: 1px solid grey;" >
 			<ul>
 				<li>
 					<div class="header-top-left" >
@@ -74,7 +74,7 @@
 						</ul>
 					</div>
 				</li>
-				<li style="transform:translate(700px,0px);">
+				<li style="transform:translate(500px,0px);">
 					<span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
 					  Yalla  <span style="color:  rgb(30, 102, 105); font-size: 50px;  font-weight: bold;"> Aawen</span>
 					</span>
@@ -128,12 +128,13 @@
 			            <!-- End Header Navigation -->
 
 			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu" style="transform: translate(-190px,0px); ">
+			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu" style="transform: translate(-80px,0px); ">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                    <li class=" scroll active"><a href="#home">home</a></li>
 			                    <li class="scroll"><a href="#works">About us</a></li>
 			                    <li class="scroll"><a href="#">All Donation posts</a></li>
-			                    <li class="scroll"><a href="notifications.html">notifications</a></li>
+                                <li class="scroll"><a href="orglistdonor.html">All Partnered Organisations</a></li>
+			                    <li class="scroll"><a href="notifications teacher.html">notifications</a></li>
 			                    <li class="scroll"><a href="myorders.html">my orders</a></li>
 			                   
 			                </ul><!--/.nav -->
@@ -204,15 +205,7 @@
 								<p>3 listings</p>
 							</div></a>
 						</li> 
-						<li > 
-							<a href="medicalcase.html">	<div class="single-list-topics-content"> 
-								<div class="single-list-topics-icon">
-									<i class="fas fa-solid fa-stethoscope" style="font-size: 35px; margin-bottom: 30px;"></i>
-								</div>
-								<h2>Probono medical Visit</h2>
-								<p>3 listings</p>
-							</div></a>
-						</li>
+						
 						<li > 
 							<a href="medications.html">	<div class="single-list-topics-content"> 
 								<div class="single-list-topics-icon">
@@ -420,10 +413,7 @@
 		window.location.href = "teaching.html";
 		 // Prevent default form submission if redirected
 	  }
-	  else   if (searchInput === "probono medical visits") {
-		window.location.href = "medicalcase.html";
-		 // Prevent default form submission if redirected
-	  }
+	 
 	  else   if (searchInput === "toy") {
 		window.location.href = "toy.html";
 		 // Prevent default form submission if redirected

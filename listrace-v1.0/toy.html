@@ -441,7 +441,7 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="footer-social" style="padding-right: 20px;">
-								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<span><i class="fa fa-phone">+201061064544</i></span>
 								<a href="#"><i class="fa fa-facebook"></i></a>	
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -462,6 +462,91 @@
 			
         </footer><!--/.footer-->
 
+
+		<script>
+			const counterElement1 = document.querySelector('.counter1');
+			const maxlimit1 = document.getElementById('maxlimit1');
+		
+		let count1 = 0; // Initial counter value
+		
+		const incrementButton1 = document.getElementById('increment1');
+		const decrementButton1 = document.getElementById('decrement1');
+		
+		incrementButton1.addEventListener('click', () => {
+		if(count1<15)	{
+		  count1++;
+		  counterElement1.textContent = count1;
+		}
+		else{
+			maxlimit1.style.display='block';
+		}
+		});
+		
+		decrementButton1.addEventListener('click', () => {
+		  if (count1 > 0) {
+			count1--;
+		  }
+		  counterElement1.textContent = count1;
+		});
+		
+		</script>
+		
+		<script>
+			const counterElement2 = document.querySelector('.counter2');
+			const maxlimit2 = document.getElementById('maxlimit2');
+		
+		let count2 = 0; // Initial counter value
+		
+		const incrementButton2 = document.getElementById('increment2');
+		const decrementButton2 = document.getElementById('decrement2');
+		
+		incrementButton2.addEventListener('click', () => {
+		if(count2<5)	{
+		  count2++;
+		  counterElement2.textContent = count2;
+		}
+		else{
+			maxlimit2.style.display='block';
+		}
+		});
+		
+		decrementButton2.addEventListener('click', () => {
+		  if (count2 > 0) {
+			count2--;
+		  }
+		  counterElement2.textContent = count2;
+		});
+		
+		</script>
+		
+		
+		
+		
+		<script>
+			const counterElement3 = document.querySelector('.counter3');
+		let count3 = 0; // Initial counter value
+		
+		const incrementButton3 = document.getElementById('increment3');
+		const decrementButton3 = document.getElementById('decrement3');
+		
+		incrementButton3.addEventListener('click', () => {
+			if(count3<12)	{
+		  count3++;
+		  counterElement3.textContent = count3;
+		}
+		else{
+			maxlimit3.style.display='block';
+		}
+		});
+		
+		decrementButton3.addEventListener('click', () => {
+		  if (count3 > 0) {
+			count3--;
+		  }
+		  counterElement3.textContent = count3;
+		});
+		
+		</script>
 
 		<script>
 			const counterElement1 = document.querySelector('.counter1');
@@ -885,5 +970,51 @@ for (const radioButton of governateRadioButtons) {
 }
 </script>
 
+<script>
+	const navbarBrand = document.querySelector('.navbar-brand');
+	
+	navbarBrand.addEventListener('click', function() {
+	  const storedValue = sessionStorage.getItem('user');
+	
+	  // Handle potential absence of stored value
+	  if (storedValue === 'farah') {
+		window.location.href = "indexteacher.html"; // Default to index if no value exists
+		 // Exit the function if no value found
+	  }
+	else if (storedValue === 'carol'){
+		window.location.href = "indexregular.html"; // Default to index if no value exists
+	
+	}
+	else if (storedValue === 'basant'){
+		window.location.href = "indexdoctor.html"; // Default to index if no value exists
+	
+	}
+	 
+	});
+	</script>
+	
+	
+	<script>
+		const accinfo = document.querySelector('.accinfo');
+		
+		accinfo.addEventListener('click', function() {
+		  const storedValue = sessionStorage.getItem('user');
+		
+		  // Handle potential absence of stored value
+		  if (storedValue === 'farah') {
+			window.location.href = "donoraccount2.html"; // Default to index if no value exists
+			 // Exit the function if no value found
+		  }
+		else if (storedValue === 'carol'){
+			window.location.href = "donoraccount1.html"; // Default to index if no value exists
+		
+		}
+		else if (storedValue === 'basant'){
+			window.location.href = "donoraccount.html"; // Default to index if no value exists
+		
+		}
+		 
+		});
+		</script>
 
 </body>
