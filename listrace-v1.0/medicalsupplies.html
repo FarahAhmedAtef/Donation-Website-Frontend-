@@ -99,6 +99,8 @@
 				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 				<i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 				<br></br>
+				<i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+				<br></br>
 				<label > Please fill in this form to schedule the pickup</label>
 				<div class="containerapply">
 				  <div class="date-time">
@@ -161,7 +163,7 @@
 										<div class="counter1" style="border: 1px black;">1</div>
 										<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 									  </div>
-								 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
+								 <label style="display:none ; color: red;" id="maxlimit1">You reached your maximum limit</label>
 					</div>
 					
 
@@ -170,7 +172,7 @@
 
 			  <div id="popup2">
 				<i id="closeButton2" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">In Need of Medical Devices</a></h2>
+					<h2><a href="#">Medical Devices Needed</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
 						<label class="city1" href="#"  Style="padding-right:7px; border-right: 1px solid  #86888b">Medical Device</label> 
@@ -200,7 +202,7 @@
 										<div class="counter2" style="border: 1px black;">1</div>
 										<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 									  </div>
-								 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
+								 <label style="display:none ;color: red;" id="maxlimit2">You reached your maximum limit</label>
 				
 						</div>
 						
@@ -241,8 +243,8 @@
 											<div class="counter3" style="border: 1px black;">1</div>
 											<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 										  </div>
-									 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
-					
+									 <label style="display:none; color: red;" id="maxlimit3">You reached your maximum limit</label>
+
 							</div>
 								
 
@@ -552,6 +554,28 @@ closeButton4.addEventListener('click', () => {
 	truck1.checked=false;
 
 });
+
+backButton4.addEventListener('click', () => {
+	let temp= sessionStorage.getItem('pop');
+	if(temp==="1"){
+        popup12.style.display = 'block';
+	}
+	else if(temp==="2"){
+       popup22.style.display='block';
+	}
+	else{
+		popup32.style.display='block';
+
+	}
+  popup11.style.display = 'none'; // Hide the popup
+	dateError1.textContent='';
+	timeError1.textContent='';
+	placeError1.textContent='';
+	car1.checked=false;
+	bike1.checked=false;
+	truck1.checked=false;
+
+ });
 
 backButton4.addEventListener('click', () => {
 	let temp= sessionStorage.getItem('pop');
@@ -959,7 +983,7 @@ closeButton30.addEventListener('click', () => {
 			const counterElement1 = document.querySelector('.counter1');
 			const maxlimit1 = document.getElementById('maxlimit1');
 		
-		let count1 = 0; // Initial counter value
+		let count1 = 1; // Initial counter value
 		
 		const incrementButton1 = document.getElementById('increment1');
 		const decrementButton1 = document.getElementById('decrement1');
@@ -975,7 +999,7 @@ closeButton30.addEventListener('click', () => {
 		});
 		
 		decrementButton1.addEventListener('click', () => {
-		  if (count1 > 0) {
+		  if (count1 > 1) {
 			count1--;
 		  }
 		  counterElement1.textContent = count1;
@@ -987,7 +1011,7 @@ closeButton30.addEventListener('click', () => {
 			const counterElement2 = document.querySelector('.counter2');
 			const maxlimit2 = document.getElementById('maxlimit2');
 		
-		let count2 = 0; // Initial counter value
+		let count2 = 1; // Initial counter value
 		
 		const incrementButton2 = document.getElementById('increment2');
 		const decrementButton2 = document.getElementById('decrement2');
@@ -1003,7 +1027,7 @@ closeButton30.addEventListener('click', () => {
 		});
 		
 		decrementButton2.addEventListener('click', () => {
-		  if (count2 > 0) {
+		  if (count2 > 1) {
 			count2--;
 		  }
 		  counterElement2.textContent = count2;
@@ -1016,7 +1040,7 @@ closeButton30.addEventListener('click', () => {
 		
 		<script>
 			const counterElement3 = document.querySelector('.counter3');
-		let count3 = 0; // Initial counter value
+		let count3 = 1; // Initial counter value
 		
 		const incrementButton3 = document.getElementById('increment3');
 		const decrementButton3 = document.getElementById('decrement3');
@@ -1032,7 +1056,7 @@ closeButton30.addEventListener('click', () => {
 		});
 		
 		decrementButton3.addEventListener('click', () => {
-		  if (count3 > 0) {
+		  if (count3 > 1) {
 			count3--;
 		  }
 		  counterElement3.textContent = count3;

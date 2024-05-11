@@ -176,7 +176,7 @@
 											<div class="counter1" style="border: 1px black;">1</div>
 											<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 										  </div>
-									 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
+									 <label style="display:none; color: red;" id="maxlimit1">You reached your maximum limit</label>
 						</div>
 
 
@@ -213,7 +213,7 @@
 									<div class="counter2" style="border: 1px black;">1</div>
 									<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 								  </div>
-							 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
+							 <label style="display:none; color: red;" id="maxlimit2">You reached your maximum limit</label>
 							
 	
 						</div>
@@ -251,7 +251,7 @@
 											<div class="counter3" style="border: 1px black;">1</div>
 											<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 										  </div>
-									 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
+									 <label style="display:none; color: red;" id="maxlimit3">You reached your maximum limit</label>
 								
 	
 						</div>
@@ -980,7 +980,7 @@ closeButton30.addEventListener('click', () => {
 			const counterElement1 = document.querySelector('.counter1');
 			const maxlimit1 = document.getElementById('maxlimit1');
 		
-		let count1 = 0; // Initial counter value
+		let count1 = 1; // Initial counter value
 		
 		const incrementButton1 = document.getElementById('increment1');
 		const decrementButton1 = document.getElementById('decrement1');
@@ -996,7 +996,7 @@ closeButton30.addEventListener('click', () => {
 		});
 		
 		decrementButton1.addEventListener('click', () => {
-		  if (count1 > 0) {
+		  if (count1 > 1) {
 			count1--;
 		  }
 		  counterElement1.textContent = count1;
@@ -1008,7 +1008,7 @@ closeButton30.addEventListener('click', () => {
 			const counterElement2 = document.querySelector('.counter2');
 			const maxlimit2 = document.getElementById('maxlimit2');
 		
-		let count2 = 0; // Initial counter value
+		let count2 = 1; // Initial counter value
 		
 		const incrementButton2 = document.getElementById('increment2');
 		const decrementButton2 = document.getElementById('decrement2');
@@ -1024,7 +1024,7 @@ closeButton30.addEventListener('click', () => {
 		});
 		
 		decrementButton2.addEventListener('click', () => {
-		  if (count2 > 0) {
+		  if (count2 > 1) {
 			count2--;
 		  }
 		  counterElement2.textContent = count2;
@@ -1037,7 +1037,7 @@ closeButton30.addEventListener('click', () => {
 		
 		<script>
 			const counterElement3 = document.querySelector('.counter3');
-		let count3 = 0; // Initial counter value
+		let count3 = 1; // Initial counter value
 		
 		const incrementButton3 = document.getElementById('increment3');
 		const decrementButton3 = document.getElementById('decrement3');
@@ -1053,7 +1053,7 @@ closeButton30.addEventListener('click', () => {
 		});
 		
 		decrementButton3.addEventListener('click', () => {
-		  if (count3 > 0) {
+		  if (count3 > 1) {
 			count3--;
 		  }
 		  counterElement3.textContent = count3;

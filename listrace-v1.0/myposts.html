@@ -144,6 +144,29 @@
 					</div>
 					<br><br>
 					<div class="border">
+					<label for="category" style="color: black;">Category</label>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="radio" id="c1" name="category" value="Clothes">
+					<label for="c1">Clothes</label>
+					<br></div>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="radio" id="c2" name="category" value="Medical Cases">
+					<label for="c2">Medical Cases</label>
+					<br></div>
+					<br>
+					<div class="checkbox-container"> 
+					<input type="radio" id="c3" name="category" value="Teaching">
+					<label for="c3">Teaching</label>
+					<br></div>
+					<br>
+					<div class="checkbox-container"> 
+						<input type="radio" id="c4" name="category" value="Food">
+						<label for="c4">Food</label>
+						<br></div>
+				</div>
+				<div class="border">
 					<label for="hospital" style="color: black;">Status</label>
 					<br>
 					<div class="checkbox-container"> 
@@ -162,55 +185,60 @@
 			  </div>
 
 
-			  <div id="popup1">
+			  <div id="popup1" style="height: 370px;">
 				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">In Need of Blood Donation</a></h2>
-					<span contenteditable="false" class="explore-rating-price">
+					<h2><a href="#">In Need of Clothes Donation</a></h2>
+					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
-						<span contenteditable="=false" class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b" >Alexandria</span> 
-						<span contenteditable="=false"class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Montazah
+						<span contenteditable="false" class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">17-21 years old</span> 
+						<span contenteditable="false" class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Female
 							
 						</span>
-						 <span contenteditable="=false" class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">alshefa Hospital</span>
-					</span>
+						 <span contenteditable="false" class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter </span>
+					</p>
+					<div>
+						
+						
+					</div>
 					<div>
 						<div>
-						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-						<span style="margin-right:5px; color: black;" contenteditable="false">Farah Ahmed</span>
+							<i class="fa-solid fa-shirt" style="margin-right:5px; color: black;"></i>
+							<span contenteditable="false" style="margin-right:5px; color: black;">T-shirts</span>
+							</div>
+							<div>
+							<i class="fa-brands fa-cotton-bureau" style="margin-right:5px; color: black;"></i>
+							<span contenteditable="false" style="margin-right:5px; color: black;">Fleece, Cotton, Wool</span>
+							</div>
+							<div>
+								<i class="fa-solid fa-arrow-up-1-9" style="margin-right:5px; color: black;"></i>
+								<span contenteditable="false" style="margin-right:5px; color: black;">6 T-shirts</span>
+								</div>
+								<div>
+									<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+									<span contenteditable="false" style="margin-right:5px; color: black;">17-21 years old</span>
+									</div>
+								<div>
+									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
+									<span contenteditable="false" style="margin-right:5px; color: black;">Winter</span>
+								</div>
 						</div>
-						<div>
-						<i class="fa-solid fa-droplet" style="margin-right:5px; color: black;"></i>
-						<span style="margin-right:5px; color: black;" contenteditable="false">D</span>
-						</div>
-					</div>
-					<div>
-						<span style="margin-right:5px; color: white;" contenteditable="false">Description: In need of 3 bags of blood type D </span>
-					</div>
-					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
-					<div class="counter-container">
-						<button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter" style="border: 1px black;">0</div>
-						<button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-					  </div>
-
-					<!-- <button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button> -->
-					<div class="button-container">
-					<button id="doneButton" class="doneBtn" style="margin-right: auto; display: none;" onclick="removedoneBtn()">Done</button>
-					<button id="editbtn1"class="edit-button" onclick="showdoneBtn()">
-						<svg class="edit-svgIcon" viewBox="0 0 512 512">
-										  <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path>
-										</svg>
-					  </button>
-
-					  <button class="delete-button" onclick="showDeletePopup()" >
-						<svg class="delete-svgIcon" viewBox="0 0 448 512">
-										  <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path>
-										</svg>
-					  </button>
-					</div>
-					<div id="deleteOverlay" class="overlay" style="display: none;"></div>
-			  <!---Delete popup-->
+						<div class="button-container">
+							<button id="doneButton" class="doneBtn" style="margin-right: auto; display: none;" onclick="removedoneBtn()">Done</button>
+							<button id="editbtn1"class="edit-button" onclick="showdoneBtn()">
+								<svg class="edit-svgIcon" viewBox="0 0 512 512">
+												  <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path>
+												</svg>
+							  </button>
+		
+							  <button class="delete-button" onclick="showDeletePopup()" >
+								<svg class="delete-svgIcon" viewBox="0 0 448 512">
+												  <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path>
+												</svg>
+							  </button>
+							</div>
+							<div id="deleteOverlay" class="overlay" style="display: none;"></div>
+				<!---Delete popup-->
 			  <div id="deletePopup" class="card" style="display: none;">
 				<div class="card-content">
 				  <lable class="card-heading">Delete post?</lable>
@@ -227,8 +255,8 @@
 					></path>
 				  </svg>
 				</button>
+			  </div>	
 			  </div>
-			</div>
 			  
 
 			  <div id="popup2">
@@ -272,15 +300,10 @@
 						<div>
 							<span style="margin-right:5px; color: white;" contenteditable="false">Description: In need of bones doctors</span>
 						</div>
-						<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>
-					
+						<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>					
 					  <div class="button-container">
-					  <button id="doneButton2" class="doneBtn" style="margin-right: auto; display: none;" onclick="removedoneBtn2()">Done</button>
-					  <button id="editbtn2" class="edit-button" onclick="showdoneBtn2()">
-						<svg class="edit-svgIcon" viewBox="0 0 512 512">
-										  <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path>
-										</svg>
-					  </button>
+					  <button id="doneButton2" class="doneBtn" style="margin-right: auto; display: block; width:200px; border-radius: 5px;" onclick="showdocPop()">
+						View Donor Doctor Details</button>
 					  
 					  <button class="delete-button" onclick="showDeletePopup2()" >
 						<svg class="delete-svgIcon" viewBox="0 0 448 512">
@@ -288,9 +311,44 @@
 										</svg>
 					  </button>
 					</div>
+					<div id="docDets2" class="overlay" style="display: none;"></div>
 					<div id="deleteOverlay2" class="overlay" style="display: none;"></div>
+				<!--View Doc POPUP-->
+				<div id="DocDets" class="card" style="display: none; z-index: 10; box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.123);">
+					<lable class="card-heading" style="color: rgb(43, 116, 110);">Donor Doctor Details</lable>
+					<div>
+						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Dr.Carol Akmal</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-stethoscope" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Bones</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-envelope" style="margin-right:5px; color: black;" ></i>
+						<label style="margin-right:5px; color: black;">carolakmal@gamil.com</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-phone"style="margin-right:5px; color: black;" ></i>
+						<label style="margin-right:5px; color: black;">+20-1117955223</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-calendar-days"style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">11/05/2024</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-clock" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">5:00 PM</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">At patient's place</label>
+					</div>
+					<!-- <p class="notificationPara">Allow push notifications so you will get latest updates</p> -->
+						<button class="appsLand-btn1 subscribe-btn" type="submit" onclick="hideDpop()">Continue</button>
+				  </div>
 			   <!---Delete popup-->
-			   <div id="deletePopup2" class="card" style="display: none;">
+			   <div id="deletePopup2" class="card" style="display: none;  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.123);">
 				<div class="card-content">
 				  <lable class="card-heading">Delete post?</lable>
 				  <lable class="card-description">Are you sure you want to delete this post?</lable>
@@ -336,14 +394,9 @@
 					<div>
 						<span style="margin-right:5px; color: white;" contenteditable="false" >Description: In need of a teacher to teach English</span>
 					</div>
-					<div id="map3" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+					<div id="map2" style=" margin-top: 20px; margin-bottom: 20px;"></div>					
 					<div class="button-container">
-						<button id="doneButton3" class="doneBtn" style="margin-right: auto; display: none;" onclick="removedoneBtn3()">Done</button>
-						<button id="editbtn3" class="edit-button" onclick="showdoneBtn3()">
-						  <svg class="edit-svgIcon" viewBox="0 0 512 512">
-											<path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path>
-										  </svg>
-						</button>
+						<button id="doneButton3" class="doneBtn" style="margin-right: auto; display: block; width:200px; border-radius: 5px;" onclick="showTPop()">View Donor Teacher Details</button>
 						
 						<button class="delete-button" onclick="showDeletePopup3()" >
 						  <svg class="delete-svgIcon" viewBox="0 0 448 512">
@@ -352,8 +405,47 @@
 						</button>
 					  </div>
 					  <div id="deleteOverlay3" class="overlay" style="display: none;"></div>
+					  <div id="tDets" class="overlay" style="display: none;"></div>
+				<!--View Teacher POPUP-->
+				<div id="Tdeets" class="card" style="display: none; z-index: 10; box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.123);">
+					<lable class="card-heading" style="color: rgb(43, 116, 110);">Donor Teacher Details</lable>
+					<div>
+						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">Rose Bassem</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-book"style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">English</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-envelope" style="margin-right:5px; color: black;" ></i>
+						<label style="margin-right:5px; color: black;">rosebassem@outlook.com</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-phone"style="margin-right:5px; color: black;" ></i>
+						<label style="margin-right:5px; color: black;">+20-1005226018</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-calendar-days"style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">7/05/2024</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-clock" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">11:00 AM</label>
+					</div>
+					<div>
+						<i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+						<label style="margin-right:5px; color: black;">10 students</label>
+					</div>
+					<div>
+					<i class="fa-solid fa-chalkboard-user"></i>
+					<label style="margin-right:5px; color: black;">1 class donated</label>
+				   </div>
+					<!-- <p class="notificationPara">Allow push notifications so you will get latest updates</p> -->
+						<button class="appsLand-btn1 subscribe-btn" type="submit" onclick="hideTpop()">Continue</button>
+				  </div>
 				 <!---Delete popup-->
-				 <div id="deletePopup3" class="card" style="display: none;">
+				 <div id="deletePopup3" class="card" style="display: none;box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.123);">
 				  <div class="card-content">
 					<lable class="card-heading">Delete post?</lable>
 					<lable class="card-description">Are you sure you want to delete this post?</lable>
@@ -371,44 +463,45 @@
 				  </button>
 				</div>
 			  </div>
+
+		  
 				
 		<div class="explore-content" id="explore-content">
 			
-			<div id="openPopup" style="margin-top:-95px">
+			<div id="openPopup" style="margin-top:-70px">
 				<button style="font-size: 20px; padding-right:3px ;">Filter</button>
 				<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
 			  </div>
-					<div id="post1" class="single-explore-item">
-						<div class="single-explore-txt bg-theme-4">
-							<h2><a href="#">In Need of Blood Donation</a></h2>
-							<p class="explore-rating-price">
 
-								<span class="explore-rating">5.0</span>
-								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Alexandria</label> 
-								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-									Montazah
-									
-								</label>
-								 <label class="hospital" href="#"  style="padding-right:3px; border-right: 1px; color: red">Pending</label>
-
-							</p>
+			  <div id="post1" class="single-explore-item">
+				<div class="single-explore-txt bg-theme-4">
+					<h2><a href="#">In Need of Clothes Donation</a></h2>
+					<p class="explore-rating-price">
+						<span class="explore-rating">5.0</span>
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
+						<label class="category"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Clothes
 							
-							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
-								<div class="row">
-									<div class="col-sm-5">
-										<button class="close-btn open-btn"   id ="openpostdetails1">View Details</button>
-									</div>
-									<div class="col-sm-7">
-										<div class="explore-map-icon">
-											<a href="#"><i data-feather="map-pin"></i></a>
-											<a href="#"><i data-feather="upload"></i></a>
-											<a href="#"><i data-feather="heart"></i></a>
-										</div>
-									</div>
+						</label>
+						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px ; color: rgb(123, 31, 31) !important">Pending</label>
+					</p>
+					
+					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+						<div class="row">
+							<div class="col-sm-5">
+								<button class="close-btn open-btn"   id ="openpostdetails1">View Details</button>
+							</div>
+							<div class="col-sm-7">
+								<div class="explore-map-icon">
+									<a href="#"><i data-feather="map-pin"></i></a>
+									<a href="#"><i data-feather="upload"></i></a>
+									<a href="#"><i data-feather="heart"></i></a>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
 				
 			
 					<div id="post2" class="single-explore-item">
@@ -421,7 +514,9 @@
 									5th Settlement
 									
 								</label>
-								 <label class="hospital" href="#" Style="padding-right:7px; border-right: 1px solid  #7e1805">Pending</label>
+								<label class="category"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+									Medical Cases</label>
+								<label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px ; color: rgb(22, 121, 39) !important">Fulfilled</label>
 								 
 								</p>
 							
@@ -452,7 +547,9 @@
 							Masr Elgedida
 							
 						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Pending</label>
+						<label class="category"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+							Teaching </label>
+						<label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px ; color: rgb(22, 121, 39) !important">Fulfilled</label>
 					</p>
 					
 					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -476,7 +573,7 @@
 	<!--/.container-->
 		</div>
 </section><!--/.explore-->
-<footer id="footer"  class="footer" style="padding-right: 0px; grid-row: 2;
+<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;;
 bottom: 0;
 width: 0px; ">
 	<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
@@ -512,8 +609,39 @@ width: 0px; ">
 </footer><!--/.footer-->
 	</div>
 
+	<script async defer 
+		src= 
+		"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
+		</script> 
 
+	<script>
 
+		function initMap() { 
+				var test= {lat: -25.363, lng: 131.044}; 
+				var map = new google.maps.Map(document.getElementById('map'), { 
+				  zoom: 4, 
+				  center: test 
+				}); 
+				var marker = new google.maps.Marker({ 
+				  position: test, 
+				  map: map 
+				}); 
+		             var map2 = new google.maps.Map(document.getElementById('map2'), { 
+			          zoom: 4, 
+			          center: test,
+			          mapId:"fc7d36a02ec1bfd9"  
+			         }); 
+			           var marker2 = new google.maps.marker.AdvancedMarkerElement({ 
+			           position: test, 
+			           map: map2
+			    }); 
+
+		
+		
+			  } 
+		
+		initMap();
+		</script>
 
 
 <script>
@@ -633,6 +761,9 @@ let textbx= null;
 else if(filterValue.name.toLocaleLowerCase() === "area".toLocaleLowerCase()){
 textbx=post.querySelector('.area');
 }
+else if(filterValue.name.toLocaleLowerCase() === "category".toLocaleLowerCase()){
+textbx=post.querySelector('.category');
+}
 else {
 textbx=post.querySelector('.hospital');
 }
@@ -681,57 +812,6 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 
 </script>   
 
-
-
-
-<script>
-
-function initMap() { 
-        var test= {lat: -25.363, lng: 131.044}; 
-        var map = new google.maps.Map(document.getElementById('map'), { 
-          zoom: 4, 
-          center: test 
-        }); 
-        var marker = new google.maps.Marker({ 
-          position: test, 
-          map: map 
-        }); 
-
-
-	
-			var map2 = new google.maps.Map(document.getElementById('map2'), { 
-			  zoom: 4, 
-			  center: test 
-			}); 
-			var marker2 = new google.maps.Marker({ 
-			  position: test, 
-			  map2: map2
-			}); 
-
-
-			var map3 = new google.maps.Map(document.getElementById('map3'), { 
-			  zoom: 4, 
-			  center: test 
-			}); 
-			var marker3 = new google.maps.Marker({ 
-			  position: test, 
-			  map3: map3
-			}); 
-
-
-      } 
-
-//initMap();
-
-
-
-</script>
-<script async defer 
-src= 
-"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
-</script> 
-
-	
 	
 <script>
 	const counterElement = document.querySelector('.counter');
@@ -803,6 +883,16 @@ closeButton3.addEventListener('click', () => {
   popup6.style.display = 'none'; // Hide the popup
 });
 </script>
+<!--POST 4!!!-->
+<script>
+	const closeButton4 = document.getElementById('closeButton4');
+const popup7 = document.getElementById('popup4');
+
+closeButton4.addEventListener('click', () => {
+  popup7.style.display = 'none'; // Hide the popup
+});
+</script>
+
 
 <script>
 	const searchInput = document.querySelector('.single-welcome-hero-form input');
@@ -866,20 +956,41 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   }
 	});
 	</script>
-
+<!---Doc POPUP-->
 <script>
-	window.addEventListener("load", function() {
-	  const leftCurtain = document.getElementById("left-curtain");
-	  const rightCurtain = document.getElementById("right-curtain");
 	
-	  leftCurtain.style.transition = "transform 1s ease-in-out";
-	  rightCurtain.style.transition = "transform 1s ease-in-out";
-	
-	  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
-	  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
-	});
-	
-	
+	    // Function to show the delete popup
+		function showdocPop() {
+        // Show the overlay
+        document.getElementById("docDets2").style.display = "block";
+        // Show the delete popup
+        document.getElementById("DocDets").style.display = "block";
+    }
+
+    // Function to hide the delete popup
+	function hideDpop() {
+  // Get a reference to the DocDets element
+  var docDets = document.getElementById("DocDets");
+
+  // Hide the element by setting its display to none
+  docDets.style.display = "none";
+}
+	    // Function to show the delete popup
+		function showTPop() {
+        // Show the overlay
+        document.getElementById("tDets").style.display = "block";
+        // Show the delete popup
+        document.getElementById("Tdeets").style.display = "block";
+    }
+	 // Function to hide the delete popup
+	 function hideTpop() {
+  // Get a reference to the DocDets element
+  var docDets = document.getElementById("Tdeets");
+
+  // Hide the element by setting its display to none
+  docDets.style.display = "none";
+}
+
 	</script> 
 
 <!---Delete popup ba2aa-->
@@ -962,33 +1073,70 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
         document.getElementById("deletePopup3").style.display = "block";
     }
 
-    // Function to hide the delete popup
+    // Function to hide the delete popup3
     function hideDeletePopup3() {
         // Hide the overlay
         document.getElementById("deleteOverlay3").style.display = "none";
-        // Hide the delete popup
+        // Hide the delete popup3
         document.getElementById("deletePopup3").style.display = "none";
     }
 
-    // Function to handle the click event on the "Delete" button in the delete popup
+    // Function to handle the click event on the "Delete" button in the delete popup3
     document.getElementById("closedeletePop3").addEventListener("click", function() {
-        // Call the function to hide the delete popup
+        // Call the function to hide the delete popup3
         hideDeletePopup3();
-		 // Hide popup1
+		 // Hide popup3
 	 document.getElementById("popup3").style.display = "none";
     });
 
-		 // Function to handle the click event on the "Cancel" button in the delete popup
+		 // Function to handle the click event on the "Cancel" button in the delete popup3
 		 document.getElementById("cancelbtn3").addEventListener("click", function() {
         // Call the function to hide the delete popup
         hideDeletePopup3();
     });
 
-    // Function to handle the click event on the "Exit" button in the delete popup
+    // Function to handle the click event on the "Exit" button in the delete popup3
     document.getElementById("exitBtn3").addEventListener("click", function() {
-        // Call the function to hide the delete popup
+        // Call the function to hide the delete popup3
         hideDeletePopup3();
     });
+
+	 // Function to show the delete popup4
+	 function showDeletePopup4() {
+        // Show the overlay
+        document.getElementById("deleteOverlay4").style.display = "block";
+        // Show the delete popup
+        document.getElementById("deletePopup4").style.display = "block";
+    }
+
+	  // Function to hide the delete popup4
+	  function hideDeletePopup4() {
+        // Hide the overlay
+        document.getElementById("deleteOverlay4").style.display = "none";
+        // Hide the delete popup
+        document.getElementById("deletePopup4").style.display = "none";
+    }
+
+    // Function to handle the click event on the "Delete" button in the delete popup4
+    document.getElementById("closedeletePop4").addEventListener("click", function() {
+        // Call the function to hide the delete popup4
+        hideDeletePopup4();
+		 // Hide popup4
+	 document.getElementById("popup4").style.display = "none";
+    });
+
+		 // Function to handle the click event on the "Cancel" button in the delete popup4
+		 document.getElementById("cancelbtn4").addEventListener("click", function() {
+        // Call the function to hide the delete popup4
+        hideDeletePopup4();
+    });
+
+    // Function to handle the click event on the "Exit" button in the delete popup4
+    document.getElementById("exitBtn4").addEventListener("click", function() {
+        // Call the function to hide the delete popup4
+        hideDeletePopup4();
+    });
+
 </script>
 
 
@@ -998,6 +1146,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 const openPostDetailsButton = document.getElementById("closedeletePop1");
 const openPostDetailsButton1 = document.getElementById("closedeletePop2");
 const openPostDetailsButton2 = document.getElementById("closedeletePop3");
+const openPostDetailsButton3 = document.getElementById("closedeletePop4");
 
 openPostDetailsButton.addEventListener("click", function() {
   // Get the parent element of the button (which is the single-explore-item)
@@ -1017,6 +1166,14 @@ openPostDetailsButton1.addEventListener("click", function() {
 openPostDetailsButton2.addEventListener("click", function() {
   // Get the parent element of the button (which is the single-explore-item)
   const exploreItem = document.getElementById("post3");
+
+  // Add the class "hidden" to the exploreItem element
+  exploreItem.classList.add("hidden");
+});
+
+openPostDetailsButton3.addEventListener("click", function() {
+  // Get the parent element of the button (which is the single-explore-item)
+  const exploreItem = document.getElementById("post4");
 
   // Add the class "hidden" to the exploreItem element
   exploreItem.classList.add("hidden");
