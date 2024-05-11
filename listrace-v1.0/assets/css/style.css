@@ -1801,7 +1801,7 @@ background-color:transparent;
   /*  padding: 20px;  /* Add some padding for better readability */
     
   /*}*/
-  #popup, #popup1, #popup2, #popup3, #popup11, #popupapply, #directapply {
+  #popup, #popup1, #popup2, #popup3, #popup11, #popup123, #popup133, #popup234,  #popup211, #popup255, #popup311, #popup321, #popup333, #popup41, #popup44, #popup46, #popup51, #popup55, #popup59, #popupapply, #directapply {
     overflow-y: auto;
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
@@ -1819,11 +1819,14 @@ background-color:transparent;
     height: 450px; /* Example height */
    
   }
-  #popup.explore-rating-price.explore-rating label,  #popup1.explore-rating-price.explore-rating label, #popup2.explore-rating-price.explore-rating label, #popup3.explore-rating-price.explore-rating label, #popup11.explore-rating-price.explore-rating label{
+  #popup.explore-rating-price.explore-rating label,  #popup1.explore-rating-price.explore-rating label, #popup2.explore-rating-price.explore-rating label, #popup3.explore-rating-price.explore-rating label, #popup11.explore-rating-price.explore-rating label, #popup123.explore-rating-price.explore-rating label, #popup133.explore-rating-price.explore-rating label, #popup211.explore-rating-price.explore-rating label,
+  #popup234.explore-rating-price.explore-rating label, #popup255.explore-rating-price.explore-rating label, #popup311.explore-rating-price.explore-rating label, #popup321.explore-rating-price.explore-rating label,
+  #popup333.explore-rating-price.explore-rating label, #popup41.explore-rating-price.explore-rating label, #popup44.explore-rating-price.explore-rating label, #popup46.explore-rating-price.explore-rating label,
+  #popup51.explore-rating-price.explore-rating label,#popup55.explore-rating-price.explore-rating label, #popup59.explore-rating-price.explore-rating label {
     color:#ecf0f0 !important;
     border-right: 1px solid #ecf0f0;
   } 
-  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a, #popup11 h2 a{
+  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a, #popup11 h2 a, #popup123 h2 a, #popup133 h2 a, #popup211 h2 a, #popup234 h2 a, #popup255 h2 a, #popup311 h2 a, #popup321 h2 a, #popup333 h2 a, #popup41 h2 a, #popup44 h2 a, #popup46 h2 a, #popup51 h2 a, #popup55 h2 a, #popup59 h2 a{
     color:rgb(5, 14, 56);
     font-size: 15px;
     font-weight: bold;
@@ -1837,11 +1840,15 @@ background-color:transparent;
     border-right: 1px solid white!important;
     color: white;
   }
-  #popup1 .explore-rating-price .explore-rating,  #popup2 .explore-rating-price .explore-rating,  #popup3 .explore-rating-price .explore-rating, #popup11 .explore-rating-price .explore-rating {
+  #popup1 .explore-rating-price .explore-rating,  #popup2 .explore-rating-price .explore-rating,  #popup3 .explore-rating-price .explore-rating, #popup11 .explore-rating-price .explore-rating, #popup123 .explore-rating-price .explore-rating, #popup133 .explore-rating-price .explore-rating, #popup211 .explore-rating-price .explore-rating,
+  #popup234 .explore-rating-price .explore-rating,#popup255 .explore-rating-price .explore-rating, #popup311 .explore-rating-price .explore-rating, #popup321 .explore-rating-price .explore-rating,
+  #popup333 .explore-rating-price .explore-rating, #popup41 .explore-rating-price .explore-rating, #popup44 .explore-rating-price .explore-rating, #popup46 .explore-rating-price .explore-rating,
+  #popup51 .explore-rating-price .explore-rating, #popup55 .explore-rating-price .explore-rating,#popup59 .explore-rating-price .explore-rating{
     background-color: rgb(5, 14, 56);
     color: white;
   }
-#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3,#popup11 #closeButton11 ,#popup #closeButton0, #closeButton00, #closepopupapply {
+#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3,#popup11 #closeButton11 , #popup123 #closeButton123, #popup133 #closeButton133, #popup211 #closeButton211 , #popup234 #closeButton234, #popup255 #closeButton255, #popup311 #closeButton311, #popup321 #closeButton321,#popup333 #closeButton333, #popup41 #closeButton41, #popup44 #closeButton44,
+#popup46 #closeButton46, #popup51 #closeButton51, #popup55 #closeButton55 , #popup59 #closeButton59 ,#popup #closeButton0, #closeButton00, #closepopupapply {
   font-size: 20px;
   padding-bottom: 4px;
 }
@@ -1849,10 +1856,28 @@ background-color:transparent;
   #popup1 div div label,  #popup2 div div i,
   #popup2 div div label,  #popup3 div div i,
   #popup3 div div label, #popup11 div div i, 
-  #popup11 div div label {
+  #popup11 div div label, #popup123 div div i,
+  #popup123 div div label, #popup133 div div i,
+  #popup133 div div label, #popup211 div div i,
+  #popup211 div div label, #popup234 div div i,
+  #popup234 div div label, #popup255 div div i, #popup255 div div label,
+  #popup311 div div i, #popup311 div div label,
+  #popup321 div div i, #popup321 div div label,
+  #popup333 div div i, #popup333 div div label,
+  #popup41 div div i, #popup41 div div label, 
+  #popup44 div div i, #popup44 div div label,
+  #popup46 div div i, #popup46 div div label,
+  #popup51 div div i, #popup51 div div label,
+  #popup55 div div i, #popup55 div div label,
+  #popup59 div div i, #popup59 div div label
+
+
+
+
+   {
     color:rgb(5, 14, 56) !important;
   }
-  #popup1 p,  #popup2 p,  #popup3 p, #popup11 p{
+  #popup1 p,  #popup2 p,  #popup3 p, #popup11 p, #popup123 p, #popup133 p, #popup211 p, #popup234 p, #popup255 p, #popup311 p, #popup321 h2 a, #popup333 p, #popup41 p, #popup44 p, #popup46 p, #popup51 p, #popup55 p, #popup59 p{
     color: white;
   }
   /* Prevent content behind popup from being interactive (Optional) */
