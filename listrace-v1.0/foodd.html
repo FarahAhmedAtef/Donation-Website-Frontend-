@@ -253,12 +253,12 @@
 
 								<div class="navbar-header" style="z-index: 1;">
 									   
-									<a class="navbar-brand" href="index.html" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+									<a class="navbar-brand" href="javascript:void(0)" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
 									<li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
 										+201061064544
 									</li>
 									<li class="header-top-contact">
-										<a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+										<a  class="accinfo" href="javascript:void(0)"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
 									</li>
 								</div>
 								
@@ -413,7 +413,7 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="footer-social" style="padding-right: 20px;">
-								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<span><i class="fa fa-phone">+201061064544</i></span>
 								<a href="#"><i class="fa fa-facebook"></i></a>	
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -870,6 +870,93 @@ for (const radioButton of governateRadioButtons) {
 </script>
 
 
+<!-- <script>
+	const governateRadioButtons1 = document.querySelectorAll('input[name="area"]');
+const areaSelectElements2 = document.querySelectorAll('input[name="hospital"]');
+
+function updateAreaOptions() {
+  const selectedGovernerate = document.querySelector('input[name="area"]:checked');
+  if (selectedGovernerate) {
+  if( selectedGovernerate.value.toLocaleLowerCase() === "5th settlement".toLocaleLowerCase()){
+   
+    for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+else if( selectedGovernerate.value === "Alexandria"){
+	for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+  }
+}
+
+// Update area options on initial load based on any selected radio button
+updateAreaOptions();
+
+// Update area options whenever a governate radio button is clicked
+for (const radioButton of governateRadioButtons) {
+  radioButton.addEventListener('click', updateAreaOptions);
+}
+</script> -->
 
 <!--explore end -->
+<script>
+	const navbarBrand = document.querySelector('.navbar-brand');
+	
+	navbarBrand.addEventListener('click', function() {
+	  const storedValue = sessionStorage.getItem('user');
+	
+	  // Handle potential absence of stored value
+	  if (storedValue === 'farah') {
+		window.location.href = "indexteacher.html"; // Default to index if no value exists
+		 // Exit the function if no value found
+	  }
+	else if (storedValue === 'carol'){
+		window.location.href = "indexregular.html"; // Default to index if no value exists
+	
+	}
+	else if (storedValue === 'basant'){
+		window.location.href = "indexdoctor.html"; // Default to index if no value exists
+	
+	}
+	 
+	});
+	</script>
+	
+	
+	<script>
+		const accinfo = document.querySelector('.accinfo');
+		
+		accinfo.addEventListener('click', function() {
+		  const storedValue = sessionStorage.getItem('user');
+		
+		  // Handle potential absence of stored value
+		  if (storedValue === 'farah') {
+			window.location.href = "donoraccount2.html"; // Default to index if no value exists
+			 // Exit the function if no value found
+		  }
+		else if (storedValue === 'carol'){
+			window.location.href = "donoraccount1.html"; // Default to index if no value exists
+		
+		}
+		else if (storedValue === 'basant'){
+			window.location.href = "donoraccount.html"; // Default to index if no value exists
+		
+		}
+		 
+		});
+		</script>
 </body>

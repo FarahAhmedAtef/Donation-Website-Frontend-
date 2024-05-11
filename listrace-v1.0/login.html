@@ -162,7 +162,7 @@
 							</div>
 							<div class="col-sm-7">
 								<div class="footer-social" style="padding-right: 20px;">
-									<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+									<span><i class="fa fa-phone">+201061064544</i></span>
 									<a href="#"><i class="fa fa-facebook"></i></a>	
 									<a href="#"><i class="fa fa-twitter"></i></a>
 									<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -191,10 +191,20 @@
     if (username === "karennn" && password === "toot24") {
         // Redirect to a specific page
         window.location.href = "admindb.html"; // Replace "dashboard.html" with the URL of the dashboard page
-    } else if ((username === "carol" && password === "cars") || (username === "basant" && password === "456") 
-        || (username === "farah" && password === "123")){
-        window.location.href = "index.html";
-    } else if ((username === "faridaelsaie" && password === "1593")){
+    } else if ((username === "carol" && password === "cars") ){
+        sessionStorage.setItem('user',"carol")
+        window.location.href = "indexregular.html";
+    } else if((username === "basant" && password === "456") ){
+        window.location.href = "indexdoctor.html";
+        sessionStorage.setItem('user',"basant")
+
+    }
+    else if((username === "farah" && password === "123")){
+        window.location.href = "indexteacher.html";
+        sessionStorage.setItem('user',"farah")
+
+    }
+    else if ((username === "faridaelsaie" && password === "1593")){
         window.location.href = "homepageorg.html";
     } else if ((username === "karennn" && password !== "toot24") || (username === "carol" && password !== "cars") || (username === "basant" && password !== "456") 
         || (username === "farah" && password !== "123") || (username === "faridaelsaie" && password !== "1593")){
