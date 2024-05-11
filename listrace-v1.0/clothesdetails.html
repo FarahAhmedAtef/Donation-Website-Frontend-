@@ -279,14 +279,14 @@
 <div id="popupapply">
 	<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 	<!-- <i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i> -->
-	<br></br>
-	<label > Please fill in this form as part of the donation procedure</label>
+	<!-- <br></br> -->
+	<label > Please fill in this form to schedule the pickup</label>
 	<div class="containerapply">
 	  <div class="date-time">
-		<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available in for the visit</h2>
+		<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available for the pickup</h2>
 		<input type="date" id="datepicker">
 		<span id="dateError" class="error-message" style="color: red;"></span>
-		<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available in for visit</h2>
+		<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available for the pickup</h2>
 		<input type="time" id="timepicker">
 		<span id="timeError" class="error-message" style="color: red;"></span>
 	  </div>
@@ -589,6 +589,8 @@ submitButton.addEventListener('click', () => {
 	dateError.textContent='';
 	timeError.textContent='';
 	placeError.textContent='';
+	window.location.href='donation confirmed.html';
+
 
   messageElement.classList.remove('hidden'); // Show the message
    popup10.style.display='none';
@@ -631,17 +633,17 @@ closeButton4.addEventListener('click', () => {
 
 });
 
-backButton4.addEventListener('click', () => {
-  popup11.style.display = 'none'; // Hide the popup
-  popup12.style.display = 'block';
-	dateError1.textContent='';
-	timeError1.textContent='';
-	placeError1.textContent='';
-	car1.checked=false;
-	bike1.checked=false;
-	truck1.checked=false;
+// backButton4.addEventListener('click', () => {
+//   popup11.style.display = 'none'; // Hide the popup
+//   popup12.style.display = 'block';
+// 	dateError1.textContent='';
+// 	timeError1.textContent='';
+// 	placeError1.textContent='';
+// 	car1.checked=false;
+// 	bike1.checked=false;
+// 	truck1.checked=false;
 
-});
+// });
 
 </script>
 
@@ -735,6 +737,7 @@ submitButton.addEventListener('click', () => {
 	dateError2.textContent='';
 	timeError2.textContent='';
 	placeError2.textContent='';
+	window.location.href='donation confirmed.html';
 
   messageElement2.classList.remove('hidden'); // Show the message
    popup20.style.display='none';
@@ -881,6 +884,7 @@ submitButton.addEventListener('click', () => {
 	dateError3.textContent='';
 	timeError3.textContent='';
 	placeError3.textContent='';
+	window.location.href='donation confirmed.html';
 
   messageElement3.classList.remove('hidden'); // Show the message
    popup30.style.display='none';
