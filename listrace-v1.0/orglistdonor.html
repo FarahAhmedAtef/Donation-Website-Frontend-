@@ -435,10 +435,7 @@ min-height: 100vh;">
             <!-- <button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button> -->
       </div>
 
-      <div id="openPopup">
-        <button style="font-size: 20px; padding-right:3px ;">Filter</button>
-        <i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
-      </div>
+     
 
       <div class="deletepops" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
         <!-- Popup content -->
@@ -754,9 +751,9 @@ width: 0px; ">
               post.classList.add('hidden'); // Add hidden class if not visible
             }
           });
-          const exploreContent = document.getElementById('reviews-content');
-        const existingMessage = exploreContent.querySelector('.no-posts-message');
-          if (allPostsHidden && !existingMessage) {
+          const exploreContent = document.querySelector('.reviews-content');
+        const existingMessage = exploreContent?.querySelector('.no-posts-message');
+          if ( !existingMessage && allPostsHidden) {
             // Display "No posts" message (optional: create a separate element)
             const noPostsElement = document.createElement('p'); // Create a paragraph element
             noPostsElement.textContent = 'No donors found based on your filters.'; // Set the text content
@@ -764,7 +761,9 @@ width: 0px; ">
             // Append the element to the appropriate container in your HTML structure
         
             // (Example: assuming you have a container with ID "filter-results")
+            if(exploreContent){
            exploreContent.appendChild(noPostsElement);
+            }
           } else if(!allPostsHidden && existingMessage) {
             // Remove any previously displayed "No posts" message (optional)
             const existingNoPostsMessage = document.querySelector('.no-posts-message');
@@ -829,12 +828,12 @@ width: 0px; ">
 		  }
 		
 	  });
-const exploreContent = document.getElementById('reviews-content');
+const exploreContent = document.querySelector('.reviews-content');
 const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No donors found based on your search.'; // Set the text content
+    noPostsElement.textContent = 'No organizations found based on your search.'; // Set the text content
     noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
     // Append the element to the appropriate container in your HTML structure
 
