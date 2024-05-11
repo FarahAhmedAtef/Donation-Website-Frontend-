@@ -276,6 +276,44 @@
 					<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
+<!-- time date selection carol-->
+<div id="popupapply">
+	<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+	<!-- <i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i> -->
+	<br></br>
+	<label > Please fill in this form as part of the donation procedure</label>
+	<div class="containerapply">
+	  <div class="date-time">
+		<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available in for the visit</h2>
+		<input type="date" id="datepicker">
+		<span id="dateError" class="error-message" style="color: red;"></span>
+		<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available in for visit</h2>
+		<input type="time" id="timepicker">
+		<span id="timeError" class="error-message" style="color: red;"></span>
+	  </div>
+	  <br>
+	  <label for="elGawyHospital">Please pick the vehicle most suitable to pick up your donation</label>
+	  <div class="checkbox-container"> 
+		<input type="radio" id="bike" name="place" value="At your clinic">
+		<label for="elGawyHospital">Motorcycle</label>
+		<br></div>
+		<div class="checkbox-container"> 
+			<input type="radio" id="car" name="place" value="At patient's place">
+			<label for="elGawyHospital">Car</label>
+			<br></div>
+			<div class="checkbox-container"> 
+				<input type="radio" id="truck" name="place" value="At your clinic">
+				<label for="elGawyHospital">Truck</label>
+				<br></div>
+			<span id="placeError" class="error-message" style="color: red;"></span>
+	  <button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
+	</div>
+  </div>
+
+
+  
+
+
 
 
 		<!--/.section-header-->
@@ -483,74 +521,498 @@
         </footer><!--/.footer-->
 
 
+		<
 
 
-<script>
-	const popup = document.getElementById('popup');
-	const openPopupBtn = document.getElementById('openPopup');
-	const closePopupBtn = document.getElementById('closePopup');
-	const closePopupBtn4 = document.getElementById('closeButton0');
 
-	openPopupBtn.addEventListener('click', function() {
-	  popup.style.display = 'block';
-	});
-  
-	closePopupBtn.addEventListener('click', function() {
-	  popup.style.display = 'none';
-	});
-	closePopupBtn4.addEventListener('click', function() {
-	  popup.style.display = 'none';
-	});
-  </script>
 
+<!-- !!!
+!!!
+!!!
+start of popup 1 
+!!!
+!!!
+!!! -->
 
 
 
 
   <script>
+	const submitButton = document.getElementById('submitButton');
+const messageElement = document.getElementById('message');
+const popup10 = document.getElementById('popupapply');
+const datePicker = document.getElementById('datepicker');
+const timePicker = document.getElementById('timepicker');
+const dateError = document.getElementById('dateError');
+const timeError = document.getElementById('timeError');
+const truck = document.getElementById('truck');
+const bike = document.getElementById('bike');
+const car = document.getElementById('car');
+const placeError = document.getElementById('placeError');
+
+submitButton.addEventListener('click', () => {
+	let hasError = false; // Flag to track if any errors are found
+
+
+  // Check if date picker has a value
+  if (datePicker.value === '') {
+    dateError.textContent = 'Please select a date.';
+    hasError = true;
+  } else {
+    dateError.textContent = ''; // Clear previous error message
+  }
+
+  // Check if time picker has a value
+  if (timePicker.value===''){
+      timeError.textContent='Please select a time.';
+	  hasError=true;
+  }
+  else {
+	timeError.textContent='';
+  }
+
+
+  if (!truck.checked && !car.checked && !bike.checked) {
+	console.log("ok");
+	placeError.textContent='Please select the suitable vehicle.';
+    hasError = true;
+  } else {
+    // Clear any previous location error
+    placeError.textContent = '';
+  }
+
+
+  if(!hasError){
+	dateError.textContent='';
+	timeError.textContent='';
+	placeError.textContent='';
+
+  messageElement.classList.remove('hidden'); // Show the message
+   popup10.style.display='none';
+  // Simulate a transition effect (using setTimeout for simplicity)
+  setTimeout(() => {
+    messageElement.classList.add('hidden'); // Hide the message after 3 seconds
+  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+}
+});
+
+</script>
+
+<script>
+	const closeButton4 = document.getElementById('closepopupapply');
+	const backButton4 = document.getElementById('backpopupapply');
+
+const popup11 = document.getElementById('popupapply');
+const popup12 = document.getElementById('popup1');
+
+const dateError1 = document.getElementById('dateError');
+const timeError1 = document.getElementById('timeError');
+
+const placeError1 = document.getElementById('placeError');
+const bike1 = document.getElementById('bike');
+const car1 = document.getElementById('car');
+const truck1 = document.getElementById('truck');
+
+
+
+
+
+closeButton4.addEventListener('click', () => {
+  popup11.style.display = 'none'; // Hide the popup
+	dateError1.textContent='';
+	timeError1.textContent='';
+	placeError1.textContent='';
+	car1.checked=false;
+	bike1.checked=false;
+	truck1.checked=false;
+
+});
+
+backButton4.addEventListener('click', () => {
+  popup11.style.display = 'none'; // Hide the popup
+  popup12.style.display = 'block';
+	dateError1.textContent='';
+	timeError1.textContent='';
+	placeError1.textContent='';
+	car1.checked=false;
+	bike1.checked=false;
+	truck1.checked=false;
+
+});
+
+</script>
+
+
+  <script>
 	const popup1 = document.getElementById('popup1');
+	const popup7= document.getElementById('popupapply');
+	const directpopup= document.getElementById('popupapply');
+
 	const openPopupBtn1 = document.getElementById('openpostdetails1');
 	const closePopupBtn1 = document.getElementById('closePopup1');
-  
+	const flag = document.querySelector('.counter');
+
 	openPopupBtn1.addEventListener('click', function() {
 	  popup1.style.display = 'block';
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
-	  popup1.style.display = 'none';
+		popup7.style.display= 'block';
+		popup1.style.display='none';
 	});
   </script>
 
+
+<!-- !!!
+!!!
+!!!
+ end of popup1 script
+!!!
+!!!
+!!! -->
+
+
+<!-- !!!
+!!!
+!!!
+start of popup 2
+!!!
+!!!
+!!! -->
+
+
+
+
 <script>
+	const submitButton2 = document.getElementById('submitButton');
+const messageElement2 = document.getElementById('message');
+const popup20 = document.getElementById('popupapply');
+const datePicker2 = document.getElementById('datepicker');
+const timePicker2 = document.getElementById('timepicker');
+const dateError2 = document.getElementById('dateError');
+const timeError2 = document.getElementById('timeError');
+const truck2 = document.getElementById('truck');
+const bike2 = document.getElementById('bike');
+const car2 = document.getElementById('car');
+const placeError2 = document.getElementById('placeError');
+
+submitButton.addEventListener('click', () => {
+	let hasError = false; // Flag to track if any errors are found
+
+
+  // Check if date picker has a value
+  if (datePicker2.value === '') {
+    dateError2.textContent = 'Please select a date.';
+    hasError = true;
+  } else {
+    dateError2.textContent = ''; // Clear previous error message
+  }
+
+  // Check if time picker has a value
+  if (timePicker2.value===''){
+      timeError2.textContent='Please select a time.';
+	  hasError=true;
+  }
+  else {
+	timeError2.textContent='';
+  }
+
+
+  if (!truck2.checked && !car2.checked && !bike2.checked) {
+	console.log("ok");
+	placeError2.textContent='Please select the suitable vehicle.';
+    hasError = true;
+  } else {
+    // Clear any previous location error
+    placeError2.textContent = '';
+  }
+
+
+  if(!hasError){
+	dateError2.textContent='';
+	timeError2.textContent='';
+	placeError2.textContent='';
+
+  messageElement2.classList.remove('hidden'); // Show the message
+   popup20.style.display='none';
+  // Simulate a transition effect (using setTimeout for simplicity)
+  setTimeout(() => {
+    messageElement2.classList.add('hidden'); // Hide the message after 3 seconds
+  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+}
+});
+
+</script>
+
+<script>
+	const closeButton20 = document.getElementById('closepopupapply');
+	const backButton20= document.getElementById('backpopupapply');
+
+const popup21 = document.getElementById('popupapply');
+const popup22 = document.getElementById('popup2');
+
+const dateError20 = document.getElementById('dateError');
+const timeError20 = document.getElementById('timeError');
+
+const placeError20 = document.getElementById('placeError');
+const bike20 = document.getElementById('bike');
+const car20 = document.getElementById('car');
+const truck20 = document.getElementById('truck');
+
+
+
+
+
+closeButton4.addEventListener('click', () => {
+  popup21.style.display = 'none'; // Hide the popup
+	dateError20.textContent='';
+	timeError20.textContent='';
+	placeError20.textContent='';
+	car20.checked=false;
+	bike20.checked=false;
+	truck20.checked=false;
+
+});
+
+backButton20.addEventListener('click', () => {
+  popup21.style.display = 'none'; // Hide the popup
+  popup22.style.display = 'block';
+	dateError20.textContent='';
+	timeError20.textContent='';
+	placeError20.textContent='';
+	car20.checked=false;
+	bike20.checked=false;
+	truck20.checked=false;
+
+});
+
+</script>
+
+
+  <script>
+	const popup23 = document.getElementById('popup2');
+	const popup24= document.getElementById('popupapply');
+	const directpopup2= document.getElementById('popupapply');
+
+	const openPopupBtn20= document.getElementById('openpostdetails2');
+	const closePopupBtn20 = document.getElementById('closePopup2');
+	const flag2 = document.querySelector('.counter');
+
+	openPopupBtn20.addEventListener('click', function() {
+	  popup23.style.display = 'block';
+	});
+  
+	closePopupBtn20.addEventListener('click', function() {
+		popup24.style.display= 'block';
+		popup23.style.display='none';
+	});
+  </script>
+
+
+<!-- !!!
+!!!
+!!!
+ end of popup2 script
+!!!
+!!!
+!!! -->
+
+
+<!-- !!!
+!!!
+!!!
+start of popup 3
+!!!
+!!!
+!!! -->
+
+
+
+
+<script>
+	const submitButton3 = document.getElementById('submitButton');
+const messageElement3 = document.getElementById('message');
+const popup30 = document.getElementById('popupapply');
+const datePicker3 = document.getElementById('datepicker');
+const timePicker3 = document.getElementById('timepicker');
+const dateError3 = document.getElementById('dateError');
+const timeError3 = document.getElementById('timeError');
+const truck3 = document.getElementById('truck');
+const bike3 = document.getElementById('bike');
+const car3 = document.getElementById('car');
+const placeError3 = document.getElementById('placeError');
+
+submitButton.addEventListener('click', () => {
+	let hasError = false; // Flag to track if any errors are found
+
+
+  // Check if date picker has a value
+  if (datePicker3.value === '') {
+    dateError3.textContent = 'Please select a date.';
+    hasError = true;
+  } else {
+    dateError3.textContent = ''; // Clear previous error message
+  }
+
+  // Check if time picker has a value
+  if (timePicker3.value===''){
+      timeError3.textContent='Please select a time.';
+	  hasError=true;
+  }
+  else {
+	timeError3.textContent='';
+  }
+
+
+  if (!truck3.checked && !car3.checked && !bike3.checked) {
+	console.log("ok");
+	placeError3.textContent='Please select the suitable vehicle.';
+    hasError = true;
+  } else {
+    // Clear any previous location error
+    placeError3.textContent = '';
+  }
+
+
+  if(!hasError){
+	dateError3.textContent='';
+	timeError3.textContent='';
+	placeError3.textContent='';
+
+  messageElement3.classList.remove('hidden'); // Show the message
+   popup30.style.display='none';
+  // Simulate a transition effect (using setTimeout for simplicity)
+  setTimeout(() => {
+    messageElement3.classList.add('hidden'); // Hide the message after 3 seconds
+  }, 3000); // Specify the delay in milliseconds (3000ms = 3 seconds)
+}
+});
+
+</script>
+
+<script>
+	const closeButton30 = document.getElementById('closepopupapply');
+	const backButton30= document.getElementById('backpopupapply');
+
+const popup31 = document.getElementById('popupapply');
+const popup32 = document.getElementById('popup3');
+
+const dateError30 = document.getElementById('dateError');
+const timeError30 = document.getElementById('timeError');
+
+const placeError30 = document.getElementById('placeError');
+const bike30 = document.getElementById('bike');
+const car30 = document.getElementById('car');
+const truck30 = document.getElementById('truck');
+
+
+
+
+
+closeButton30.addEventListener('click', () => {
+  popup31.style.display = 'none'; // Hide the popup
+	dateError30.textContent='';
+	timeError30.textContent='';
+	placeError30.textContent='';
+	car30.checked=false;
+	bike30.checked=false;
+	truck30.checked=false;
+
+});
+
+backButton30.addEventListener('click', () => {
+  popup31.style.display = 'none'; // Hide the popup
+  popup32.style.display = 'block';
+	dateError30.textContent='';
+	timeError30.textContent='';
+	placeError30.textContent='';
+	car30.checked=false;
+	bike30.checked=false;
+	truck30.checked=false;
+
+});
+
+</script>
+
+
+  <script>
+	const popup33 = document.getElementById('popup3');
+	const popup34= document.getElementById('popupapply');
+	const directpopup3= document.getElementById('popupapply');
+
+	const openPopupBtn30= document.getElementById('openpostdetails3');
+	const closePopupBtn30 = document.getElementById('closePopup3');
+	const flag3 = document.querySelector('.counter');
+
+	openPopupBtn30.addEventListener('click', function() {
+	  popup33.style.display = 'block';
+	});
+  
+	closePopupBtn30.addEventListener('click', function() {
+		popup34.style.display= 'block';
+		popup33.style.display='none';
+	});
+  </script>
+
+
+<!-- !!!
+!!!
+!!!
+ end of popup3 script
+!!!
+!!!
+!!! -->
+
+
+ <script>
 	const popup3 = document.getElementById('popup2');
+	const popup8= document.getElementById('popupapply');
+
 	const openPopupBtn2 = document.getElementById('openpostdetails2');
 	const closePopupBtn2 = document.getElementById('closePopup2');
-  
+
 	openPopupBtn2.addEventListener('click', function() {
 	  popup3.style.display = 'block';
 	});
+	
   
 	closePopupBtn2.addEventListener('click', function() {
-	  popup3.style.display = 'none';
+		if(flag.textContent==="0"){
+			flag.textContent="1";
+		popup3.style.display = 'none';
+	  popup8.style.display = 'block';
+		}
+		else{
+			popup3.style.display = 'none';
+	  directpopup.style.display = 'block';
+		}
 	});
-  </script>
+  </script> 
 
 
 <script>
 	const popup5 = document.getElementById('popup3');
+	const popup9= document.getElementById('popupapply3');
 	const openPopupBtn3 = document.getElementById('openpostdetails3');
 	const closePopupBtn3 = document.getElementById('closePopup3');
   
 	openPopupBtn3.addEventListener('click', function() {
 	  popup5.style.display = 'block';
 	});
+	
   
 	closePopupBtn3.addEventListener('click', function() {
-	  popup5.style.display = 'none';
+		if(flag.textContent==="0"){
+			flag.textContent="1";
+		popup5.style.display = 'none';
+	  popup9.style.display = 'block';
+		}
+		else{
+			popup5.style.display = 'none';
+	  directpopup.style.display = 'block';
+		}
 	});
   </script>
-
-
 
   <script>
   const clearAllButton = document.getElementById('clearall');
@@ -562,7 +1024,7 @@
 
 
 <script>
-	const applyButton = document.getElementById('closePopup');
+const applyButton = document.getElementById('closePopup');
 const checkboxForm = document.getElementById('form1'); // Assuming ID for checkbox form
 const postElements = document.querySelectorAll('.single-explore-item');
 
@@ -821,7 +1283,7 @@ closeButton3.addEventListener('click', () => {
 	});
 	
 	
-	</script> 
+	</script>  
 
 <!--explore end -->
 </body>
