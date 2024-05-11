@@ -240,30 +240,49 @@
 			  </div>
               <div id="popup11">
 				<i id="closeButton11" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-					<h2><a href="#">In Need of Clothes Donation</a></h2>
-					<p class="explore-rating-price">
-						<span class="explore-rating">5.0</span>
-						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">14-17 years old</label> 
-						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Female
-							
-						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter</label>
-					</p>
-					<div>
-						<div>
-						<i class="fa-solid fa-user" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">Farah Ahmed</label>
-						</div>
-						<div>
-						<i class="fa-solid fa-droplet" style="margin-right:5px; color: black;"></i>
-						<label style="margin-right:5px; color: black;">D</label>
-						</div>
-					</div>
-					<div>
-						<p>Description: In need of 3 bags of blood type D </p>
-					</div>
-					<div id="map" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+                <h2><a href="#">In Need of Clothes Donation</a></h2>
+                <p class="explore-rating-price">
+                    <span class="explore-rating">5.0</span>
+                    <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">14-17 years old</label> 
+                    <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                        Female
+                        
+                    </label>
+                     <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter </label>
+                </p>
+                <div>
+                    
+                    
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-shirt" style="margin-right:5px; color: black;"></i>
+                        <label style="margin-right:5px; color: black;">T-shirts</label>
+                        </div>
+                        <div>
+                        <i class="fa-brands fa-cotton-bureau" style="margin-right:5px; color: black;"></i>
+                        <label style="margin-right:5px; color: black;">Fleece, Cotton, Wool</label>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-up-1-9" style="margin-right:5px; color: black;"></i>
+                            <label style="margin-right:5px; color: black;">6 T-shirts</label>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
+                                <label style="margin-right:5px; color: black;">14-17 years old</label>
+                                </div>
+                            <div>
+                                <i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
+                                <label style="margin-right:5px; color: black;">Winter</label>
+                                </div>
+
+                    </div>
+                <div class="counter-container">
+                    <button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+                    <div class="counter1" style="border: 1px black;">0</div>
+                    <button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+                  </div>
+             <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
 					
 
 					<button id="closePopup11" style=" margin: 0 auto; display: block;">Donate</button>
@@ -994,7 +1013,18 @@ width: 0px; ">
 
 
 
+<script>
+	const popup1 = document.getElementById('popup1');
 
+
+	const openPopupBtn1 = document.getElementById('openpostdetails1');
+	
+	openPopupBtn1.addEventListener('click', function() {
+	  popup1.style.display = 'block';
+	});
+  
+	
+  </script>
 
   <script>
 	const popup11 = document.getElementById('popup11');
@@ -1201,7 +1231,14 @@ src=
 
 
 
+<script>
+	const closeButton = document.getElementById('closeButton');
+const popup2 = document.getElementById('popup1');
 
+closeButton.addEventListener('click', () => {
+  popup2.style.display = 'none'; // Hide the popup
+});
+</script>
 
 <script>
 	const closeButton11 = document.getElementById('closeButton11');
