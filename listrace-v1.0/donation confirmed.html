@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
+    <script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
 
     <!--font-family-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -55,26 +56,33 @@
 
 </head>
 <body>
-<!--subscription strat -->
-<section id="contact"  class="subscription">
-    <button onclick="openPopup()">Open Popup</button>
-    <div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ffffff; padding: 20px; border: 1px solid #000000; z-index: 9999;">
-        <!-- Popup content -->
-        <h2>This is a Popup</h2>
-        <p>Hello, this is a simple popup!</p>
-        <button onclick="closePopup()">Close Popup</button>
-    </div>
+
+        
+                <div class="postpopup">
+                    <!-- <form action="#"> -->
+                        
+                        
+                            <div class="notificationCard">
+                                <p class="notificationHeading">Your Pickup has been scheduled!</p>
+                                <i class="fa-regular fa-circle-check"></i>
+                                <!-- <p class="notificationPara">Allow push notifications so you will get latest updates</p> -->
+                                <div class="buttonContainer">
+                                    <a href="index.html" class="postback">Back to Home Page</a>
+                                  <!-- <button class="NotnowBtn">Now now</button> -->
+                                </div>
+                              </div>
+                           
+
+                           
+                
+             
+                    
+            </div>	
+     
+
 </section><!--/subscription-->	
 <!--subscription end -->
-<script>
-    function openPopup() {
-        var popup = document.getElementById("popup");
-        popup.style.display = "block";
-    }
 
-    function closePopup() {
-        var popup = document.getElementById("popup");
-        popup.style.display = "none";
-    }
-</script>
+
+
 </body>
