@@ -64,9 +64,9 @@
                     </ul>
                 </div>
             </li>
-            <li style="transform:translate(570px,0px);">
-                <span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-                  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
+            <li style="transform:translate(450px,0px);">
+                <span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+                  Yalla  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Aawen</span>
                 </span>
               </li>
               
@@ -77,13 +77,13 @@
 
                             <div class="navbar-header" style="z-index: 1;">
                                    
-                                <a class="navbar-brand" href="#" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+                                <!-- <a class="navbar-brand" href="#" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a> -->
                                 <li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
                                     +201061064544
                                 </li>
-                                <li class="header-top-contact">
+                                <!-- <li class="header-top-contact">
                                     <a href="#"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
-                                </li>
+                                </li> -->
                             </div>
                             
                         </nav>
@@ -109,9 +109,9 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <form action="#">
-                        <input type="email" id = "username" class="subscription-input-form" placeholder="enter your username">
+                        <input type="email" id = "username" class="subscription-input-form" placeholder="enter your username" style="border: 2px solid rgb(30, 102, 105); border-radius: 5px;">
                         <br/>
-                        <input type="password" id = "password" class="subscription-input-form" placeholder="enter your password">
+                        <input type="password" id = "password" class="subscription-input-form" placeholder="enter your password" style="border: 2px solid rgb(30, 102, 105); border-radius: 5px;">
                         <br/>
                        
                     </form>
@@ -148,10 +148,10 @@
    
 
 </section><!--/subscription-->	
-<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
+<footer id="footer"  class="footer" style="padding-right: 0px; position: relative;
 			bottom: 0;
 			width: 0px; ">
-				<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
+				<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
 					
 					<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
 						<div class="row">
@@ -162,7 +162,7 @@
 							</div>
 							<div class="col-sm-7">
 								<div class="footer-social" style="padding-right: 20px;">
-									<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+									<span><i class="fa fa-phone">+201061064544</i></span>
 									<a href="#"><i class="fa fa-facebook"></i></a>	
 									<a href="#"><i class="fa fa-twitter"></i></a>
 									<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -191,9 +191,26 @@
     if (username === "karennn" && password === "toot24") {
         // Redirect to a specific page
         window.location.href = "admindb.html"; // Replace "dashboard.html" with the URL of the dashboard page
-    } else if (username === "karennn" && password !== "toot24"){
+    } else if ((username === "carol" && password === "cars") ){
+        sessionStorage.setItem('user',"carol")
+        window.location.href = "indexregular.html";
+    } else if((username === "basant" && password === "456") ){
+        window.location.href = "indexdoctor.html";
+        sessionStorage.setItem('user',"basant")
+
+    }
+    else if((username === "farah" && password === "123")){
+        window.location.href = "indexteacher.html";
+        sessionStorage.setItem('user',"farah")
+
+    }
+    else if ((username === "faridaelsaie" && password === "1593")){
+        window.location.href = "homepageorg.html";
+    } else if ((username === "karennn" && password !== "toot24") || (username === "carol" && password !== "cars") || (username === "basant" && password !== "456") 
+        || (username === "farah" && password !== "123") || (username === "faridaelsaie" && password !== "1593")){
         alert("Invalid password. Please try again.");
-    } else if (username !== "karennn" && password === "toot24"){
+    } else if ((username !== "karennn" && password === "toot24") || (username !== "carol" && password === "cars") || (username !== "basant" && password === "456") 
+        || (username !== "farah" && password === "123") || (username !== "faridaelsaie" && password === "1593")){
         alert("Invalid username. Please try again.");
     } else{
         alert("Invalid username & password. Please try again");

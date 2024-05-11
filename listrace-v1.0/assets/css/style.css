@@ -52,7 +52,7 @@ body{
 a,a:hover,a:active,a:focus {
 	display:inline-block;
 	text-decoration:none;
-	color: #343a3f;
+	color: rgb(30, 102, 105);
 	font-size:16px;
 	padding:0;
     font-weight: 500;
@@ -67,7 +67,7 @@ a,a:hover,a:active,a:focus {
 }
 h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
-	color:#020202;
+	color:rgb(22, 88, 90);
     font-size: 18px;
     font-weight: 500;
     text-transform: capitalize;
@@ -195,9 +195,13 @@ html,body{height: 100%;}
 /*-------------------------------------
         3. Top-area
 --------------------------------------*/
+.top-area{
+  box-shadow: 0 5px 5px #b3b6b6; 
+}
 nav.navbar.bootsnav {
     background-color:#ecf0f0;
     border-bottom: transparent;
+    
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
 
@@ -218,8 +222,8 @@ nav.navbar.bootsnav {
 /*.nav li*/
 nav.navbar.bootsnav ul.nav > li > a {
     color: #859098;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: bold;
     text-transform:uppercase;
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
@@ -228,8 +232,8 @@ nav.navbar.bootsnav ul.nav > li > a {
     transition: 0.3s linear;
 }
 nav.navbar.bootsnav ul.nav > li > a {padding:34px 21px;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color: #ff545a;}
-nav.navbar.bootsnav ul.nav > li.active>a {color: #ff545a;}
+nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color:  rgb(30, 102, 105);}
+nav.navbar.bootsnav ul.nav > li.active>a {color:  rgb(30, 102, 105);}
 
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
     content: "";
@@ -279,7 +283,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
   background-position: center;  /* Positions both images centrally */
   background-size: cover;
   text-align: center;
-  height: 1000px;
+  height: 800px;
   z-index: 1;
 }
 
@@ -568,6 +572,12 @@ ul{
 .single-how-works h2 a {
     font-size:  18px;
     margin: 35px 0 20px;
+}
+.singlehoe-works p{
+  color:rgb(30, 102, 105) !important;
+}
+.single-how-works p:hover{
+ color:white
 }
 .single-how-works h2 a span {text-transform:initial;}
 .single-how-works p {margin-bottom: 25px;text-transform: initial;}
@@ -1038,6 +1048,7 @@ margin: 10px;
     margin:0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+    
 
 }
 
@@ -1373,21 +1384,11 @@ background-color:transparent;
     display: block;
   }
 
-      /*clothes post*/ 
+      /*home page org farida*/ 
+      .nav.navbar-nav.navbar-right {
+        text-align: center;
+      }
 
-      /* .form {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-        height: 200px;
-        width:auto;
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
-      } */
   
       
 .form {
