@@ -167,6 +167,10 @@
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Winter</label>
 									</div>
+
+									<div>
+										<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+									</div>	
 	
 						</div>
 					<div class="counter-container">
@@ -217,6 +221,10 @@
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Summer</label>
 									</div>
+
+									<div>
+										<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+									</div>	
 	
 						</div>
 						<div class="counter-container">
@@ -263,6 +271,10 @@
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Summer</label>
 									</div>
+
+									<div>
+										<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+									</div>	
 	
 						</div>
 						<div class="counter-container">
@@ -283,10 +295,10 @@
 	<label > Please fill in this form as part of the donation procedure</label>
 	<div class="containerapply">
 	  <div class="date-time">
-		<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available in for the visit</h2>
+		<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available for the pickup</h2>
 		<input type="date" id="datepicker">
 		<span id="dateError" class="error-message" style="color: red;"></span>
-		<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available in for visit</h2>
+		<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available for the pickup</h2>
 		<input type="time" id="timepicker">
 		<span id="timeError" class="error-message" style="color: red;"></span>
 	  </div>
@@ -589,6 +601,8 @@ submitButton.addEventListener('click', () => {
 	dateError.textContent='';
 	timeError.textContent='';
 	placeError.textContent='';
+	window.location.href='donation confirmed.html';
+
 
   messageElement.classList.remove('hidden'); // Show the message
    popup10.style.display='none';
@@ -651,7 +665,7 @@ backButton4.addEventListener('click', () => {
 	bike1.checked=false;
 	truck1.checked=false;
 
-});
+// });
 
 </script>
 
@@ -746,6 +760,7 @@ submitButton.addEventListener('click', () => {
 	dateError2.textContent='';
 	timeError2.textContent='';
 	placeError2.textContent='';
+	window.location.href='donation confirmed.html';
 
   messageElement2.classList.remove('hidden'); // Show the message
    popup20.style.display='none';
@@ -882,6 +897,7 @@ submitButton.addEventListener('click', () => {
 	dateError3.textContent='';
 	timeError3.textContent='';
 	placeError3.textContent='';
+	window.location.href='donation confirmed.html';
 
   messageElement3.classList.remove('hidden'); // Show the message
    popup30.style.display='none';
