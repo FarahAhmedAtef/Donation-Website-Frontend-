@@ -167,11 +167,15 @@
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Winter</label>
 									</div>
+
+									<div>
+										<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+									</div>	
 	
 						</div>
 					<div class="counter-container">
 						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-						<div class="counter1" style="border: 1px black;">0</div>
+						<div class="counter1" style="border: 1px black;">1</div>
 						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 					  </div>
                  <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
@@ -217,11 +221,15 @@
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Summer</label>
 									</div>
+
+									<div>
+										<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+									</div>	
 	
 						</div>
 						<div class="counter-container">
 							<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-							<div class="counter2" style="border: 1px black;">0</div>
+							<div class="counter2" style="border: 1px black;">1</div>
 							<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 						  </div>
 					 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
@@ -263,11 +271,15 @@
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
 									<label style="margin-right:5px; color: black;">Summer</label>
 									</div>
+
+									<div>
+										<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+									</div>	
 	
 						</div>
 						<div class="counter-container">
 							<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-							<div class="counter3" style="border: 1px black;">0</div>
+							<div class="counter3" style="border: 1px black;">1</div>
 							<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
 						  </div>
 					 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
@@ -278,9 +290,9 @@
 <!-- time date selection carol-->
 <div id="popupapply">
 	<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
-	<!-- <i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i> -->
-	<!-- <br></br> -->
-	<label > Please fill in this form to schedule the pickup</label>
+	<i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+	<br></br>
+	<label > Please fill in this form as part of the donation procedure</label>
 	<div class="containerapply">
 	  <div class="date-time">
 		<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available for the pickup</h2>
@@ -633,17 +645,27 @@ closeButton4.addEventListener('click', () => {
 
 });
 
-// backButton4.addEventListener('click', () => {
-//   popup11.style.display = 'none'; // Hide the popup
-//   popup12.style.display = 'block';
-// 	dateError1.textContent='';
-// 	timeError1.textContent='';
-// 	placeError1.textContent='';
-// 	car1.checked=false;
-// 	bike1.checked=false;
-// 	truck1.checked=false;
+backButton4.addEventListener('click', () => {
+	let temp= sessionStorage.getItem('pop');
+	if(temp==="1"){
+        popup12.style.display = 'block';
+	}
+	else if(temp==="2"){
+       popup22.style.display='block';
+	}
+	else{
+		popup32.style.display='block';
 
-// });
+	}
+  popup11.style.display = 'none'; // Hide the popup
+	dateError1.textContent='';
+	timeError1.textContent='';
+	placeError1.textContent='';
+	car1.checked=false;
+	bike1.checked=false;
+	truck1.checked=false;
+
+ });
 
 </script>
 
@@ -662,6 +684,7 @@ closeButton4.addEventListener('click', () => {
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
+		sessionStorage.setItem('pop',"1");
 		popup7.style.display= 'block';
 		popup1.style.display='none';
 	});
@@ -752,7 +775,6 @@ submitButton.addEventListener('click', () => {
 
 <script>
 	const closeButton20 = document.getElementById('closepopupapply');
-	const backButton20= document.getElementById('backpopupapply');
 
 const popup21 = document.getElementById('popupapply');
 const popup22 = document.getElementById('popup2');
@@ -780,17 +802,7 @@ closeButton4.addEventListener('click', () => {
 
 });
 
-backButton20.addEventListener('click', () => {
-  popup21.style.display = 'none'; // Hide the popup
-  popup22.style.display = 'block';
-	dateError20.textContent='';
-	timeError20.textContent='';
-	placeError20.textContent='';
-	car20.checked=false;
-	bike20.checked=false;
-	truck20.checked=false;
 
-});
 
 </script>
 
@@ -809,6 +821,7 @@ backButton20.addEventListener('click', () => {
 	});
   
 	closePopupBtn20.addEventListener('click', function() {
+		sessionStorage.setItem('pop',"2");
 		popup24.style.display= 'block';
 		popup23.style.display='none';
 	});
@@ -899,7 +912,6 @@ submitButton.addEventListener('click', () => {
 
 <script>
 	const closeButton30 = document.getElementById('closepopupapply');
-	const backButton30= document.getElementById('backpopupapply');
 
 const popup31 = document.getElementById('popupapply');
 const popup32 = document.getElementById('popup3');
@@ -927,17 +939,7 @@ closeButton30.addEventListener('click', () => {
 
 });
 
-backButton30.addEventListener('click', () => {
-  popup31.style.display = 'none'; // Hide the popup
-  popup32.style.display = 'block';
-	dateError30.textContent='';
-	timeError30.textContent='';
-	placeError30.textContent='';
-	car30.checked=false;
-	bike30.checked=false;
-	truck30.checked=false;
 
-});
 
 </script>
 
@@ -956,6 +958,7 @@ backButton30.addEventListener('click', () => {
 	});
   
 	closePopupBtn30.addEventListener('click', function() {
+		sessionStorage.setItem('pop',"3");
 		popup34.style.display= 'block';
 		popup33.style.display='none';
 	});
@@ -984,15 +987,10 @@ backButton30.addEventListener('click', () => {
 	
   
 	closePopupBtn2.addEventListener('click', function() {
-		if(flag.textContent==="0"){
-			flag.textContent="1";
-		popup3.style.display = 'none';
-	  popup8.style.display = 'block';
-		}
-		else{
+		
 			popup3.style.display = 'none';
 	  directpopup.style.display = 'block';
-		}
+		
 	});
   </script> 
 
@@ -1009,15 +1007,10 @@ backButton30.addEventListener('click', () => {
 	
   
 	closePopupBtn3.addEventListener('click', function() {
-		if(flag.textContent==="0"){
-			flag.textContent="1";
-		popup5.style.display = 'none';
-	  popup9.style.display = 'block';
-		}
-		else{
+		
 			popup5.style.display = 'none';
 	  directpopup.style.display = 'block';
-		}
+		
 	});
   </script>
 
@@ -1323,7 +1316,71 @@ else if (storedValue === 'basant'){
 	 
 	});
 	</script>
+     <script>
+		const searchInput = document.querySelector('.single-welcome-hero-form input');
+		const exploreItems = document.querySelectorAll('.single-explore-item');
+		
+		// Add click event listener to the search div
+		const searchDiv = document.querySelector('.welcome-hero-serch');
+		
+	
+		searchDiv.addEventListener('click', () => {
+			const searchText = searchInput.value.trim();
+			console.log(searchText); // Remove leading/trailing whitespaces
+			if(searchText === ''){
+				console.log(searchText); // Remove leading/trailing whitespaces
+	
+				const existingNoPostsMessage = document.querySelector('.no-posts-message');
+		if (existingNoPostsMessage) {
+		  existingNoPostsMessage.remove();
+		}
+			exploreItems.forEach(exploreItem=>{
+				exploreItem.classList.remove('hidden'); // Show if hospital matches search
+			});
+			return;
+		}
+		let allPostsHidden=true;
+		  exploreItems.forEach(exploreItem => {
+			const hospitalLabel = exploreItem.querySelector('.hospital');
+			const areaLabel = exploreItem.querySelector('.area');
 
+			const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
+			const areaText = areaLabel.textContent.trim(); // Remove leading/trailing whitespaces
+
+		
+			
+			  
+		
+			  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase() || searchText.toLocaleLowerCase() === areaText.toLocaleLowerCase()) {
+				allPostsHidden=false;
+				exploreItem.classList.remove('hidden'); // Show if hospital matches search
+			  }
+			  else{
+				exploreItem.classList.add('hidden'); // Show if hospital matches search
+	
+			  }
+			
+		  });
+	const exploreContent = document.getElementById('explore-content');
+	const existingMessage = exploreContent.querySelector('.no-posts-message');
+	  if (allPostsHidden && !existingMessage) {
+		// Display "No posts" message (optional: create a separate element)
+		const noPostsElement = document.createElement('p'); // Create a paragraph element
+		noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
+		noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
+		// Append the element to the appropriate container in your HTML structure
+	
+		// (Example: assuming you have a container with ID "filter-results")
+	   exploreContent.appendChild(noPostsElement);
+	  } else if(!allPostsHidden && existingMessage) {
+		// Remove any previously displayed "No posts" message (optional)
+		const existingNoPostsMessage = document.querySelector('.no-posts-message');
+		if (existingNoPostsMessage) {
+		  existingNoPostsMessage.remove();
+		}
+	  }
+		});
+		</script>
 
 <!--explore end -->
 </body>
