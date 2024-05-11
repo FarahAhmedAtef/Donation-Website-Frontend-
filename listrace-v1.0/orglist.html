@@ -527,12 +527,35 @@
         <i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
       </div> -->
 
-      <div class="deletepops" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+      <!-- <div class="postpopup">
+                <div class="notificationCard">
+                    <p class="notificationHeading">Your Account Was Sucessfully Deleted!</p>
+                    <i class="fa-solid fa-trash-can"></i>
+
+                    <div class="buttonContainer1">
+                    <form id="redirectForm" action="register.html" method="get">
+                        <button class="appsLand-btn1 subscribe-btn" type="submit">Create new Account</button>
+                    </form>
+                    <form id="redirectForm" action="#" method="get">
+                        <button class="appsLand-btn subscribe-btn" type="submit">continue as a guest</button>
+                    </form>
+                    </div>
+                </div>
+        </div>	 -->
+
+        <!-- <div class="deletepops" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+            <h2 style="text-transform:none;">Account Deleted Successfully</h2>
+            <br><br>
+            <h4><button onclick="closePopup('confirmb')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
+        </div> -->
+
+
+    <div class="postpopup" id="confirmp" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
         <!-- Popup content -->
         <h2 style="text-transform:none;">Account Deleted Successfully</h2>
         <br><br>
         <!-- <p>Hello, this is a simple popup!</p> -->
-        <h4><button onclick="closePopup('confirmb')" id="confirmb" style="border:2px solid rgb(5, 14, 56); border-radius:4px; width:auto; padding:5px;">OK</button></h4>
+        <h4><button class="appsLand-btn subscribe-btn" onclick="closePopup('confirmb')" id="confirmb">OK</button></h4>
     </div>
 
     <div class="deletepops" id="delpopup1" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
