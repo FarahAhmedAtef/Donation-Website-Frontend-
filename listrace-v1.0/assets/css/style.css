@@ -218,8 +218,8 @@ nav.navbar.bootsnav {
 /*.nav li*/
 nav.navbar.bootsnav ul.nav > li > a {
     color: #859098;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: bold;
     text-transform:uppercase;
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
@@ -228,8 +228,8 @@ nav.navbar.bootsnav ul.nav > li > a {
     transition: 0.3s linear;
 }
 nav.navbar.bootsnav ul.nav > li > a {padding:34px 21px;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color: #ff545a;}
-nav.navbar.bootsnav ul.nav > li.active>a {color: #ff545a;}
+nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus{color:  rgb(30, 102, 105);}
+nav.navbar.bootsnav ul.nav > li.active>a {color:  rgb(30, 102, 105);}
 
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
     content: "";
@@ -279,7 +279,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
   background-position: center;  /* Positions both images centrally */
   background-size: cover;
   text-align: center;
-  height: 1000px;
+  height: 800px;
   z-index: 1;
 }
 

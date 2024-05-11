@@ -168,9 +168,17 @@ min-height: 100vh;">
             alert("New password saved.");
             if (oldpass === "toot24"){
                 window.location.href = "admindb.html"; 
-            } else if (oldpass === "cars" || oldpass === "123" || oldpass === "456"){
-                window.location.href = "index.html";
-            } else if (oldpass === "1593"){
+            } else if (oldpass === "cars"  ){
+                window.location.href = "indexregular.html";
+            } else if(oldpass === "123"){
+                window.location.href = "indexteacher.html";
+
+            }
+            else if ( oldpass === "456"){
+                window.location.href = "indexdoctor.html";
+
+            }
+            else if (oldpass === "1593"){
                 window.location.href = "homepageorg.html";
             }
         }
