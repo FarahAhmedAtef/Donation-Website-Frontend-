@@ -4,8 +4,8 @@
 <head>
 
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
+	<!-- <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine"> -->
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,8 +59,7 @@
 
 </head>
 <body style="background-color: #ecf0f0; ">
-	<div id="left-curtain"></div>
-	<div id="right-curtain"></div>
+	
 		  
 <!--explore start -->
 <!-- <section id="explore" class="explore">
@@ -167,11 +166,19 @@
 						<label style="margin-right:5px; color: black;">15 basketballs </label>
 						</div>
 
-				</div>
-				<!-- <div>
-					<p></p>
-				</div> -->
+										
 				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\basketball.jpeg" alt="Imagedescription" style="padding: 10px;">
+				<div>
+					<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+				</div>	
+				<div class="counter-container">
+						<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+						<div class="counter1" style="border: 1px black;">0</div>
+						<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+					  </div>
+                 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
+				</div>
+
 					<button id="closePopup1" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
@@ -196,11 +203,20 @@
 						<i class="fa-solid fa-chess-board" style="margin-right:5px; color: black;"></i>
 						<label style="margin-right:5px; color: black;">5 unos</label>
 						</div>
-				</div>
-				<!-- <div>
-					<p>5 unos</p>
-				</div> -->
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\uno.jpeg" alt="Imagedescription" style="padding: 10px;">
+						<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\uno.jpeg" alt="Imagedescription" style="padding: 10px;">
+
+						<div>
+							<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+						</div>	
+						<div class="counter-container">
+								<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+								<div class="counter2" style="border: 1px black;">0</div>
+								<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+							  </div>
+						 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
+						</div>
+		
+				
 	
 						<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
@@ -226,9 +242,19 @@
 						<i class="fa-solid fa-dog" style="margin-right:5px; color: black;"></i>
 						<label style="margin-right:5px; color: black;">12 Stuffed Toys</label>
 						</div>
+						<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\stitch.jpeg" alt="Imagedescription" style="padding: 10px;">
+
+						<div>
+							<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+						</div>	
+						<div class="counter-container">
+								<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+								<div class="counter3" style="border: 1px black;">0</div>
+								<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+							  </div>
+						 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
 				</div>
 				
-				<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\stitch.jpeg" alt="Imagedescription" style="padding: 10px;">
 	
 						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
@@ -436,6 +462,92 @@
 			</div><!--/.scroll-Top-->
 			
         </footer><!--/.footer-->
+
+
+		<script>
+			const counterElement1 = document.querySelector('.counter1');
+			const maxlimit1 = document.getElementById('maxlimit1');
+		
+		let count1 = 0; // Initial counter value
+		
+		const incrementButton1 = document.getElementById('increment1');
+		const decrementButton1 = document.getElementById('decrement1');
+		
+		incrementButton1.addEventListener('click', () => {
+		if(count1<15)	{
+		  count1++;
+		  counterElement1.textContent = count1;
+		}
+		else{
+			maxlimit1.style.display='block';
+		}
+		});
+		
+		decrementButton1.addEventListener('click', () => {
+		  if (count1 > 0) {
+			count1--;
+		  }
+		  counterElement1.textContent = count1;
+		});
+		
+		</script>
+		
+		<script>
+			const counterElement2 = document.querySelector('.counter2');
+			const maxlimit2 = document.getElementById('maxlimit2');
+		
+		let count2 = 0; // Initial counter value
+		
+		const incrementButton2 = document.getElementById('increment2');
+		const decrementButton2 = document.getElementById('decrement2');
+		
+		incrementButton2.addEventListener('click', () => {
+		if(count2<5)	{
+		  count2++;
+		  counterElement2.textContent = count2;
+		}
+		else{
+			maxlimit2.style.display='block';
+		}
+		});
+		
+		decrementButton2.addEventListener('click', () => {
+		  if (count2 > 0) {
+			count2--;
+		  }
+		  counterElement2.textContent = count2;
+		});
+		
+		</script>
+		 
+		
+		
+		
+		<script>
+			const counterElement3 = document.querySelector('.counter3');
+		let count3 = 0; // Initial counter value
+		
+		const incrementButton3 = document.getElementById('increment3');
+		const decrementButton3 = document.getElementById('decrement3');
+		
+		incrementButton3.addEventListener('click', () => {
+			if(count3<12)	{
+		  count3++;
+		  counterElement3.textContent = count3;
+		}
+		else{
+			maxlimit3.style.display='block';
+		}
+		});
+		
+		decrementButton3.addEventListener('click', () => {
+		  if (count3 > 0) {
+			count3--;
+		  }
+		  counterElement3.textContent = count3;
+		});
+		
+		</script>
 
 
 
@@ -725,16 +837,7 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
 	});
 	</script>
 	<script>
-window.addEventListener("load", function() {
-  const leftCurtain = document.getElementById("left-curtain");
-  const rightCurtain = document.getElementById("right-curtain");
 
-  leftCurtain.style.transition = "transform 1s ease-in-out";
-  rightCurtain.style.transition = "transform 1s ease-in-out";
-
-  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
-  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
-});
 
 
 </script>  
