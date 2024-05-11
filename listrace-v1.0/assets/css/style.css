@@ -195,9 +195,13 @@ html,body{height: 100%;}
 /*-------------------------------------
         3. Top-area
 --------------------------------------*/
+.top-area{
+  box-shadow: 0 5px 5px #b3b6b6; 
+}
 nav.navbar.bootsnav {
     background-color:#ecf0f0;
     border-bottom: transparent;
+    
 }
 .wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
 
