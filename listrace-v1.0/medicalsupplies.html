@@ -4,8 +4,8 @@
 <head>
 
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
+	<!-- <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine"> -->
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,9 +59,7 @@
 
 </head>
 <body style="background-color: #ecf0f0; ">
-	<div id="left-curtain"></div>
-	<div id="right-curtain"></div>
-		  
+	
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
@@ -114,15 +112,18 @@
 							<i class="fa-solid fa-syringe" style="margin-right:4px; color: black;"></i>
 							<label style="margin-right:5px; color: black;">50 Syringes </label>
 							</div>
-							<!-- <div>
-								<i class="fa-solid fa-scale-balanced" style="margin-right:5px; color: black;"></i>
-								<label style="margin-right:5px; color: black;">61 KG</label>
-								</div> -->
-
+							
 								<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\syringes.jpg" alt="Imagedescription"style="padding: 10px;">
 
-							
-
+								<div>
+									<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+								</div>	
+								<div class="counter-container">
+										<button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+										<div class="counter1" style="border: 1px black;">0</div>
+										<button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+									  </div>
+								 <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
 					</div>
 					
 
@@ -153,7 +154,16 @@
 								</div>
 								<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\cath.jpeg" alt="Imagedescription"style="padding: 10px;">
 
-	
+								<div>
+									<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+								</div>	
+								<div class="counter-container">
+										<button id="decrement2"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+										<div class="counter2" style="border: 1px black;">0</div>
+										<button id="increment2"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+									  </div>
+								 <label style="display:none" id="maxlimit2">You reached your maximum limit</label>
+				
 						</div>
 						
 	
@@ -185,7 +195,16 @@
 									</div>
 									<img src="C:\Users\User\Desktop\bfckfr\listrace-v1.0\assets\img\monitors.jpeg" alt="Imagedescription"style="padding: 10px;">
 	
-		
+									<div>
+										<label style="margin-right:5px; color: black;">choose the quantity you want to donate </label>
+									</div>	
+									<div class="counter-container">
+											<button id="decrement3"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+											<div class="counter3" style="border: 1px black;">0</div>
+											<button id="increment3"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+										  </div>
+									 <label style="display:none" id="maxlimit3">You reached your maximum limit</label>
+					
 							</div>
 								
 
@@ -195,52 +214,50 @@
 						<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 			
-		<!--/.section-header-->
+			<!--/.section-header-->
 		
-		<header id="header-top" class="header-top"  >
-			<ul>
-				<li>
-					<div class="header-top-left" >
-						<ul>
-							<li> <img src="assets/logo/SE logo.png" alt="Company Logo" width="90" height="9" style="padding-left: 8px;">  </li>
-						</ul>
-					</div>
-				</li>
-				<li style="transform:translate(570px,0px);">
-					<span style="align-items: center; color:rgb(103, 8, 8); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
-					  Make  <span style="color:  rgb(30, 102, 105); font-size: 50px; font-style: italic; font-weight: bold;"> Difference</span>
-					</span>
-				  </li>
-				  
-				<li class="head-responsive-right pull-right" style="margin-top: 28px;">
-					<div class="header-top-right" style="z-index: 1;">
-						<ul style="z-index: 1;">
-							<nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000" style="z-index: 1;">
-
-								<div class="navbar-header" style="z-index: 1;">
-									   
-									<a class="navbar-brand" href="javascript:void(0)" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
-									<li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
-										+201061064544
-									</li>
-									<li class="header-top-contact">
-										<a  class="accinfo" href="javascript:void(0)"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
-									</li>
-								</div>
+			<header id="header-top" class="header-top"  >
+				<ul>
+					<li>
+						<div class="header-top-left" >
+							<ul>
+								<li> <img src="assets/logo/SE logo.png" alt="Company Logo" width="90" height="9" style="padding-left: 8px;">  </li>
+							</ul>
+						</div>
+					</li>
+					<li style="transform:translate(450px,0px);">
+						<span style="align-items: center; color:rgb(181, 56, 10); font-size: 50px; font-weight: bold; font-family:'Tangerine',serif;">
+						  Yalla  <span style="color: rgb(30, 102, 105); font-size: 50px; ; font-weight: bold; font-style: italic;"> Aawen</span>
+						</span>
+					  </li>
+					  
+					<li class="head-responsive-right pull-right" style="margin-top: 28px;">
+						<div class="header-top-right" style="z-index: 1;">
+							<ul style="z-index: 1;">
+								<nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000" style="z-index: 1;">
+	
+									<div class="navbar-header" style="z-index: 1;">
+										   
+										<a class="navbar-brand" href="index.html" style="margin-right:15px; color:rgb(30, 102, 105)"><i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+										<li class="header-top-contact" style="color:rgb(30, 102, 105); padding-top:7px; ">
+											+201061064544
+										</li>
+										<li class="header-top-contact">
+											<a href="donoraccount.html"><i class="fa-solid fa-user" style="font-size: 19px; color:rgb(30, 102, 105); margin-left:-4px; "></i></a>
+										</li>
+									</div>
+									
+								</nav>
 								
-							</nav>
-							
-						</ul>
-					</div>
-				</li>
-			</ul>
+							</ul>
+						</div>
+					</li>
+				</ul>
+					
 				
-			
-		</header><!--/.header-top-->
-		<!--header-top end -->
-		 
-		 
-
+			</header><!--/.header-top-->
+			<!--header-top end -->
+		
 		
 		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
 			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
@@ -384,6 +401,95 @@
 			</div><!--/.scroll-Top-->
 			
         </footer><!--/.footer-->
+
+
+		<script>
+			const counterElement1 = document.querySelector('.counter1');
+			const maxlimit1 = document.getElementById('maxlimit1');
+		
+		let count1 = 0; // Initial counter value
+		
+		const incrementButton1 = document.getElementById('increment1');
+		const decrementButton1 = document.getElementById('decrement1');
+		
+		incrementButton1.addEventListener('click', () => {
+		if(count1<50)	{
+		  count1++;
+		  counterElement1.textContent = count1;
+		}
+		else{
+			maxlimit1.style.display='block';
+		}
+		});
+		
+		decrementButton1.addEventListener('click', () => {
+		  if (count1 > 0) {
+			count1--;
+		  }
+		  counterElement1.textContent = count1;
+		});
+		
+		</script>
+		
+		<script>
+			const counterElement2 = document.querySelector('.counter2');
+			const maxlimit2 = document.getElementById('maxlimit2');
+		
+		let count2 = 0; // Initial counter value
+		
+		const incrementButton2 = document.getElementById('increment2');
+		const decrementButton2 = document.getElementById('decrement2');
+		
+		incrementButton2.addEventListener('click', () => {
+		if(count2<2)	{
+		  count2++;
+		  counterElement2.textContent = count2;
+		}
+		else{
+			maxlimit2.style.display='block';
+		}
+		});
+		
+		decrementButton2.addEventListener('click', () => {
+		  if (count2 > 0) {
+			count2--;
+		  }
+		  counterElement2.textContent = count2;
+		});
+		
+		</script>
+		
+		
+		
+		
+		<script>
+			const counterElement3 = document.querySelector('.counter3');
+		let count3 = 0; // Initial counter value
+		
+		const incrementButton3 = document.getElementById('increment3');
+		const decrementButton3 = document.getElementById('decrement3');
+		
+		incrementButton3.addEventListener('click', () => {
+			if(count3<2)	{
+		  count3++;
+		  counterElement3.textContent = count3;
+		}
+		else{
+			maxlimit3.style.display='block';
+		}
+		});
+		
+		decrementButton3.addEventListener('click', () => {
+		  if (count3 > 0) {
+			count3--;
+		  }
+		  counterElement3.textContent = count3;
+		});
+		
+		</script>
+
+
+
 
 
 
@@ -724,20 +830,8 @@ const existingMessage = exploreContent.querySelector('.no-posts-message');
   }
 	});
 	</script>
-	<script>
-window.addEventListener("load", function() {
-  const leftCurtain = document.getElementById("left-curtain");
-  const rightCurtain = document.getElementById("right-curtain");
-
-  leftCurtain.style.transition = "transform 1s ease-in-out";
-  rightCurtain.style.transition = "transform 1s ease-in-out";
-
-  leftCurtain.style.transform = "translateX(-50vw)";  /* Move left curtain off screen to left */
-  rightCurtain.style.transform = "translateX(50vw)";  /* Move right curtain off screen to right */
-});
 
 
-</script>  
   
 
 

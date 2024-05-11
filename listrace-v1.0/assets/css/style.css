@@ -1801,7 +1801,7 @@ background-color:transparent;
   /*  padding: 20px;  /* Add some padding for better readability */
     
   /*}*/
-  #popup, #popup1, #popup2, #popup3, #popupapply, #directapply {
+  #popup, #popup1, #popup2, #popup3, #popup11, #popupapply, #directapply {
     overflow-y: auto;
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
@@ -1819,11 +1819,11 @@ background-color:transparent;
     height: 450px; /* Example height */
    
   }
-  #popup.explore-rating-price.explore-rating label,  #popup1.explore-rating-price.explore-rating label, #popup2.explore-rating-price.explore-rating label, #popup3.explore-rating-price.explore-rating label{
+  #popup.explore-rating-price.explore-rating label,  #popup1.explore-rating-price.explore-rating label, #popup2.explore-rating-price.explore-rating label, #popup3.explore-rating-price.explore-rating label, #popup11.explore-rating-price.explore-rating label{
     color:#ecf0f0 !important;
     border-right: 1px solid #ecf0f0;
   } 
-  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a{
+  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a, #popup11 h2 a{
     color:rgb(5, 14, 56);
     font-size: 15px;
     font-weight: bold;
@@ -1837,21 +1837,22 @@ background-color:transparent;
     border-right: 1px solid white!important;
     color: white;
   }
-  #popup1 .explore-rating-price .explore-rating,  #popup2 .explore-rating-price .explore-rating,  #popup3 .explore-rating-price .explore-rating {
+  #popup1 .explore-rating-price .explore-rating,  #popup2 .explore-rating-price .explore-rating,  #popup3 .explore-rating-price .explore-rating, #popup11 .explore-rating-price .explore-rating {
     background-color: rgb(5, 14, 56);
     color: white;
   }
-#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3, #popup #closeButton0, #closeButton00, #closepopupapply {
+#popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3,#popup11 #closeButton11 ,#popup #closeButton0, #closeButton00, #closepopupapply {
   font-size: 20px;
   padding-bottom: 4px;
 }
   #popup1 div div i,
   #popup1 div div label,  #popup2 div div i,
   #popup2 div div label,  #popup3 div div i,
-  #popup3 div div label {
+  #popup3 div div label, #popup11 div div i, 
+  #popup11 div div label {
     color:rgb(5, 14, 56) !important;
   }
-  #popup1 p,  #popup2 p,  #popup3 p{
+  #popup1 p,  #popup2 p,  #popup3 p, #popup11 p{
     color: white;
   }
   /* Prevent content behind popup from being interactive (Optional) */
