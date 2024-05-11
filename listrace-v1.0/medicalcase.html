@@ -289,6 +289,7 @@
 			  </div>
 			  <div id="popupapply">
 				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+				<i  id="backpopupapply1" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 				<label > Please fill in this form as part of the donation procedure</label>
 				<label id="checkmap" style="display:none;"></label>
 				<form class="file-upload-form">
@@ -375,6 +376,7 @@
 			  </div>
 			  <div id="directapply">
 				<i id="closeButton00" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+				<i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
 				<div class="containerapply">
 					<div class="date-time">
 					  <h2 style="font-size: 15px; margin-top:  9px;">Please choose the date you will be available in for visit</h2>
@@ -672,9 +674,10 @@
 		if(flag && flag==="1"){
 			popup1.style.display = 'none';
 	  directpopup.style.display = 'block';
-
+         sessionStorage.setItem('pop',"1");
 		}
 		else{
+			sessionStorage.setItem('pop',"1");
 			popup1.style.display = 'none';
 	  popup7.style.display = 'block';
 		}
@@ -695,10 +698,12 @@
   
 	closePopupBtn2.addEventListener('click', function() {
 		if(flag && flag==="1"){
+			sessionStorage.setItem('pop',"2");
 			popup3.style.display = 'none';
 	  directpopup.style.display = 'block';
 		}
 		else{
+			sessionStorage.setItem('pop',"2");
             popup3.style.display = 'none';
 	  popup8.style.display = 'block';
 
@@ -723,9 +728,11 @@
 		if(flag && flag==="1"){
             popup5.style.display = 'none';
 	  directpopup.style.display = 'block';
+	  sessionStorage.setItem('pop',"3")
 
 		}
 		else{
+			sessionStorage.setItem('pop',"3")
 			popup5.style.display = 'none';
 	  popup9.style.display = 'block';
 		}
@@ -1396,4 +1403,67 @@ for (const radioButton of governateRadioButtons) {
 </script> -->
 
 <!--explore end -->
+
+<script>
+		const backButton4 = document.getElementById('backpopupapply1');
+		backButton4.addEventListener('click', () => {
+	let temp= sessionStorage.getItem('pop');
+	if(temp==="1"){
+        popup1.style.display = 'block';
+	}
+	else if(temp==="2"){
+       popup3.style.display='block';
+	}
+	else{
+		popup5.style.display='block';
+
+	}
+	popup11.style.display = 'none'; // Hide the popup
+  fileError1.textContent='';
+	dateError1.textContent='';
+	timeError1.textContent='';
+	addressError1.textContent='';
+	govError1.textContent='';
+	areaError1.textContent='';
+	placeError1.textContent='';
+	mapError1.textContent='';
+	specError1.textContent='';
+	address1.value=address1.placeholder;
+	gov1.selectedIndex=0;
+	area1.selectedIndex=0;
+	spec1.selectedIndex=0;
+	pat1.checked=false;
+	clinic.checked=false;
+
+});
+
+
+const backButton5 = document.getElementById('backpopupapply');
+		backButton5.addEventListener('click', () => {
+	let temp= sessionStorage.getItem('pop');
+	if(temp==="1"){
+        popup1.style.display = 'block';
+	}
+	else if(temp==="2"){
+       popup3.style.display='block';
+	}
+	else{
+		popup5.style.display='block';
+
+	}
+	pat2.checked=false;
+	clinic2.checked=false;
+	placeError2.textContent='';
+	dateError2.textContent='';
+	timeError2.textContent='';
+	  directapp.style.display = 'none';
+
+});
+
+
+		
+
+</script>
+
+
 </body>
