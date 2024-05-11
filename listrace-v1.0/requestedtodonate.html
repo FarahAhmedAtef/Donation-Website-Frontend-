@@ -67,7 +67,7 @@
                                 <i class="fa-regular fa-circle-check"></i>
                                 <!-- <p class="notificationPara">Allow push notifications so you will get latest updates</p> -->
                                 <div class="buttonContainer">
-                                    <a href="index.html" class="postback">Back to Home Page</a>
+                                    <a href="javascript:void(0)" class="postback">Back to Home Page</a>
                                   <!-- <button class="NotnowBtn">Now now</button> -->
                                 </div>
                               </div>
@@ -82,7 +82,28 @@
 
 </section><!--/subscription-->	
 <!--subscription end -->
+<script>
+    const navbarBrand = document.querySelector('.postback');
 
+navbarBrand.addEventListener('click', function() {
+  const storedValue = sessionStorage.getItem('user');
+
+  // Handle potential absence of stored value
+  if (storedValue === 'farah') {
+    window.location.href = "indexteacher.html"; // Default to index if no value exists
+     // Exit the function if no value found
+  }
+else if (storedValue === 'carol'){
+    window.location.href = "indexregular.html"; // Default to index if no value exists
+
+}
+else if (storedValue === 'basant'){
+    window.location.href = "indexdoctor.html"; // Default to index if no value exists
+
+}
+ 
+});
+</script>
 
 
 </body>
