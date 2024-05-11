@@ -147,8 +147,8 @@
 
 			  <div id="popupapply">
 				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
-				<!-- <i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i> -->
-				<!-- <br></br> -->
+				<i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+				<br></br>
 				<label > Please fill in this form to schedule the pickup</label>
 				<div class="containerapply">
 				  <div class="date-time">
@@ -258,7 +258,7 @@
 
 			  <div id="popup3">
 				<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-				<h2><a href="#">Toy Donatio Request</a></h2>
+				<h2><a href="#">Toy Donation Request</a></h2>
 				<p class="explore-rating-price">
 					<span class="explore-rating">5.0</span>
 					<label class="Age" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">6-10 years</label> 
@@ -602,6 +602,28 @@ closeButton4.addEventListener('click', () => {
 	bike1.checked=false;
 	truck1.checked=false;
 
+	backButton4.addEventListener('click', () => {
+	let temp= sessionStorage.getItem('pop');
+	if(temp==="1"){
+        popup12.style.display = 'block';
+	}
+	else if(temp==="2"){
+       popup22.style.display='block';
+	}
+	else{
+		popup32.style.display='block';
+
+	}
+  popup11.style.display = 'none'; // Hide the popup
+	dateError1.textContent='';
+	timeError1.textContent='';
+	placeError1.textContent='';
+	car1.checked=false;
+	bike1.checked=false;
+	truck1.checked=false;
+
+ });
+
 });
 
 // backButton4.addEventListener('click', () => {
@@ -633,6 +655,7 @@ closeButton4.addEventListener('click', () => {
 	});
   
 	closePopupBtn1.addEventListener('click', function() {
+		sessionStorage.setItem('pop',"1");
 		popup7.style.display= 'block';
 		popup1.style.display='none';
 	});
@@ -723,7 +746,7 @@ submitButton.addEventListener('click', () => {
 
 <script>
 	const closeButton20 = document.getElementById('closepopupapply');
-	const backButton20= document.getElementById('backpopupapply');
+	// const backButton20= document.getElementById('backpopupapply');
 
 const popup21 = document.getElementById('popupapply');
 const popup22 = document.getElementById('popup2');
@@ -780,6 +803,7 @@ closeButton4.addEventListener('click', () => {
 	});
   
 	closePopupBtn20.addEventListener('click', function() {
+		sessionStorage.setItem('pop',"2");
 		popup24.style.display= 'block';
 		popup23.style.display='none';
 	});
@@ -870,7 +894,7 @@ submitButton.addEventListener('click', () => {
 
 <script>
 	const closeButton30 = document.getElementById('closepopupapply');
-	const backButton30= document.getElementById('backpopupapply');
+	// const backButton30= document.getElementById('backpopupapply');
 
 const popup31 = document.getElementById('popupapply');
 const popup32 = document.getElementById('popup3');
@@ -927,6 +951,7 @@ closeButton30.addEventListener('click', () => {
 	});
   
 	closePopupBtn30.addEventListener('click', function() {
+		sessionStorage.setItem('pop',"3");
 		popup34.style.display= 'block';
 		popup33.style.display='none';
 	});
