@@ -1101,7 +1101,7 @@
               post.classList.add('hidden'); // Add hidden class if not visible
             }
           });
-          const exploreContent = document.getElementById('reviews-content');
+          const exploreContent = document.querySelector('.reviews-content');
         const existingMessage = exploreContent.querySelector('.no-posts-message');
           if (allPostsHidden && !existingMessage) {
             // Display "No posts" message (optional: create a separate element)
@@ -1176,7 +1176,7 @@
 		  }
 		
 	  });
-const exploreContent = document.getElementById('reviews-content');
+const exploreContent = document.querySelector('.reviews-content');
 const existingMessage = exploreContent.querySelector('.no-posts-message');
   if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
