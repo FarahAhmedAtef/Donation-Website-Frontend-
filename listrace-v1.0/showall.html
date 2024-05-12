@@ -1207,6 +1207,37 @@
     
               <button id="closePopup888" style=" margin: 0 auto; display: block;">Donate</button>
             </div>
+
+            <div id="popup999">
+              <i id="closeButton999" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+                <h2><a style="text-transform: none;" href="#">Teacher is needed</a></h2>
+                <p class="explore-rating-price">
+                  <span class="explore-rating">5.0</span>
+                  <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
+                  <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                    Masr Elgedida
+                    
+                  </label>
+                   <label class="hospital" href="#"  Style="padding-right:3px; border-right:none !important;">English</label>
+                </p>
+                <div>
+                  <div>
+                  <i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+                  <label style="margin-right:5px; color: black;">10 Students</label>
+                  </div>
+                  <div>
+                  <i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+                  <label style="margin-right:5px; color: black;">Villa 231, Block 38</label>
+                  </div>
+                </div>
+                <div>
+                  <p>Description: In need of a teacher to teach English</p>
+                </div>
+                <div id="map999" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+                
+      
+                <button id="closePopup999" style=" margin: 0 auto; display: block;">Donate</button>
+              </div>
 		  
 		<div class="explore-content" id="explore-content">
 			
@@ -2054,11 +2085,19 @@
 	const closePopupBtn4 = document.getElementById('closeButton0');
   const closePopupBtn555= document.getElementById('closeButton555');
   const closePopupBtn5551= document.getElementById('closePopup555');
+  const closePopupBtn8881= document.getElementById('closePopup888');
+  const closePopupBtn9991= document.getElementById('closePopup999');
   const popup5555=document.getElementById('popup555');
+  const popup888=document.getElementById('popup888');
+  const popup999=document.getElementById('popup999');
   const openpop555= document.getElementById('openpostdetails70');
   const openpop777= document.getElementById('openpostdetails72');
+  const openpop888= document.getElementById('openpostdetails73');
+  const openpop999= document.getElementById('openpostdetails75');
   const popup777 = document.getElementById('popup777');
   const closePopupBtn777= document.getElementById('closeButton777');
+  const closePopupBtn888= document.getElementById('closeButton888');
+  const closePopupBtn999= document.getElementById('closeButton999');
   const closePopupBtn7771= document.getElementById('closePopup777');
 
 
@@ -2074,6 +2113,14 @@
 	  popup777.style.display = 'block';
 	}); 
 
+  openpop888.addEventListener('click', function() {
+    console.log("alo");
+	  popup888.style.display = 'block';
+	}); 
+  openpop999.addEventListener('click', function() {
+    console.log("alo");
+	  popup999.style.display = 'block';
+	});
 
   closePopupBtn555.addEventListener('click', function() {
 	  popup5555.style.display = 'none';
@@ -2081,7 +2128,12 @@
   closePopupBtn777.addEventListener('click', function() {
 	  popup777.style.display = 'none';
 	});
-
+  closePopupBtn888.addEventListener('click', function() {
+	  popup888.style.display = 'none';
+	});
+  closePopupBtn999.addEventListener('click', function() {
+	  popup999.style.display = 'none';
+	});
 
   closePopupBtn5551.addEventListener('click', function() {
     window.location.href='medicalcase.html';
@@ -2090,7 +2142,12 @@
   closePopupBtn7771.addEventListener('click', function() {
     window.location.href='medicalcase.html';
 	});
-
+  closePopupBtn8881.addEventListener('click', function() {
+    window.location.href='teaching.html';
+	});
+  closePopupBtn9991.addEventListener('click', function() {
+    window.location.href='teaching.html';
+	});
 	closePopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'none';
 	});
@@ -2525,6 +2582,26 @@ function initMap() {
 			var marker777= new google.maps.marker.AdvancedMarkerElement({ 
 			  position: test, 
 			  map: map777
+			}); 
+
+      var map888 = new google.maps.Map(document.getElementById('map888'), { 
+			  zoom: 4, 
+			  center: test,
+			  mapId:"fc7d36a02ec1bfd9"  
+			}); 
+			var marker888= new google.maps.marker.AdvancedMarkerElement({ 
+			  position: test, 
+			  map: map888
+			}); 
+
+      var map999 = new google.maps.Map(document.getElementById('map999'), { 
+			  zoom: 4, 
+			  center: test,
+			  mapId:"fc7d36a02ec1bfd9"  
+			}); 
+			var marker999= new google.maps.marker.AdvancedMarkerElement({ 
+			  position: test, 
+			  map: map999
 			}); 
 
       } 
