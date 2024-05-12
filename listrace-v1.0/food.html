@@ -122,7 +122,7 @@
                                 <option value="fruit">fruits</option>
                                 <option value="fm">fresh meals</option>
                             </select> <br><br>
-                         <input type="text" class="subscription-input-form " id="amountInput" placeholder="Amount in kgs ex: 1/2 kgs, 2kgs, etc." style="display: none;">
+                         <input type="text" class="subscription-input-form " id="amountInput" placeholder="amount in kgs ex: 1/2 kgs, 2kgs, etc." style="display: none;">
                                 <br><br>
                             <input type="text" class="subscription-input-form" id="name" placeholder="item name">
                             <br><br>
@@ -130,7 +130,7 @@
                             <div class="counter-container1" style="display: none;">
                                 <label id="quantityLabel" style="margin-left:-500px;">Quantity:</label> 
                                 <button id="decrement1" style="margin-left: 300px;"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter1" style="border: 10px black; margin: 0 10px;">0</div>
+                                <div class="counter1" style="border: 10px black; margin: 0 10px;">1</div>
                                 <button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
         
@@ -326,7 +326,7 @@ width: 0px; ">
 
 <script>
 	const counterElement = document.querySelector('.counter1');
-let count = 0; // Initial counter value
+let count = 1; // Initial counter value
 
 const incrementButton = document.getElementById('increment1');
 const decrementButton = document.getElementById('decrement1');
@@ -337,7 +337,7 @@ incrementButton.addEventListener('click', () => {
 });
 
 decrementButton.addEventListener('click', () => {
-  if (count > 0) {
+  if (count > 1) {
     count--;
   }
   counterElement.textContent = count;

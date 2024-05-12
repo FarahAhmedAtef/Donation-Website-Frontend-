@@ -136,7 +136,7 @@ min-height: 100vh;">
                             <div class="counter-container">
                                <label id="quantityLabel1" style="margin-right:15px;">Number of students involved:</label> 
                                 <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
+                                <div class="counter" id="quantityCounter" style="border: 10px black;">1</div>
                                 <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
                            <br><br>
@@ -295,6 +295,14 @@ initMap();
     }
   }
 
+  function updateDropdownBorderColor(DropdownElement) {
+      if (DropdownElement.value === "") {
+        DropdownElement.style.border = "1px solid red";
+      } else {
+        DropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+
     // Function to update quantity value on button click
     function updateQuantity(change) {
     currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
@@ -317,11 +325,16 @@ initMap();
     updateInputBorderColor(addressInput);
   });
 
+  SubDropdown.addEventListener('input', function() {
+    updateDropdownBorderColor(SubDropdown);
+  });
+
   postBtn.addEventListener('click', function(event) {
-    if (addressInput.value.trim() === "" ) {
+    if (addressInput.value.trim() === "" || !isValidlangOptionSelected() ) {
       event.preventDefault(); // Prevent form submission
       warningMsg.style.display = "block"; // Display warning message
       updateInputBorderColor(addressInput);
+      updateDropdownBorderColor(SubDropdown);
     }else if (!isValidSubOptionSelected()) {
       event.preventDefault(); // Prevent form submission
       warningMsg.textContent = "Please choose a subject to proceed."; // Update warning message
@@ -339,7 +352,7 @@ initMap();
 
 <script>
 	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
+let count = 1; // Initial counter value
 
 const incrementButton = document.getElementById('increment');
 const decrementButton = document.getElementById('decrement');
@@ -350,7 +363,7 @@ incrementButton.addEventListener('click', () => {
 });
 
 decrementButton.addEventListener('click', () => {
-  if (count > 0) {
+  if (count > 1) {
     count--;
   }
   counterElement.textContent = count;
