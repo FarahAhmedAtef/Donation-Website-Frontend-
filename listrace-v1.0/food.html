@@ -211,6 +211,15 @@ width: 0px; ">
         inputElement.style.border = "none"; // Remove red border if not empty
       }
     }
+
+    function updateDropdownBorderColor(DropdownElement) {
+      if (DropdownElement.value === "") {
+        DropdownElement.style.border = "1px solid red";
+      } else {
+        DropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+
     // Function to update quantity value on button click
     function updateQuantity(change) {
       currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
@@ -236,17 +245,25 @@ width: 0px; ">
     nameInput.addEventListener('input', function() {
       updateInputBorderColor(nameInput);
     });
+
+    foodDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(foodDropdown);
+    });
   
     postBtn.addEventListener('click', function(event) {
       if (!isValidFoodOptionSelected() && nameInput.value.trim()==="") {
         event.preventDefault(); // Prevent form submission
         warningMsg.style.display = "block"; // Display warning message
         updateInputBorderColor(nameInput);
+        updateDropdownBorderColor(foodDropdown);
+
       }
       else if (!isValidFoodOptionSelected()) {
         event.preventDefault(); // Prevent form submission
         warningMsg.textContent = "Please choose a food item to proceed."; // Update warning message
-        warningMsg.style.display = "block";}
+        warningMsg.style.display = "block";
+        updateDropdownBorderColor(foodDropdown);
+}
         else if (isValidFoodOptionSelected()&& (this.value==="veggies"|| this.value==="fruit")) {
         event.preventDefault(); // Prevent form submission
         warningMsg.textContent = "Please insert amount in kgs to proceed!"; // Update warning message

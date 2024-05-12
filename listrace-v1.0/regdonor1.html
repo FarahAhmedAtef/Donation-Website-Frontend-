@@ -1,0 +1,223 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Directory Landing Page</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!--linear icon css-->
+		<link rel="stylesheet" href="assets/css/linearicons.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+		<!--flaticon.css-->
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+
+		<!--slick.css-->
+        <link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/slick-theme.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+	
+	<body>
+<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						Registration Form
+					</h2>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#">
+								<input type="text" id="fname" class="subscription-input-form" placeholder="First name" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;" required>
+								<br><br>
+								<input type="text" id="lname" class="subscription-input-form" placeholder="Last name" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;"required>
+								<br><br>
+								<select name="gender" id="gender" class="subscription-input-form" id="gender" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;" required>
+									<option value="" disabled selected>Gender</option>
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</select>
+								<br><br>	
+								<input type="email" id = "email" class="subscription-input-form" placeholder="Email" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;" required>
+								<br><br>
+								<div id="emailInvalidWarning" style="display: none; color: red;">Please enter a valid email address (including @).</div>
+								<input type="tel" id="cnum" class="subscription-input-form" placeholder="Contact number" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;" required>
+								<br><br>
+								<input type="password" id = "pass" class="subscription-input-form" placeholder="Enter a new password" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;"required>
+								<br><br>
+								<div id="passwordMismatchWarning" style="display: none; color: red;">Passwords do not match!</div>
+								<br>
+								<input type="password" class="subscription-input-form"  id="cpass" placeholder="Confirm Password" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;"required>
+								<br><br>
+								<input type="text" id="address" class="subscription-input-form" placeholder="Address" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;" required>
+								<br><br>
+								<input type="text" id="area" class="subscription-input-form" placeholder="Area" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;"required>
+								<br><br>
+								<select name="govern" class="subscription-input-form" id="govern" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;"required>
+									<option value="" disabled selected>Governorate</option>
+									<option value="Regular">Cairo</option>
+									<option value="Teacher">Giza</option>
+									<option value="Doctor">Alexandria</option>
+								</select>
+			<br><br>								<select name="typed" class="subscription-input-form" id="typed" style ="border: 2px solid rgb(30, 102, 105); border-radius: 5px;" required>
+									<option value="" disabled selected>Select type of donor</option>
+									<option value="Regular">Regular</option>
+									<option value="Teacher">Teacher</option>
+									<option value="Doctor">Doctor</option>
+								</select>
+								<br><br>
+															  
+
+							</form>
+			
+						</div>
+					</div>	
+				</div>
+				<button class="appsLand-btn subscribe-btn">
+					create account
+				</button>
+				
+			</div>
+		</section>
+		
+		
+		<script>
+			
+			// Attach an event listener to the button click
+			document.querySelector('.subscribe-btn').addEventListener('click', function() {
+				// Retrieve all form fields
+				var inputs = document.querySelectorAll('.subscription-input-form');
+		
+				// Remove existing error messages
+				var existingErrorMessages = document.querySelectorAll('.error-message');
+				existingErrorMessages.forEach(function(errorMessage) {
+					errorMessage.parentNode.removeChild(errorMessage);
+				});
+		
+				var isValid = true;
+		
+				// Validate each field
+				inputs.forEach(function(input) {
+					// Check if the field is empty
+					if (!input.value) {
+						isValid = false;
+						var errorMessage = document.createElement('span');
+						errorMessage.className = 'error-message';
+						errorMessage.textContent = 'This field is required';
+						input.parentNode.insertBefore(errorMessage, input.nextSibling);
+					}
+				});
+		
+				// If all fields are filled, proceed with redirection
+				if (isValid) {
+					var typed = document.getElementById('typed').value;
+		
+					if (typed === 'Teacher') {
+						window.location.href = 'login.html'; // Redirect to subjectdetails.html
+					} else if (typed === 'Doctor') {
+						window.location.href = 'login.html'; // Redirect to cliniclocation.html
+					} else if (typed === 'Regular') {
+						window.location.href = 'login.html'; // Redirect to index.html
+					}
+				}
+			});
+		</script>
+		</script>
+		<!--password & email validation/ upload-->
+		<script>
+			const createAccBtn = document.getElementById('createacc');
+			const emailvalid = document.getElementById('email');
+		const passwordInput = document.getElementById('pass');
+		const confirmPasswordInput = document.getElementById('cpass');
+		const doneButton = document.getElementById("uploadBtn");
+		const fileV = document.getElementById("file1");
+		const emailInvalidWarning = document.getElementById('emailInvalidWarning');
+		const passwordMismatchWarning = document.getElementById('passwordMismatchWarning');
+		const createAccountForm = document.getElementById('createacct');
+		const warningMsg1 = document.getElementById('warningMsg'); // Existing warning message
+		
+		// Function to check if email is valid (including @)
+		function isValidEmail(email) {
+		  const atSymbolIndex = email.indexOf('@');
+		  return email.length > 0 && atSymbolIndex > 0 && atSymbolIndex < email.length - 1;
+		}
+		
+		// Event listener for email input to check validity
+		emailvalid.addEventListener('input', function() {
+		  if (isValidEmail(emailvalid.value)) {
+			emailInvalidWarning.style.display = 'none'; // Hide warning if valid
+		  } else {
+			emailInvalidWarning.style.display = 'block'; // Show warning if invalid
+		  }
+		});
+		
+		// Function to check if password and confirm password match
+		function passwordsMatch() {
+		  return passwordInput.value === confirmPasswordInput.value;
+		}
+		
+		function removedoneBtn() {
+				// Show the overlay
+				document.getElementById("uploadBtn").style.display = "none";
+				
+		}
+		function showdoFile() {
+				// Show the overlay
+				document.getElementById("uploadBtn").style.display = "none";
+				
+		}
+		
+		// Event listener for confirm password input to check for mismatch
+		confirmPasswordInput.addEventListener('input', function() {
+		  if (passwordsMatch()) {
+			passwordMismatchWarning.style.display = 'none'; // Hide mismatch warning
+		  } else {
+			passwordMismatchWarning.style.display = 'block'; // Show mismatch warning
+		  }
+		});
+		  </script>
+		
+		
+		
+		
+    </body>
+</html>

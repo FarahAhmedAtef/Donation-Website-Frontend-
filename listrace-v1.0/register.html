@@ -155,26 +155,15 @@ min-height: 100vh;">
                                 <option value="giza">Giza</option>
                                 <option value="Alex">Alexandria</option>
                             </select> <br><br>
-                        
-                            <br>
-                            <label for="gender">Gender</label>
-                            <div class="radio-group">
-                                <input class="radio-input" name="radio-group" id="radio1" type="radio">
-                                <label class="radio-label" for="radio1">
-                                  <span class="radio-inner-circle"></span>
-                                  Male
-                                </label>
-                                
-                                <input class="radio-input" name="radio-group" id="radio2" type="radio">
-                                <label class="radio-label" for="radio2">
-                                  <span class="radio-inner-circle"></span>
-                                  Female
-                                </label>
-                                <br><br>
-                            </div>
-                                <form class="file-upload-form" >
+
+                            <select name="Gender" class="subscription-input-form" id="gender">
+                              <option value="" disabled selected>Gender</option>
+                              <option value="regular">Male</option>
+                              <option value="teacher">Female</option>
+                          </select> <br><br>
+                                <form class="file-upload-form">
                                     <label for="file" class="file-upload-label">
-                                        Upload required government registration documents
+                                        Upload required Government Registration documents
                                         <br>
                                       <div class="file-upload-design">
                                         <svg viewBox="0 0 640 512" height="1em">
@@ -188,18 +177,16 @@ min-height: 100vh;">
                                         <span class="browse-button">Browse file</span>
                                       </div>
                                       <input id="file" type="file" />
-                                      <span id="fileError" class="error-message" style="display: none; color:red;">Please upload government regitartion documents</span>
-                                      <span id="fileSelected" class="success-message" style="display: none; color:green">File selected was successfully uploaded.</span>
                                     </label>
                                   </form>
                                   <br>
-                            <h4>Please pick orgaanization exact location on map</h4>
+                                  <button id="uploadBtn" class="doneBtn small-btn" style="margin-right: auto; display: block; height: 30px; width: 60px; " onclick="removedoneBtn()">Upload </button>
+                                  <br>
+                            <h4>Please pick your exact location on map</h4>
                             <div id="map4" style="height: 400px;"></div><br><br>
-                            <span id="mapError" class="error-message" style="color: red; display: none;">Please pick orgaanization location on map</span>
-
 
                             <div id="warningMsg" style="display: none; color: red;">Please fill in all required fields!</div>
-                            <form id="redirectForm" action="homepageorg.html" method="get">
+                            <form id="redirectForm" action="login.html" method="get">
                                 <button class="appsLand-btn subscribe-btn" id="createacc" type="submit">Create Account</button>
                                 <!-- <a href="#" class="btn">Post</a> -->
                             </form>
@@ -221,13 +208,13 @@ width: 0px; ">
 		<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
 			<div class="row">
 				<div class="col-sm-5">
-					<p style="text-transform: none;">
-						&copy;Copyright. Designed and developed by <a href="https://www.themesine.com/">BFCKFR</a>
+					<p>
+						&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
 					</p><!--/p-->
 				</div>
 				<div class="col-sm-7">
 					<div class="footer-social" style="padding-right: 20px;">
-						<span><i class="fa fa-phone">+20-1061064544</i></span>
+						<span><i class="fa fa-phone">+201061064544</i></span>
 						<a href="#"><i class="fa fa-facebook"></i></a>	
 						<a href="#"><i class="fa fa-twitter"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -280,53 +267,6 @@ width: 0px; ">
             }
         </script>
 
-<script>
-  const postBtn2 = document.getElementById('createacc');
-const mapError = document.getElementById('mapError');
-
-
-// Define a variable to store the chosen location (initially null)
-let chosenLocation = null;
-
-// Function to handle map initialization (replace with your actual API key)
-function initMap() {
-  // ... Your Google Maps API initialization logic here ...
-  // Replace the following with your actual API key
-  const map = new google.maps.Map(document.getElementById("map4"), {
-    zoom: 8,
-    center: { lat: 30.0444, lng: 31.2357 }, // Replace with your default location
-  });
-
-  // Add a click event listener to the map to capture user selection
-  map.addListener("click", (event) => {
-  chosenLocation = event.latLng; // Store the clicked location
-
-  // Create a marker at the chosen location
-  const marker = new google.maps.Marker({
-    position: chosenLocation,
-    map: map,
-  });
-});
-}
-
-postBtn2.addEventListener('click', function(event) {
-  if (!chosenLocation) {
-    // Prevent form submission and show error message
-    event.preventDefault();
-    mapError.style.display = "block";
-  } else {
-    // Allow form submission if a location is chosen on the map
-    mapError.style.display = "none";
-    // Your form submission logic here (e.g., using fetch or form submit)
-    // You can access the chosenLocation (latitude and longitude) for further processing
-    console.log("Chosen location:", chosenLocation.lat(), chosenLocation.lng());
-  }
-});
-
-// Call the function to initialize the map (after including the Google Maps API)
-initMap();
-</script>
-
         <!---to fill all fields-->
 <script>
     const createBtn = document.getElementById('createacc');
@@ -342,12 +282,9 @@ initMap();
     const warningMsg = document.getElementById('warningMsg');
     const typeDropdown = document.getElementById('type');
     const govDropdown = document.getElementById('gov');
-    const radioGroup = document.querySelector('.radio-group'); // Select the radio group element
+    const genderDropdown = document.getElementById('gender'); 
   
-   // Function to check if a radio button is selected
-   function isRadioSelected() {
-    return radioGroup.querySelector('input[type="radio"]:checked') !== null;
-  }
+  
   
      // Function to check if a valid option is selected from the dropdown
      function isValidtypeOptionSelected() {
@@ -356,12 +293,24 @@ initMap();
     function isValidgovOptionSelected() {
       return govDropdown.value !== ""; // Check if value is not the empty string
     }
+
+    function isValidgenderOptionSelected() {
+      return genderDropdown.value !== ""; // Check if value is not the empty string
+    }
     // Function to update border style based on input value
     function updateInputBorderColor(inputElement) {
       if (inputElement.value.trim() === "") {
         inputElement.style.border = "1px solid red";
       } else {
         inputElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+
+    function updateDropdownBorderColor(DropdownElement) {
+      if (DropdownElement.value === "") {
+        DropdownElement.style.border = "1px solid red";
+      } else {
+        DropdownElement.style.border = "none"; // Remove red border if not empty
       }
     }
    
@@ -392,10 +341,22 @@ initMap();
       updateInputBorderColor(addInput);
     });
     areaInput.addEventListener('input', function() {
-      updateInputBorderColor(areaInput);
+      updateInputBorderColor(areaInput); 
     });
+
+    typeDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(typeDropdown);
+    });
+    govDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(govDropdown);
+    });
+    genderDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(genderDropdown);
+    });
+
+
     createBtn.addEventListener('click', function(event) {
-      if (!isRadioSelected()&& n1Input.value.trim() === "" ||n2Input.value.trim()==="" ||emailInput.value.trim() === ""|| passInput.value.trim() === "" 
+      if (!isValidtypeOptionSelected()|| !isValidgenderOptionSelected()||!isValidgovOptionSelected() || n1Input.value.trim() === "" ||n2Input.value.trim()==="" ||emailInput.value.trim() === ""|| passInput.value.trim() === "" 
       || cpassInput.value.trim() === ""|| numInput.value.trim() === "" ||nameInput.value.trim()===""||addInput.value.trim()===""
       ||areaInput.value.trim()==="" ) {
         event.preventDefault(); // Prevent form submission
@@ -409,23 +370,26 @@ initMap();
         updateInputBorderColor(nameInput);
         updateInputBorderColor(addInput);
         updateInputBorderColor(areaInput);
+        updateDropdownBorderColor(typeDropdown);
+        updateDropdownBorderColor(govDropdown);
+        updateDropdownBorderColor(genderDropdown);
       }
-      else if (!isValidgovOptionSelected() && !isValidtypeOptionSelected()) {
-      event.preventDefault(); // Prevent form submission
-      warningMsg.textContent = "Please choose an Organization Type and Governorate to proceed."; // Update warning message
-      warningMsg.style.display = "block";}
-       else if (!isValidtypeOptionSelected()) {
-        event.preventDefault(); // Prevent form submission
-        warningMsg.textContent = "Please choose an Organization Type to proceed."; // Update warning message
-        warningMsg.style.display = "block";}
-     else if (!isValidgovOptionSelected()) {
-      event.preventDefault(); // Prevent form submission
-      warningMsg.textContent = "Please choose a Governorate to proceed."; // Update warning message
-      warningMsg.style.display = "block";}
-      else if (!isRadioSelected()) {
-      event.preventDefault(); // Prevent form submission
-      warningMsg.textContent = "Please choose a gender to proceed!"; // Update warning message
-      warningMsg.style.display = "block";}
+    //   else if (!isValidgovOptionSelected() && !isValidtypeOptionSelected()) {
+    //   event.preventDefault(); // Prevent form submission
+    //   warningMsg.textContent = "Please choose an Organization Type and Governorate to proceed."; // Update warning message
+    //   warningMsg.style.display = "block";}
+    //    else if (!isValidtypeOptionSelected()) {
+    //     event.preventDefault(); // Prevent form submission
+    //     warningMsg.textContent = "Please choose an Organization Type to proceed."; // Update warning message
+    //     warningMsg.style.display = "block";}
+    //  else if (!isValidgovOptionSelected()) {
+    //   event.preventDefault(); // Prevent form submission
+    //   warningMsg.textContent = "Please choose a Governorate to proceed."; // Update warning message
+    //   warningMsg.style.display = "block";}
+    //   else if (!isRadioSelected()) {
+    //   event.preventDefault(); // Prevent form submission
+    //   warningMsg.textContent = "Please choose a gender to proceed!"; // Update warning message
+    //   warningMsg.style.display = "block";}
       else {
         warningMsg.style.display = "none"; // Hide warning message (optional)
         // Submit the form (form submission logic)
@@ -438,6 +402,7 @@ initMap();
     const emailvalid = document.getElementById('email');
 const passwordInput = document.getElementById('pass');
 const confirmPasswordInput = document.getElementById('cpass');
+const doneButton = document.getElementById("uploadBtn");
 const fileV = document.getElementById("file1");
 const emailInvalidWarning = document.getElementById('emailInvalidWarning');
 const passwordMismatchWarning = document.getElementById('passwordMismatchWarning');
@@ -464,6 +429,17 @@ function passwordsMatch() {
   return passwordInput.value === confirmPasswordInput.value;
 }
 
+function removedoneBtn() {
+        // Show the overlay
+        document.getElementById("uploadBtn").style.display = "none";
+        
+}
+function showdoFile() {
+        // Show the overlay
+        document.getElementById("uploadBtn").style.display = "none";
+        
+}
+
 // Event listener for confirm password input to check for mismatch
 confirmPasswordInput.addEventListener('input', function() {
   if (passwordsMatch()) {
@@ -473,41 +449,4 @@ confirmPasswordInput.addEventListener('input', function() {
   }
 });
   </script>
-
-
-
-<script>
-  const postBtn1 = document.getElementById('createacc');
-const fileError = document.getElementById('fileError');
-const fileInput = document.getElementById('file');
-const fileSelected = document.getElementById('fileSelected');
-
-
-fileSelected.style.display = "none";
-
-fileInput.addEventListener('change', function() {
-if (fileInput.value) {
-  postBtn1.disabled = false;
-  fileSelected.style.display = "block";
-  fileError.style.display = "none"; // Hide error message
-} else {
-  postBtn1.disabled = true;
-  fileSelected.style.display = "none";
-  fileError.style.display = "block"; // Show error message if no file
-}
-});
-
-postBtn1.addEventListener('click', function(event) {
-if (fileInput.value === '') {
-  // Prevent form submission if no file is chosen
-  event.preventDefault();
-  fileError.style.display = "block"; // Show error message
-} else {
-  // Allow form submission if a file is chosen
-  fileError.style.display = "none"; // Hide error message (optional for clarity)
-  fileInput.style.display="block";
-  // Your form submission logic here (e.g., using fetch or form submit)
-}
-});
-</script>
 </body>
