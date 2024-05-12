@@ -139,7 +139,7 @@
                             <div class="counter-container">
                                <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
                                 <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" style="border: 10px black;">0</div>
+                                <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
                                 <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
         
@@ -152,7 +152,7 @@
                      </form>
                 <br><br>
                                 
-                                <form class="file-upload-form">
+                                <form class="file-upload-form"style="margin: 0 auto;">
                                     <label for="file" class="file-upload-label">
                                         Upload picture of the book required
                                         <br>
@@ -168,6 +168,8 @@
                                         <span class="browse-button">Browse file</span>
                                       </div>
                                       <input id="file" type="file" />
+                                      <span id="fileError" class="error-message" style="display: none; color:red;">Please upload an image of the book required.</span>
+                                      <span id="fileSelected" class="success-message" style="display: none; color:green">File selected was successfully uploaded.</span>
                                     </label>
                                   </form>
                                   <br>
@@ -232,6 +234,33 @@ width: 0px; ">
   const authorInput = document.getElementById('author');
   const editionInput = document.getElementById('edition');
   const warningMsg = document.getElementById('warningMsg');
+  const langDropdown = document.getElementById('type1');
+  const quantityCounter = document.getElementById('quantityCounter');
+
+  let currentQuantity = 0; // Store current quantity
+
+     // Function to check if a valid option is selected from the dropdown
+     function isValidLOptionSelected() {
+    return langDropdown.value !== ""; // Check if value is not the empty string
+  }
+  // 
+
+    // Function to update quantity value on button click
+    function updateQuantity(change) {
+    currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
+    quantityCounter.textContent = currentQuantity;
+  }
+   // Event listeners for increment/decrement buttons
+   const decrementBtn = document.getElementById('decrement');
+  const incrementBtn = document.getElementById('increment');
+
+  decrementBtn.addEventListener('click', function() {
+    updateQuantity(-1);
+  });
+
+  incrementBtn.addEventListener('click', function() {
+    updateQuantity(1);
+  });
 
   // Function to update border style based on input value
   function updateInputBorderColor(inputElement) {
@@ -262,11 +291,55 @@ width: 0px; ">
       updateInputBorderColor(authorInput);
       updateInputBorderColor(editionInput);
 
-    } else {
+    } else if (!isValidLOptionSelected()) {
+      event.preventDefault(); // Prevent form submission
+      warningMsg.textContent = "Please choose book language to proceed."; // Update warning message
+      warningMsg.style.display = "block";}
+      else if (currentQuantity === 0) {
+      event.preventDefault(); // Prevent form submission
+      warningMsg.textContent = "Please choose a quantity to proceed."; // Update warning message
+      warningMsg.style.display = "block";}
+    
+    else {
       warningMsg.style.display = "none"; // Hide warning message (optional)
       // Submit the form (form submission logic)
     }
   });
+</script>
+
+<script>
+  const postBtn1 = document.getElementById('postBtn');
+const fileError = document.getElementById('fileError');
+const fileInput = document.getElementById('file');
+const fileSelected = document.getElementById('fileSelected');
+
+
+fileSelected.style.display = "none";
+
+fileInput.addEventListener('change', function() {
+if (fileInput.value) {
+  postBtn.disabled = false;
+  fileSelected.style.display = "block";
+  fileError.style.display = "none"; // Hide error message
+} else {
+  postBtn.disabled = true;
+  fileSelected.style.display = "none";
+  fileError.style.display = "block"; // Show error message if no file
+}
+});
+
+postBtn.addEventListener('click', function(event) {
+if (fileInput.value === '') {
+  // Prevent form submission if no file is chosen
+  event.preventDefault();
+  fileError.style.display = "block"; // Show error message
+} else {
+  // Allow form submission if a file is chosen
+  fileError.style.display = "none"; // Hide error message (optional for clarity)
+  fileInput.style.display="block";
+  // Your form submission logic here (e.g., using fetch or form submit)
+}
+});
 </script>
 
 <script>

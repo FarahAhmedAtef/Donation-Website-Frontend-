@@ -128,38 +128,25 @@
                             <br><br>
                             <input type="text" id="precaution" class="subscription-input-form" placeholder="precautions">
                             <br><br>
-                            
-                                
-                    <div class="container">
-                      <h2 style="text-transform:none;">Choose medication expiration date:</h2>
-                      <input type="date" id="datepicker">
-                    </div>
-                    
-                    
-                        </div>
-                    
-                            <br><br>
-                            <!-- <label for="password">Password:</label> -->
                             <div class="counter-container">
-                               <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
-                                <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" style="border: 10px black;">0</div>
-                                <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-                              </div>
-        
-                            
-                           <br><br>
-                                
-                              
-
-
+                              <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
+                               <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+                               <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
+                               <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+                             </div>
+                              <br><br>
+                     <div class="container" >
+                      <h2 style="text-transform:none; translate:(50px,50px) ;">Choose medication expiration date:</h2>
+                      <input type="date" id="datepicker">
+                    </div>     
                       <!-- textbox for description -->
-                      <form class="form">
+                      <form class="form" style="margin: 0 auto;">
                         <textarea placeholder=" extra information"></textarea>
                      </form>
                 <br><br>
 
                 <div id="warningMsg" style="display: none; color: red;">Please fill in all required fields!</div>
+                <div id="warningMsg1" style="display: none; color: red;">Please choose a date to proceed!</div>
                 <br>
                 <!-- <div id="warningMsg1" style="display: none; color: red;">Please fill in and "Category"!</div> -->
 
@@ -171,6 +158,7 @@
                     
             </div>	
         </div>
+    </div>
     </div>
 
 </section><!--/subscription-->	
@@ -215,6 +203,26 @@ width: 0px; ">
   const useInput = document.getElementById('use');
   const precInput = document.getElementById('precaution');
   const warningMsg = document.getElementById('warningMsg');
+  const quantityCounter = document.getElementById('quantityCounter');
+
+  let currentQuantity = 0; // Store current quantity
+
+   // Function to update quantity value on button click
+   function updateQuantity(change) {
+      currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
+      quantityCounter.textContent = currentQuantity;
+    }
+     // Event listeners for increment/decrement buttons
+     const decrementBtn = document.getElementById('decrement');
+    const incrementBtn = document.getElementById('increment');
+  
+    decrementBtn.addEventListener('click', function() {
+      updateQuantity(-1);
+    });
+  
+    incrementBtn.addEventListener('click', function() {
+      updateQuantity(1);
+    });
 
   // Function to update border style based on input value
   function updateInputBorderColor(inputElement) {
@@ -245,11 +253,34 @@ width: 0px; ">
       updateInputBorderColor(useInput);
       updateInputBorderColor(precInput);
 
-    } else {
+    } else if (currentQuantity === 0) {
+        event.preventDefault(); // Prevent form submission
+        warningMsg.textContent = "Please choose a quantity to proceed."; // Update warning message
+        warningMsg.style.display = "block";
+      }
+    else {
       warningMsg.style.display = "none"; // Hide warning message (optional)
       // Submit the form (form submission logic)
     }
   });
+</script>
+
+<script>
+  const postBtn1 = document.getElementById('postBtn');
+const datepicker = document.getElementById('datepicker');
+const warningMsg1 = document.getElementById('warningMsg1');
+
+postBtn1.addEventListener('click', function(event) {
+  if (datepicker.value === '') {
+    // Prevent form submission and show warning message
+    event.preventDefault();
+    warningMsg1.style.display = "block";
+  } else {
+    // Allow form submission if a date is chosen
+    warningMsg1.style.display = "none";
+    // Your form submission logic here (e.g., using fetch or form submit)
+  }
+});
 </script>
 
 <script>
