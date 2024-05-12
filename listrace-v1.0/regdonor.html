@@ -255,7 +255,7 @@ width: 0px; ">
       }
     }
 
-    function updatetypeBorderColor(dropdownElement) {
+    function updateDropDownBorderColor(dropdownElement) {
       if (dropdownElement.value === "") {
         dropdownElement.style.border = "1px solid red";
       } else {
@@ -263,21 +263,7 @@ width: 0px; ">
       }
     }
 
-    function updategovBorderColor(dropdownElement) {
-      if (dropdownElement.value === "") {
-        dropdownElement.style.border = "1px solid red";
-      } else {
-        dropdownElement.style.border = "none"; // Remove red border if not empty
-      }
-    }
 
-    function updategenderBorderColor(dropdownElement) {
-      if (dropdownElement.value === "") {
-        dropdownElement.style.border = "1px solid red";
-      } else {
-        dropdownElement.style.border = "none"; // Remove red border if not empty
-      }
-    }
    
     // Event listeners for input changes
     n1Input.addEventListener('input', function() {
@@ -307,13 +293,13 @@ width: 0px; ">
       updateInputBorderColor(areaInput);
     });
     typeDropdown.addEventListener('change', function() {
-      updateDropdownBorderColor(typeDropdown);
+      updateDropDownBorderColor(typeDropdown);
     });
     govDropdown.addEventListener('change', function() {
-      updateDropdownBorderColor(govDropdown);
+      updateDropDownBorderColor(govDropdown);
     });
     genderDropdown.addEventListener('change', function() {
-      updateDropdownBorderColor(genderDropdown);
+      updateDropDownBorderColor(genderDropdown);
     });
 
 
@@ -330,9 +316,9 @@ width: 0px; ">
         updateInputBorderColor(numInput);
         updateInputBorderColor(addInput);
         updateInputBorderColor(areaInput);
-        updatetypeBorderColor(typeDropdown);
-        updategovBorderColor(govDropdown);
-        updategenderBorderColor(genderDropdown);
+        updateDropDownBorderColor(typeDropdown);
+        updateDropDownBorderColor(govDropdown);
+        updateDropDownBorderColor(genderDropdown);
       }
       else {
         warningMsg.style.display = "none";
