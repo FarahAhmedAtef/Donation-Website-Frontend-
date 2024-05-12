@@ -163,26 +163,27 @@
                                   Female
                                 </label></div>
                                 <br><br>
-                                <form class="file-upload-form">
-                                    <label for="file" class="file-upload-label">
-                                        Upload picture of the toy(s) required
-                                        <br>
-                                      <div class="file-upload-design">
-                                        <svg viewBox="0 0 640 512" height="1em">
-                                          <path
-                                            d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
-                                          ></path>
-                                        </svg>
-                                        <img id="preview" scr="" alt="toy1.png">
-                                        <p>Drag and Drop</p>
-                                        <p>or</p>
-                                        <span class="browse-button">Browse file</span>
-                                      </div>
-                                      <input id="file" type="file" />
-                                    </label>
-                                  </form>
-                                  <br><br>
-                                  <!-- <button id="upload" class="uploadbtn" style="margin-right: auto; display: none;">Upload</button> -->
+                                <form class="file-upload-form"style="margin: 0 auto;">
+                                  <label for="file" class="file-upload-label">
+                                      Upload picture of the toy(s) required
+                                      <br>
+                                    <div class="file-upload-design">
+                                      <svg viewBox="0 0 640 512" height="1em">
+                                        <path
+                                          d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
+                                        ></path>
+                                      </svg>
+                                      <!-- <img id="preview" scr="" alt="toy1.png"> -->
+                                      <p>Drag and Drop</p>
+                                      <p>or</p>
+                                      <span class="browse-button">Browse file</span>
+                                    </div>
+                                    <input id="file" type="file" />
+                                    <span id="fileError" class="error-message" style="display: none; color:red;">Please upload an image of the toy(s) required.</span>
+                                    <span id="fileSelected" class="success-message" style="display: none; color:green">File selected was successfully uploaded.</span>
+                                  </label>
+                                </form>
+                                  <br>
                                      
 
 
@@ -314,6 +315,41 @@ width: 0px; ">
   });
 </script>
 
+
+<script>
+  const postBtn1 = document.getElementById('postBtn');
+const fileError = document.getElementById('fileError');
+const fileInput = document.getElementById('file');
+const fileSelected = document.getElementById('fileSelected');
+
+
+fileSelected.style.display = "none";
+
+fileInput.addEventListener('change', function() {
+if (fileInput.value) {
+  postBtn.disabled = false;
+  fileSelected.style.display = "block";
+  fileError.style.display = "none"; // Hide error message
+} else {
+  postBtn.disabled = true;
+  fileSelected.style.display = "none";
+  fileError.style.display = "block"; // Show error message if no file
+}
+});
+
+postBtn.addEventListener('click', function(event) {
+if (fileInput.value === '') {
+  // Prevent form submission if no file is chosen
+  event.preventDefault();
+  fileError.style.display = "block"; // Show error message
+} else {
+  // Allow form submission if a file is chosen
+  fileError.style.display = "none"; // Hide error message (optional for clarity)
+  fileInput.style.display="block";
+  // Your form submission logic here (e.g., using fetch or form submit)
+}
+});
+</script>
 <script>
 	const counterElement = document.querySelector('.counter');
 let count = 0; // Initial counter value

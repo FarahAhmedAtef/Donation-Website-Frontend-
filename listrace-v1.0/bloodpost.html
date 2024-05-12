@@ -125,23 +125,6 @@
                             <br><br>
                             <input type="text" id="type" class="subscription-input-form" placeholder="blood type (please include RH type)">
                             <br><br>
-                            <!-- <input type="text" id="edition" class="subscription-input-form" placeholder="Edition ex: first, second, etc.">
-                            <br><br> -->
-                            <!-- <select name="type1" class="subscription-input-form" id="type1">
-                              <option value="" disabled selected>Select book language</option>
-                              <option value="l1">English</option>
-                              <option value="l2">Arabic</option>
-                              <option value="l3">French</option>
-                              <option value="l4">German</option>
-                          </select> -->
-                            <br><br>
-                            <!-- <label for="password">Password:</label> -->
-                            <div class="counter-container">
-                               <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
-                                <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" style="border: 10px black;">0</div>
-                                <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
-                              </div>
         
                             
                            <br><br>
@@ -242,28 +225,6 @@ width: 0px; ">
   });
 </script>
 
-<script>
-	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
-
-const incrementButton = document.getElementById('increment');
-const decrementButton = document.getElementById('decrement');
-
-incrementButton.addEventListener('click', () => {
-  count++;
-  counterElement.textContent = count;
-});
-
-decrementButton.addEventListener('click', () => {
-  if (count > 0) {
-    count--;
-  }
-  counterElement.textContent = count;
-});
-
-</script>
-
-<!---image preview-->
 
 
 </body>

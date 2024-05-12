@@ -124,7 +124,7 @@
                             </select> <br><br>
                          <input type="text" class="subscription-input-form " id="amountInput" placeholder="Amount in kgs ex: 1/2 kgs, 2kgs, etc." style="display: none;">
                                 <br><br>
-                            <input type="text" class="subscription-input-form" placeholder="item name">
+                            <input type="text" class="subscription-input-form" id="name" placeholder="item name">
                             <br><br>
                            
                             <div class="counter-container1" style="display: none;">
@@ -144,7 +144,8 @@
                 <form class="form1">
                     <textarea placeholder="extra information"></textarea>
                 </form>
-<br><br>
+                <div id="warningMsg" style="display: none; color: red;">Please choose a food item and mention item name to proceed!</div>
+
 <form id="redirectForm" action="posted.html" method="get">
     <button id="postBtn" class="appsLand-btn subscribe-btn" type="submit" style="height:60px; width: 160px;font-size: 15px;
     font-weight: bold;">Post</button>
@@ -153,6 +154,7 @@
                     
             </div>	
         </div>
+    </div>
     </div>
 
 </section><!--/subscription-->	
@@ -183,14 +185,89 @@ width: 0px; ">
 		</div><!--/.hm-footer-copyright-->
 	</div><!--/.container-->
 
-	<div id="scroll-Top">
-		<div class="return-to-top">
-			<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-		</div>
-	</div><!--/.scroll-Top-->
 </footer><!--/.footer-->
 
 
+
+<script>
+    const postBtn = document.getElementById('postBtn');
+    const amount = document.getElementById('amountInput');
+    const nameInput = document.getElementById('name');
+    const warningMsg = document.getElementById('warningMsg');
+    const foodDropdown = document.getElementById('type1');
+    const quantityCounter = document.getElementById('quantityCounter');
+  
+    let currentQuantity = 0; // Store current quantity
+  
+     // Function to check if a valid option is selected from the dropdown
+     function isValidFoodOptionSelected() {
+      return foodDropdown.value !== ""; // Check if value is not the empty string
+    }
+    // Function to update border style based on input value
+    function updateInputBorderColor(inputElement) {
+      if (inputElement.value.trim() === "") {
+        inputElement.style.border = "1px solid red";
+      } else {
+        inputElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+    // Function to update quantity value on button click
+    function updateQuantity(change) {
+      currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
+      quantityCounter.textContent = currentQuantity;
+    }
+     // Event listeners for increment/decrement buttons
+     const decrementBtn = document.getElementById('decrement1');
+     const incrementBtn = document.getElementById('increment1');
+  
+    decrementBtn.addEventListener('click', function() {
+      updateQuantity(-1);
+    });
+  
+    incrementBtn.addEventListener('click', function() {
+      updateQuantity(1);
+    });
+  
+    // Event listeners for input changes
+    amount.addEventListener('input', function() {
+      updateInputBorderColor(amount);
+    });
+  
+    nameInput.addEventListener('input', function() {
+      updateInputBorderColor(nameInput);
+    });
+  
+    postBtn.addEventListener('click', function(event) {
+      if (!isValidFoodOptionSelected() && nameInput.value.trim()==="") {
+        event.preventDefault(); // Prevent form submission
+        warningMsg.style.display = "block"; // Display warning message
+        updateInputBorderColor(nameInput);
+      }
+      else if (!isValidFoodOptionSelected()) {
+        event.preventDefault(); // Prevent form submission
+        warningMsg.textContent = "Please choose a food item to proceed."; // Update warning message
+        warningMsg.style.display = "block";}
+        else if (isValidFoodOptionSelected()&& (this.value==="veggies"|| this.value==="fruit")) {
+        event.preventDefault(); // Prevent form submission
+        warningMsg.textContent = "Please insert amount in kgs to proceed!"; // Update warning message
+        warningMsg.style.display = "block";
+        updateInputBorderColor(amount);}
+        else if (currentQuantity === 0 && this.value==="fm") {
+        event.preventDefault(); // Prevent form submission
+        warningMsg.textContent = "Please choose a quantity to proceed!"; // Update warning message
+        warningMsg.style.display = "block";}
+      else if (!currentQuantity === 0 && (amount.value.trim()==="" && isValidFoodOptionSelected()&!nameInput.value.trim()==="")) {
+        warningMsg.style.display = "none"; // Hide warning message (optional)
+      }
+      else if (currentQuantity === 0 && (!amount.value.trim()==="" && isValidFoodOptionSelected()&!nameInput.value.trim()==="")) {
+        warningMsg.style.display = "none"; // Hide warning message (optional)
+      }
+      else {
+        warningMsg.style.display = "none"; // Hide warning message (optional)
+        // Submit the form (form submission logic)
+      }
+    });
+  </script>
 <!--amount in kgs textbox-->
 <script>
     // Get the select element
