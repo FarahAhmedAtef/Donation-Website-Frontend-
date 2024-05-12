@@ -379,7 +379,7 @@ ul{
  
   
 
-  #closePopup1, #closePopup2, #closePopup3, #submitButton, #submitButton1 {
+  #closePopup1, #closePopup2, #closePopup3, #submitButton, #submitButton1, #closePopup11, #closePopup123, #closePopup133, #closePopup211, #closePopup234, #closePopup255, #closePopup311, #closePopup321, #closePopup333, #closePopup41, #closePopup44, #closePopup46, #closePopup51, #closePopup55, #closePopup59, #closePopup61, #closePopup65, #closePopup69, #closePopup555, #closePopup777{
     /* Existing styles: color: white; */
     background-color:rgb(5, 14, 56);;
     color: #ecf0f0;
@@ -1806,7 +1806,7 @@ background-color:transparent;
   /*  padding: 20px;  /* Add some padding for better readability */
     
   /*}*/
-  #popup, #popup1, #popup2, #popup3, #popup11, #popup123, #popup133, #popup234,  #popup211, #popup255, #popup311, #popup321, #popup333, #popup41, #popup44, #popup46, #popup51, #popup55, #popup59, #popup61, #popup65,#popup69, #popupapply, #directapply {
+  #popup, #popup1, #popup2, #popup3, #popup11, #popup123, #popup133, #popup234,  #popup211, #popup255, #popup311, #popup321, #popup333, #popup41, #popup44, #popup46, #popup51, #popup55, #popup59, #popup61, #popup65,#popup69, #popupapply, #directapply, #popup555, #popup777 {
     overflow-y: auto;
     position: fixed; /* Fix the popup to the viewport */
     top: 50%; /* Position vertically at 50% (center) */
@@ -1827,11 +1827,11 @@ background-color:transparent;
   #popup.explore-rating-price.explore-rating label,  #popup1.explore-rating-price.explore-rating label, #popup2.explore-rating-price.explore-rating label, #popup3.explore-rating-price.explore-rating label, #popup11.explore-rating-price.explore-rating label, #popup123.explore-rating-price.explore-rating label, #popup133.explore-rating-price.explore-rating label, #popup211.explore-rating-price.explore-rating label,
   #popup234.explore-rating-price.explore-rating label, #popup255.explore-rating-price.explore-rating label, #popup311.explore-rating-price.explore-rating label, #popup321.explore-rating-price.explore-rating label,
   #popup333.explore-rating-price.explore-rating label, #popup41.explore-rating-price.explore-rating label, #popup44.explore-rating-price.explore-rating label, #popup46.explore-rating-price.explore-rating label,
-  #popup51.explore-rating-price.explore-rating label,#popup55.explore-rating-price.explore-rating label, #popup59.explore-rating-price.explore-rating label , #popup61.explore-rating-price.explore-rating label, #popup65.explore-rating-price.explore-rating label, #popup69.explore-rating-price.explore-rating label {
+  #popup51.explore-rating-price.explore-rating label,#popup55.explore-rating-price.explore-rating label, #popup59.explore-rating-price.explore-rating label , #popup61.explore-rating-price.explore-rating label, #popup65.explore-rating-price.explore-rating label, #popup69.explore-rating-price.explore-rating label, #popup555.explore-rating-price.explore-rating label, #popup777.explore-rating-price.explore-rating label {
     color:#ecf0f0 !important;
     border-right: 1px solid #ecf0f0;
   } 
-  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a, #popup11 h2 a, #popup123 h2 a, #popup133 h2 a, #popup211 h2 a, #popup234 h2 a, #popup255 h2 a, #popup311 h2 a, #popup321 h2 a, #popup333 h2 a, #popup41 h2 a, #popup44 h2 a, #popup46 h2 a, #popup51 h2 a, #popup55 h2 a, #popup59 h2 a, #popup61 h2 a, #popup65 h2 a, #popup69 h2 a{
+  #popup h2 a, #popup1 h2 a,  #popup2 h2 a,  #popup3 h2 a, #popup11 h2 a, #popup123 h2 a, #popup133 h2 a, #popup211 h2 a, #popup234 h2 a, #popup255 h2 a, #popup311 h2 a, #popup321 h2 a, #popup333 h2 a, #popup41 h2 a, #popup44 h2 a, #popup46 h2 a, #popup51 h2 a, #popup55 h2 a, #popup59 h2 a, #popup61 h2 a, #popup65 h2 a, #popup69 h2 a, #popup555 h2 a, #popup777 h2 a{
     color:rgb(5, 14, 56);
     font-size: 15px;
     font-weight: bold;
@@ -1848,12 +1848,12 @@ background-color:transparent;
   #popup1 .explore-rating-price .explore-rating,  #popup2 .explore-rating-price .explore-rating,  #popup3 .explore-rating-price .explore-rating, #popup11 .explore-rating-price .explore-rating, #popup123 .explore-rating-price .explore-rating, #popup133 .explore-rating-price .explore-rating, #popup211 .explore-rating-price .explore-rating,
   #popup234 .explore-rating-price .explore-rating,#popup255 .explore-rating-price .explore-rating, #popup311 .explore-rating-price .explore-rating, #popup321 .explore-rating-price .explore-rating,
   #popup333 .explore-rating-price .explore-rating, #popup41 .explore-rating-price .explore-rating, #popup44 .explore-rating-price .explore-rating, #popup46 .explore-rating-price .explore-rating,
-  #popup51 .explore-rating-price .explore-rating, #popup55 .explore-rating-price .explore-rating,#popup59 .explore-rating-price .explore-rating, #popup61 .explore-rating-price .explore-rating, #popup65 .explore-rating-price .explore-rating,#popup69 .explore-rating-price .explore-rating {
+  #popup51 .explore-rating-price .explore-rating, #popup55 .explore-rating-price .explore-rating,#popup59 .explore-rating-price .explore-rating, #popup61 .explore-rating-price .explore-rating, #popup65 .explore-rating-price .explore-rating,#popup69 .explore-rating-price .explore-rating, #popup555 .explore-rating-price .explore-rating, #popup777 .explore-rating-price .explore-rating {
     background-color: rgb(5, 14, 56);
     color: white;
   }
 #popup1 #closeButton, #popup2 #closeButton2, #popup3 #closeButton3,#popup11 #closeButton11 , #popup123 #closeButton123, #popup133 #closeButton133, #popup211 #closeButton211 , #popup234 #closeButton234, #popup255 #closeButton255, #popup311 #closeButton311, #popup321 #closeButton321,#popup333 #closeButton333, #popup41 #closeButton41, #popup44 #closeButton44,
-#popup46 #closeButton46, #popup51 #closeButton51, #popup55 #closeButton55 , #popup59 #closeButton59 , #popup61 #closeButton61 , #popup65 #closeButton65, #popup69 #closeButton69 , #popup #closeButton0, #closeButton00, #closepopupapply {
+#popup46 #closeButton46, #popup51 #closeButton51, #popup55 #closeButton55 , #popup59 #closeButton59 , #popup61 #closeButton61 , #popup65 #closeButton65, #popup69 #closeButton69 , #popup #closeButton0, #closeButton00, #closepopupapply, #popup555 #closeButton555, #popup777 #closeButton777 {
   font-size: 20px;
   padding-bottom: 4px;
 }
@@ -1876,8 +1876,10 @@ background-color:transparent;
   #popup55 div div i, #popup55 div div label,
   #popup59 div div i, #popup59 div div label
   #popup61 div div i, #popup61 div div label,
-  #popup65 div div i, #popup65 div div label
-  #popup69 div div i, #popup69 div div label
+  #popup65 div div i, #popup65 div div label,
+  #popup69 div div i, #popup69 div div label,
+  #popup555 div div label,  #popup555 div div i,
+  #popup777 div div label,  #popup777 div div i
 
 
 
@@ -1886,7 +1888,7 @@ background-color:transparent;
    {
     color:rgb(5, 14, 56) !important;
   }
-  #popup1 p,  #popup2 p,  #popup3 p, #popup11 p, #popup123 p, #popup133 p, #popup211 p, #popup234 p, #popup255 p, #popup311 p, #popup321 h2 a, #popup333 p, #popup41 p, #popup44 p, #popup46 p, #popup51 p, #popup55 p, #popup59 p, #popup61 p, #popup65 p, #popup69 p{
+  #popup1 p,  #popup2 p,  #popup3 p, #popup11 p, #popup123 p, #popup133 p, #popup211 p, #popup234 p, #popup255 p, #popup311 p, #popup321 h2 a, #popup333 p, #popup41 p, #popup44 p, #popup46 p, #popup51 p, #popup55 p, #popup59 p, #popup61 p, #popup65 p, #popup69 p, #popup555 p, #popup777 p, #popup888 p{
     color: white;
   }
   /* Prevent content behind popup from being interactive (Optional) */
@@ -1933,7 +1935,7 @@ background-color:transparent;
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
   }
-  #map, #map2, #map3, #map4{
+  #map, #map2, #map3, #map4, #map555, #map777{
     height: 30%;
   }
   .price-tag {
@@ -2693,7 +2695,7 @@ input {
 
 
 /*========================Thank you=================*/
-#openpostdetails1, #openpostdetails2, #openpostdetails3{
+#openpostdetails1, #openpostdetails2, #openpostdetails3, #openpostdetails11,#openpostdetails123, #openpostdetails133, #openpostdetails211, #openpostdetails234, #openpostdetails255, #openpostdetails311, #openpostdetails321, #openpostdetails333, #openpostdetails41, #openpostdetails44, #openpostdetails46, #openpostdetails51, #openpostdetails55, #openpostdetails59, #openpostdetails61, #openpostdetails65, #openpostdetails69, #openpostdetails70, #openpostdetails71, #openpostdetails72, #openpostdetails73, #openpostdetails74, #openpostdetails75{
 border:1px solid white;
 }
 .explore-open-close-part button {
