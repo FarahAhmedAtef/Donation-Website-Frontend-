@@ -140,18 +140,11 @@ min-height: 100vh;">
                         <input type="text" id="address" class="subscription-input-form" placeholder="patient address">
                         <br><br>
 
-                        <label for="gender">Gender</label>
-                        <div class="radio-group">
-                            <input class="radio-input" name="radio-group" id="radio1" type="radio">
-                            <label class="radio-label" for="radio1">
-                              <span class="radio-inner-circle"></span>
-                              Male
-                            </label>
-                            <input class="radio-input" name="radio-group" id="radio2" type="radio">
-                            <label class="radio-label" for="radio2">
-                              <span class="radio-inner-circle"></span>
-                              Female
-                            </label></div>
+                        <select name="Gender" class="subscription-input-form" id="gender">
+                          <option value="" disabled selected>Gender</option>
+                          <option value="regular">Male</option>
+                          <option value="teacher">Female</option>
+                      </select> 
                             <br><br>
 <!-- textbox for description -->
 <label for="txtbox">Brief description about the patient's case:</label><br>
@@ -301,9 +294,9 @@ initMap();
   const ageInput = document.getElementById('age');
   const weightInput = document.getElementById('weight');
   const addressInput = document.getElementById('address');
-  const SpecDropdown = document.getElementById('type1');
   const warningMsg = document.getElementById('warningMsg');
-  const radioGroup = document.querySelector('.radio-group'); // Select the radio group element
+  const specDropdown = document.getElementById('type1');
+  const genderDropdown = document.getElementById('gender'); 
  
 
     // Function to check if a valid option is selected from the dropdown
@@ -312,10 +305,10 @@ initMap();
   }
   // 
 
-   // Function to check if a radio button is selected
-   function isRadioSelected() {
-    return radioGroup.querySelector('input[type="radio"]:checked') !== null;
-  }
+  function isValidgenderOptionSelected() {
+      return genderDropdown.value !== ""; // Check if value is not the empty string
+    }
+
   // Function to update border style based on input value
   function updateInputBorderColor(inputElement) {
     if (inputElement.value.trim() === "") {
@@ -324,6 +317,14 @@ initMap();
       inputElement.style.border = "none"; // Remove red border if not empty
     }
   }
+
+  function updateDropdownBorderColor(DropdownElement) {
+      if (DropdownElement.value === "") {
+        DropdownElement.style.border = "1px solid red";
+      } else {
+        DropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
 
   // Event listeners for input changes
   nameInput.addEventListener('input', function() {
@@ -338,15 +339,24 @@ initMap();
   addressInput.addEventListener('input', function() {
     updateInputBorderColor(addressInput);
   });
+  specDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(govDropdown);
+  });
+  genderDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(genderDropdown);
+  });
 
   postBtn.addEventListener('click', function(event) {
-    if (!isRadioSelected()&& nameInput.value.trim() === ""|| ageInput.value.trim() === "" || weightInput.value.trim() === ""|| addressInput.value.trim() === "" ) {
+    if (!isValidgenderOptionSelected()||!isValidspecOptionSelected() || nameInput.value.trim() === ""|| ageInput.value.trim() === "" || weightInput.value.trim() === ""|| addressInput.value.trim() === "" ) {
       event.preventDefault(); // Prevent form submission
       warningMsg.style.display = "block"; // Display warning message
       updateInputBorderColor(nameInput);
       updateInputBorderColor(ageInput);
       updateInputBorderColor(weightInput);
       updateInputBorderColor(addressInput);
+      updateDropdownBorderColor(specDropdown);
+      updateDropdownBorderColor(genderDropdown);
+
     } else if (!isValidSpecOptionSelected()) {
       event.preventDefault(); // Prevent form submission
       warningMsg.textContent = "Please choose a specialization to proceed."; // Update warning message
@@ -355,7 +365,7 @@ initMap();
         event.preventDefault(); // Prevent form submission
       warningMsg.textContent = "Please fill in all required fields!"; // Update warning message
       warningMsg.style.display = "block";}
-     else if (!isRadioSelected()) {
+     else if (!isValidgenderOptionSelected()) {
       event.preventDefault(); // Prevent form submission
       warningMsg.textContent = "Please choose a gender to proceed!"; // Update warning message
       warningMsg.style.display = "block";}
