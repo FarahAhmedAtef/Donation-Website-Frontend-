@@ -139,7 +139,7 @@
                             <div class="counter-container">
                               <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
                               <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                              <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
+                              <div class="counter" id="quantityCounter" style="border: 10px black;">1</div>
                               <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                             </div>
         
@@ -297,7 +297,7 @@ width: 0px; ">
 
 <script>
 	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
+let count = 1; // Initial counter value
 
 const incrementButton = document.getElementById('increment');
 const decrementButton = document.getElementById('decrement');
@@ -308,7 +308,7 @@ incrementButton.addEventListener('click', () => {
 });
 
 decrementButton.addEventListener('click', () => {
-  if (count > 0) {
+  if (count > 1) {
     count--;
   }
   counterElement.textContent = count;

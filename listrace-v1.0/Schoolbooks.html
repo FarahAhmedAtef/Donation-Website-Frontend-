@@ -139,7 +139,7 @@
                             <div class="counter-container">
                                <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
                                 <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
+                                <div class="counter" id="quantityCounter" style="border: 10px black;">1</div>
                                 <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
         
@@ -270,6 +270,14 @@ width: 0px; ">
       inputElement.style.border = "none"; // Remove red border if not empty
     }
   }
+  function updateDropdownBorderColor(DropdownElement) {
+      if (DropdownElement.value === "") {
+        DropdownElement.style.border = "1px solid red";
+      } else {
+        DropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+
 
   // Event listeners for input changes
   nameInput.addEventListener('input', function() {
@@ -283,13 +291,19 @@ width: 0px; ">
     updateInputBorderColor(editionInput);
   });
 
+  langDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(langDropdown);
+    });
+
   postBtn.addEventListener('click', function(event) {
-    if (nameInput.value.trim() === "" || authorInput.value.trim() === "" || editionInput.value.trim() === "" ) {
+    if (!isValidLOptionSelected() || nameInput.value.trim() === "" || authorInput.value.trim() === "" || editionInput.value.trim() === "" ) {
       event.preventDefault(); // Prevent form submission
       warningMsg.style.display = "block"; // Display warning message
       updateInputBorderColor(nameInput);
       updateInputBorderColor(authorInput);
       updateInputBorderColor(editionInput);
+      updateDropdownBorderColor(langDropdown);
+
 
     } else if (!isValidLOptionSelected()) {
       event.preventDefault(); // Prevent form submission
@@ -344,7 +358,7 @@ if (fileInput.value === '') {
 
 <script>
 	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
+let count = 1; // Initial counter value
 
 const incrementButton = document.getElementById('increment');
 const decrementButton = document.getElementById('decrement');
@@ -355,7 +369,7 @@ incrementButton.addEventListener('click', () => {
 });
 
 decrementButton.addEventListener('click', () => {
-  if (count > 0) {
+  if (count > 1) {
     count--;
   }
   counterElement.textContent = count;

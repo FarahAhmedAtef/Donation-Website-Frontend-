@@ -139,7 +139,7 @@
                             <div class="counter-container">
                                <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
                                 <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
+                                <div class="counter" id="quantityCounter" style="border: 10px black;">1</div>
                                 <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
         
@@ -149,19 +149,11 @@
                             <!-- <label for="confirm-password">Confirm Password:</label> -->
                             <!-- <input type="password" id="confirm-password" name="confirm-password" required> -->
                             <br>
-                            <label for="gender">Gender</label>
-                            <div class="radio-group">
-                                <input class="radio-input" name="radio-group" id="radio1" type="radio">
-                                <label class="radio-label" for="radio1">
-                                  <span class="radio-inner-circle"></span>
-                                  Male
-                                </label>
-                                
-                                <input class="radio-input" name="radio-group" id="radio2" type="radio">
-                                <label class="radio-label" for="radio2">
-                                  <span class="radio-inner-circle"></span>
-                                  Female
-                                </label></div>
+                            <select name="Gender" class="subscription-input-form" id="gender">
+                              <option value="" disabled selected>Gender</option>
+                              <option value="regular">Male</option>
+                              <option value="teacher">Female</option>
+                          </select>
                                 <br><br>
                                 <form class="file-upload-form"style="margin: 0 auto;">
                                   <label for="file" class="file-upload-label">
@@ -252,6 +244,8 @@ width: 0px; ">
   const warningMsg = document.getElementById('warningMsg');
   const ageDropdown = document.getElementById('type1');
   const quantityCounter = document.getElementById('quantityCounter');
+  const genderDropdown = document.getElementById('gender'); 
+
 
   let currentQuantity = 0; // Store current quantity
 
@@ -259,6 +253,10 @@ width: 0px; ">
    function isValidFoodOptionSelected() {
     return ageDropdown.value !== ""; // Check if value is not the empty string
   }
+  function isValidgenderOptionSelected() {
+    return genderDropdown.value !== ""; // Check if value is not the empty string
+  }
+
   // Function to update border style based on input value
   function updateInputBorderColor(inputElement) {
     if (inputElement.value.trim() === "") {
@@ -267,6 +265,13 @@ width: 0px; ">
       inputElement.style.border = "none"; // Remove red border if not empty
     }
   }
+  function updateDropdownBorderColor(DropdownElement) {
+      if (DropdownElement.value === "") {
+        DropdownElement.style.border = "1px solid red";
+      } else {
+        DropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
   // Function to update quantity value on button click
   function updateQuantity(change) {
     currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
@@ -293,12 +298,21 @@ width: 0px; ">
     updateInputBorderColor(categoryInput);
   });
 
+  ageDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(ageDropdown);
+    });
+    genderDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(genderDropdown);
+    });
+
   postBtn.addEventListener('click', function(event) {
-    if (toyTypeInput.value.trim() === "" || categoryInput.value.trim() === "") {
+    if (!isValidgenderOptionSelected()||!isValidgovOptionSelected() || toyTypeInput.value.trim() === "" || categoryInput.value.trim() === "") {
       event.preventDefault(); // Prevent form submission
       warningMsg.style.display = "block"; // Display warning message
       updateInputBorderColor(toyTypeInput);
       updateInputBorderColor(categoryInput);
+      updateDropdownBorderColor(ageDropdown);
+      updateDropdownBorderColor(genderDropdown);
     } else if (!isValidFoodOptionSelected()) {
       event.preventDefault(); // Prevent form submission
       warningMsg.textContent = "Please choose an age range to proceed."; // Update warning message
@@ -352,7 +366,7 @@ if (fileInput.value === '') {
 </script>
 <script>
 	const counterElement = document.querySelector('.counter');
-let count = 0; // Initial counter value
+let count = 1; // Initial counter value
 
 const incrementButton = document.getElementById('increment');
 const decrementButton = document.getElementById('decrement');
@@ -363,7 +377,7 @@ incrementButton.addEventListener('click', () => {
 });
 
 decrementButton.addEventListener('click', () => {
-  if (count > 0) {
+  if (count > 1) {
     count--;
   }
   counterElement.textContent = count;
