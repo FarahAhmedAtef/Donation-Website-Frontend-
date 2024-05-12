@@ -333,6 +333,12 @@
                               </div>
 
                     </div>
+                <div class="counter-container">
+                    <button id="decrement1"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
+                    <div class="counter1" style="border: 1px black;">0</div>
+                    <button id="increment1"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
+                  </div>
+             <label style="display:none" id="maxlimit1">You reached your maximum limit</label>
 					
 
 					<button id="closePopup11" style=" margin: 0 auto; display: block;">Donate</button>
@@ -1285,10 +1291,10 @@
                     <span class="explore-rating">5.0</span>
                     <label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">3-6 years</label> 
                     <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-                      Boys
-                      
-                  </label>
-                   <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
+                        Male
+                        
+                    </label>
+                     <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
                 </p>
                 
                 <div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -1310,15 +1316,15 @@
     
     <div class="single-explore-item">
         <div class="single-explore-txt bg-theme-4">
-          <h2><a style="text-transform: none;" href="#">Clothes donations are required</a></h2>
-                      <p class="explore-rating-price">
+            <h2><a href="#">Clothes Donations are Required</a></h2>
+            <p class="explore-rating-price">
                 <span class="explore-rating">5.0</span>
-                <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">6-10 Years</label> 
-						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Girls
-							
-						</label>
-						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
+                <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">10-13 years old</label> 
+                <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                    Female
+                    
+                </label>
+                 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
             </p>
             
             <div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
@@ -2000,12 +2006,43 @@
 
         </div>
         <div>
-          <p>Description: In need of bones doctors</p>
+          <p style="color:#ecf0f0">Description: In need of bones doctors</p>
         </div>
         <div id="map666" style=" margin-top: 20px; margin-bottom: 20px;"></div>
 
         <button id="closePopup666" style=" margin: 0 auto; display: block;">Donate</button>
     </div>
+
+
+    <div id="popup779">
+      <i id="closeButton779" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
+        <h2><a  style="text-transform: none;" href="#">Probono teaching needed</a></h2>
+        <p class="explore-rating-price">
+          <span class="explore-rating">5.0</span>
+          <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Cairo</label> 
+          <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+            5th Settlement
+            
+          </label>
+           <label class="hospital" href="#"  Style="padding-right:3px; border-right:none !important;">Math</label>
+        </p>
+        <div>
+          <div>
+          <i class="fa-solid fa-users" style="margin-right:5px; color: black;"></i>
+          <label style="margin-right:5px; color: black;">5 students</label>
+          </div>
+          <div>
+          <i class="fa-solid fa-location-dot" style="margin-right:5px; color: black;"></i>
+          <label style="margin-right:5px; color: black;">Abrag El mohandesin, Corniche El Maadi</label>
+          </div>
+        </div>
+        <div>
+          <p>Description: I need a teacher for 5 students to teach them Maths </p>
+        </div>
+        <div id="map779" style=" margin-top: 20px; margin-bottom: 20px;"></div>
+
+        <button id="closePopup779" style=" margin: 0 auto; display: block;">Donate</button>
+      </div>
 
 </section><!--/.explore-->
 
@@ -2038,6 +2075,30 @@
 
 			
         </footer><!--/.footer-->
+
+
+        <script>
+          const popup779 = document.getElementById('popup779');
+          const openPopupBtn779 = document.getElementById('openpostdetails74');
+          const closeButton779 = document.getElementById('closeButton779');
+          const closePopupBtn779 = document.getElementById('closePopup779');
+          
+          openPopupBtn779.addEventListener('click', function() {
+            popup779.style.display = 'block';
+          });
+          
+          closeButton779.addEventListener('click', function() {
+            popup779.style.display = 'none';
+          
+          });
+          
+          closePopupBtn779.addEventListener('click', function() {
+          
+            window.location.href="Teaching.html";
+            }
+           
+          );
+          </script>
 
         <script>
           const popup666 = document.getElementById('popup666');
@@ -2542,6 +2603,26 @@ function initMap() {
 			  position: test, 
 			  map: map777
 			}); 
+
+      var map666 = new google.maps.Map(document.getElementById('map666'), { 
+			  zoom: 4, 
+			  center: test,
+			  mapId:"fc7d36a02ec1bfd9"  
+			}); 
+			var marker666= new google.maps.marker.AdvancedMarkerElement({ 
+			  position: test, 
+			  map: map666
+			}); 
+
+      var map779 = new google.maps.Map(document.getElementById('map779'), { 
+			  zoom: 4, 
+			  center: test,
+			  mapId:"fc7d36a02ec1bfd9"  
+			}); 
+			var marker779= new google.maps.marker.AdvancedMarkerElement({ 
+			  position: test, 
+			  map: map779
+			});
 
       } 
 
