@@ -125,18 +125,19 @@ min-height: 100vh;">
                     <!-- <form action="#"> -->
                         
                         <select name="type1" class="subscription-input-form" id="type1">
-                            <option value="" disabled selected>Select medical specialization</option>
+                            <option value="" disabled selected>select medical specialization</option>
                             <option value="l1">Pediatrics</option>
                             <option value="l2">Dermatology</option>
                             <option value="l3">Cardiology</option>
+                            <option value="l4">Bones</option>
                         </select><br><br>
-                        <input type="text" id="name" class="subscription-input-form" placeholder="Name of Patient">
+                        <input type="text" id="name" class="subscription-input-form" placeholder="name of patient">
                         <br><br>
-                        <input type="number" id="age" class="subscription-input-form" placeholder="Patient Age">
+                        <input type="number" id="age" class="subscription-input-form" placeholder="patient age">
                         <br><br>
-                        <input type="number" id="weight" class="subscription-input-form" placeholder="Patient Weight in kgs">
+                        <input type="number" id="weight" class="subscription-input-form" placeholder="patient weight in kgs">
                         <br><br>
-                        <input type="text" id="address" class="subscription-input-form" placeholder="Patient Address">
+                        <input type="text" id="address" class="subscription-input-form" placeholder="patient address">
                         <br><br>
 
                         <label for="gender">Gender</label>
@@ -157,10 +158,13 @@ min-height: 100vh;">
 <form class="form">
   <textarea placeholder="Case description"></textarea>
 </form>
-<br><br>
+<br>
+<!-- <div id="caseError" class="error-message" style="display: none; color: red;">Please enter a brief description of the patient's case.</div> -->
+<br>
           
-                           <h4>Please pick your exact location on map</h4>
-                           <div id="map4" style="height: 400px;"></div><br><br>
+                           <h4  style="text-transform: none;">Please pick medical visit exact location on map</h4>
+                           <div id="map4" style="height: 400px;"></div><br>
+                           <span id="mapError" class="error-message" style="color: red; display: none;">Please pick location for medical visit on map</span>
                                 
       <div id="warningMsg" style="display: none; color: red;">Please fill in the all required fields!</div>
                 <br>
@@ -243,6 +247,52 @@ width: 0px; ">
                 });
             }
         </script>
+<script>
+  const postBtn1 = document.getElementById('postBtn');
+const mapError = document.getElementById('mapError');
+
+
+// Define a variable to store the chosen location (initially null)
+let chosenLocation = null;
+
+// Function to handle map initialization (replace with your actual API key)
+function initMap() {
+  // ... Your Google Maps API initialization logic here ...
+  // Replace the following with your actual API key
+  const map = new google.maps.Map(document.getElementById("map4"), {
+    zoom: 8,
+    center: { lat: 30.0444, lng: 31.2357 }, // Replace with your default location
+  });
+
+  // Add a click event listener to the map to capture user selection
+  map.addListener("click", (event) => {
+  chosenLocation = event.latLng; // Store the clicked location
+
+  // Create a marker at the chosen location
+  const marker = new google.maps.Marker({
+    position: chosenLocation,
+    map: map,
+  });
+});
+}
+
+postBtn1.addEventListener('click', function(event) {
+  if (!chosenLocation) {
+    // Prevent form submission and show error message
+    event.preventDefault();
+    mapError.style.display = "block";
+  } else {
+    // Allow form submission if a location is chosen on the map
+    mapError.style.display = "none";
+    // Your form submission logic here (e.g., using fetch or form submit)
+    // You can access the chosenLocation (latitude and longitude) for further processing
+    console.log("Chosen location:", chosenLocation.lat(), chosenLocation.lng());
+  }
+});
+
+// Call the function to initialize the map (after including the Google Maps API)
+initMap();
+</script>
 
 <!---to fill all fields-->
 <script>
@@ -251,10 +301,16 @@ width: 0px; ">
   const ageInput = document.getElementById('age');
   const weightInput = document.getElementById('weight');
   const addressInput = document.getElementById('address');
+  const SpecDropdown = document.getElementById('type1');
   const warningMsg = document.getElementById('warningMsg');
-//   const warningMsg1 = document.getElementById('warningMsg1');
   const radioGroup = document.querySelector('.radio-group'); // Select the radio group element
+ 
 
+    // Function to check if a valid option is selected from the dropdown
+    function isValidSpecOptionSelected() {
+    return SpecDropdown.value !== ""; // Check if value is not the empty string
+  }
+  // 
 
    // Function to check if a radio button is selected
    function isRadioSelected() {
@@ -291,7 +347,11 @@ width: 0px; ">
       updateInputBorderColor(ageInput);
       updateInputBorderColor(weightInput);
       updateInputBorderColor(addressInput);
-    } else if(nameInput.value.trim() === ""|| ageInput.value.trim() === "" || weightInput.value.trim() === ""|| addressInput.value.trim() === ""){
+    } else if (!isValidSpecOptionSelected()) {
+      event.preventDefault(); // Prevent form submission
+      warningMsg.textContent = "Please choose a specialization to proceed."; // Update warning message
+      warningMsg.style.display = "block";}
+    else if(nameInput.value.trim() === ""|| ageInput.value.trim() === "" || weightInput.value.trim() === ""|| addressInput.value.trim() === ""){
         event.preventDefault(); // Prevent form submission
       warningMsg.textContent = "Please fill in all required fields!"; // Update warning message
       warningMsg.style.display = "block";}
@@ -299,13 +359,14 @@ width: 0px; ">
       event.preventDefault(); // Prevent form submission
       warningMsg.textContent = "Please choose a gender to proceed!"; // Update warning message
       warningMsg.style.display = "block";}
+      
      else {
       warningMsg.style.display = "none"; // Hide warning message (optional)
-      warningMsg1.style.display = "none";
       // Submit the form (form submission logic)
     }
   });
 </script>
+
 
 <script>
 	const counterElement = document.querySelector('.counter');

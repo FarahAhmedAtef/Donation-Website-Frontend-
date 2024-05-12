@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Directory Landing Page</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!--linear icon css-->
+		<link rel="stylesheet" href="assets/css/linearicons.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+		<!--flaticon.css-->
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+
+		<!--slick.css-->
+        <link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/slick-theme.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+	
+	<body>
+<section id="contact"  class="subscription">
+			<div class="container">
+				<div class="subscribe-title text-center">
+					<h2>
+						Update Account Information
+					</h2>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="subscription-input-group">
+							<form action="#">
+								<input type="text" id="email" class="subscription-input-form" placeholder="Update Email" required>
+								<input type="text" id="cnum" class="subscription-input-form" placeholder="Update Contact number" required>
+								<input type="password" id="pass" class="subscription-input-form" placeholder="Update password" required>
+								<input type="text" id="address" class="subscription-input-form" placeholder="Update Address" required>
+								<input type="text" id="area" class="subscription-input-form" placeholder="Update Area" required>
+								<input type="text" id="govern" class="subscription-input-form" placeholder="Update Governorate" required>
+								<br><br>
+							</form>
+			
+						</div>
+					</div>	
+				</div>
+				<button class="appsLand-btn subscribe-btn" onclick="validateForm()">
+					Save Changes
+				</button>
+			</div>
+		</section>
+        <script>
+            function validateForm() {
+                var form = document.getElementById('update-account');
+                var fname = document.getElementById('email');
+                var fname = document.getElementById('cnum');
+                var fname = document.getElementById('pass');
+                var fname = document.getElementById('address');
+                var fname = document.getElementById('area');
+                var fname = document.getElementById('govern');
+
+        
+                var inputs = [email, cnum, pass, address, area, govern];
+        
+                var existingErrorMessages = document.querySelectorAll('.error-message');
+        existingErrorMessages.forEach(function(errorMessage) {
+            errorMessage.parentNode.removeChild(errorMessage);
+        });
+        
+                inputs.forEach(function(input) {
+                    if (!input.value) {
+                        var errorMessage = document.createElement('span');
+                        errorMessage.className = 'error-message';
+                        errorMessage.textContent = 'This field is required';
+                        input.parentNode.insertBefore(errorMessage, input.nextSibling);
+                    }
+                });
+            }
+            
+        </script>
+    </body>
+</html>

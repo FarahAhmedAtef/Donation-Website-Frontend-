@@ -121,13 +121,13 @@
                         
       
                             
-                            <input type="text" id="itemT" class="subscription-input-form" placeholder="Item Type ex: pencil, notebooks, etc.">
+                            <input type="text" id="itemT" class="subscription-input-form" placeholder="item type ex: pencil, notebooks, etc.">
                             <br><br>
                             <!-- <label for="password">Password:</label> -->
                             <div class="counter-container">
                                <label id="quantityLabel1" style="margin-right:15px;">Quantity:</label> 
                                 <button id="decrement"><i class="fas fa-minus" style="font-weight: bold; color: black;"></i></button>
-                                <div class="counter" style="border: 10px black;">0</div>
+                                <div class="counter" id="quantityCounter" style="border: 10px black;">0</div>
                                 <button id="increment"><i class="fas fa-plus" style="font-weight: bold; color: black;"></i></button>
                               </div>
         
@@ -136,7 +136,7 @@
                   <!-- textbox for description -->
                   <!-- <label for="txtbox">Brief summary of what the book is about:</label> -->
                       <form class="form">
-                        <textarea placeholder="Extra information"></textarea>
+                        <textarea placeholder="extra information"></textarea>
                      </form>
                 <br>
                            
@@ -189,6 +189,28 @@ width: 0px; ">
   const postBtn = document.getElementById('postBtn');
   const itemInput = document.getElementById('itemT');
   const warningMsg = document.getElementById('warningMsg');
+  const quantityCounter = document.getElementById('quantityCounter');
+
+let currentQuantity = 0; // Store current quantity
+
+
+   // Function to update quantity value on button click
+   function updateQuantity(change) {
+    currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
+    quantityCounter.textContent = currentQuantity;
+  }
+   // Event listeners for increment/decrement buttons
+   const decrementBtn = document.getElementById('decrement');
+  const incrementBtn = document.getElementById('increment');
+
+  decrementBtn.addEventListener('click', function() {
+    updateQuantity(-1);
+  });
+
+  incrementBtn.addEventListener('click', function() {
+    updateQuantity(1);
+  });
+
 
   // Function to update border style based on input value
   function updateInputBorderColor(inputElement) {
@@ -209,8 +231,11 @@ width: 0px; ">
       warningMsg.style.display = "block"; // Display warning message
       updateInputBorderColor(itemInput);
     
-
-    } else {
+    } else if (currentQuantity === 0) {
+      event.preventDefault(); // Prevent form submission
+      warningMsg.textContent = "Please choose a quantity to proceed."; // Update warning message
+      warningMsg.style.display = "block";}
+     else {
       warningMsg.style.display = "none"; // Hide warning message (optional)
       // Submit the form (form submission logic)
     }
