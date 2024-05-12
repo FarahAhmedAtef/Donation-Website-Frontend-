@@ -170,10 +170,10 @@ min-height: 100vh;">
                            
 
                             <div id="warningMsg" style="display: none; color: red;">Please fill in all required fields!</div>
-                            <form id="redirectForm"  method="get">
+                            
                                 <button class="appsLand-btn subscribe-btn" id="createbutton" >Create Account</button>
                                 <!-- <a href="#" class="btn">Post</a> -->
-                            </form>
+                            
                         
                     </form>
                 </div>
@@ -303,7 +303,7 @@ width: 0px; ">
     });
 
 
-    createBtn.addEventListener('click', function(event) {
+    createBtn.addEventListener('click', function() {
       if ( !isValidtypeOptionSelected()|| !isValidgenderOptionSelected()||!isValidgovOptionSelected() ||n1Input.value.trim() === "" || n2Input.value.trim()==="" || emailInput.value.trim() === "" || passInput.value.trim() === "" 
       || cpassInput.value.trim() === "" || numInput.value.trim() === "" || addInput.value.trim()===""|| areaInput.value.trim()==="" ) {
         event.preventDefault(); // Prevent form submission

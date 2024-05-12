@@ -309,6 +309,7 @@
 					</div>
 					<input id="file" type="file" />
 					<span id="fileError" class="error-message" style="color: red;"></span>
+					<span id="fileSelected" class="success-message" style="display: none; color:green">File selected was successfully uploaded.</span>
 				  </label>
 				</form>
 				<br>
@@ -1466,6 +1467,19 @@ const backButton5 = document.getElementById('backpopupapply');
 		
 
 </script>
+<script>
+	const fileSelected = document.getElementById('fileSelected');
 
+
+fileSelected.style.display = "none";
+
+fileInput.addEventListener('change', function() {
+if (fileInput.value) {
+  fileSelected.style.display = "block";
+} else {
+  fileSelected.style.display = "none";
+}
+});
+</script>
 
 </body>
