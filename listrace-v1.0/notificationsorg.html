@@ -152,7 +152,7 @@
 					
 				
 						<label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">6 Vests</label> 	
-						<label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">Females</label> 	
+						<label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">Girls</label> 	
 					</p>
 					<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
 						<div class="row">
@@ -203,6 +203,7 @@
 					  </div>
 				</div>
 				<button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
+				<label id="scheduledbtn" style="color:rgb(5,14,56); display:none; font-size:13px;"> Scheduled</label>
 		  </div>
 		    <!---submit popup-->
 			<div class="container">
@@ -213,7 +214,7 @@
 				  <i class="fa-regular fa-circle-check"></i>
 				</div>
 				<div class="card-button-wrapper">
-				  <button id="cancelbtn1" class="card-button secondary" style="background-color: rgb(35, 121, 113); color: #ecf0f0;margin-top: 7px;" onclick="hidesub()">Continue</button>
+				  <button id="cancelbtn1" class="card-button secondary" style="background-color: rgb(35, 121, 113); color: #ecf0f0;margin-top: 7px;" onclick="hidesub(); submitted('cancelbtn1')">Continue</button>
 				</div>
 				<button id="exitBtn1" class="exit-button">
 				  <svg height="20px" viewBox="0 0 384 512">
@@ -270,11 +271,17 @@
 	const closePopupBtn1 = document.getElementById('closeButton1');
 	const datePicker = document.getElementById('datepicker');
    const timePicker = document.getElementById('timepicker');
-   const submitbtn =document.getElementById('submitButton');
+   const submitbtn = document.getElementById('submitButton');
    const submitPop = document.getElementById('submitpop');
    const dateError = document.getElementById('dateError');
     const timeError = document.getElementById('timeError');
    
+    function submitted(buttonid){
+		var submitbtn = document.getElementById('submitButton');
+		submitbtn.parentNode.removeChild(submitbtn);
+		var sch = document.getElementById("scheduledbtn");
+		sch.style.display = 'block';
+	}
 
 	function hidesub() {
 		document.getElementById("submitpop").style.display = "none";
