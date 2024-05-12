@@ -116,6 +116,13 @@
             <div class="col-sm-12">
                 <div class="subscription-input-group">
                     <!-- <form action="#"> -->
+
+                      <select name="Gender" class="subscription-input-form" id="gender">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="regular">Male</option>
+                        <option value="teacher">Female</option>
+                    </select> <br><br>
+
                         
                           <select name="type1" class="subscription-input-form" id="type1">
                             <option value="" disabled selected>select age range</option>
@@ -142,21 +149,8 @@
                             <!-- <label for="confirm-password">Confirm Password:</label> -->
                             <!-- <input type="password" id="confirm-password" name="confirm-password" required> -->
                             <br>
-                            <label for="gender">Gender</label>
-                            <div class="radio-group">
-                                <input class="radio-input" name="radio-group" id="radio1" type="radio">
-                                <label class="radio-label" for="radio1">
-                                  <span class="radio-inner-circle"></span>
-                                  Male
-                                </label>
-                                
-                                <input class="radio-input" name="radio-group" id="radio2" type="radio">
-                                <label class="radio-label" for="radio2">
-                                  <span class="radio-inner-circle"></span>
-                                  Female
-                                </label></div>
-                                <br><br>
-
+                            
+                            
                                 
                 
                 
@@ -221,16 +215,16 @@ width: 0px; ">
     const warningMsg = document.getElementById('warningMsg');
     const ageDropdown = document.getElementById('type1');
     const quantityCounter = document.getElementById('quantityCounter');
-    const radioGroup = document.querySelector('.radio-group'); // Select the radio group element
-  
-    let currentQuantity = 0; // Store current quantity
-    function isRadioSelected() {
-    return radioGroup.querySelector('input[type="radio"]:checked') !== null;
-  }
-  
+    const genderDropdown = document.getElementById('gender');
+
+    
      // Function to check if a valid option is selected from the dropdown
-     function isValidFoodOptionSelected() {
+     function isValidageOptionSelected() {
       return ageDropdown.value !== ""; // Check if value is not the empty string
+    }
+
+    function isValidgenderOptionSelected() {
+      return genderDropdown.value !== ""; // Check if value is not the empty string
     }
     // Function to update border style based on input value
     function updateInputBorderColor(inputElement) {
@@ -240,6 +234,14 @@ width: 0px; ">
         inputElement.style.border = "none"; // Remove red border if not empty
       }
     }
+
+    function updateDropdownBorderColor(DropdownElement) {
+      if (DropdownElement.value === "") {
+        DropdownElement.style.border = "1px solid red";
+      } else {
+        DropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    } 
     // Function to update quantity value on button click
     function updateQuantity(change) {
       currentQuantity = Math.max(0, currentQuantity + change); // Ensure quantity stays non-negative
@@ -267,11 +269,13 @@ width: 0px; ">
     });
   
     postBtn.addEventListener('click', function(event) {
-      if (!isRadioSelected()&& sInput.value.trim() === "" || mInput.value.trim() === "") {
+      if (!isValidageOptionSelected()|| !isValidgenderOptionSelected()|| sInput.value.trim() === "" || mInput.value.trim() === "") {
         event.preventDefault(); // Prevent form submission
         warningMsg.style.display = "block"; // Display warning message
         updateInputBorderColor(sInput);
         updateInputBorderColor(mInput);
+        updateDropdownBorderColor(ageDropdown);
+        updateDropdownBorderColor(genderDropdown);
       } else if (!isValidFoodOptionSelected()) {
         event.preventDefault(); // Prevent form submission
         warningMsg.textContent = "Please choose an age range to proceed."; // Update warning message
