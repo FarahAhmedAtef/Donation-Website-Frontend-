@@ -170,8 +170,8 @@ min-height: 100vh;">
                            
 
                             <div id="warningMsg" style="display: none; color: red;">Please fill in all required fields!</div>
-                            <form id="redirectForm" action="login.html" method="get">
-                                <button class="appsLand-btn subscribe-btn" id="createbutton" type="submit">Create Account</button>
+                            <form id="redirectForm"  method="get">
+                                <button class="appsLand-btn subscribe-btn" id="createbutton" >Create Account</button>
                                 <!-- <a href="#" class="btn">Post</a> -->
                             </form>
                         
@@ -335,8 +335,8 @@ width: 0px; ">
         updategenderBorderColor(genderDropdown);
       }
       else {
-        warningMsg.style.display = "none"; // Hide warning message (optional)
-        // Submit the form (form submission logic)
+        warningMsg.style.display = "none";
+        window.location.href='login.html'; // Hide warning message (optional)
       }
     });
   </script>
