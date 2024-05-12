@@ -1751,9 +1751,9 @@
 	const closePopupBtn = document.getElementById('closePopup');
 	const closePopupBtn4 = document.getElementById('closeButton0');
 
-	openPopupBtn.addEventListener('click', function() {
-	  popup.style.display = 'block';
-	});
+	// openPopupBtn.addEventListener('click', function() {
+	//   popup.style.display = 'block';
+	// });
   
 	closePopupBtn.addEventListener('click', function() {
 	  popup.style.display = 'none';
@@ -2357,68 +2357,7 @@ closeButton69.addEventListener('click', () => {
 });
 </script>
 
-<script>
-	const searchInput = document.querySelector('.single-welcome-hero-form input');
-	const exploreItems = document.querySelectorAll('.single-explore-item');
-	
-	// Add click event listener to the search div
-	const searchDiv = document.querySelector('.welcome-hero-serch');
-	
 
-	searchDiv.addEventListener('click', () => {
-		const searchText = searchInput.value.trim();
-		console.log(searchText); // Remove leading/trailing whitespaces
-		if(searchText === ''){
-			console.log(searchText); // Remove leading/trailing whitespaces
-
-			const existingNoPostsMessage = document.querySelector('.no-posts-message');
-    if (existingNoPostsMessage) {
-      existingNoPostsMessage.remove();
-    }
-		exploreItems.forEach(exploreItem=>{
-			exploreItem.classList.remove('hidden'); // Show if hospital matches search
-		});
-		return;
-	}
-	let allPostsHidden=true;
-	  exploreItems.forEach(exploreItem => {
-		const hospitalLabel = exploreItem.querySelector('.hospital');
-		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
-	
-	
-		
-		  
-	
-		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase()) {
-			allPostsHidden=false;
-			exploreItem.classList.remove('hidden'); // Show if hospital matches search
-		  }
-		  else{
-			exploreItem.classList.add('hidden'); // Show if hospital matches search
-
-		  }
-		
-	  });
-const exploreContent = document.getElementById('explore-content');
-const existingMessage = exploreContent.querySelector('.no-posts-message');
-  if (allPostsHidden && !existingMessage) {
-    // Display "No posts" message (optional: create a separate element)
-    const noPostsElement = document.createElement('p'); // Create a paragraph element
-    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
-    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
-    // Append the element to the appropriate container in your HTML structure
-
-    // (Example: assuming you have a container with ID "filter-results")
-   exploreContent.appendChild(noPostsElement);
-  } else if(!allPostsHidden && existingMessage) {
-    // Remove any previously displayed "No posts" message (optional)
-    const existingNoPostsMessage = document.querySelector('.no-posts-message');
-    if (existingNoPostsMessage) {
-      existingNoPostsMessage.remove();
-    }
-  }
-	});
-	</script>
 
 <script>
 	window.addEventListener("load", function() {

@@ -1231,11 +1231,15 @@ margin: 10px;
     overflow: hidden; /* Prevent elements from overflowing the container */
   }
   
-  #decrement1, #increment1, #increment2, #decerement2, #increment3, #decrement3 {
+  #increment1, #increment2, #increment3 {
     float: left; /* Float the buttons to the left */
     margin-right: 10px; /* Add spacing between buttons */
   }
   
+  #decrement1, #decrement2, #decrement3{
+    float: left; /* Float the buttons to the left */
+    margin-left: 10px;
+  }
   .counter1 {
     float: left; /* Float the counter display to the left */
   }
