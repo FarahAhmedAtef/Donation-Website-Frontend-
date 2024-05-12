@@ -2,7 +2,10 @@
 <html class="no-js" lang="en">
 
 <head>
+
 	<script src="https://kit.fontawesome.com/c3757d9e41.js" crossorigin="anonymous"></script>
+	<!-- <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine"> -->
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,89 +58,127 @@
     <![endif]-->
 
 </head>
-<body style="background:#ecf0f0">
+<body style="background-color: #ecf0f0; ">
 	
+		  
 <!--explore start -->
 <!-- <section id="explore" class="explore">
 	<div class="container">
 		<div class="section-header">
 			<h2>explore</h2>
 			<p>Explore New place, food, culture around the world and many more</p> -->
-            <div id="popup">
+			<div id="popup">
 				<i id="closeButton0" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
-
 				<button id="clearall" style="margin-bottom:10px ;">Clear All</button>
 				<form class="popupcontent" id="form1">
 					<div class="border">
-					<label for="Age" style="color: black;">Age</label>
-					
-					<div class="checkbox-container"> 
-					<input type="radio" id="age1" name="Governerate" value="0 - 5">
-					<label for="age1">0 - 5</label>
-					</div>
-					
-					<div class="checkbox-container"> 
-					<input type="radio" id="age2" name="Governerate" value="6 - 10">
-					<label for="age2">6 - 10</label>
-					</div>
-                    <div class="checkbox-container"> 
-                        <input type="radio" id="age3" name="Governerate" value="11 - 16">
-                        <label for="age3">11 - 16</label>
-                        </div>
-                        <div class="checkbox-container"> 
-                            <input type="radio" id="age4" name="Governerate" value="17 - 21">
-                            <label for="age4">17 - 21</label>
-                            </div>
-					</div>
-					<div class="border">
-						<label for="gender" style="color: black;">Gender</label>
+						<label for="Age" style="color: black;">Age</label>
+						<br>
+						<div class="checkbox-container"> 
+						<input type="radio" id="Age1" name="Age" value="1-3 years">
+						<label for="Age2">1-3 years</label>
+						<br></div>
 						
 						<div class="checkbox-container"> 
-						<input type="radio" id="gender1" name="area" value="Male">
-						<label for="gender">Male</label>
-						</div>
-						
+						<input type="radio" id="Age2" name="Age" value="3-6 years">
+						<label for="Age2">3-6 years</label>
+						<br></div>
 						<div class="checkbox-container"> 
-						<input type="radio" id="gender2" name="area" value="Female">
-						<label for="gender2">Female</label>
+							<input type="radio" id="Age2" name="Age" value="6-10 years">
+							<label for="Age2">6-10 years</label>
+							<br></div>
 						</div>
-					</div>
-					<div class="border">
-					<label for="Season" style="color: black;">Season</label>
-					<div class="checkbox-container"> 
-					<input type="radio" id="spring" name="hospital" value="spring">
-					<label for="spring">Spring</label>
-				</div>
+						<br><br>
+						<div class="border">
+							<label for="Gender" style="color: black;">Gender</label>
+							<br>
+							<div class="checkbox-container"> 
+							<input type="radio" id="gender1" name="Gender" value="Girls">
+							<label for="Gender">Girls</label>
+							<br></div>
+							<br>
+							<div class="checkbox-container"> 
+							<input type="radio" id="gender2" name="Gender" value="Boys">
+							<label for="gender2">Boys</label>
+							<br></div>
+						</div>
+						<br><br>
+						<div class="border">
+							<label for="category" style="color: black;">Category</label>
+							<br>
+							<div class="checkbox-container"> 
+							<input type="radio" id="spring" name="category" value="spring">
+							<label for="spring"> Spring</label>
+							<br></div>
+							<br>
+							<div class="checkbox-container"> 
+							<input type="radio" id="summer" name="category" value="summer">
+							<label for="summer">Summer</label>
+							<br></div>
+							<br>
+							<div class="checkbox-container">
+							<input type="radio" id="fall" name="category" value="fall">
+							<label for="fall">fall</label>
+							<br></div>
+							<br>
+							<div class="checkbox-container"> 
+							<input type="radio" id="winter" name="category" value="winter">
+							<label for="winter">winter</label>
+							<br></div>
+							
+							
 				
-					<div class="checkbox-container"> 
-                        <input type="radio" id="summer" name="hospital" value="summer">
-                        <label for="summer">Summer</label>
-                        </div>
-                        
-                        <div class="checkbox-container"> 
-                            <input type="radio" id="fall" name="hospital" value="fall">
-                            <label for="fall">Fall</label>
-                            </div>
-                            
-                        <div class="checkbox-container"> 
-                                <input type="radio" id="winter" name="hospital" value="winter">
-                                <label for="winter">Winter</label>
-                                </div>
-                                
-				</div>
-				<br> <br>
+						</div>
+						<br> <br>
+				
+		
 				  </form>
 				  <button id="closePopup">Apply</button>
 			  </div>
+
+
+			  <div id="popupapply">
+				<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+				<i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
+				<br></br>
+				<label > Please fill in this form to schedule the pickup</label>
+				<div class="containerapply">
+				  <div class="date-time">
+					<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available for the pickup</h2>
+					<input type="date" id="datepicker">
+					<span id="dateError" class="error-message" style="color: red;"></span>
+					<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available for the pickup</h2>
+					<input type="time" id="timepicker">
+					<span id="timeError" class="error-message" style="color: red;"></span>
+				  </div>
+				  <br>
+				  <label for="elGawyHospital">Please pick the vehicle most suitable to pick up your donation</label>
+				  <div class="checkbox-container"> 
+					<input type="radio" id="bike" name="place" value="At your clinic">
+					<label for="elGawyHospital">Motorcycle</label>
+					<br></div>
+					<div class="checkbox-container"> 
+						<input type="radio" id="car" name="place" value="At patient's place">
+						<label for="elGawyHospital">Car</label>
+						<br></div>
+						<div class="checkbox-container"> 
+							<input type="radio" id="truck" name="place" value="At your clinic">
+							<label for="elGawyHospital">Truck</label>
+							<br></div>
+						<span id="placeError" class="error-message" style="color: red;"></span>
+				  <button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
+				</div>
+			  </div>
+
 
 			  <div id="popup1" style="height: 370px;">
 				<i id="closeButton" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 					<h2><a style="text-transform: none;" href="#">In need of clothes donation</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
-						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">14-17 years old</label> 
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">1-3 years</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Female
+							Girls
 							
 						</label>
 						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter </label>
@@ -161,7 +202,7 @@
 								</div>
 								<div>
 									<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
-									<label style="margin-right:5px; color: black;">14-17 years old</label>
+									<label style="margin-right:5px; color: black;">1-3 years</label>
 									</div>
 								<div>
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
@@ -187,9 +228,9 @@
 					<h2><a style="text-transform: none;" href="#">Clothes donation</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
-						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">6-9 years old</label> 
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">3-6 years</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Male 
+							Boys 
 							
 						</label>
 						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer </label>
@@ -215,7 +256,7 @@
 								</div>
 								<div>
 									<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
-									<label style="margin-right:5px; color: black;">6-9 years old</label>
+									<label style="margin-right:5px; color: black;">3-6 Years</label>
 									</div>
 								<div>
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
@@ -237,14 +278,15 @@
 					<button id="closePopup2" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
 
+
 			  <div id="popup3" style="height: 370px;">
 				<i id="closeButton3" class="fa-solid fa-xmark" style=" color:red; position: absolute; top: 10px; right: 10px; cursor: pointer;"></i>
 					<h2><a  style="text-transform: none;" href="#">Clothes donations are required</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
-						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">10-13 years old</label> 
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">6-10 Years</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Female
+							Girls
 							
 						</label>
 						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
@@ -265,7 +307,7 @@
 								</div>
 								<div>
 									<i class="fa-solid fa-hourglass-end" style="margin-right:5px; color: black;"></i>
-									<label style="margin-right:5px; color: black;">10-13 years old</label>
+									<label style="margin-right:5px; color: black;">6-10 Years</label>
 									</div>
 								<div>
 									<i class="fa-solid fa-cloud-sun-rain" style="margin-right:5px; color: black;"></i>
@@ -286,48 +328,6 @@
 
 					<button id="closePopup3" style=" margin: 0 auto; display: block;">Donate</button>
 			  </div>
-
-<!-- time date selection carol-->
-<div id="popupapply">
-	<i  id="closepopupapply" class="fa-solid fa-xmark" style=" color:  red; position: absolute; top: 5px; right: 3px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
-	<i  id="backpopupapply" class="fa-solid fa-less-than" style=" color:  white; position: absolute; top: 5px; left: 15px; margin-top:5px; margin-right:3px; cursor: pointer;"></i>
-	<br></br>
-	<label > Please fill in this form as part of the donation procedure</label>
-	<div class="containerapply">
-	  <div class="date-time">
-		<h2 style="font-size: 13px; margin-top:  9px; font-weight: bold">Please choose the date you will be available for the pickup</h2>
-		<input type="date" id="datepicker">
-		<span id="dateError" class="error-message" style="color: red;"></span>
-		<h2 style="font-size: 13px; margin-top: 9px; font-weight: bold;">Please choose the time you will be available for the pickup</h2>
-		<input type="time" id="timepicker">
-		<span id="timeError" class="error-message" style="color: red;"></span>
-	  </div>
-	  <br>
-	  <label for="elGawyHospital">Please pick the vehicle most suitable to pick up your donation</label>
-	  <div class="checkbox-container"> 
-		<input type="radio" id="bike" name="place" value="At your clinic">
-		<label for="elGawyHospital">Motorcycle</label>
-		<br></div>
-		<div class="checkbox-container"> 
-			<input type="radio" id="car" name="place" value="At patient's place">
-			<label for="elGawyHospital">Car</label>
-			<br></div>
-			<div class="checkbox-container"> 
-				<input type="radio" id="truck" name="place" value="At your clinic">
-				<label for="elGawyHospital">Truck</label>
-				<br></div>
-			<span id="placeError" class="error-message" style="color: red;"></span>
-	  <button id="submitButton" style=" margin: 0 auto; display: block;">Submit</button>
-	</div>
-  </div>
-
-
-  
-
-
-
-
-		<!--/.section-header-->
 		
 		<header id="header-top" class="header-top"  >
 			<ul>
@@ -366,14 +366,17 @@
 								
 							</nav>
 							
-				
-				
-			
+						</ul>
+					</div>
+				</li>
+			</ul>
 				
 			
 		</header><!--/.header-top-->
-		
-		
+		<!--header-top end -->
+		 
+		 
+
 		
 		<div class="welcome-hero-serch-box" style="border-color: #3855d4;">
 			<div class="welcome-hero-form" style=" height: 50px; margin-top: -30px; transform: translate(520px,0px); border: 2px solid rgb(30, 102, 105); border-radius: 5px; width: 30%;">
@@ -389,7 +392,7 @@
 			<div class="welcome-hero-serch" style="margin-top: -30px; transform: translate(520px,0px);">
 				<button class="welcome-hero-btn" style="height:45px ; width:50px ; background-color: rgb(30, 102, 105); border-radius: 10px;" onclick="window.location.href='#'">
 					   <i class="fa-solid fa-magnifying-glass" ></i> 
-				
+				</button>
 			</div>
 		</div>
 		
@@ -400,75 +403,75 @@
 				<button style="font-size: 20px; padding-right:3px ;">Filter</button>
 				<i class="fa-solid fa-sliders" style="margin-top:9px;"></i>
 			  </div>
-					<div class="single-explore-item">
-						<div class="single-explore-txt bg-theme-4">
-							<h2><a style="text-transform: none;" href="#">In need of clothes donation</a></h2>
-							<p class="explore-rating-price">
-								<span class="explore-rating">5.0</span>
-								<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">14-17 years old</label> 
-								<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-									Female
-									
-								</label>
-								 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter</label>
-							</p>
-							
-							<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
-								<div class="row">
-									<div class="col-sm-5">
-										<button class="close-btn open-btn"   id ="openpostdetails1">View Details</button>
-									</div>
-									<div class="col-sm-7">
-										<div class="explore-map-icon">
-											<a href="#"><i data-feather="map-pin"></i></a>
-											<a href="#"><i data-feather="upload"></i></a>
-											<a href="#"><i data-feather="heart"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+              <div class="single-explore-item">
+                <div class="single-explore-txt bg-theme-4">
+                    <h2><a style="text-transform: none;" href="#">In need of clothes donation</a></h2>
+                    <p class="explore-rating-price">
+                        <span class="explore-rating">5.0</span>
+                        <label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">1-3 years</label> 
+                        <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                            Girls
+                            
+                        </label>
+                         <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Winter</label>
+                    </p>
+                    
+                    <div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <button class="close-btn open-btn"   id ="openpostdetails1">View Details</button>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="explore-map-icon">
+                                    <a href="#"><i data-feather="map-pin"></i></a>
+                                    <a href="#"><i data-feather="upload"></i></a>
+                                    <a href="#"><i data-feather="heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 				
 			
-				<div class="single-explore-item">
-					<div class="single-explore-txt bg-theme-4">
-						<h2><a  style="text-transform: none;" href="#">Clothes donation </a></h2>
-						<p class="explore-rating-price">
-							<span class="explore-rating">5.0</span>
-							<label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">6-9 years old</label> 
-							<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-								Male
-								
-							</label>
-							 <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
-						</p>
-						
-						<div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
-							<div class="row">
-								<div class="col-sm-5">
-									<button class="close-btn open-btn"    id ="openpostdetails2">View Details</button>
-								</div>
-								<div class="col-sm-7">
-									<div class="explore-map-icon">
-										<a href="#"><i data-feather="map-pin"></i></a>
-										<a href="#"><i data-feather="upload"></i></a>
-										<a href="#"><i data-feather="heart"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <div class="single-explore-item">
+                <div class="single-explore-txt bg-theme-4">
+                    <h2><a  style="text-transform: none;" href="#">Clothes donation </a></h2>
+                    <p class="explore-rating-price">
+                        <span class="explore-rating">5.0</span>
+                        <label class="city"  Style="padding-right:3px; border-right: 1px solid  #86888b" href="#">3-6 years</label> 
+                        <label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
+                            Boys
+                            
+                        </label>
+                         <label class="hospital" href="#" Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
+                    </p>
+                    
+                    <div class="explore-open-close-part" style="border-top: 1px solid #e1e5eb;">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <button class="close-btn open-btn"    id ="openpostdetails2">View Details</button>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="explore-map-icon">
+                                    <a href="#"><i data-feather="map-pin"></i></a>
+                                    <a href="#"><i data-feather="upload"></i></a>
+                                    <a href="#"><i data-feather="heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			
 			<div class="single-explore-item">
 				<div class="single-explore-txt bg-theme-4">
 					<h2><a style="text-transform: none;" href="#">Clothes donations are required</a></h2>
 					<p class="explore-rating-price">
 						<span class="explore-rating">5.0</span>
-						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">10-13 years old</label> 
+						<label class="city" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">6-10 Years</label> 
 						<label class="area"  Style="padding-right:3px; border-right: 1px solid  #86888b">
-							Female
+							Girls
 							
 						</label>
 						 <label class="hospital" href="#"  Style="padding-right:3px; border-right: 1px solid  #86888b">Summer</label>
@@ -494,14 +497,11 @@
 		</div>
 	<!--/.container-->
 
-</section><!--/.explore-->
-		
-
-		
-<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
+<!--/.explore-->
+		<footer id="footer"  class="footer" style="padding-right: 0px; position: fixed;
 		bottom: 0;
 		width: 0px; ">
-			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:0px solid white; ">
+			<div id="footercontainer" class="container" style="margin-left: 0px; padding-left: 0px; border:1px solid white; ">
 				
 				<div class="hm-footer-copyright" style="background: rgb(30, 102, 105); width:1535px; margin-left: 0px; padding-left: 0px; border-top: 3px solid white; ">
 					<div class="row">
@@ -517,7 +517,6 @@
 								<a href="#"><i class="fa fa-facebook"></i></a>	
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-linkedin"></i></a>
-								<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
 								<!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
 							</div>
 						</div>
@@ -536,12 +535,8 @@
         </footer><!--/.footer-->
 
 
-		
 
-
-
-
-<!-- !!!
+		<!-- !!!
 !!!
 !!!
 start of popup 1 
@@ -552,7 +547,7 @@ start of popup 1
 
 
 
-  <script>
+<script>
 	const submitButton = document.getElementById('submitButton');
 const messageElement = document.getElementById('message');
 const popup10 = document.getElementById('popupapply');
@@ -643,6 +638,8 @@ closeButton4.addEventListener('click', () => {
 	bike1.checked=false;
 	truck1.checked=false;
 
+	
+
 });
 
 backButton4.addEventListener('click', () => {
@@ -666,6 +663,18 @@ backButton4.addEventListener('click', () => {
 	truck1.checked=false;
 
  });
+
+// backButton4.addEventListener('click', () => {
+//   popup11.style.display = 'none'; // Hide the popup
+//   popup12.style.display = 'block';
+// 	dateError1.textContent='';
+// 	timeError1.textContent='';
+// 	placeError1.textContent='';
+// 	car1.checked=false;
+// 	bike1.checked=false;
+// 	truck1.checked=false;
+
+// });
 
 </script>
 
@@ -775,6 +784,7 @@ submitButton.addEventListener('click', () => {
 
 <script>
 	const closeButton20 = document.getElementById('closepopupapply');
+	// const backButton20= document.getElementById('backpopupapply');
 
 const popup21 = document.getElementById('popupapply');
 const popup22 = document.getElementById('popup2');
@@ -802,7 +812,17 @@ closeButton4.addEventListener('click', () => {
 
 });
 
+// backButton20.addEventListener('click', () => {
+//   popup21.style.display = 'none'; // Hide the popup
+//   popup22.style.display = 'block';
+// 	dateError20.textContent='';
+// 	timeError20.textContent='';
+// 	placeError20.textContent='';
+// 	car20.checked=false;
+// 	bike20.checked=false;
+// 	truck20.checked=false;
 
+// });
 
 </script>
 
@@ -912,6 +932,7 @@ submitButton.addEventListener('click', () => {
 
 <script>
 	const closeButton30 = document.getElementById('closepopupapply');
+	// const backButton30= document.getElementById('backpopupapply');
 
 const popup31 = document.getElementById('popupapply');
 const popup32 = document.getElementById('popup3');
@@ -939,7 +960,17 @@ closeButton30.addEventListener('click', () => {
 
 });
 
+// backButton30.addEventListener('click', () => {
+//   popup31.style.display = 'none'; // Hide the popup
+//   popup32.style.display = 'block';
+// 	dateError30.textContent='';
+// 	timeError30.textContent='';
+// 	placeError30.textContent='';
+// 	car30.checked=false;
+// 	bike30.checked=false;
+// 	truck30.checked=false;
 
+// });
 
 </script>
 
@@ -974,57 +1005,187 @@ closeButton30.addEventListener('click', () => {
 !!! -->
 
 
- <script>
+		<script>
+			const counterElement1 = document.querySelector('.counter1');
+			const maxlimit1 = document.getElementById('maxlimit1');
+		
+		let count1 = 1; // Initial counter value
+		
+		const incrementButton1 = document.getElementById('increment1');
+		const decrementButton1 = document.getElementById('decrement1');
+		
+		incrementButton1.addEventListener('click', () => {
+		if(count1<15)	{
+		  count1++;
+		  counterElement1.textContent = count1;
+		}
+		else{
+			maxlimit1.style.display='block';
+		}
+		});
+		
+		decrementButton1.addEventListener('click', () => {
+		  if (count1 > 1) {
+			count1--;
+		  }
+		  counterElement1.textContent = count1;
+		});
+		
+		</script>
+		
+		<script>
+			const counterElement2 = document.querySelector('.counter2');
+			const maxlimit2 = document.getElementById('maxlimit2');
+		
+		let count2 = 1; // Initial counter value
+		
+		const incrementButton2 = document.getElementById('increment2');
+		const decrementButton2 = document.getElementById('decrement2');
+		
+		incrementButton2.addEventListener('click', () => {
+		if(count2<5)	{
+		  count2++;
+		  counterElement2.textContent = count2;
+		}
+		else{
+			maxlimit2.style.display='block';
+		}
+		});
+		
+		decrementButton2.addEventListener('click', () => {
+		  if (count2 > 1) {
+			count2--;
+		  }
+		  counterElement2.textContent = count2;
+		});
+		
+		</script>
+		 
+		
+		
+		
+		<script>
+			const counterElement3 = document.querySelector('.counter3');
+		let count3 = 1; // Initial counter value
+		
+		const incrementButton3 = document.getElementById('increment3');
+		const decrementButton3 = document.getElementById('decrement3');
+		
+		incrementButton3.addEventListener('click', () => {
+			if(count3<12)	{
+		  count3++;
+		  counterElement3.textContent = count3;
+		}
+		else{
+			maxlimit3.style.display='block';
+		}
+		});
+		
+		decrementButton3.addEventListener('click', () => {
+		  if (count3 > 1) {
+			count3--;
+		  }
+		  counterElement3.textContent = count3;
+		});
+		
+		</script>
+
+
+
+
+
+<script>
+	const popup = document.getElementById('popup');
+	const openPopupBtn = document.getElementById('openPopup');
+	const closePopupBtn = document.getElementById('closePopup');
+	const closePopupBtn4 = document.getElementById('closeButton0');
+
+	openPopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'block';
+	});
+  
+	closePopupBtn.addEventListener('click', function() {
+	  popup.style.display = 'none';
+	});
+	closePopupBtn4.addEventListener('click', function() {
+	  popup.style.display = 'none';
+	});
+  </script>
+
+
+
+
+
+  <!-- <script>
+	const popup1 = document.getElementById('popup1');
+	const popup7= document.getElementById('popupapply');
+	const openPopupBtn1 = document.getElementById('openpostdetails1');
+	const closePopupBtn1 = document.getElementById('closePopup1');
+  
+	openPopupBtn1.addEventListener('click', function() {
+	  popup1.style.display = 'block';
+	});
+  
+	closePopupBtn1.addEventListener('click', function() {
+		popup1.style.display = 'none';
+	  popup7.style.display = 'block';
+	});
+  </script> -->
+
+<script>
 	const popup3 = document.getElementById('popup2');
 	const popup8= document.getElementById('popupapply');
 
 	const openPopupBtn2 = document.getElementById('openpostdetails2');
 	const closePopupBtn2 = document.getElementById('closePopup2');
-
+  
 	openPopupBtn2.addEventListener('click', function() {
 	  popup3.style.display = 'block';
 	});
-	
   
 	closePopupBtn2.addEventListener('click', function() {
-		
-			popup3.style.display = 'none';
-	  directpopup.style.display = 'block';
-		
+		popup3.style.display = 'none';
+	  popup8.style.display = 'block';
 	});
-  </script> 
+  </script>
 
 
 <script>
 	const popup5 = document.getElementById('popup3');
-	const popup9= document.getElementById('popupapply3');
+	const popup9= document.getElementById('popupapply');
 	const openPopupBtn3 = document.getElementById('openpostdetails3');
 	const closePopupBtn3 = document.getElementById('closePopup3');
   
 	openPopupBtn3.addEventListener('click', function() {
 	  popup5.style.display = 'block';
 	});
-	
   
 	closePopupBtn3.addEventListener('click', function() {
-		
-			popup5.style.display = 'none';
-	  directpopup.style.display = 'block';
-		
+		popup5.style.display = 'none';
+	  popup9.style.display = 'block';
 	});
   </script>
+
+
 
   <script>
   const clearAllButton = document.getElementById('clearall');
 	const checkboxes = document.querySelectorAll('input[type="radio"]');
-	
+const areaSelectElements1 = document.querySelectorAll('input[name="area"]');
 	clearAllButton.addEventListener('click', () => {
 	  checkboxes.forEach(checkbox => checkbox.checked = false);
+	  for (const areaElement of areaSelectElements) {
+     
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    
+
 	});</script>
 
 
 <script>
-const applyButton = document.getElementById('closePopup');
+	const applyButton = document.getElementById('closePopup');
 const checkboxForm = document.getElementById('form1'); // Assuming ID for checkbox form
 const postElements = document.querySelectorAll('.single-explore-item');
 
@@ -1039,10 +1200,15 @@ applyButton.addEventListener('click', () => {
     }
   });
   if(selectedFilters.length===0){
+	const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
 	postElements.forEach(post=>{
 		post.classList.remove('hidden');
 		
 	})
+    
 	return;
   }
 
@@ -1054,15 +1220,16 @@ applyButton.addEventListener('click', () => {
     // Check if any selected filter matches post data
 	for (const filterValue of selectedFilters) {
 let textbx= null;
-      if(filterValue.name.toLocaleLowerCase() === "Governerate".toLocaleLowerCase()){
+      if(filterValue.name.toLocaleLowerCase() === "Age".toLocaleLowerCase()){
         textbx=post.querySelector('.city');
 } 
-else if(filterValue.name.toLocaleLowerCase() === "area".toLocaleLowerCase()){
+else if(filterValue.name.toLocaleLowerCase() === "Gender".toLocaleLowerCase()){
 textbx=post.querySelector('.area');
 }
-else {
+else if(filterValue.name.toLocaleLowerCase() === "Category".toLocaleLowerCase()){
 textbx=post.querySelector('.hospital');
 }
+
 
       
       const textbxText = textbx? textbx.textContent.trim() : '';
@@ -1085,7 +1252,9 @@ textbx=post.querySelector('.hospital');
       post.classList.add('hidden'); // Add hidden class if not visible
     }
   });
-  if (allPostsHidden) {
+  const exploreContent = document.getElementById('explore-content');
+const existingMessage = exploreContent.querySelector('.no-posts-message');
+  if (allPostsHidden && !existingMessage) {
     // Display "No posts" message (optional: create a separate element)
     const noPostsElement = document.createElement('p'); // Create a paragraph element
     noPostsElement.textContent = 'No posts found based on your filters.'; // Set the text content
@@ -1093,8 +1262,8 @@ textbx=post.querySelector('.hospital');
     // Append the element to the appropriate container in your HTML structure
 
     // (Example: assuming you have a container with ID "filter-results")
-    document.getElementById('explore-content').appendChild(noPostsElement);
-  } else {
+   exploreContent.appendChild(noPostsElement);
+  } else if(!allPostsHidden && existingMessage) {
     // Remove any previously displayed "No posts" message (optional)
     const existingNoPostsMessage = document.querySelector('.no-posts-message');
     if (existingNoPostsMessage) {
@@ -1108,139 +1277,9 @@ textbx=post.querySelector('.hospital');
 
 
 
-<!-- <script>
-
-function initMap() { 
-        var test= {lat: -25.363, lng: 131.044}; 
-        var map = new google.maps.Map(document.getElementById('map'), { 
-          zoom: 4, 
-          center: test 
-        }); 
-        var marker = new google.maps.Marker({ 
-          position: test, 
-          map: map 
-        }); 
-
-
-	
-			var map2 = new google.maps.Map(document.getElementById('map2'), { 
-			  zoom: 4, 
-			  center: test 
-			}); 
-			var marker2 = new google.maps.Marker({ 
-			  position: test, 
-			  map2: map2
-			}); 
-
-
-			var map3 = new google.maps.Map(document.getElementById('map3'), { 
-			  zoom: 4, 
-			  center: test 
-			}); 
-			var marker3 = new google.maps.Marker({ 
-			  position: test, 
-			  map3: map3
-			}); 
-
-
-      } 
-
-//initMap();
 
 
 
-</script>
-<script async defer 
-src= 
-"https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&callback=initMap&async"> 
-</script>  -->
-
-	
-	
-<script>
-	const counterElement1 = document.querySelector('.counter1');
-	const maxlimit1 = document.getElementById('maxlimit1');
-
-let count1 = 0; // Initial counter value
-
-const incrementButton1 = document.getElementById('increment1');
-const decrementButton1 = document.getElementById('decrement1');
-
-incrementButton1.addEventListener('click', () => {
-if(count1<6)	{
-  count1++;
-  counterElement1.textContent = count1;
-}
-else{
-    maxlimit1.style.display='block';
-}
-});
-
-decrementButton1.addEventListener('click', () => {
-  if (count1 > 0) {
-    count1--;
-  }
-  counterElement1.textContent = count1;
-});
-
-</script>
-
-<script>
-	const counterElement2 = document.querySelector('.counter2');
-	const maxlimit2 = document.getElementById('maxlimit2');
-
-let count2 = 0; // Initial counter value
-
-const incrementButton2 = document.getElementById('increment2');
-const decrementButton2 = document.getElementById('decrement2');
-
-incrementButton2.addEventListener('click', () => {
-if(count2<5)	{
-  count2++;
-  counterElement2.textContent = count2;
-}
-else{
-    maxlimit2.style.display='block';
-}
-});
-
-decrementButton2.addEventListener('click', () => {
-  if (count2 > 0) {
-    count2--;
-  }
-  counterElement2.textContent = count2;
-});
-
-</script>
-
-
-
-
-<script>
-	const counterElement3 = document.querySelector('.counter3');
-let count3 = 0; // Initial counter value
-
-const incrementButton3 = document.getElementById('increment3');
-const decrementButton3 = document.getElementById('decrement3');
-
-incrementButton3.addEventListener('click', () => {
-	if(count3<7)	{
-  count3++;
-  counterElement3.textContent = count3;
-}
-else{
-    maxlimit3.style.display='block';
-}
-});
-
-decrementButton3.addEventListener('click', () => {
-  if (count3 > 0) {
-    count3--;
-  }
-  counterElement3.textContent = count3;
-});
-
-</script>
 
 
 <script>
@@ -1261,6 +1300,9 @@ closeButton2.addEventListener('click', () => {
 });
 </script>
 
+
+
+
 <script>
 	const closeButton3 = document.getElementById('closeButton3');
 const popup6 = document.getElementById('popup3');
@@ -1269,118 +1311,168 @@ closeButton3.addEventListener('click', () => {
   popup6.style.display = 'none'; // Hide the popup
 });
 </script>
-</script>
-<script>
-const navbarBrand = document.querySelector('.navbar-brand');
-
-navbarBrand.addEventListener('click', function() {
-  const storedValue = sessionStorage.getItem('user');
-
-  // Handle potential absence of stored value
-  if (storedValue === 'farah') {
-    window.location.href = "indexteacher.html"; // Default to index if no value exists
-     // Exit the function if no value found
-  }
-else if (storedValue === 'carol'){
-    window.location.href = "indexregular.html"; // Default to index if no value exists
-
-}
-else if (storedValue === 'basant'){
-    window.location.href = "indexdoctor.html"; // Default to index if no value exists
-
-}
- 
-});
-</script>
-
 
 <script>
-	const accinfo = document.querySelector('.accinfo');
+	const searchInput = document.querySelector('.single-welcome-hero-form input');
+	const exploreItems = document.querySelectorAll('.single-explore-item');
 	
-	accinfo.addEventListener('click', function() {
+	// Add click event listener to the search div
+	const searchDiv = document.querySelector('.welcome-hero-serch');
+	
+
+	searchDiv.addEventListener('click', () => {
+		const searchText = searchInput.value.trim();
+		console.log(searchText); // Remove leading/trailing whitespaces
+		if(searchText === ''){
+			console.log(searchText); // Remove leading/trailing whitespaces
+
+			const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+		exploreItems.forEach(exploreItem=>{
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		});
+		return;
+	}
+	let allPostsHidden=true;
+	  exploreItems.forEach(exploreItem => {
+		const hospitalLabel = exploreItem.querySelector('.hospital');
+		// const specLabel = exploreItem.querySelector('.speciality');
+
+		const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
+	
+		// const specText = specLabel.textContent.trim(); // Remove leading/trailing whitespaces
+
+		
+		  
+	
+		  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase()) {
+			allPostsHidden=false;
+			exploreItem.classList.remove('hidden'); // Show if hospital matches search
+		  }
+		  else{
+			exploreItem.classList.add('hidden'); // Show if hospital matches search
+
+		  }
+		
+	  });
+const exploreContent = document.getElementById('explore-content');
+const existingMessage = exploreContent.querySelector('.no-posts-message');
+  if (allPostsHidden && !existingMessage) {
+    // Display "No posts" message (optional: create a separate element)
+    const noPostsElement = document.createElement('p'); // Create a paragraph element
+    noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
+    noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
+    // Append the element to the appropriate container in your HTML structure
+
+    // (Example: assuming you have a container with ID "filter-results")
+   exploreContent.appendChild(noPostsElement);
+  } else if(!allPostsHidden && existingMessage) {
+    // Remove any previously displayed "No posts" message (optional)
+    const existingNoPostsMessage = document.querySelector('.no-posts-message');
+    if (existingNoPostsMessage) {
+      existingNoPostsMessage.remove();
+    }
+  }
+	});
+	</script>
+	<script>
+
+
+
+</script>  
+  
+
+
+
+<script>
+	const governateRadioButtons = document.querySelectorAll('input[name="Governerate"]');
+const areaSelectElements = document.querySelectorAll('input[name="area"]');
+
+function updateAreaOptions() {
+  const selectedGovernerate = document.querySelector('input[name="Governerate"]:checked');
+  if (selectedGovernerate) {
+  if( selectedGovernerate.value === "Cairo"){
+   
+    for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "Montazah".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Sidi Gaber".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+else if( selectedGovernerate.value === "Alexandria"){
+	for (const areaElement of areaSelectElements) {
+      if (areaElement.value.toLocaleLowerCase() === "5th Settlement".toLocaleLowerCase() || areaElement.value.toLocaleLowerCase() === "Masr elgedida".toLocaleLowerCase()) {
+        areaElement.disabled = true;
+        areaElement.parentElement.classList.add('hidden'); // Hide the entire checkbox container
+      } else  {
+        areaElement.disabled = false;
+        areaElement.parentElement.classList.remove('hidden'); // Reset display to default
+      }
+    }
+}
+  }
+}
+
+// Update area options on initial load based on any selected radio button
+updateAreaOptions();
+
+// Update area options whenever a governate radio button is clicked
+for (const radioButton of governateRadioButtons) {
+  radioButton.addEventListener('click', updateAreaOptions);
+}
+</script>
+
+<script>
+	const navbarBrand = document.querySelector('.navbar-brand');
+	
+	navbarBrand.addEventListener('click', function() {
 	  const storedValue = sessionStorage.getItem('user');
 	
 	  // Handle potential absence of stored value
 	  if (storedValue === 'farah') {
-		window.location.href = "donoraccount2.html"; // Default to index if no value exists
+		window.location.href = "indexteacher.html"; // Default to index if no value exists
 		 // Exit the function if no value found
 	  }
 	else if (storedValue === 'carol'){
-		window.location.href = "donoraccount1.html"; // Default to index if no value exists
+		window.location.href = "indexregular.html"; // Default to index if no value exists
 	
 	}
 	else if (storedValue === 'basant'){
-		window.location.href = "donoraccount.html"; // Default to index if no value exists
+		window.location.href = "indexdoctor.html"; // Default to index if no value exists
 	
 	}
 	 
 	});
 	</script>
-     <script>
-		const searchInput = document.querySelector('.single-welcome-hero-form input');
-		const exploreItems = document.querySelectorAll('.single-explore-item');
-		
-		// Add click event listener to the search div
-		const searchDiv = document.querySelector('.welcome-hero-serch');
-		
 	
-		searchDiv.addEventListener('click', () => {
-			const searchText = searchInput.value.trim();
-			console.log(searchText); // Remove leading/trailing whitespaces
-			if(searchText === ''){
-				console.log(searchText); // Remove leading/trailing whitespaces
 	
-				const existingNoPostsMessage = document.querySelector('.no-posts-message');
-		if (existingNoPostsMessage) {
-		  existingNoPostsMessage.remove();
+	<script>
+		const accinfo = document.querySelector('.accinfo');
+		
+		accinfo.addEventListener('click', function() {
+		  const storedValue = sessionStorage.getItem('user');
+		
+		  // Handle potential absence of stored value
+		  if (storedValue === 'farah') {
+			window.location.href = "donoraccount2.html"; // Default to index if no value exists
+			 // Exit the function if no value found
+		  }
+		else if (storedValue === 'carol'){
+			window.location.href = "donoraccount1.html"; // Default to index if no value exists
+		
 		}
-			exploreItems.forEach(exploreItem=>{
-				exploreItem.classList.remove('hidden'); // Show if hospital matches search
-			});
-			return;
-		}
-		let allPostsHidden=true;
-		  exploreItems.forEach(exploreItem => {
-			const hospitalLabel = exploreItem.querySelector('.hospital');
-			const areaLabel = exploreItem.querySelector('.area');
-
-			const hospitalText = hospitalLabel.textContent.trim(); // Remove leading/trailing whitespaces
-			const areaText = areaLabel.textContent.trim(); // Remove leading/trailing whitespaces
-
+		else if (storedValue === 'basant'){
+			window.location.href = "donoraccount.html"; // Default to index if no value exists
 		
-			
-			  
-		
-			  if (searchText.toLocaleLowerCase() === hospitalText.toLocaleLowerCase() || searchText.toLocaleLowerCase() === areaText.toLocaleLowerCase()) {
-				allPostsHidden=false;
-				exploreItem.classList.remove('hidden'); // Show if hospital matches search
-			  }
-			  else{
-				exploreItem.classList.add('hidden'); // Show if hospital matches search
-	
-			  }
-			
-		  });
-	const exploreContent = document.getElementById('explore-content');
-	const existingMessage = exploreContent.querySelector('.no-posts-message');
-	  if (allPostsHidden && !existingMessage) {
-		// Display "No posts" message (optional: create a separate element)
-		const noPostsElement = document.createElement('p'); // Create a paragraph element
-		noPostsElement.textContent = 'No posts found based on your search.'; // Set the text content
-		noPostsElement.classList.add('no-posts-message'); // Add a class for styling (optional)
-		// Append the element to the appropriate container in your HTML structure
-	
-		// (Example: assuming you have a container with ID "filter-results")
-	   exploreContent.appendChild(noPostsElement);
-	  } else if(!allPostsHidden && existingMessage) {
-		// Remove any previously displayed "No posts" message (optional)
-		const existingNoPostsMessage = document.querySelector('.no-posts-message');
-		if (existingNoPostsMessage) {
-		  existingNoPostsMessage.remove();
 		}
-	  }
+		 
 		});
 		</script>
 
-<!--explore end -->
 </body>

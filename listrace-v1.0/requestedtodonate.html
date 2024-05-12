@@ -62,14 +62,14 @@
                     <!-- <form action="#"> -->
                         
                         
+                        
                             <div class="notificationCard">
                                 <p class="notificationHeading">Your request to donate has been submitted succesfully!</p>
                                 <i class="fa-regular fa-circle-check"></i>
                                 <!-- <p class="notificationPara">Allow push notifications so you will get latest updates</p> -->
-                                <div class="buttonContainer">
-                                    <a href="javascript:void(0)" class="postback">Back to Home Page</a>
-                                  <!-- <button class="NotnowBtn">Now now</button> -->
-                                </div>
+                                <form id="postback" method="get">
+                                    <button class="appsLand-btn1 subscribe-btn" type="submit" style="text-transform: none;">Back to homepage</button>
+                                </form>
                               </div>
                            
 
@@ -82,8 +82,30 @@
 
 </section><!--/subscription-->	
 <!--subscription end -->
-<script>
+<!-- <script>
     const navbarBrand = document.querySelector('.postback');
+
+navbarBrand.addEventListener('click', function() {
+  const storedValue = sessionStorage.getItem('user');
+
+  // Handle potential absence of stored value
+  if (storedValue === 'farah') {
+    window.location.href = "indexteacher.html"; // Default to index if no value exists
+     // Exit the function if no value found
+  }
+else if (storedValue === 'carol'){
+    window.location.href = "indexregular.html"; // Default to index if no value exists
+
+}
+else if (storedValue === 'basant'){
+    window.location.href = "indexdoctor.html"; // Default to index if no value exists
+
+}
+ 
+});
+</script> -->
+<script>
+    const navbarBrand = document.getElementById('postback');
 
 navbarBrand.addEventListener('click', function() {
   const storedValue = sessionStorage.getItem('user');
