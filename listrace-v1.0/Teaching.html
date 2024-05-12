@@ -237,6 +237,7 @@
 					</div>
 					<input id="file" type="file" />
 					<span id="fileError" class="error-message" style="color: red;"></span>
+					<span id="fileSelected" class="success-message" style="display: none; color:green">File selected was successfully uploaded.</span>
 				  </label>
 				</form>
 				
@@ -1142,6 +1143,21 @@ submitButton1.addEventListener('click', () => {
 });
 
 	
+</script>
+
+<script>
+	const fileSelected = document.getElementById('fileSelected');
+
+
+fileSelected.style.display = "none";
+
+fileInput.addEventListener('change', function() {
+if (fileInput.value) {
+  fileSelected.style.display = "block";
+} else {
+  fileSelected.style.display = "none";
+}
+});
 </script>
 <!--explore end -->
 </body>
