@@ -117,6 +117,9 @@ min-height: 100vh;">
                             <br><br>
                             <input type="text" class="subscription-input-form"  id="lname" placeholder="Last Name">
                             <br><br>
+
+                            
+
                             <!-- <label for="email">Email</label> -->
                             <input type="email" class="subscription-input-form"  id="email" placeholder="Email" required>
                             <br>
@@ -129,6 +132,7 @@ min-height: 100vh;">
                             <br>
                             <input type="password" class="subscription-input-form"  id="cpass" placeholder="Confirm Password" required>
                             <br></br>
+                            
                              <!-- <label for="num">Contact Number</label> -->
                              <input type="number" class="subscription-input-form" id="num" placeholder="Phone Number">
                              <br><br>
@@ -144,43 +148,28 @@ min-height: 100vh;">
                                 <option value="giza">Giza</option>
                                 <option value="Alex">Alexandria</option>
                             </select> <br><br>
-
                             <select name="Gender" class="subscription-input-form" id="gender">
                               <option value="" disabled selected>Gender</option>
                               <option value="regular">Male</option>
                               <option value="teacher">Female</option>
                           </select> <br><br>
+                          <select name="Donor Type" class="subscription-input-form" id="type">
+                            <option value="" disabled selected>Select Donor Type</option>
+                            <option value="regular">Regular</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="doctor">Doctor</option>
+                        </select> <br><br>
+                           
 
-                            <select name="Donor Type" class="subscription-input-form" id="type">
-                              <option value="" disabled selected>Select Donor Type</option>
-                              <option value="regular">Regular</option>
-                              <option value="teacher">Teacher</option>
-                              <option value="doctor">Doctor</option>
-                          </select> <br><br>
+                            
                         
                             <br>
-                            <!-- <label for="gender">Gender</label>
-                            <div class="radio-group">
-                                <input class="radio-input" name="radio-group" id="radio1" type="radio">
-                                <label class="radio-label" for="radio1">
-                                  <span class="radio-inner-circle"></span>
-                                  Male
-                                </label>
-                                
-                                <input class="radio-input" name="radio-group" id="radio2" type="radio">
-                                <label class="radio-label" for="radio2">
-                                  <span class="radio-inner-circle"></span>
-                                  Female
-                                </label>
-                                <br><br>
-                            </div> -->
-                            
                                 
                            
 
                             <div id="warningMsg" style="display: none; color: red;">Please fill in all required fields!</div>
                             <form id="redirectForm" action="homepageorg.html" method="get">
-                                <button class="appsLand-btn subscribe-btn" id="createacc" type="submit">Create Account</button>
+                                <button class="appsLand-btn subscribe-btn" id="createbutton" type="submit">Create Account</button>
                                 <!-- <a href="#" class="btn">Post</a> -->
                             </form>
                         
@@ -226,17 +215,11 @@ width: 0px; ">
 	</div><!--/.scroll-Top-->
 </footer> </div>
 <!--/.footer-->
-<!--- Google Marker-->
-<script   
-        src= 
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyCi2ACx5R70fdMhO8ly-0RmQf16Jnx7AGs&loading=async&callback=initMap&v=weekly&libraries=marker" defer> 
-        </script>
-
         
 
         <!---to fill all fields-->
 <script>
-    const createBtn = document.getElementById('createacc');
+    const createBtn = document.getElementById('createbutton');
     const n1Input = document.getElementById('fname');
     const n2Input = document.getElementById('lname');
     const emailInput = document.getElementById('email');
@@ -247,13 +230,9 @@ width: 0px; ">
     const areaInput = document.getElementById('area');
     const warningMsg = document.getElementById('warningMsg');
     const typeDropdown = document.getElementById('type');
-    const govDropdown = document.getElementById('gov');
-    const genderDropdown = document.querySelector('gender'); // Select the radio group element
+    const govDropdown = document.getElementById('Gov');
+    const genderDropdown = document.getElementById('gender'); // Select the radio group element
   
-   // Function to check if a radio button is selected
-  //  function isRadioSelected() {
-  //   return radioGroup.querySelector('input[type="radio"]:checked') !== null;
-  // }
   
      // Function to check if a valid option is selected from the dropdown
      function isValidtypeOptionSelected() {
@@ -271,6 +250,30 @@ width: 0px; ">
         inputElement.style.border = "1px solid red";
       } else {
         inputElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+
+    function updatetypeBorderColor(dropdownElement) {
+      if (dropdownElement.value === "") {
+        dropdownElement.style.border = "1px solid red";
+      } else {
+        dropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+
+    function updategovBorderColor(dropdownElement) {
+      if (dropdownElement.value === "") {
+        dropdownElement.style.border = "1px solid red";
+      } else {
+        dropdownElement.style.border = "none"; // Remove red border if not empty
+      }
+    }
+
+    function updategenderBorderColor(dropdownElement) {
+      if (dropdownElement.value === "") {
+        dropdownElement.style.border = "1px solid red";
+      } else {
+        dropdownElement.style.border = "none"; // Remove red border if not empty
       }
     }
    
@@ -301,9 +304,20 @@ width: 0px; ">
     areaInput.addEventListener('input', function() {
       updateInputBorderColor(areaInput);
     });
+    typeDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(typeDropdown);
+    });
+    govDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(govDropdown);
+    });
+    genderDropdown.addEventListener('change', function() {
+      updateDropdownBorderColor(genderDropdown);
+    });
+
+
     createBtn.addEventListener('click', function(event) {
-      if (!isRadioSelected()&& n1Input.value.trim() === "" ||n2Input.value.trim()==="" ||emailInput.value.trim() === ""|| passInput.value.trim() === "" 
-      || cpassInput.value.trim() === ""|| numInput.value.trim() === "" ||addInput.value.trim()===""||areaInput.value.trim()==="" ) {
+      if ( !isValidtypeOptionSelected()|| !isValidgenderOptionSelected()||!isValidgovOptionSelected() ||n1Input.value.trim() === "" || n2Input.value.trim()==="" || emailInput.value.trim() === "" || passInput.value.trim() === "" 
+      || cpassInput.value.trim() === "" || numInput.value.trim() === "" || addInput.value.trim()===""|| areaInput.value.trim()==="" ) {
         event.preventDefault(); // Prevent form submission
         warningMsg.style.display = "block"; // Display warning message
         updateInputBorderColor(n1Input);
@@ -314,23 +328,10 @@ width: 0px; ">
         updateInputBorderColor(numInput);
         updateInputBorderColor(addInput);
         updateInputBorderColor(areaInput);
+        updatetypeBorderColor(typeDropdown);
+        updategovBorderColor(govDropdown);
+        updategenderBorderColor(genderDropdown);
       }
-      else if (!isValidgovOptionSelected() && !isValidtypeOptionSelected()&& !isValidgenderOptionSelected) {
-      event.preventDefault(); // Prevent form submission
-      warningMsg.textContent = "Please choose an Organization Type and Governorate to proceed."; // Update warning message
-      warningMsg.style.display = "block";}
-       else if (!isValidtypeOptionSelected()) {
-        event.preventDefault(); // Prevent form submission
-        warningMsg.textContent = "Please choose a Donor Type to proceed."; // Update warning message
-        warningMsg.style.display = "block";}
-     else if (!isValidgovOptionSelected()) {
-      event.preventDefault(); // Prevent form submission
-      warningMsg.textContent = "Please choose a Governorate to proceed."; // Update warning message
-      warningMsg.style.display = "block";}
-      else if (!isValidgovOptionSelected()) {
-      event.preventDefault(); // Prevent form submission
-      warningMsg.textContent = "Please choose a gender to proceed!"; // Update warning message
-      warningMsg.style.display = "block";}
       else {
         warningMsg.style.display = "none"; // Hide warning message (optional)
         // Submit the form (form submission logic)
@@ -339,7 +340,7 @@ width: 0px; ">
   </script>
   <!--password & email validation/ upload-->
   <script>
-    const createAccBtn = document.getElementById('createacc');
+    const createAccBtn = document.getElementById('createbutton');
     const emailvalid = document.getElementById('email');
 const passwordInput = document.getElementById('pass');
 const confirmPasswordInput = document.getElementById('cpass');
@@ -370,16 +371,6 @@ function passwordsMatch() {
   return passwordInput.value === confirmPasswordInput.value;
 }
 
-function removedoneBtn() {
-        // Show the overlay
-        document.getElementById("uploadBtn").style.display = "none";
-        
-}
-function showdoFile() {
-        // Show the overlay
-        document.getElementById("uploadBtn").style.display = "none";
-        
-}
 
 // Event listener for confirm password input to check for mismatch
 confirmPasswordInput.addEventListener('input', function() {
