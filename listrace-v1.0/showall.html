@@ -2932,5 +2932,54 @@ for (const radioButton of governateRadioButtons) {
   radioButton.addEventListener('click', updateAreaOptions);
 }
 </script>
+
+<script>
+	const navbarBrand = document.querySelector('.navbar-brand');
+	
+	navbarBrand.addEventListener('click', function() {
+	  const storedValue = sessionStorage.getItem('user');
+	
+	  // Handle potential absence of stored value
+	  if (storedValue === 'farah') {
+		window.location.href = "indexteacher.html"; // Default to index if no value exists
+		 // Exit the function if no value found
+	  }
+	else if (storedValue === 'carol'){
+		window.location.href = "indexregular.html"; // Default to index if no value exists
+	
+	}
+	else if (storedValue === 'basant'){
+		window.location.href = "indexdoctor.html"; // Default to index if no value exists
+	
+	}
+	 
+	});
+	</script>
+	
+	
+	<script>
+		const accinfo = document.querySelector('.accinfo');
+		
+		accinfo.addEventListener('click', function() {
+		  const storedValue = sessionStorage.getItem('user');
+		
+		  // Handle potential absence of stored value
+		  if (storedValue === 'farah') {
+			window.location.href = "donoraccount2.html"; // Default to index if no value exists
+			 // Exit the function if no value found
+		  }
+		else if (storedValue === 'carol'){
+			window.location.href = "donoraccount1.html"; // Default to index if no value exists
+		
+		}
+		else if (storedValue === 'basant'){
+			window.location.href = "donoraccount.html"; // Default to index if no value exists
+		
+		}
+		 
+		});
+		</script>
+
+
 <!--explore end -->
 </body>
